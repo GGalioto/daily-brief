@@ -6,209 +6,207 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>Geo's Daily Brief — June 14, 2026</title>
+<title>Geo's Daily Intelligence Brief — June 14, 2026</title>
 <style>
   :root{
-    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --ink:#e8eaf0; --muted:#9aa3b2;
-    --accent:#7c9cff; --accent2:#ffb86b; --good:#5fd39a; --bad:#ff7a85; --line:#262b36;
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --ink:#e8eaf0; --mut:#9aa3b2;
+    --line:#262b36; --acc:#ff7a45; --acc2:#5ad1a6; --warn:#ffd166; --bad:#ff5d6c;
+    --good:#5ad1a6; --blue:#6fb1ff; --pill:#222734;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{
-    background:radial-gradient(1200px 600px at 80% -10%, #1a1f2e 0%, var(--bg) 55%);
-    color:var(--ink);
-    font-family:ui-rounded,"SF Pro Rounded","Segoe UI",-apple-system,system-ui,"Helvetica Neue",Arial,sans-serif;
-    line-height:1.55; font-size:17px; -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:760px;margin:0 auto;padding:22px 16px 80px}
-  header.top{margin-bottom:18px}
-  .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  h1{font-size:30px;line-height:1.15;margin:6px 0 4px;font-weight:800}
-  .date{color:var(--muted);font-size:14px}
-  .readtime{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted);
-    border:1px solid var(--line);padding:4px 10px;border-radius:999px}
-  section{background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:18px 18px 14px;margin:16px 0;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-  h2{font-size:20px;margin:0 0 10px;font-weight:800;display:flex;gap:9px;align-items:center}
-  h3{font-size:16px;margin:14px 0 4px;color:var(--accent2);font-weight:700}
-  p{margin:8px 0}
-  .muted{color:var(--muted)}
+  body{margin:0;background:linear-gradient(180deg,#0f1115,#0b0d11);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;padding:0 0 60px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+  header{padding:30px 16px 18px;text-align:center;border-bottom:1px solid var(--line);
+    background:radial-gradient(120% 80% at 50% 0%,rgba(255,122,69,.12),transparent)}
+  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:700}
+  h1{font-size:27px;margin:6px 0 2px;font-weight:800;letter-spacing:-.5px}
+  .date{color:var(--mut);font-size:14px}
+  .read{display:inline-block;margin-top:10px;font-size:12px;color:var(--mut);
+    background:var(--pill);padding:4px 12px;border-radius:20px;border:1px solid var(--line)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:20px;margin:18px 0;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  .sec-h{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:800;margin:0 0 4px}
+  .sec-h .em{font-size:22px}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 14px}
+  .verdict{background:linear-gradient(135deg,rgba(255,122,69,.16),rgba(90,209,166,.10));
+    border:1px solid var(--acc)}
+  .badge{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;
+    letter-spacing:1px;padding:4px 10px;border-radius:8px;margin-bottom:10px}
+  .b-attack{background:rgba(255,122,69,.2);color:var(--acc);border:1px solid var(--acc)}
+  p{margin:10px 0}
+  .big{font-size:20px;font-weight:800;line-height:1.35;margin:6px 0 12px}
+  .lane{color:var(--acc);font-weight:800}
+  .do{background:var(--card2);border-left:3px solid var(--acc2);border-radius:8px;
+    padding:12px 14px;margin:12px 0;font-size:15px}
+  .do b{color:var(--acc2)}
   ul{margin:8px 0;padding-left:20px}
-  li{margin:6px 0}
-  .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;
-    background:#222838;color:var(--accent);margin-right:6px}
+  li{margin:8px 0}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;
+    margin-right:6px;vertical-align:middle}
+  .t-anvil{background:rgba(111,177,255,.15);color:var(--blue)}
+  .t-wl{background:rgba(90,209,166,.15);color:var(--good)}
+  .t-rifle{background:rgba(255,209,102,.15);color:var(--warn)}
+  .t-white{background:rgba(255,93,108,.15);color:var(--bad)}
   .up{color:var(--good);font-weight:700}
   .down{color:var(--bad);font-weight:700}
-  .sig{border-left:3px solid var(--accent);padding:8px 0 8px 14px;margin:12px 0;background:var(--card2);
-    border-radius:0 12px 12px 0;padding-right:12px}
-  .sig b{color:#fff}
-  .opp{background:var(--card2);border-radius:12px;padding:10px 12px;margin:10px 0;border:1px dashed var(--line)}
-  .opp .eq{color:var(--accent2);font-weight:700}
-  pre{background:#0c0e13;border:1px solid var(--line);border-radius:12px;padding:12px;
-    overflow-x:auto;font-size:13px;color:#cfe;line-height:1.4;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-  .action{background:linear-gradient(135deg,#1b2440,#241a33);border:1px solid #3a3360}
-  .takeaway{counter-reset:t}
-  .takeaway .row{display:flex;gap:12px;align-items:flex-start;margin:12px 0}
-  .takeaway .num{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--accent);
-    color:#0b0d12;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
-  .verdict{font-weight:800;color:var(--accent2)}
-  a{color:var(--accent)}
-  .src{font-size:12px;color:var(--muted)}
-  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:26px}
-  .divider{height:1px;background:var(--line);margin:10px 0}
-  .tag-good{color:var(--good);font-weight:700}
-  .tag-warn{color:var(--accent2);font-weight:700}
+  .spark{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+    background:var(--card2);padding:8px 12px;border-radius:8px;color:var(--acc2);
+    overflow-x:auto;white-space:nowrap}
+  .opp{border-left:3px solid var(--warn);padding:8px 0 8px 14px;margin:14px 0}
+  .opp b{color:var(--warn)}
+  .money{border-left:3px solid var(--good);padding:8px 0 8px 14px;margin:12px 0}
+  .whitespace{background:rgba(255,93,108,.10);border:1px dashed var(--bad);
+    border-radius:10px;padding:12px 14px;margin:14px 0}
+  .whitespace b{color:var(--bad)}
+  .take{counter-reset:t;list-style:none;padding:0}
+  .take li{background:var(--card2);border-radius:10px;padding:12px 14px 12px 46px;
+    position:relative;margin:10px 0}
+  .take li::before{counter-increment:t;content:counter(t);position:absolute;left:12px;top:12px;
+    width:24px;height:24px;background:var(--acc);color:#111;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+  .action-box{background:linear-gradient(135deg,rgba(90,209,166,.14),rgba(111,177,255,.10));
+    border:1px solid var(--acc2)}
+  .win{font-size:13px;color:var(--mut);margin-top:10px}
+  .win b{color:var(--good)}
+  a{color:var(--blue)}
+  footer{text-align:center;color:var(--mut);font-size:12px;margin-top:30px;padding:0 16px}
+  hr{border:none;border-top:1px solid var(--line);margin:14px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}
 </style>
 </head>
 <body>
+<header>
+  <div class="kicker">Daily Intelligence Brief</div>
+  <h1>Where do I attack first today? 🎯</h1>
+  <div class="date">Sunday, June 14, 2026 · last 48h of signals</div>
+  <div class="read">⏱️ ~6 min read</div>
+  <div class="legend">
+    <span class="tag t-anvil">Anvil</span>
+    <span class="tag t-wl">Website Landlord</span>
+    <span class="tag t-rifle">Rifle Tool</span>
+    <span class="tag t-white">Whitespace</span>
+  </div>
+</header>
+
 <div class="wrap">
 
-  <header class="top">
-    <div class="kicker">⚡ Geo's Intelligence Brief</div>
-    <h1>The boring layer is where the money is 🛡️</h1>
-    <div class="date">Sunday, June 14, 2026 · last 48h of signals</div>
-    <div class="readtime">☕ ~6 min read</div>
-  </header>
-
-  <!-- 1. TOP SIGNALS -->
-  <section>
-    <h2>🔭 Top Signals</h2>
-
-    <div class="sig">
-      <span class="pill">SHIFT</span><b>HN's mood on AI flipped from "magic" to "trust." 📉 hype, 📈 plumbing.</b>
-      <p class="muted">June's Hacker News trends show the action moving away from flashy demos toward trust, security, and controlled workflows. Builders are openly asking whether AI-generated code creates more mess than value. The recommended startup angle is, in their words, "boring on purpose: build trust layers around AI." Translation: the easy demo era is over; the durable money is in the unsexy connective tissue.</p>
-    </div>
-
-    <div class="sig">
-      <span class="pill">CAPITAL</span><b>Vertical AI agents now eat 54.6% of agentic capital — but the bubble is real. ⚠️</b>
-      <p class="muted">Vertical AI agents are the main investable surface (48.3% of YTD deals, 54.6% of capital). At the same time, a large share of early-stage agent startups are projected to run out of cash by late 2026 — killed by model token costs and slow enterprise sales cycles. Money is flowing, but only to teams with paying customers and a real moat. The median round is ~$19M, not the $52M headline.</p>
-    </div>
-
-    <div class="sig">
-      <span class="pill">MODELS</span><b>Frontier got cheaper-per-IQ again: Opus 4.8, Gemini 3.5, Gemma 4, Kimi K2. 📈</b>
-      <p class="muted">Claude Opus 4.8 (May 27) took #1 on the Artificial Analysis Intelligence Index at 61.4, tuned for coding + agentic computer use. Google declared the "agentic Gemini era" with Gemini 3.5 and open Gemma 4. Moonshot's trillion-param Kimi K2 leads open-weights on GPQA Diamond at 90.5%. Capability is no longer the bottleneck — distribution and trust are.</p>
-    </div>
+  <!-- 1. BEST LANE -->
+  <section class="verdict">
+    <span class="badge b-attack">⚔️ Today's Best Lane to Attack</span>
+    <div class="sec-h"><span class="em">🔵</span> Attack <span class="lane">&nbsp;Anvil</span>&nbsp;— the window just blinked open</div>
+    <p class="big">A Y Combinator (YC) startup is building your <span class="t-anvil tag">Anvil</span> thesis almost word-for-word — and they've raised only $500K. That's not a threat. That's a starter pistol.</p>
+    <p><b>Bravi</b> (YC Fall 2025) describes itself as "the Artificial Intelligence (AI) operating system for home-services businesses," using AI front-office communication (calls, chats, follow-ups) as the wedge, then layering an internal copilot that understands products, pricing, and technical docs. That <i>is</i> Anvil — a vertical agent back-office for local service businesses. They started narrow (fenestration: windows, shutters, garage doors) and are expanding to adjacent trades.</p>
+    <p>Why this favors moving today: the thesis is now externally validated by the sharpest filter in startups (YC accepted it), but the field is wide open — Bravi has $500K and one narrow vertical. Vertical AI agents took <span class="up">48.3%</span> of all 2026 year-to-date agent deals and <span class="up">54.6%</span> of the capital, so the money agrees the category is real. You are not too early and not too late. You are exactly on time.</p>
+    <div class="do"><b>Highest-leverage action, doable now:</b> Sign up for Bravi (bravi.app) and read every pricing tier and feature page. Write a one-page teardown: their exact wedge, what they charge, and the <i>one</i> vertical they don't serve where you already have an edge — appliance repair, where Website Landlord gives you a lead-flow head start. Their beachhead is fenestration; yours can be the trades they'll reach last.</p>
   </section>
 
-  <!-- 2. EMERGING OPPORTUNITIES -->
+  <!-- 2. TOP SIGNALS -->
   <section>
-    <h2>💡 Emerging Opportunities</h2>
+    <div class="sec-h"><span class="em">📡</span> Top Signals</div>
+    <p class="sub">What happened, why it matters, what it means for your lanes.</p>
 
-    <div class="opp">
-      <p>Teams ship AI code fast but can't trust it <span class="eq">+ no standard "trust layer" for solo/small teams = opportunity</span></p>
-      <p class="muted">HN keeps surfacing the same anxiety: generated code that nobody fully owns. A lightweight verification / provenance / "did the agent actually do what it claimed" layer for non-enterprise builders is wide open.</p>
-    </div>
-
-    <div class="opp">
-      <p>Founders crossing $10–50K MRR are professionalizing ops <span class="eq">+ generic tools don't fit their niche = opportunity</span></p>
-      <p class="muted">This cohort suddenly needs billing, analytics, support, and infra — but hates bolting on ten horizontal tools. Niche-aware "graduation kits" are underbuilt.</p>
-    </div>
-
-    <div class="opp">
-      <p>High-ticket local services ($3K–15K/job) have lots of demand, few competent providers <span class="eq">+ enterprise software ignores single-location shops = opportunity</span></p>
-      <p class="muted">Directly relevant to your local-services thesis (see below). Vertical SaaS is ~$157B and growing 2–3x faster than horizontal. The winners are tools so embedded in one trade that ChatGPT can't replace them.</p>
-    </div>
+    <p><b>1. Bravi proves the Anvil thesis is fundable.</b> <span class="tag t-anvil">Anvil</span> Covered above — the single most decision-relevant signal of the week. Takeaway: stop debating <i>whether</i> the vertical-agent-back-office is real and start racing on <i>which vertical you own first</i>.</p>
+    <hr/>
+    <p><b>2. Appliance-repair economics are screaming "wedge."</b> <span class="tag t-wl">Website Landlord</span> The appliance-repair market is ~$4.5 billion; 97% of customers find repair services via Google; 73% of service searches convert to same-day bookings. With Search Engine Optimization (SEO), Cost Per Acquired customer can drop <span class="up">below $10</span> after 6–9 months, and rankings stay live when you stop paying — an owned asset, not rented traffic. This is the Willingness To Pay (WTP) backbone of the whole pipeline.</p>
+    <hr/>
+    <p><b>3. The model floor keeps rising — and getting cheaper.</b> <span class="tag t-anvil">Anvil</span> <span class="tag t-rifle">Rifle Tool</span> Nvidia shipped Nemotron 3 Ultra (550-billion-parameter open model, permissive license); MiniMax M3 landed with a 1-million-token context window and frontier coding; Moonshot's Kimi K2.7-Code claims 30% lower reasoning-token usage; Google's Gemini 3.5 Pro hits general availability this month. Translation for a builder: agent back-ends and knowledge-base tools (rifle build coach, Anvil copilot) keep getting cheaper to run and longer of memory. Margins improve while you sleep.</p>
   </section>
 
-  <!-- 3. TECHNICAL SHIFTS -->
+  <!-- 3. EMERGING OPPORTUNITIES -->
   <section>
-    <h2>🧪 Technical Shifts</h2>
+    <div class="sec-h"><span class="em">🧭</span> Emerging Opportunities</div>
+    <p class="sub">Format: problem + no good solution = opportunity.</p>
+
+    <div class="opp"><b>Problem:</b> Home-service owners are being sold AI front-office tools, but most are single-trade and shallow. <b>No good solution:</b> nobody owns the <i>boring, un-sexy</i> trades (appliance repair, small HVAC — Heating Ventilation and Air Conditioning) with a full back-office agent. <b>= Opportunity.</b> <span class="tag t-anvil">Anvil</span> <span class="tag t-wl">Website Landlord</span> Strengthens the pipeline thesis directly — your wedge vertical is also the one incumbents ignore.</p>
+
+    <div class="opp"><b>Problem:</b> Hacker News hiring/discussion threads keep circling one theme — making AI "survivable" inside real businesses: provenance, role permissions, plain-language interfaces for non-engineers. <b>No good solution:</b> most agent tools still expect the customer to think like an engineer or prompt specialist. <b>= Opportunity.</b> <span class="tag t-anvil">Anvil</span> If Anvil's pitch is "your staff talk to it like a coworker, not a console," that's a moat against both Bravi and DIY tools.</p>
+
+    <div class="opp"><b>Problem:</b> A free firearm configurator (rifleconfigurator.com) already exists with affiliate links, build sheets, and 14+ part categories. <b>No good solution to the high-ticket moment:</b> the National Firearms Act (NFA) suppressor boom (more below) means buyers are making expensive, confusing, compliance-heavy decisions with little guided help. <b>= Opportunity.</b> <span class="tag t-rifle">Rifle Tool</span> A "suppressed-build coach" is a narrower, higher-WTP slice than a generic builder.</p>
+  </section>
+
+  <!-- 4. FASTEST MONEY -->
+  <section>
+    <div class="sec-h"><span class="em">💸</span> Fastest Money Right Now</div>
+    <p class="sub">What's printing fastest in 48h — with a whitespace alarm.</p>
+
+    <div class="money"><b>Solo vertical micro-tools.</b> Solo founders are now 36.3% of new startups (up from 23.7% in 2019). Reported examples: a habit-tracker cycling $15K–$30K Monthly Recurring Revenue (MRR) (~$602K/year) run by one person; multiple solo operators past $1M Annual Recurring Revenue (ARR). The pattern: vertical Software as a Service (SaaS) and workflow automation in niches too small for funded startups, built in ~6 weeks, run for under $500/month in tooling. <span class="tag t-anvil">Anvil</span> <span class="tag t-wl">Website Landlord</span> This is your exact game — confirmation, not novelty.</p>
+
+    <div class="money"><b>Agent infrastructure megarounds.</b> Last week's biggest rounds: Ramp $750M; Generalist AI $400M (robotics); plus several $500M rounds. Smaller-but-telling: F2 AI $14M (deal underwriting), Trustap $10M (marketplace transaction agents), Concentrate AI $5.1M (Large Language Model gateway/routing). Durable category, but capital-intensive — <i>not</i> your lane to chase directly.</p>
+
+    <div class="whitespace"><b>🚨 Whitespace radar — are you missing a fortune?</b> The loudest 48-hour money signal outside all your lanes is the <b>National Firearms Act (NFA) suppressor surge</b>: NFA background checks up <span class="up">100–167% year-over-year</span>, dubbed "the Year of the Suppressor," 200,000+ NFA checks in a single month. People are spending real money on high-ticket, compliance-heavy gear right now. You have a foot in this world via the rifle tool — but you're aimed at low-WTP builders, not the high-WTP suppressor buyer drowning in paperwork. <b>That gap is the fortune you might be walking past.</b> Honest durability note: suppressor demand is partly policy-driven (tax/regulation tailwinds) and could cool if rules shift — treat as a 12–18 month window, not forever.</p>
+  </section>
+
+  <!-- 5. TECHNICAL SHIFTS -->
+  <section>
+    <div class="sec-h"><span class="em">⚙️</span> Technical Shifts</div>
+    <p class="sub">New capability, and why it matters to you specifically.</p>
     <ul>
-      <li><b>Agentic-by-default models.</b> Gemini 3.5, Gemma 4, and Opus 4.8 are all explicitly built for multi-step agent + computer-use workflows. Building an "agent" is now a config problem, not a research problem — which means your edge moves up to data, workflow, and trust.</li>
-      <li><b>Open weights caught up.</b> Kimi K2 (trillion-param MoE) at 90.5% GPQA Diamond means strong models can run without per-token API bleed — the exact cost that's about to bankrupt thin agent startups. <span class="tag-good">Cost moat available if you self-host.</span></li>
-      <li><b>Orchestration is productizing.</b> IBM watsonx Orchestrate next-gen and Alteryx Agent Studio + MCP Server let non-engineers turn existing workflows into agents. The "build an agent framework" startup is now a feature.</li>
+      <li><b>Cheaper, longer memory.</b> MiniMax M3's 1-million-token context + Kimi K2.7-Code's 30% token savings mean an Anvil copilot can hold a whole business's docs, pricing, and history in-session for less money. <span class="tag t-anvil">Anvil</span></li>
+      <li><b>Open weights at the frontier.</b> Nemotron 3 Ultra (550B, permissive license) lets you self-host or fine-tune without per-token vendor lock-in — relevant if Anvil ever needs data-residency or margin control. <span class="tag t-anvil">Anvil</span></li>
+      <li><b>Coding agents keep compounding.</b> Frontier coding in the new models = you ship Website Landlord sites and Anvil prototypes faster solo. The <$500/month solo stack is now genuinely real. <span class="tag t-wl">Website Landlord</span></li>
+    </ul>
+    <div class="spark">Open-model capability ▁▂▃▅▆▇█  (Nemotron 3 Ultra = new high-water mark)</div>
+  </section>
+
+  <!-- 6. ADOPTION -->
+  <section>
+    <div class="sec-h"><span class="em">📈</span> Adoption & Traction Signals</div>
+    <p class="sub">Real users, not hype — and what it says about your timing.</p>
+    <ul>
+      <li><span class="up">▲</span> <b>Home-services AI is being bought, not just demoed.</b> Bravi (YC-backed) capturing leads for real home-service companies = the buyer exists and is paying. Market-timing for Anvil: <b>green light, move now.</b> <span class="tag t-anvil">Anvil</span></li>
+      <li><span class="up">▲</span> <b>Local search still rules service discovery.</b> 97% Google usage + 73% same-day booking = the Website Landlord channel isn't going anywhere. <span class="tag t-wl">Website Landlord</span></li>
+      <li><span class="up">▲</span> <b>Solo-built vertical tools crossing $1M ARR</b> proves a one-person operator can reach real revenue — your structural bet is sound. <span class="tag t-anvil">Anvil</span></li>
     </ul>
   </section>
 
-  <!-- 4. ADOPTION & TRACTION -->
+  <!-- 7. RIFLE -->
   <section>
-    <h2>📊 Adoption &amp; Traction Signals</h2>
-    <p class="muted">Where the real (non-hype) usage is concentrating:</p>
-    <pre>
-Vertical AI capital share (2026 YTD)
-Vertical agents  ██████████████████████  54.6%
-Everything else  ██████████████████      45.4%
+    <div class="sec-h"><span class="em">🎯</span> Rifle Builder Tool — Validation Signals</div>
+    <p class="sub">Demand, Willingness To Pay (WTP), feasibility, competition.</p>
+    <p><b>Demand:</b> Strong and steady. Adjusted background checks ~1.1M firearms sold in May 2026 (<span class="up">+3.2% year-over-year</span>); the standout is the NFA/suppressor category up <span class="up">100–167%</span>. Buyers are actively configuring high-ticket builds.</p>
+    <p><b>Willingness To Pay — the hard truth:</b> Confirmed weak for a generic builder. <b>rifleconfigurator.com already exists</b> doing the exact concept — visual builder, 14+ part categories, live 2026 pricing, build sheets, and a stack of calculators (buffer, gas system, co-witness, ballistics) — monetized via <i>affiliate</i> links (OpticsPlanet) and kept <b>free</b>. That's the only model the market currently rewards, and someone already runs it. <span class="tag t-rifle">Rifle Tool</span></p>
+    <p><b>Knowledge-base feasibility:</b> Improving fast. Long-context + cheaper models make a credible "build coach" (compatibility, compliance, suppressor-host tuning) technically easy and cheap to run.</p>
+    <p><b>Competitive landscape:</b> Crowded at the free/affiliate generic-builder layer (rifleconfigurator.com, CZ Configurator for branded orders). Open at the <i>guided high-ticket / compliance</i> layer.</p>
+    <div class="do"><b>Why it matters:</b> Don't build "another configurator" — that race is lost. The only viable angle is a <b>narrow, high-WTP wedge</b>: a suppressed-build / NFA-paperwork coach (paid build-coach or Business-to-Business engine for suppressor retailers). Otherwise, park it — it's your weakest lane this week.</p>
+  </section>
 
-Cybersecurity   ████████████   strong
-Healthcare ops  ██████████     strong
-Finance/compliance ████████    strong
-Generic chatbots ██           cooling 📉
-    </pre>
+  <!-- 8. SECOND ORDER -->
+  <section>
+    <div class="sec-h"><span class="em">🔮</span> Second-Order Effects & Corners</div>
     <ul>
-      <li>AI-native startups reportedly hit product-market fit ~2.4x faster; YC W24 time-to-MVP down ~60% vs 2022. <span class="up">📈</span> Speed to launch is no longer a differentiator — everyone has it.</li>
-      <li>The indie hackers actually making money aren't building the 10th AI writing tool — they're chasing trades, agriculture, local services, niche professional workflows. <span class="tag-good">Boring + specific is winning.</span></li>
-      <li>Investor bar at Series A: paying customers, retention, repeatable sales, and a reason you won't be cloned in a weekend.</li>
+      <li><b>Bravi's expansion path telegraphs the land grab.</b> They went fenestration → adjacent trades. Whoever plants a flag in the un-glamorous trades (appliance repair, small HVAC) first gets the data and reviews that compound. Move before the obvious verticals are claimed. <span class="tag t-anvil">Anvil</span></li>
+      <li><b>Cheaper agents commoditize the "front office" wedge.</b> When everyone has an AI receptionist, the moat shifts to the <i>back office</i> — scheduling, parts, invoicing, technician dispatch. That's deeper Anvil territory and a better defensible position than the call-answering layer Bravi leads with. <span class="tag t-anvil">Anvil</span></li>
+      <li><b>Policy-driven booms are double-edged.</b> The suppressor surge is partly regulatory tailwind. Great for a fast B2B play now; dangerous as a long-term core. Build it as a campaign, not a company. <span class="tag t-rifle">Rifle Tool</span></li>
+      <li><b>The corner you might miss:</b> Website Landlord's appliance-repair lead flow is also Anvil's free customer-discovery channel. The businesses buying your leads are the businesses you'll sell Anvil to. The pipeline thesis isn't a sequence — it's a flywheel. <span class="tag t-wl">Website Landlord</span> <span class="tag t-anvil">Anvil</span></li>
     </ul>
   </section>
 
-  <!-- 5. WHAT THIS MEANS FOR YOU -->
+  <!-- 9. ACTION -->
+  <section class="action-box">
+    <div class="sec-h"><span class="em">✅</span> Your Action Item — This Week</div>
+    <p class="sub">One trackable assumption, tied to today's lane (Anvil). ≤30 minutes.</p>
+    <p class="big">Demo Bravi and find the gap.</p>
+    <p><b>Assumption to validate:</b> "There is at least one local-service vertical Bravi does not serve where I have a lead-flow or domain edge."</p>
+    <p>Do this in 30 minutes: (1) create a Bravi account at bravi.app; (2) screenshot every pricing tier and the feature list; (3) note which trades they explicitly support today; (4) write three sentences — the vertical you'd own, why Bravi can't easily follow, and what your front-office-plus-back-office pitch would say.</p>
+    <p class="win"><b>Success looks like:</b> a one-page doc named <code>anvil-vs-bravi-2026-06-14</code> in the Briefing Prompt folder, naming your target vertical and a one-line wedge. If you can't name a defensible vertical after the demo, that's also a result — it tells you Anvil needs a sharper angle before more time goes in.</p>
+  </section>
+
+  <!-- 10. TAKEAWAYS -->
   <section>
-    <h2>🎯 What This Means For You</h2>
-    <p>Geo — the macro is bending <i>toward</i> your instincts, not away. Two threads in your portfolio just got validation:</p>
-    <ul>
-      <li><b>Your local-services pipeline thesis.</b> Multiple independent sources this week point at the same gap: high-ticket local services + single-location shops + no fitting software. That's not a coincidence, that's a market forming. The "boring vertical" framing is now consensus among the people who make money, which is both validation and a clock — the window is opening, and others see it too.</li>
-      <li><b>The "trust layer" turn helps you.</b> You don't need to win the model race (you can't, and you shouldn't try). The value migrated to workflow + trust + niche knowledge — areas where a sharp solo founder with domain focus can actually out-execute a funded generalist.</li>
-    </ul>
-    <p><b>New angle worth a look:</b> the "MRR graduation kit" for $10–50K founders professionalizing ops. It's adjacent to your consulting work — you already see these businesses' guts. You could productize what you'd otherwise hand-deliver.</p>
-  </section>
-
-  <!-- 6. RIFLE BUILDER TOOL -->
-  <section>
-    <h2>🔧 Rifle Builder Tool — Validation Signals</h2>
-
-    <h3>Community demand — REAL ✅</h3>
-    <p class="muted">Beginner confusion is genuine and repeated: gas tube length vs barrel length mismatches, buffer weight, BCG config, twist rate, AR-15 vs AR-10 parts that look identical but don't fit, and "tolerance stacking" where every part is in-spec but the rifle still won't cycle. People actively share builds on Reddit and ask "will this fit?" The pain is documented and ongoing.</p>
-
-    <h3>Willingness to pay — UNCLEAR ⚠️</h3>
-    <p class="muted">Gun owners spend freely on <i>parts</i> (kits, sales, accessories), but I found no evidence anyone is paying for a <i>build/compatibility app</i>. Every configurator I found is free. That's a yellow flag: demand for the function ≠ demand for a paid product. The spend is on hardware, and existing tools monetize via affiliate/retail referral, not subscriptions.</p>
-
-    <h3>Knowledge base feasibility — STRONG ✅</h3>
-    <p class="muted">Specs, mil-spec standards, assembly guides, twist rates, and compatibility rules are abundant and public. Building the rules engine is very doable. This is the easiest part of the problem — which is also why others have done it.</p>
-
-    <h3>Competitive landscape — CROWDED 🔴</h3>
-    <p class="muted">This is the headline finding, and it's not gentle. The space already has multiple established players, several with AI assistants:</p>
-    <ul>
-      <li><b>AR15.BUILD</b> — configurator across AR-15/10/9, AK, Glock; live pricing; <i>AI assistant</i>; gear tracking; shareable build URLs; community voting/comments.</li>
-      <li><b>RifleConfigurator.com</b> — AR-15/10, AK, handguns, PCC, shotgun, bolt/lever, chassis. Free.</li>
-      <li><b>Gunstruction</b> (AR15.com) — established AR builder.</li>
-      <li><b>GunPartPicker</b> — assembly + real-time price + compatibility across retailers.</li>
-    </ul>
-    <p class="muted"><b>Why this matters:</b> the obvious version of your idea already exists, is free, and at least one competitor has already bolted on the AI angle you'd lead with. This isn't a "no" — it's a "not like this." A viable wedge would need to be something they structurally can't or won't do: a much narrower niche (e.g., a single platform done <i>deeply</i> — precision long-range, a specific competition class, suppressed builds), a real workflow they ignore (FFL/compliance, build-log + maintenance + round-count as the core not an add-on), or a community/content moat rather than another configurator.</p>
-  </section>
-
-  <!-- 7. SECOND ORDER -->
-  <section>
-    <h2>🌀 Second-Order Effects &amp; Corners</h2>
-    <ul>
-      <li><b>The agent-cash-crunch is a buying opportunity.</b> If many thin agent startups die by late 2026, their customers, talent, and abandoned niches come loose. Watch for orphaned verticals you could pick up cheaply.</li>
-      <li><b>"AI assistant" stops being a feature.</b> When every configurator (even rifle builders) has one, the AI label adds zero differentiation. Your moat has to be data, niche, or distribution — never "we added a chatbot."</li>
-      <li><b>Open weights quietly reset unit economics.</b> The startups that self-host on Kimi K2 / Gemma 4 survive the token-cost cull that kills API-dependent competitors. Cost structure is becoming a strategy, not a line item.</li>
-      <li><b>Corner you might miss:</b> the real defensible asset in niche tools isn't the configurator — it's the <i>proprietary compatibility/outcome data</i> you accumulate from real users' builds. Whoever logs the most real-world "this combo actually worked / failed" data wins, and that's a head start you can only build by starting early.</li>
-    </ul>
-  </section>
-
-  <!-- 8. ACTION ITEM -->
-  <section class="action">
-    <h2>✅ Your Action Item (This Week)</h2>
-    <p><b>Assumption to test:</b> "People will pay for a rifle build tool" — the weakest link in the rifle thesis.</p>
-    <p><b>30-minute task:</b> Go to AR15.BUILD and RifleConfigurator. Spend 15 min using each as a first-time builder would. Then write down exactly one thing both do badly that a specific sub-niche would pay to have done right. If you can't find a paid wedge in 30 minutes against free, AI-equipped incumbents, that's a real data point — and a cheap one.</p>
-    <p class="muted">Trackable success = one written paragraph naming (a) the niche, (b) the unmet job, (c) why incumbents won't serve it. If you can't write it, the honest move is to redirect that energy toward the local-services thesis, which has fresher air.</p>
-  </section>
-
-  <!-- 9. TAKEAWAYS -->
-  <section class="takeaway">
-    <h2>🧠 Your 3 Key Takeaways</h2>
-    <div class="row"><div class="num">1</div><div><b>Bet on the boring layer, not the model.</b> Capability is commoditized; trust, niche, and workflow are where defensible value moved. This favors a focused solo founder over a funded generalist — <span class="verdict">play your strength.</span></div></div>
-    <div class="row"><div class="num">2</div><div><b>The rifle builder space is crowded and free — and at least one rival already has the AI angle.</b> Don't build the obvious version. The only viable path is a narrow niche or an ignored workflow (compliance, build-log-first, proprietary outcome data). <span class="verdict">Verdict: proceed only with a wedge, not a clone.</span></div></div>
-    <div class="row"><div class="num">3</div><div><b>Your local-services thesis just got third-party validation this week.</b> Multiple sources independently flagged the same gap. That's the warmer lead — and the window is opening for others too. <span class="verdict">Move while it's early.</span></div></div>
+    <div class="sec-h"><span class="em">🧠</span> Your 3 Key Takeaways</div>
+    <ol class="take">
+      <li><b>Attack Anvil this week.</b> A YC startup validated your thesis with only $500K raised — the category is real and the field is open. Speed beats perfection now.</li>
+      <li><b>Don't build another rifle configurator — it's already built and free.</b> If the rifle tool lives, it lives as a narrow, high-WTP suppressed-build / NFA-compliance coach. Otherwise park it.</li>
+      <li><b>Treat the pipeline as a flywheel, not a relay.</b> Appliance-repair leads (Website Landlord) are Anvil's cheapest customer-discovery channel. Same customer, two products — run them together.</li>
+    </ol>
   </section>
 
   <footer>
-    <div class="divider"></div>
-    Generated autonomously · sources: Hacker News, AI funding/model trackers, AR-build communities, Indie Hackers · June 14, 2026<br/>
-    Signals, not gospel — verify before you bet real money or time. 🦅
+    Generated for Geo · June 14, 2026 · sources: Hacker News, Crunchbase, Y Combinator, Indie Hackers, NSSF-adjusted background-check data, model-release roundups.<br/>
+    Sharp over comprehensive. Where do you attack first? Anvil.
   </footer>
-
 </div>
 </body>
 </html>
