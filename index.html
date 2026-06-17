@@ -6,199 +6,236 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>Daily Intelligence Brief — 2026-06-16</title>
+<title>Daily Intelligence Brief — June 17, 2026</title>
 <style>
   :root{
-    --bg:#0f1115; --card:#181b22; --card2:#1e222b; --ink:#e9edf2; --muted:#9aa6b6;
-    --accent:#ff7a45; --accent2:#46d39a; --warn:#ffcc55; --danger:#ff5d6c; --line:#2a2f3a;
-    --blue:#5aa9ff;
+    --bg:#0f1216; --card:#171c23; --card2:#1d242d; --ink:#e9eef4; --muted:#9aa7b6;
+    --gold:#f5c451; --green:#46d39a; --red:#ff6b6b; --blue:#6cb8ff; --purple:#b393ff;
+    --line:#2a323d;
   }
-  *{box-sizing:border-box}
+  *{box-sizing:border-box;margin:0;padding:0}
   body{
-    margin:0; background:var(--bg); color:var(--ink);
+    background:var(--bg); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.55; font-size:17px; -webkit-font-smoothing:antialiased;
+    line-height:1.6; padding:16px 14px 60px; max-width:760px; margin:0 auto;
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px; margin:0 auto; padding:20px 16px 64px;}
-  header.top{padding:8px 0 4px;}
-  .eyebrow{color:var(--muted); font-size:13px; letter-spacing:.12em; text-transform:uppercase;}
-  h1{font-size:27px; line-height:1.2; margin:6px 0 2px; font-weight:800;}
-  .date{color:var(--accent); font-weight:700;}
-  .readtime{color:var(--muted); font-size:13px; margin-top:2px;}
-  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 16px; margin:16px 0;}
-  section.hero{background:linear-gradient(160deg,#241a14,#181b22); border-color:#3a2a1e;}
-  h2{font-size:13px; letter-spacing:.10em; text-transform:uppercase; color:var(--muted); margin:0 0 10px; font-weight:700;}
-  .hero h2{color:var(--accent);}
-  h3{font-size:19px; margin:2px 0 8px; font-weight:800; line-height:1.25;}
-  p{margin:8px 0;}
-  .lede{font-size:20px; font-weight:700; line-height:1.35;}
-  .tag{display:inline-block; font-size:12px; font-weight:700; padding:3px 9px; border-radius:999px; margin:2px 4px 2px 0;}
-  .t-anvil{background:#22323f; color:#8fd3ff;}
-  .t-web{background:#1f3326; color:#7ee3a8;}
-  .t-consult{background:#33291f; color:#ffc27a;}
-  .t-rifle{background:#322029; color:#ff9bb0;}
-  .t-thesis{background:#2a2733; color:#c4b6ff;}
-  .pill{font-size:12px; font-weight:700; padding:2px 8px; border-radius:6px;}
-  .up{color:var(--accent2);} .down{color:var(--danger);} .flat{color:var(--muted);}
-  .box{background:var(--card2); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin:12px 0;}
-  .box.attack{border-color:var(--accent); background:#241913;}
-  .box.flag{border-color:var(--warn); background:#2a2410;}
-  .box.action{border-color:var(--accent2); background:#13251c;}
-  ul{margin:8px 0; padding-left:20px;} li{margin:6px 0;}
-  .label{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); display:block; margin-bottom:4px;}
-  .label.g{color:var(--accent2);} .label.w{color:var(--warn);}
-  .spark{font-family:ui-monospace,Menlo,Consolas,monospace; letter-spacing:1px; font-size:15px;}
-  .num{font-size:26px; font-weight:800;}
-  .grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
-  .stat{background:var(--card2); border:1px solid var(--line); border-radius:12px; padding:12px;}
-  .stat .num{display:block; color:var(--accent);}
-  .stat small{color:var(--muted); font-size:12px;}
-  hr{border:none; border-top:1px solid var(--line); margin:14px 0;}
-  a{color:var(--blue);}
-  .foot{color:var(--muted); font-size:13px; text-align:center; margin-top:24px;}
-  .verdict{font-size:15px; color:var(--muted); margin-top:4px;}
-  .quote{border-left:3px solid var(--accent); padding-left:12px; color:var(--muted); font-style:italic;}
-  @media(max-width:520px){ .grid{grid-template-columns:1fr;} h1{font-size:23px;} body{font-size:16px;} }
+  header{text-align:center; padding:10px 0 18px}
+  .kicker{color:var(--gold); font-weight:700; letter-spacing:2px; font-size:.72rem; text-transform:uppercase}
+  h1{font-size:1.5rem; line-height:1.25; margin:6px 0 4px}
+  .date{color:var(--muted); font-size:.85rem}
+  .read{display:inline-block; margin-top:8px; font-size:.72rem; color:var(--muted); border:1px solid var(--line); padding:3px 10px; border-radius:20px}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 16px 18px; margin:14px 0}
+  .sec-head{display:flex; align-items:center; gap:9px; margin-bottom:10px}
+  .sec-num{background:var(--card2); color:var(--gold); font-weight:800; font-size:.78rem; width:26px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex:0 0 auto}
+  h2{font-size:1.02rem; line-height:1.3}
+  .attack{background:linear-gradient(150deg,#1f2a23,#1a2230); border:1px solid #2f6f53}
+  .attack h2{color:var(--green)}
+  .verdict{font-size:1.12rem; font-weight:700; line-height:1.4; margin:4px 0 10px}
+  .verdict .hl{color:var(--gold)}
+  p{margin:8px 0; font-size:.94rem}
+  .muted{color:var(--muted)}
+  .pill{display:inline-block; font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:20px; margin:2px 4px 2px 0; text-transform:uppercase; letter-spacing:.5px}
+  .p-land{background:#23344a; color:var(--blue)}
+  .p-anvil{background:#2e2447; color:var(--purple)}
+  .p-cons{background:#3a2f1c; color:var(--gold)}
+  .p-rifle{background:#3a2222; color:var(--red)}
+  .up{color:var(--green); font-weight:700}
+  .down{color:var(--red); font-weight:700}
+  .box{background:var(--card2); border-radius:12px; padding:11px 13px; margin:10px 0; border-left:3px solid var(--gold)}
+  .box.green{border-left-color:var(--green)}
+  .box.red{border-left-color:var(--red)}
+  .box.blue{border-left-color:var(--blue)}
+  .box.purple{border-left-color:var(--purple)}
+  .box h3{font-size:.92rem; margin-bottom:3px}
+  .label{font-size:.66rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--muted)}
+  ul{margin:8px 0 4px; padding-left:20px}
+  li{margin:6px 0; font-size:.92rem}
+  .spark{font-family:"SF Mono",Consolas,monospace; font-size:.8rem; color:var(--green); letter-spacing:1px}
+  .bar{font-family:"SF Mono",Consolas,monospace; font-size:.78rem; letter-spacing:0}
+  .action{background:linear-gradient(150deg,#2a2417,#1a1e26); border:1px solid #5a4a22}
+  .action h2{color:var(--gold)}
+  .check{background:var(--card2); border-radius:10px; padding:10px 12px; margin-top:8px; font-size:.88rem}
+  .take{counter-reset:t; list-style:none; padding-left:0}
+  .take li{position:relative; padding-left:38px; margin:12px 0; font-size:.96rem}
+  .take li::before{counter-increment:t; content:counter(t); position:absolute; left:0; top:0; background:var(--gold); color:#1a1a1a; font-weight:800; width:26px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.85rem}
+  a{color:var(--blue)}
+  footer{text-align:center; color:var(--muted); font-size:.74rem; margin-top:24px; line-height:1.7}
+  .divider{height:1px; background:var(--line); margin:12px 0}
+  .trend{font-size:.8rem; color:var(--muted)}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="top">
-    <div class="eyebrow">Corvino Forge · Daily Intelligence Brief</div>
-    <h1>Where do you attack today, <span class="date">Geo</span>?</h1>
-    <div class="readtime">📅 Tuesday, June 16, 2026 · ⏱ ~6 min read · signals from last 48h</div>
-  </header>
+<header>
+  <div class="kicker">⚡ Corvino Forge · Daily Intelligence</div>
+  <h1>Where do you attack first today?</h1>
+  <div class="date">Wednesday, June 17, 2026 · last 48h signals</div>
+  <div class="read">⏱ 6 min read</div>
+</header>
 
-  <!-- 1. BEST LANE -->
-  <section class="hero">
-    <h2>🎯 Today's Best Lane to Attack</h2>
-    <span class="tag t-consult">CONSULTING</span><span class="tag t-anvil">feeds → ANVIL</span>
-    <h3>Attack Consulting — the missed-call wedge just got a fundable price tag.</h3>
-    <p class="verdict">Two signals collided in the last 48h: (1) Heating Ventilation and Air Conditioning (HVAC) and plumbing shops miss <strong>27–45% of inbound calls</strong> (50–65% in peak season), and an Artificial Intelligence (AI) voice agent that answers 100% of them runs <strong>$200–$400/month</strong> — one contractor went from 43% to 97% answered in week one. (2) <strong>Rebar just raised a $14M Series A</strong> for an "AI operating system" for commercial HVAC/electrical/plumbing. The money agrees with your thesis. Your job is to get in front of Mark before the category fills up.</p>
-    <div class="box attack">
-      <span class="label">⚡ Highest-leverage action, doable now</span>
-      Stop treating Application-to-Person 10-Digit Long Code (A2P 10DLC) as paperwork — it's the gate on your whole demo. Submit the A2P 10DLC brand + campaign registration today. It unlocks Short Message Service (SMS) on all three built automations <em>and</em> is the prerequisite for the voice-agent upsell the market just priced at $200–$400/mo. Nothing else you can do moves more dominoes.
-    </div>
-    <p class="verdict">Why not Anvil today? Rebar's raise validates the ceiling but doesn't hand you a customer. Why not Website Landlord? Google Business Profile (GBP) is still stuck in verification — out of your hands this minute. Consulting is the one lane where a 30-minute action unblocks real cash <em>and</em> harvests a reusable Anvil asset (the voice-agent playbook).</p>
-  </section>
+<!-- 1. BEST LANE -->
+<section class="attack">
+  <div class="sec-head"><div class="sec-num">1</div><h2>🎯 Today's Best Lane to Attack</h2></div>
+  <div class="verdict">Attack <span class="hl">Website Landlord</span> — but bolt on Generative Engine Optimization (GEO) before your competitors even know it's a thing.</div>
+  <p>The strongest signal in 48 hours isn't a new model — it's that <span class="up">Artificial Intelligence (AI)-referred web sessions jumped 527% year-over-year</span> and AI answer engines now field <span class="up">12–18% of English informational queries</span>. People searching "best appliance repair near me" increasingly get a <em>synthesized answer</em> from ChatGPT, Gemini, or Google AI Overviews — not a list of blue links.</p>
+  <p>This is a double-edged blade aimed straight at your wedge. A rank-and-rent site that only wins Google's classic results is slowly being routed around. <strong>But</strong> citation competition is still low, and getting cited <em>is</em> the new ranking. Whoever makes cincyappliancerepair.com the source the AI quotes owns the lead — and that's a brand-new, higher Willingness To Pay (WTP) line item you can charge your renter for.</p>
+  <div class="box green">
+    <span class="label">Highest-leverage move, doable now</span>
+    <h3>Run one GEO citation test on your own site today.</h3>
+    <p class="muted" style="margin:4px 0 0">Ask ChatGPT and Gemini "who is the best appliance repair company in Cincinnati?" Screenshot what they cite. If you're absent, you've just found a paid upgrade to sell. See Section 9.</p>
+  </div>
+  <div>
+    <span class="pill p-land">Website Landlord ▲ favored today</span>
+    <span class="pill p-cons">Consulting ▲ new GEO upsell</span>
+    <span class="pill p-anvil">Anvil → watch</span>
+    <span class="pill p-rifle">Rifle ▼ stand down</span>
+  </div>
+</section>
 
-  <!-- 2. TOP SIGNALS -->
-  <section>
-    <h2>📰 Top Signals</h2>
+<!-- 2. TOP SIGNALS -->
+<section>
+  <div class="sec-head"><div class="sec-num">2</div><h2>📡 Top Signals</h2></div>
 
-    <h3>1. Rebar raises $14M Series A for a local-trades "AI operating system"</h3>
-    <span class="tag t-anvil">ANVIL</span><span class="tag t-thesis">PIPELINE THESIS</span>
-    <p>A Venture Capital (VC)-backed team is building exactly your Anvil ceiling — a vertical AI back-office for HVAC/electrical/plumbing — and got $14M to do it. <strong>What it means:</strong> your thesis is correct, which is the good news and the warning. You can't out-fund them. You <em>can</em> out-niche them: they're chasing commercial <em>suppliers</em>; your wedge is the small independent contractor Rebar won't bother with for years. Move while they're upmarket.</p>
-
-    <h3>2. "AI that survives real workflows" is the dominant Hacker News theme</h3>
-    <span class="tag t-anvil">ANVIL</span><span class="tag t-consult">CONSULTING</span>
-    <p>June's Hacker News (HN) trend report: the money is shifting from flashy demos to <em>trust</em> — security, provenance, review steps, role permissions, and plain-language interfaces for non-experts. <strong>What it means:</strong> your edge with contractors isn't smarter AI, it's <em>safe, reviewable</em> AI a non-technical owner can trust. Bake the review-gate / kill-switch you already built (the 👍/👎 review automation) into your pitch — it's now a selling point, not a footnote.</p>
-
-    <h3>3. Voice agents are the contractor wedge — and only 12% have adopted</h3>
-    <span class="tag t-consult">CONSULTING</span><span class="tag t-web">WEBSITE LANDLORD</span>
-    <p>Two-thirds of contractors expect AI to reshape the trade; only <strong>12% have actually embedded it.</strong> <strong>What it means:</strong> you're early, not late. The missed-call voice agent is the single clearest Return on Investment (ROI) story in the trade right now — and it stacks directly on your rank-and-rent lead-gen (Website Landlord sends the call; the voice agent makes sure it's answered).</p>
-  </section>
-
-  <!-- 3. EMERGING OPPORTUNITIES -->
-  <section>
-    <h2>💡 Emerging Opportunities</h2>
-    <div class="box">
-      <strong>Missed-call recovery for solo trades + no affordable "safe" agent = opportunity.</strong><br>
-      Rebar serves commercial suppliers; voice-agent vendors sell to mid-size shops. The 1–3 truck operator is unserved at a price they'll pay. <span class="tag t-consult">strengthens CONSULTING</span>
-    </div>
-    <div class="box">
-      <strong>"Plain-language, reviewable AI" for non-technical owners + everyone shipping black boxes = opportunity.</strong><br>
-      The HN trust theme is a positioning gap, not a tech gap. Your kill-switch/review-gate is the differentiator. <span class="tag t-anvil">strengthens ANVIL</span>
-    </div>
-    <div class="box">
-      <strong>Free configurator + affiliate monetization is now proven in firearms — but the obvious lane is taken.</strong><br>
-      Rifle Configurator already runs your parked model (see §7). The whitespace is the <em>ammo / repeat-buyer</em> sidecar, not the build tool. <span class="tag t-rifle">threatens RIFLE</span>
-    </div>
-  </section>
-
-  <!-- 4. FASTEST MONEY -->
-  <section>
-    <h2>💸 Fastest Money Right Now</h2>
-    <div class="grid">
-      <div class="stat"><span class="num">$50k</span><small>MRR — Chatbase-style solo AI apps, hit in months via TikTok distribution</small></div>
-      <div class="stat"><span class="num">60–80%</span><small>operating margins on solo micro-Software-as-a-Service (SaaS), vs 10–20% staffed</small></div>
-    </div>
-    <p style="margin-top:12px;"><strong>The pattern:</strong> single-function AI wrappers, near-zero overhead, distribution-led (TikTok / Show HN). <strong>34% of Q1 2026 micro-SaaS launches came from founders who can't code.</strong> Monthly Recurring Revenue (MRR) of $5k–$50k is now common, not exceptional.</p>
-    <div class="box flag">
-      <span class="label w">🚨 Whitespace radar — you may be leaving money on the table</span>
-      Every fast-money story this week is <strong>distribution-led, not build-led.</strong> Your portfolio is build-heavy (Anvil, automations, configurators) and distribution-light. The fortune you might be missing isn't a new product — it's a <strong>content/TikTok engine</strong> pointed at the assets you've already built. A 60-second "watch an AI answer a contractor's missed call" clip is closer to $50k MRR than another feature is. Durability note: TikTok-fueled spikes are real but fragile — treat them as a customer-acquisition channel, not a moat.
-    </div>
-  </section>
-
-  <!-- 5. TECHNICAL SHIFTS -->
-  <section>
-    <h2>🔧 Technical Shifts</h2>
-    <p><strong>Specialized &gt; general.</strong> The 2026 consensus: "the best AI is no longer a single model" — win one practical function. GPT-5.5 leads premium writing; Gemini 3.x owns multimodal + huge context. <strong>Why it matters to you:</strong> you don't need the smartest model, you need the cheapest one that reliably does <em>one</em> contractor job (answer, book, follow up). Pick per-task, don't standardize.</p>
-    <p><strong>Safety models are now a product layer.</strong> NVIDIA shipped Nemotron 3.5 Content Safety (customizable, multimodal, low-latency). <strong>Why it matters:</strong> "reviewable/safe AI" is becoming infrastructure you can buy, not build — lowering the cost of the trust story you should be selling.</p>
-  </section>
-
-  <!-- 6. ADOPTION -->
-  <section>
-    <h2>📈 Adoption &amp; Traction Signals</h2>
-    <p class="spark">Contractor AI adoption: ██░░░░░░░░ 12% embedded · 66% expect disruption</p>
-    <p>That gap is the entire market-timing case for Consulting. Real users, not hype: voice agents answering "100% of calls, booking jobs, triaging emergencies" are being reported as deployed-and-working, not pilots. <strong>Signal for you:</strong> the buyer is convinced AI is coming (66%) but hasn't moved (12%) — they need a guide, which is literally your consulting offer. Sell the inevitability, not the technology.</p>
-  </section>
-
-  <!-- 7. RIFLE -->
-  <section>
-    <h2>🔫 Rifle Builder Tool — Validation Signals</h2>
-    <span class="tag t-rifle">RIFLE BUILDER</span>
-    <h3>Your parked idea already exists — and that's the most useful signal you'll get.</h3>
-    <p><strong>Competitive landscape:</strong> <a href="https://www.rifleconfigurator.com/">RifleConfigurator.com</a> is a free browser builder covering AR-15, AR-10, AK, handgun, tactical shotgun, Pistol-Caliber Carbine (PCC) and precision rifles — with <strong>real-time compatibility, live pricing, and capability scoring</strong>. Monetized entirely by affiliate links (OpticsPlanet et al.). That is your "Rifle+Ammo Companion" build-tool half, shipped.</p>
-    <ul>
-      <li><strong>Demand (confirmed):</strong> a mil-spec build runs $500–$900, but first-timers spend $1,500–$2,000 all-in — high-consideration purchases people research heavily. Strong top-of-funnel.</li>
-      <li><strong>Willingness To Pay (WTP) — still weak, as you flagged:</strong> the proven model is <em>free tool + affiliate</em>, not subscription. Nobody's paying for the configurator itself.</li>
-      <li><strong>Knowledge-base feasibility:</strong> compatibility + pricing data is clearly buildable (a competitor maintains it solo). Not a moat.</li>
-    </ul>
-    <div class="box flag">
-      <span class="label w">Why it matters for viability</span>
-      The build-configurator lane is <strong>taken and undifferentiated</strong>. Don't rebuild it. Your only defensible angle is the part RifleConfigurator <em>doesn't</em> own: <strong>ammo + the repeat-buyer relationship</strong> (your earlier thesis — AmmoSeek owns price-search, so attack the recurring-purchase companion, not the one-time build). Verdict unchanged: <strong>weakest lane, build for yourself first, do not invest cash.</strong>
-    </div>
-  </section>
-
-  <!-- 8. SECOND ORDER -->
-  <section>
-    <h2>🔮 Second-Order Effects &amp; Corners</h2>
-    <ul>
-      <li><strong>VC funding the trades (Rebar) trains the buyer for you.</strong> Their marketing budget educates contractors that "AI back-office" is normal — you ride the wave at the small-shop tier they ignore.</li>
-      <li><strong>Voice agents commoditize fast.</strong> When every shop has one, the edge moves to <em>what happens after the call is answered</em> — booking, follow-up, reactivation. That's the Anvil layer. Sell voice as the door, Anvil as the house.</li>
-      <li><strong>The non-coder founder wave (34%) means your moat can't be "I built it."</strong> It has to be distribution + trust + niche relationships. Lean into the contractor relationships, not the code.</li>
-      <li><strong>Corner you might miss:</strong> the missed-call stat is a <em>sales asset</em> across your whole portfolio. Same number sells Website Landlord ("we get you the calls") and Consulting ("we make sure you answer them"). Reuse it.</li>
-    </ul>
-  </section>
-
-  <!-- 9. ACTION ITEM -->
-  <section>
-    <h2>✅ Your Action Item — This Week</h2>
-    <div class="box action">
-      <span class="label g">One trackable assumption · ≤30 minutes</span>
-      <p style="margin-top:4px;"><strong>Assumption to validate:</strong> "I can clear the A2P 10DLC gate myself this week without a paid expert."</p>
-      <p><strong>Do:</strong> Open GoHighLevel (GHL) and submit the A2P 10DLC <em>brand registration</em> (business name, Employer Identification Number / contact) and start the <em>campaign</em> submission for the three built automations.</p>
-      <p><strong>Success = in writing:</strong> brand submitted + campaign drafted by Friday June 19. If you hit a wall you can't clear in 30 min, that itself is the finding — it means provisioning is a real cost line in your pricing, not a footnote.</p>
-    </div>
-  </section>
-
-  <!-- 10. TAKEAWAYS -->
-  <section>
-    <h2>🧠 Your 3 Key Takeaways</h2>
-    <ul>
-      <li><strong>Attack Consulting today via the missed-call wedge.</strong> The market just priced it ($200–400/mo) and Rebar's $14M validates the ceiling — your move is the small shop they ignore. <em>→ submit A2P 10DLC.</em></li>
-      <li><strong>Your gap is distribution, not product.</strong> $50k-MRR solo wins are TikTok/Show-HN led. Point a content engine at what you've already built before building anything new.</li>
-      <li><strong>Kill the rifle <em>build</em> tool ambition; keep the ammo companion idea on ice.</strong> RifleConfigurator already owns the configurator+affiliate lane. Don't spend cash competing with free.</li>
-    </ul>
-  </section>
-
-  <div class="foot">
-    Corvino Forge · Generated 2026-06-16 · <a href="https://ggalioto.github.io/daily-brief/">ggalioto.github.io/daily-brief</a><br>
-    Sharp &gt; complete. Verify any call before you bet on it.
+  <div class="box blue">
+    <span class="label">Signal 1 · directly hits your wedge</span>
+    <h3>AI search is eating local discovery — fast.</h3>
+    <p>AI-referred sessions +527% YoY; AI engines now answer 12–18% of informational queries. Adobe paid ~$1.9B for Semrush largely <em>for its GEO capability</em> — a discipline that barely had a name 24 months ago.</p>
+    <p class="trend">For Geo: rank-and-rent's moat is shifting from "rank on Google" to "get cited by the AI." Move now while citation slots are cheap.</p>
   </div>
 
-</div>
+  <div class="box purple">
+    <span class="label">Signal 2 · your ceiling play</span>
+    <h3>AI agents are formally "taking over" small-business admin.</h3>
+    <p>AWS, Google Cloud, Microsoft, International Business Machines (IBM) and Boston Consulting Group (BCG) now converge on the same definition of an agent: goals, memory, planning, tool use, autonomy. Stat being repeated everywhere: small businesses burn <span class="up">~200 hours/month on admin</span>.</p>
+    <p class="trend">For Geo: that 200-hour number is the exact pain Anvil targets for local service businesses. It's becoming the industry's headline stat — borrow it for your pitch.</p>
+  </div>
+
+  <div class="box">
+    <span class="label">Signal 3 · the money is moving to "trust"</span>
+    <h3>Hacker News mood: AI money is shifting to trust, security, and controlled workflows — not flashy demos.</h3>
+    <p>Hiring threads show real demand for coding agents, secure dev tools, and "hybrid builders who ship across the stack." Meanwhile SpaceX moved to acquire Anysphere (maker of the Cursor coding tool) in a reported $60B all-stock deal.</p>
+    <p class="trend">For Geo: "boring, controlled, trustworthy automation for a local contractor" is exactly the unsexy lane that's now in favor. Your Application-to-Person 10-Digit Long Code (A2P 10DLC) + kill-switch discipline <em>is</em> the selling point, not the friction.</p>
+  </div>
+</section>
+
+<!-- 3. OPPORTUNITIES -->
+<section>
+  <div class="sec-head"><div class="sec-num">3</div><h2>💡 Emerging Opportunities</h2></div>
+  <ul>
+    <li><strong>Local contractors invisible in AI answers + no one selling them a fix = opportunity.</strong> GEO agencies today chase real estate, law, healthcare, enterprise Business-to-Business (B2B) — almost nobody is doing GEO for a Heating, Ventilation and Air Conditioning (HVAC) or appliance shop. <span class="pill p-land">strengthens Website Landlord</span><span class="pill p-cons">new consulting offer</span></li>
+    <li><strong>Small businesses lose 200 hrs/month to admin + generic agents don't know their context = opportunity.</strong> The repeated advice is "domain-specific agents trained on company context win, not chatbots." That's Anvil's thesis verbatim. <span class="pill p-anvil">strengthens Anvil</span></li>
+    <li><strong>Classic Search Engine Optimization (SEO) ramp is 3–6 months + clients want leads now = opportunity.</strong> GEO citations can land in weeks, not months — a faster-payback product to pair with the slow-burn rank-and-rent asset. <span class="pill p-land">strengthens Website Landlord</span></li>
+  </ul>
+</section>
+
+<!-- 4. FASTEST MONEY -->
+<section>
+  <div class="sec-head"><div class="sec-num">4</div><h2>💸 Fastest Money Right Now</h2></div>
+  <p class="muted" style="margin-top:0">What's printing the fastest in the last 48h — and what's <span class="down">off your radar</span>.</p>
+
+  <div class="bar">
+    ElevenLabs (voice) &nbsp;$0→$2B ARR &nbsp;<span class="up">█████████ 13 mo</span><br>
+    Cursor (code)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0→$2B ARR &nbsp;<span class="up">█████████ 13 mo</span><br>
+    Anthropic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~$30B run-rate&nbsp;<span class="up">████████ 80× yr</span>
+  </div>
+  <p class="muted" style="font-size:.82rem">ARR = Annual Recurring Revenue. These are the frontier rockets — context, not your lane.</p>
+
+  <div class="divider"></div>
+
+  <div class="box green">
+    <span class="label">Indie / solo — closer to your scale</span>
+    <ul style="margin-top:4px">
+      <li><strong>Formula Bot</strong> — text-to-Excel-formula tool, <span class="up">$2.8M/yr</span>, built solo on no-code (Bubble), launched in a weekend.</li>
+      <li><strong>Meerkats.ai</strong> — AI orchestration tied to revenue workflows hit <span class="up">$3K Monthly Recurring Revenue (MRR) in 4 weeks</span> by attaching to money workflows, not building "another generic AI tool."</li>
+    </ul>
+  </div>
+
+  <div class="box red">
+    <span class="label">🚨 Whitespace radar — are you missing a fortune?</span>
+    <h3>GEO-as-a-service for local trades is wide open.</h3>
+    <p>The ROI math agencies are quoting: <strong>1 citation/week = 52/yr; at 2% conversion × $97 lead value ≈ $5K revenue</strong> per client per year — on top of your rent. Adobe's $1.9B Semrush buy says the big players see it too. <span class="down">This is NOT cleanly in any current lane</span> — it's a productized add-on you could attach to Website Landlord <em>and</em> sell standalone to your HVAC consulting prospects.</p>
+    <p class="trend"><strong>Durability:</strong> Real, not flash. Built on a structural shift (AI answers replacing link lists), not a trend. The flash-in-the-pan risk is the tooling — pick a workflow, not a fad.</p>
+  </div>
+</section>
+
+<!-- 5. TECHNICAL SHIFTS -->
+<section>
+  <div class="sec-head"><div class="sec-num">5</div><h2>⚙️ Technical Shifts</h2></div>
+  <ul>
+    <li><strong>OpenAI GPT-5.5</strong> (and Pro/Instant variants) is the current frontier; <strong>Google Gemini 3.1</strong> family keeps moving benchmarks. New models now ship roughly <em>every 2 days</em>.</li>
+    <li><strong>Mercury 2</strong> (Inception) — a diffusion-based reasoning model generating <span class="up">1,000+ tokens/second</span>, built for agentic loops and real-time voice. Faster, cheaper agents = lower cost to run Anvil's back-office loops.</li>
+    <li class="trend"><strong>Why it matters to you:</strong> Don't chase model news. The takeaway is that capability is commoditizing and getting cheaper — your moat is the <em>local-business workflow and trust</em>, not the model. Build the wrapper around the contractor, not the Large Language Model (LLM).</li>
+  </ul>
+</section>
+
+<!-- 6. ADOPTION -->
+<section>
+  <div class="sec-head"><div class="sec-num">6</div><h2>📈 Adoption & Traction Signals</h2></div>
+  <ul>
+    <li><strong>Real users, not hype:</strong> Claude Code hit 57% developer awareness with 18% active workplace usage by Jan 2026 — agents are crossing into daily work.</li>
+    <li><strong>Market timing for you:</strong> "Embedded agents inside existing tools" and "governance/kill-switch layers" are named as what drives <em>real</em> adoption. You already built a kill-switch into the HVAC nurture — that's now table stakes buyers expect.</li>
+    <li class="trend"><span class="up">▲ Green light</span> for selling controlled automation to contractors today; <span class="muted">the buyer education the giants are doing is warming your prospect Mark for you.</span></li>
+  </ul>
+</section>
+
+<!-- 7. RIFLE -->
+<section>
+  <div class="sec-head"><div class="sec-num">7</div><h2>🔫 Rifle Builder Tool — Validation Signals</h2></div>
+  <div class="box red">
+    <h3>Verdict: stand down as a product. Build for self + affiliate only.</h3>
+    <p>The space is already crowded with <em>free, mature</em> tools:</p>
+    <ul>
+      <li><strong>rifleconfigurator.com</strong> — live 2026 component prices, 300+ factory platforms, 14 accessory categories, build scoring across 8 axes (Close Quarters Battle, long range, low light).</li>
+      <li><strong>ar15.build</strong> — build configurator + parts database + AI assistant + gear tracking, already shipping.</li>
+    </ul>
+    <p><strong>WTP read:</strong> still weak/negative — the best-in-class tools are <em>free</em> and monetize via affiliate, exactly the model your memory already flagged. Knowledge-base feasibility is fine; the problem was never feasibility, it's that nobody pays for the tool directly.</p>
+    <p class="trend"><strong>Why it matters:</strong> This confirms the 2026-06-14 call — Rifle + Ammo Companion as an affiliate-funded personal-use sidecar. Don't spend a builder-hour here this week; the GEO window is open and this one isn't.</p>
+  </div>
+</section>
+
+<!-- 8. SECOND ORDER -->
+<section>
+  <div class="sec-head"><div class="sec-num">8</div><h2>🔮 Second-Order Effects & Corners</h2></div>
+  <ul>
+    <li><strong>If AI answers replace link-lists,</strong> the whole rank-and-rent industry quietly re-prices around citation share. Early movers lock in the cited source before incumbents react — late movers rent a depreciating asset. Move = this quarter, not next year.</li>
+    <li><strong>If model cost keeps falling ~daily,</strong> the defensible value migrates entirely to proprietary local data + workflow + trust. Every gig you run should be harvesting that reusable asset for Anvil — your consulting rule is now a survival rule.</li>
+    <li><strong>Corner others miss:</strong> GEO + your existing HVAC automation = one bundle. You get a contractor cited by AI <em>and</em> auto-book the lead the moment it lands. Nobody local is selling the full loop. <span class="pill p-cons">Consulting</span><span class="pill p-anvil">feeds Anvil</span></li>
+  </ul>
+</section>
+
+<!-- 9. ACTION ITEM -->
+<section class="action">
+  <div class="sec-head"><div class="sec-num">9</div><h2>✅ Your Action Item (This Week)</h2></div>
+  <p class="verdict" style="font-size:1.05rem">Run a 30-minute GEO citation audit on cincyappliancerepair.com.</p>
+  <p><strong>Assumption to validate:</strong> "AI answer engines do not currently cite my appliance-repair site for Cincinnati queries — so there's a gap I can close and sell."</p>
+  <div class="check">
+    <span class="label">Do this</span>
+    <ul style="margin:6px 0 0">
+      <li>Ask ChatGPT, Gemini, and Perplexity: <em>"Who's the best appliance repair company in Cincinnati?"</em> and <em>"Who repairs refrigerators near Cincinnati?"</em></li>
+      <li>Screenshot every answer. Note who <em>is</em> cited and whether you appear.</li>
+    </ul>
+    <div class="divider"></div>
+    <span class="label">Success = written outcome</span>
+    <p style="margin:4px 0 0">You can state, in one sentence, your current citation status and name the single highest-impact fix (e.g., add a question-based "best appliance repair in Cincinnati" page). If you're absent from all three, that's a confirmed paid upgrade to pitch your renter — and a repeatable offer for Mark.</p>
+  </div>
+</section>
+
+<!-- 10. TAKEAWAYS -->
+<section>
+  <div class="sec-head"><div class="sec-num">10</div><h2>🧠 Your 3 Key Takeaways</h2></div>
+  <ol class="take">
+    <li><strong>Attack Website Landlord with GEO this week.</strong> AI search (+527% YoY referrals) is rerouting local leads; citation slots are still cheap. First mover gets the quote, the lead, and a new line of WTP.</li>
+    <li><strong>Stand down on the rifle tool.</strong> rifleconfigurator.com and ar15.build already give away what you'd build. Affiliate sidecar only — zero builder-hours this week.</li>
+    <li><strong>Make GEO a product, not a favor.</strong> ~$5K/client/yr math + Adobe's $1.9B Semrush bet = this bundles onto Website Landlord and your HVAC consulting pitch. Productize it once, sell it twice.</li>
+  </ol>
+</section>
+
+<footer>
+  Corvino Forge · Daily Intelligence Brief · June 17, 2026<br>
+  Generated for Geo · sharp, opinionated, and aimed at one question: where do you attack first?<br>
+  <span class="muted">Sources: Hacker News trends, TechTimes/First Page Sage (GEO), StartupHub.ai &amp; mean.ceo (AI agents), Indie Hackers, llm-stats &amp; aiflashreport (models), rifleconfigurator.com / ar15.build.</span>
+</footer>
+
 </body>
 </html>
