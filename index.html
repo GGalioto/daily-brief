@@ -1,241 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<title>Daily Intelligence Brief — June 17, 2026</title>
-<style>
-  :root{
-    --bg:#0f1216; --card:#171c23; --card2:#1d242d; --ink:#e9eef4; --muted:#9aa7b6;
-    --gold:#f5c451; --green:#46d39a; --red:#ff6b6b; --blue:#6cb8ff; --purple:#b393ff;
-    --line:#2a323d;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6; padding:16px 14px 60px; max-width:760px; margin:0 auto;
-    -webkit-font-smoothing:antialiased;
-  }
-  header{text-align:center; padding:10px 0 18px}
-  .kicker{color:var(--gold); font-weight:700; letter-spacing:2px; font-size:.72rem; text-transform:uppercase}
-  h1{font-size:1.5rem; line-height:1.25; margin:6px 0 4px}
-  .date{color:var(--muted); font-size:.85rem}
-  .read{display:inline-block; margin-top:8px; font-size:.72rem; color:var(--muted); border:1px solid var(--line); padding:3px 10px; border-radius:20px}
-  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 16px 18px; margin:14px 0}
-  .sec-head{display:flex; align-items:center; gap:9px; margin-bottom:10px}
-  .sec-num{background:var(--card2); color:var(--gold); font-weight:800; font-size:.78rem; width:26px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex:0 0 auto}
-  h2{font-size:1.02rem; line-height:1.3}
-  .attack{background:linear-gradient(150deg,#1f2a23,#1a2230); border:1px solid #2f6f53}
-  .attack h2{color:var(--green)}
-  .verdict{font-size:1.12rem; font-weight:700; line-height:1.4; margin:4px 0 10px}
-  .verdict .hl{color:var(--gold)}
-  p{margin:8px 0; font-size:.94rem}
-  .muted{color:var(--muted)}
-  .pill{display:inline-block; font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:20px; margin:2px 4px 2px 0; text-transform:uppercase; letter-spacing:.5px}
-  .p-land{background:#23344a; color:var(--blue)}
-  .p-anvil{background:#2e2447; color:var(--purple)}
-  .p-cons{background:#3a2f1c; color:var(--gold)}
-  .p-rifle{background:#3a2222; color:var(--red)}
-  .up{color:var(--green); font-weight:700}
-  .down{color:var(--red); font-weight:700}
-  .box{background:var(--card2); border-radius:12px; padding:11px 13px; margin:10px 0; border-left:3px solid var(--gold)}
-  .box.green{border-left-color:var(--green)}
-  .box.red{border-left-color:var(--red)}
-  .box.blue{border-left-color:var(--blue)}
-  .box.purple{border-left-color:var(--purple)}
-  .box h3{font-size:.92rem; margin-bottom:3px}
-  .label{font-size:.66rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--muted)}
-  ul{margin:8px 0 4px; padding-left:20px}
-  li{margin:6px 0; font-size:.92rem}
-  .spark{font-family:"SF Mono",Consolas,monospace; font-size:.8rem; color:var(--green); letter-spacing:1px}
-  .bar{font-family:"SF Mono",Consolas,monospace; font-size:.78rem; letter-spacing:0}
-  .action{background:linear-gradient(150deg,#2a2417,#1a1e26); border:1px solid #5a4a22}
-  .action h2{color:var(--gold)}
-  .check{background:var(--card2); border-radius:10px; padding:10px 12px; margin-top:8px; font-size:.88rem}
-  .take{counter-reset:t; list-style:none; padding-left:0}
-  .take li{position:relative; padding-left:38px; margin:12px 0; font-size:.96rem}
-  .take li::before{counter-increment:t; content:counter(t); position:absolute; left:0; top:0; background:var(--gold); color:#1a1a1a; font-weight:800; width:26px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:.85rem}
-  a{color:var(--blue)}
-  footer{text-align:center; color:var(--muted); font-size:.74rem; margin-top:24px; line-height:1.7}
-  .divider{height:1px; background:var(--line); margin:12px 0}
-  .trend{font-size:.8rem; color:var(--muted)}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>🦅 Daily Intelligence Brief — 2026-06-18</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --card2: #1f2333;
+      --accent: #e87c2e;
+      --accent2: #4fa3e0;
+      --accent3: #5ec47a;
+      --accent4: #c45e8a;
+      --text: #e4e6f0;
+      --muted: #8891a8;
+      --border: #2a2f45;
+      --warn: #f0c040;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 0 0 60px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 50%, #1a1222 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 20px 24px;
+      text-align: center;
+    }
+    .hero .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 5vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .hero .date {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-header .num {
+      background: var(--accent);
+      color: #000;
+      font-weight: 800;
+      font-size: 11px;
+      border-radius: 4px;
+      padding: 2px 7px;
+      letter-spacing: 0.5px;
+    }
+    .section-header h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .card.highlight {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, #1f1a10 0%, var(--card) 100%);
+    }
+    .card.blue {
+      border-color: var(--accent2);
+      background: linear-gradient(135deg, #101a24 0%, var(--card) 100%);
+    }
+    .card.green {
+      border-color: var(--accent3);
+      background: linear-gradient(135deg, #0f1f14 0%, var(--card) 100%);
+    }
+    .card.warn {
+      border-color: var(--warn);
+      background: linear-gradient(135deg, #1f1a0a 0%, var(--card) 100%);
+    }
+    .card.pink {
+      border-color: var(--accent4);
+      background: linear-gradient(135deg, #1f1020 0%, var(--card) 100%);
+    }
+    .card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .card p { font-size: 14px; color: var(--text); margin-bottom: 8px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { padding-left: 20px; }
+    .card ul li { font-size: 14px; color: var(--text); margin-bottom: 5px; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .tag.orange { background: rgba(232,124,46,0.2); color: var(--accent); border: 1px solid rgba(232,124,46,0.3); }
+    .tag.blue { background: rgba(79,163,224,0.2); color: var(--accent2); border: 1px solid rgba(79,163,224,0.3); }
+    .tag.green { background: rgba(94,196,122,0.2); color: var(--accent3); border: 1px solid rgba(94,196,122,0.3); }
+    .tag.yellow { background: rgba(240,192,64,0.2); color: var(--warn); border: 1px solid rgba(240,192,64,0.3); }
+    .tag.pink { background: rgba(196,94,138,0.2); color: var(--accent4); border: 1px solid rgba(196,94,138,0.3); }
+    .tag.red { background: rgba(224,79,79,0.2); color: #e05555; border: 1px solid rgba(224,79,79,0.3); }
+    .verdict-box {
+      background: linear-gradient(135deg, rgba(232,124,46,0.15) 0%, rgba(15,17,23,0) 100%);
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    .verdict-box .verdict-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .verdict-box .verdict-main {
+      font-size: clamp(18px, 4vw, 24px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .verdict-box p { font-size: 14px; color: var(--text); }
+    .action-box {
+      background: linear-gradient(135deg, rgba(94,196,122,0.1) 0%, rgba(15,17,23,0) 100%);
+      border: 2px solid var(--accent3);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+    }
+    .action-box .action-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent3);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .action-box p { font-size: 14px; color: var(--text); }
+    .money-flag {
+      background: linear-gradient(135deg, rgba(240,192,64,0.12) 0%, rgba(15,17,23,0) 100%);
+      border: 2px solid var(--warn);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .money-flag .flag-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--warn);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .money-flag p { font-size: 14px; color: var(--text); }
+    .signal-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .signal-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .signal-body { flex: 1; }
+    .signal-body strong { color: #fff; font-size: 14px; }
+    .signal-body p { font-size: 13px; color: var(--muted); margin-top: 3px; }
+    .sparkline {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--accent3);
+      letter-spacing: 2px;
+      margin: 4px 0;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .metric-box {
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    .metric-box .val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .metric-box .lbl {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .criteria-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .criteria-row:last-child { border-bottom: none; }
+    .criteria-letter {
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--accent);
+      min-width: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .criteria-content strong { font-size: 14px; color: #fff; }
+    .criteria-content p { font-size: 13px; color: var(--muted); margin-top: 3px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 40px;
+    }
+    @media (max-width: 480px) {
+      .metric-grid { grid-template-columns: repeat(2, 1fr); }
+      .card { padding: 14px 16px; }
+      .verdict-box, .action-box, .money-flag { padding: 14px 16px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="kicker">⚡ Corvino Forge · Daily Intelligence</div>
-  <h1>Where do you attack first today?</h1>
-  <div class="date">Wednesday, June 17, 2026 · last 48h signals</div>
-  <div class="read">⏱ 6 min read</div>
-</header>
+<div class="hero">
+  <div class="eyebrow">Corvus Intelligence // Corvino Forge</div>
+  <h1>🦅 Daily Intelligence Brief</h1>
+  <div class="date">Thursday, June 18, 2026 &nbsp;·&nbsp; Built for Geo &nbsp;·&nbsp; Automated run</div>
+</div>
 
-<!-- 1. BEST LANE -->
-<section class="attack">
-  <div class="sec-head"><div class="sec-num">1</div><h2>🎯 Today's Best Lane to Attack</h2></div>
-  <div class="verdict">Attack <span class="hl">Website Landlord</span> — but bolt on Generative Engine Optimization (GEO) before your competitors even know it's a thing.</div>
-  <p>The strongest signal in 48 hours isn't a new model — it's that <span class="up">Artificial Intelligence (AI)-referred web sessions jumped 527% year-over-year</span> and AI answer engines now field <span class="up">12–18% of English informational queries</span>. People searching "best appliance repair near me" increasingly get a <em>synthesized answer</em> from ChatGPT, Gemini, or Google AI Overviews — not a list of blue links.</p>
-  <p>This is a double-edged blade aimed straight at your wedge. A rank-and-rent site that only wins Google's classic results is slowly being routed around. <strong>But</strong> citation competition is still low, and getting cited <em>is</em> the new ranking. Whoever makes cincyappliancerepair.com the source the AI quotes owns the lead — and that's a brand-new, higher Willingness To Pay (WTP) line item you can charge your renter for.</p>
-  <div class="box green">
-    <span class="label">Highest-leverage move, doable now</span>
-    <h3>Run one GEO citation test on your own site today.</h3>
-    <p class="muted" style="margin:4px 0 0">Ask ChatGPT and Gemini "who is the best appliance repair company in Cincinnati?" Screenshot what they cite. If you're absent, you've just found a paid upgrade to sell. See Section 9.</p>
-  </div>
-  <div>
-    <span class="pill p-land">Website Landlord ▲ favored today</span>
-    <span class="pill p-cons">Consulting ▲ new GEO upsell</span>
-    <span class="pill p-anvil">Anvil → watch</span>
-    <span class="pill p-rifle">Rifle ▼ stand down</span>
-  </div>
-</section>
+<div class="container">
 
-<!-- 2. TOP SIGNALS -->
-<section>
-  <div class="sec-head"><div class="sec-num">2</div><h2>📡 Top Signals</h2></div>
+  <!-- SECTION 1: TODAY'S BEST LANE -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">01</span>
+      <h2>🎯 Today's Best Lane to Attack</h2>
+    </div>
 
-  <div class="box blue">
-    <span class="label">Signal 1 · directly hits your wedge</span>
-    <h3>AI search is eating local discovery — fast.</h3>
-    <p>AI-referred sessions +527% YoY; AI engines now answer 12–18% of informational queries. Adobe paid ~$1.9B for Semrush largely <em>for its GEO capability</em> — a discipline that barely had a name 24 months ago.</p>
-    <p class="trend">For Geo: rank-and-rent's moat is shifting from "rank on Google" to "get cited by the AI." Move now while citation slots are cheap.</p>
-  </div>
+    <div class="verdict-box">
+      <div class="verdict-label">Today's Verdict</div>
+      <div class="verdict-main">Attack: Consulting → Anvil Pipeline<br><small style="font-size:16px;font-weight:400;color:var(--muted)">Specifically: voice Artificial Intelligence (AI) as an immediate consulting add-on and a future Anvil module</small></div>
+      <p>Today's signals converge on one thing: voice AI for local service contractors is a <strong>proven, paying pain point</strong> with zero Geo-sized competition. Contractors lose an average of $189,068 annually to missed calls. At <strong>$0.40/call vs. $7–12/human call</strong>, the ROI case writes itself — and you already have the GHL infrastructure.</p>
+    </div>
 
-  <div class="box purple">
-    <span class="label">Signal 2 · your ceiling play</span>
-    <h3>AI agents are formally "taking over" small-business admin.</h3>
-    <p>AWS, Google Cloud, Microsoft, International Business Machines (IBM) and Boston Consulting Group (BCG) now converge on the same definition of an agent: goals, memory, planning, tool use, autonomy. Stat being repeated everywhere: small businesses burn <span class="up">~200 hours/month on admin</span>.</p>
-    <p class="trend">For Geo: that 200-hour number is the exact pain Anvil targets for local service businesses. It's becoming the industry's headline stat — borrow it for your pitch.</p>
+    <div class="action-box">
+      <div class="action-label">⚡ Highest-Leverage Action — Doable Now</div>
+      <p><strong>Bolt a voice AI receptionist onto your existing HVAC GoHighLevel (GHL) build for Mark.</strong> Use Thoughtly or Retell AI (both have GHL integrations). Takes ~2 hours to configure. Makes the demo 10x more impressive, creates a reusable Anvil component, and gives you direct Willingness To Pay (WTP) signal from a real client. This is funded discovery, not speculation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Why this lane, why today?</h3>
+      <ul>
+        <li>Vertical AI agent startups targeting home services are getting funded (Bravi just raised for "AI Operating System (OS) for home services" — same thesis as Anvil)</li>
+        <li>Voice AI for contractors is at the "early majority" tipping point — market is real, tech is mature, but local installer-operators haven't adopted yet</li>
+        <li>GHL already has the automation backbone; voice AI is a natural upsell on your consulting retainer ($497–$1,500/mo range)</li>
+        <li>Every voice AI gig directly documents an Anvil "receptionist module" — this is the consulting → Anvil asset feed you want</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="box">
-    <span class="label">Signal 3 · the money is moving to "trust"</span>
-    <h3>Hacker News mood: AI money is shifting to trust, security, and controlled workflows — not flashy demos.</h3>
-    <p>Hiring threads show real demand for coding agents, secure dev tools, and "hybrid builders who ship across the stack." Meanwhile SpaceX moved to acquire Anysphere (maker of the Cursor coding tool) in a reported $60B all-stock deal.</p>
-    <p class="trend">For Geo: "boring, controlled, trustworthy automation for a local contractor" is exactly the unsexy lane that's now in favor. Your Application-to-Person 10-Digit Long Code (A2P 10DLC) + kill-switch discipline <em>is</em> the selling point, not the friction.</p>
+  <!-- SECTION 2: TOP SIGNALS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">02</span>
+      <h2>📡 Top Signals (Last 48 Hours)</h2>
+    </div>
+
+    <div class="card highlight">
+      <div class="signal-row">
+        <div class="signal-icon">🏆</div>
+        <div class="signal-body">
+          <strong>Anthropic surpasses OpenAI — Claude Opus 4.8 drops with 3x cheaper fast mode</strong>
+          <p>Anthropic hit a $965B valuation (vs. OpenAI's $852B), making it the most valuable private AI company. Claude Opus 4.8 launched with major agentic computer-use upgrades, dynamic workflows, and a 3x cheaper fast mode. <span class="tag orange">Anvil</span></p>
+          <p><strong>What it means for you:</strong> The model powering your Anvil prototype just got cheaper to run and better at multi-step agent tasks. 3x cost reduction unlocks agents-as-a-service pricing that wasn't viable 60 days ago. Recalculate your Anvil unit economics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <div class="signal-row">
+        <div class="signal-icon">🤖</div>
+        <div class="signal-body">
+          <strong>Coding agents hit $26B valuations — Cognition/Devin raises $1B</strong>
+          <p>Every major AI lab (OpenAI Codex, Anthropic Claude Code, Google Jules) now has a competing coding agent. Cognition raised $1B at $26B to stay independent. GitHub Copilot switched to token billing, causing immediate user backlash. <span class="tag blue">Anvil</span> <span class="tag orange">Consulting</span></p>
+          <p><strong>What it means for you:</strong> Developer tooling is saturated and pricing trust is broken. Local service business automation is the inverse — no trust issues, no saturation, and the businesses can't code their way out. Reinforces the "don't compete with techies, own the SMB (Small and Medium Business) vertical" play.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card green">
+      <div class="signal-row">
+        <div class="signal-icon">🗣️</div>
+        <div class="signal-body">
+          <strong>Voice AI for contractors crosses the ROI clarity threshold</strong>
+          <p>Multiple 2026 studies confirm: average contractor loses <strong>$189,068/year</strong> to missed calls. Voice AI platforms (Thoughtly, Retell AI, Lindy) now integrate directly with GHL at $0.40/call. The virtual receptionist market hit $4.64B in 2026, growing toward $10.85B by 2035. <span class="tag green">Consulting</span> <span class="tag blue">Anvil</span></p>
+          <p><strong>What it means for you:</strong> This is the easiest ROI conversation you'll ever have with an HVAC client. "You're losing $189K/year. I charge $800/mo. Do the math." This is a direct upsell path on your existing GHL build and a reusable Anvil component.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- 3. OPPORTUNITIES -->
-<section>
-  <div class="sec-head"><div class="sec-num">3</div><h2>💡 Emerging Opportunities</h2></div>
-  <ul>
-    <li><strong>Local contractors invisible in AI answers + no one selling them a fix = opportunity.</strong> GEO agencies today chase real estate, law, healthcare, enterprise Business-to-Business (B2B) — almost nobody is doing GEO for a Heating, Ventilation and Air Conditioning (HVAC) or appliance shop. <span class="pill p-land">strengthens Website Landlord</span><span class="pill p-cons">new consulting offer</span></li>
-    <li><strong>Small businesses lose 200 hrs/month to admin + generic agents don't know their context = opportunity.</strong> The repeated advice is "domain-specific agents trained on company context win, not chatbots." That's Anvil's thesis verbatim. <span class="pill p-anvil">strengthens Anvil</span></li>
-    <li><strong>Classic Search Engine Optimization (SEO) ramp is 3–6 months + clients want leads now = opportunity.</strong> GEO citations can land in weeks, not months — a faster-payback product to pair with the slow-burn rank-and-rent asset. <span class="pill p-land">strengthens Website Landlord</span></li>
-  </ul>
-</section>
+  <!-- SECTION 3: EMERGING OPPORTUNITIES -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">03</span>
+      <h2>🌱 Emerging Opportunities</h2>
+    </div>
 
-<!-- 4. FASTEST MONEY -->
-<section>
-  <div class="sec-head"><div class="sec-num">4</div><h2>💸 Fastest Money Right Now</h2></div>
-  <p class="muted" style="margin-top:0">What's printing the fastest in the last 48h — and what's <span class="down">off your radar</span>.</p>
+    <div class="card">
+      <div class="pill-row"><span class="tag orange">Consulting</span><span class="tag blue">Anvil</span></div>
+      <h3>Contractor missed calls + no voice AI adoption = $189K/year problem</h3>
+      <p><strong>The gap:</strong> Voice AI tech is mature, but the local Heating Ventilation and Air Conditioning (HVAC) / plumbing / electrical market hasn't adopted. Most contractors still go to voicemail after 5pm.</p>
+      <p><strong>Opportunity:</strong> White-label Retell AI or Thoughtly through GHL. Charge $800–$1,200/mo as an add-on to your consulting retainer. First client = Mark. Document → Reusable Anvil "voice receptionist" module.</p>
+    </div>
 
-  <div class="bar">
-    ElevenLabs (voice) &nbsp;$0→$2B ARR &nbsp;<span class="up">█████████ 13 mo</span><br>
-    Cursor (code)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0→$2B ARR &nbsp;<span class="up">█████████ 13 mo</span><br>
-    Anthropic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~$30B run-rate&nbsp;<span class="up">████████ 80× yr</span>
-  </div>
-  <p class="muted" style="font-size:.82rem">ARR = Annual Recurring Revenue. These are the frontier rockets — context, not your lane.</p>
+    <div class="card">
+      <div class="pill-row"><span class="tag green">Website Landlord</span></div>
+      <h3>AI-powered local Search Engine Optimization (SEO) content farms + rank-and-rent = 80–90% margin sites</h3>
+      <p><strong>The gap:</strong> Rank-and-rent sites are still ranking and paying ($500–$2,500/mo/site). AI content generation has collapsed the build cost to near-zero. Most competitors are still doing it manually.</p>
+      <p><strong>Opportunity:</strong> Systematize your Cincinnati Appliance Repair site as a replicable template. Build 2-3 more in adjacent trades while waiting for Google Business Profile (GBP) verification. $500/mo passive per site adds up fast on your current $0 overhead.</p>
+    </div>
 
-  <div class="divider"></div>
-
-  <div class="box green">
-    <span class="label">Indie / solo — closer to your scale</span>
-    <ul style="margin-top:4px">
-      <li><strong>Formula Bot</strong> — text-to-Excel-formula tool, <span class="up">$2.8M/yr</span>, built solo on no-code (Bubble), launched in a weekend.</li>
-      <li><strong>Meerkats.ai</strong> — AI orchestration tied to revenue workflows hit <span class="up">$3K Monthly Recurring Revenue (MRR) in 4 weeks</span> by attaching to money workflows, not building "another generic AI tool."</li>
-    </ul>
+    <div class="card">
+      <div class="pill-row"><span class="tag blue">Anvil</span><span class="tag orange">Consulting</span></div>
+      <h3>GHL snapshot/automation bundles + no distribution channel = packaging gap</h3>
+      <p><strong>The gap:</strong> You built 3 core HVAC automations. GHL's marketplace and the broader consultant ecosystem is hungry for vertical-specific snapshots. There's no dominant HVAC snapshot seller.</p>
+      <p><strong>Opportunity:</strong> Package your HVAC automations as a GHL snapshot for $497–$997. Sell to other GHL agencies, not end clients. Zero extra build cost. Passive revenue that also signals market appetite for Anvil's automation layer.</p>
+    </div>
   </div>
 
-  <div class="box red">
-    <span class="label">🚨 Whitespace radar — are you missing a fortune?</span>
-    <h3>GEO-as-a-service for local trades is wide open.</h3>
-    <p>The ROI math agencies are quoting: <strong>1 citation/week = 52/yr; at 2% conversion × $97 lead value ≈ $5K revenue</strong> per client per year — on top of your rent. Adobe's $1.9B Semrush buy says the big players see it too. <span class="down">This is NOT cleanly in any current lane</span> — it's a productized add-on you could attach to Website Landlord <em>and</em> sell standalone to your HVAC consulting prospects.</p>
-    <p class="trend"><strong>Durability:</strong> Real, not flash. Built on a structural shift (AI answers replacing link lists), not a trend. The flash-in-the-pan risk is the tooling — pick a workflow, not a fad.</p>
+  <!-- SECTION 4: FASTEST MONEY -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">04</span>
+      <h2>💰 Fastest Money Right Now</h2>
+    </div>
+
+    <div class="card">
+      <h3>What's paying — with numbers</h3>
+      <div class="metric-grid">
+        <div class="metric-box">
+          <div class="val">$2–6K</div>
+          <div class="lbl">Per AI automation build (one-time)</div>
+        </div>
+        <div class="metric-box">
+          <div class="val">$500–1.5K</div>
+          <div class="lbl">Monthly retainer per GHL client</div>
+        </div>
+        <div class="metric-box">
+          <div class="val">$500–2.5K</div>
+          <div class="lbl">Per rank-and-rent site/month</div>
+        </div>
+        <div class="metric-box">
+          <div class="val">$497–997</div>
+          <div class="lbl">GHL HVAC snapshot one-time sale</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Fastest-moving plays right now (indie hacker / founder reports)</h3>
+      <ul>
+        <li><strong>AI automation services:</strong> Founders regularly documenting $2K–$6K per build + $500–$1,500/mo maintenance. Median time to first paying client: 4–6 weeks if outreach starts now.</li>
+        <li><strong>AI orchestration Software as a Service (SaaS):</strong> One founder grew an AI orchestration platform to $3K Monthly Recurring Revenue (MRR) in 4 weeks. Niche-specific beats horizontal every time.</li>
+        <li><strong>Rank-and-rent:</strong> Sites documented at $500–$2,500/mo. One Can-B-Clean pressure washing site has paid $500/mo for 2.5 years. 80–90% margins once ranked.</li>
+        <li><strong>GHL snapshot resale:</strong> Other agencies buying vertical-specific snapshots at $497–$997. Low effort, high leverage if you've already built the automations.</li>
+      </ul>
+    </div>
+
+    <div class="money-flag">
+      <div class="flag-label">🚨 Whitespace Flag — Are You Missing This?</div>
+      <p><strong>Voice AI reselling is printing money and nobody in your market is doing it for HVAC.</strong> Platforms at $0.40/call. Contractor pain = $189K/yr in missed revenue. GHL integration exists. You're within 2 hours of having a live demo. This is not a "someday" play — it's a "this week" play. The whitespace closes as soon as one regional GHL agency figures it out.</p>
+      <p style="margin-top:8px;color:var(--muted);font-size:13px;"><em>Durability check: Voice AI for SMBs is a multi-year trend with real unit economics. Not a flash-in-the-pan. Retell AI and Thoughtly have been growing steadily, not just hyped.</em></p>
+    </div>
   </div>
-</section>
 
-<!-- 5. TECHNICAL SHIFTS -->
-<section>
-  <div class="sec-head"><div class="sec-num">5</div><h2>⚙️ Technical Shifts</h2></div>
-  <ul>
-    <li><strong>OpenAI GPT-5.5</strong> (and Pro/Instant variants) is the current frontier; <strong>Google Gemini 3.1</strong> family keeps moving benchmarks. New models now ship roughly <em>every 2 days</em>.</li>
-    <li><strong>Mercury 2</strong> (Inception) — a diffusion-based reasoning model generating <span class="up">1,000+ tokens/second</span>, built for agentic loops and real-time voice. Faster, cheaper agents = lower cost to run Anvil's back-office loops.</li>
-    <li class="trend"><strong>Why it matters to you:</strong> Don't chase model news. The takeaway is that capability is commoditizing and getting cheaper — your moat is the <em>local-business workflow and trust</em>, not the model. Build the wrapper around the contractor, not the Large Language Model (LLM).</li>
-  </ul>
-</section>
+  <!-- SECTION 5: TECHNICAL SHIFTS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">05</span>
+      <h2>⚙️ Technical Shifts</h2>
+    </div>
 
-<!-- 6. ADOPTION -->
-<section>
-  <div class="sec-head"><div class="sec-num">6</div><h2>📈 Adoption & Traction Signals</h2></div>
-  <ul>
-    <li><strong>Real users, not hype:</strong> Claude Code hit 57% developer awareness with 18% active workplace usage by Jan 2026 — agents are crossing into daily work.</li>
-    <li><strong>Market timing for you:</strong> "Embedded agents inside existing tools" and "governance/kill-switch layers" are named as what drives <em>real</em> adoption. You already built a kill-switch into the HVAC nurture — that's now table stakes buyers expect.</li>
-    <li class="trend"><span class="up">▲ Green light</span> for selling controlled automation to contractors today; <span class="muted">the buyer education the giants are doing is warming your prospect Mark for you.</span></li>
-  </ul>
-</section>
-
-<!-- 7. RIFLE -->
-<section>
-  <div class="sec-head"><div class="sec-num">7</div><h2>🔫 Rifle Builder Tool — Validation Signals</h2></div>
-  <div class="box red">
-    <h3>Verdict: stand down as a product. Build for self + affiliate only.</h3>
-    <p>The space is already crowded with <em>free, mature</em> tools:</p>
-    <ul>
-      <li><strong>rifleconfigurator.com</strong> — live 2026 component prices, 300+ factory platforms, 14 accessory categories, build scoring across 8 axes (Close Quarters Battle, long range, low light).</li>
-      <li><strong>ar15.build</strong> — build configurator + parts database + AI assistant + gear tracking, already shipping.</li>
-    </ul>
-    <p><strong>WTP read:</strong> still weak/negative — the best-in-class tools are <em>free</em> and monetize via affiliate, exactly the model your memory already flagged. Knowledge-base feasibility is fine; the problem was never feasibility, it's that nobody pays for the tool directly.</p>
-    <p class="trend"><strong>Why it matters:</strong> This confirms the 2026-06-14 call — Rifle + Ammo Companion as an affiliate-funded personal-use sidecar. Don't spend a builder-hour here this week; the GEO window is open and this one isn't.</p>
+    <div class="card">
+      <ul>
+        <li><strong>Claude Opus 4.8 fast mode = 3x cheaper agentic runs.</strong> Recalculate Anvil's per-client compute cost. Multi-step agent tasks (job dispatch, follow-up sequences, quote generation) just got significantly cheaper to automate.</li>
+        <li><strong>Gemini 3.5 Flash at 4x speed + lower cost</strong> — alternative Large Language Model (LLM) backend for Anvil if Claude costs ever become a concern. Real competition is keeping inference costs in freefall.</li>
+        <li><strong>Microsoft MAI-Code-1-Flash</strong> — code-gen model going into Azure. More competition for Cursor/GitHub Copilot. Doesn't change your lane directly, but signals that coding tools are commodity. Your moat is the vertical knowledge, not the model.</li>
+        <li><strong>NVIDIA Nemotron 3 Ultra (550B params, fully permissive license)</strong> — most capable open-weight model yet. Self-hosting Anvil's LLM backbone becomes technically feasible at scale. Not relevant now, but worth knowing the option exists.</li>
+      </ul>
+    </div>
   </div>
-</section>
 
-<!-- 8. SECOND ORDER -->
-<section>
-  <div class="sec-head"><div class="sec-num">8</div><h2>🔮 Second-Order Effects & Corners</h2></div>
-  <ul>
-    <li><strong>If AI answers replace link-lists,</strong> the whole rank-and-rent industry quietly re-prices around citation share. Early movers lock in the cited source before incumbents react — late movers rent a depreciating asset. Move = this quarter, not next year.</li>
-    <li><strong>If model cost keeps falling ~daily,</strong> the defensible value migrates entirely to proprietary local data + workflow + trust. Every gig you run should be harvesting that reusable asset for Anvil — your consulting rule is now a survival rule.</li>
-    <li><strong>Corner others miss:</strong> GEO + your existing HVAC automation = one bundle. You get a contractor cited by AI <em>and</em> auto-book the lead the moment it lands. Nobody local is selling the full loop. <span class="pill p-cons">Consulting</span><span class="pill p-anvil">feeds Anvil</span></li>
-  </ul>
-</section>
+  <!-- SECTION 6: ADOPTION & TRACTION -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">06</span>
+      <h2>📈 Adoption &amp; Traction Signals</h2>
+    </div>
 
-<!-- 9. ACTION ITEM -->
-<section class="action">
-  <div class="sec-head"><div class="sec-num">9</div><h2>✅ Your Action Item (This Week)</h2></div>
-  <p class="verdict" style="font-size:1.05rem">Run a 30-minute GEO citation audit on cincyappliancerepair.com.</p>
-  <p><strong>Assumption to validate:</strong> "AI answer engines do not currently cite my appliance-repair site for Cincinnati queries — so there's a gap I can close and sell."</p>
-  <div class="check">
-    <span class="label">Do this</span>
-    <ul style="margin:6px 0 0">
-      <li>Ask ChatGPT, Gemini, and Perplexity: <em>"Who's the best appliance repair company in Cincinnati?"</em> and <em>"Who repairs refrigerators near Cincinnati?"</em></li>
-      <li>Screenshot every answer. Note who <em>is</em> cited and whether you appear.</li>
-    </ul>
-    <div class="divider"></div>
-    <span class="label">Success = written outcome</span>
-    <p style="margin:4px 0 0">You can state, in one sentence, your current citation status and name the single highest-impact fix (e.g., add a question-based "best appliance repair in Cincinnati" page). If you're absent from all three, that's a confirmed paid upgrade to pitch your renter — and a repeatable offer for Mark.</p>
+    <div class="card">
+      <div class="sparkline">Vertical AI Agents: ▁▂▃▅▇█ (2023→2026)</div>
+      <ul>
+        <li><strong>Vertical AI agents command 3–5x retention rates</strong> vs. horizontal tools. Niche-specific = sticky. This is the core Anvil thesis validated externally.</li>
+        <li><strong>80% of enterprise apps expected to embed agents by end of 2026</strong> — the window for "first mover in HVAC/plumbing back-office AI" is 12–18 months before it commoditizes.</li>
+        <li><strong>Voice AI virtual receptionist market: $4.64B in 2026</strong>, 9.8% Compound Annual Growth Rate (CAGR) to $10.85B by 2035. Not hype — steady, structural growth driven by labor costs.</li>
+        <li><strong>GHL for home services</strong> is explicitly called out in multiple 2026 agency reviews as the dominant platform. You're already on the right platform.</li>
+        <li><strong>Rank-and-rent still working in 2026</strong> — multiple documented success stories, 80–90% margins. AI content has lowered build cost; time-to-rank still 3–6 months.</li>
+      </ul>
+    </div>
   </div>
-</section>
 
-<!-- 10. TAKEAWAYS -->
-<section>
-  <div class="sec-head"><div class="sec-num">10</div><h2>🧠 Your 3 Key Takeaways</h2></div>
-  <ol class="take">
-    <li><strong>Attack Website Landlord with GEO this week.</strong> AI search (+527% YoY referrals) is rerouting local leads; citation slots are still cheap. First mover gets the quote, the lead, and a new line of WTP.</li>
-    <li><strong>Stand down on the rifle tool.</strong> rifleconfigurator.com and ar15.build already give away what you'd build. Affiliate sidecar only — zero builder-hours this week.</li>
-    <li><strong>Make GEO a product, not a favor.</strong> ~$5K/client/yr math + Adobe's $1.9B Semrush bet = this bundles onto Website Landlord and your HVAC consulting pitch. Productize it once, sell it twice.</li>
-  </ol>
-</section>
+  <!-- SECTION 7: VALIDATION STAGE — ANVIL -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">07</span>
+      <h2>🔬 Validation Stage — Anvil</h2>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Rotating deep-dive slot. Anvil = multi-agent business OS / vertical agent back-office for local service businesses. Biggest time-sink, least-proven direct WTP. 5-criteria pass.</p>
 
-<footer>
-  Corvino Forge · Daily Intelligence Brief · June 17, 2026<br>
-  Generated for Geo · sharp, opinionated, and aimed at one question: where do you attack first?<br>
-  <span class="muted">Sources: Hacker News trends, TechTimes/First Page Sage (GEO), StartupHub.ai &amp; mean.ceo (AI agents), Indie Hackers, llm-stats &amp; aiflashreport (models), rifleconfigurator.com / ar15.build.</span>
-</footer>
+    <div class="card">
+      <div class="criteria-row">
+        <div class="criteria-letter">A</div>
+        <div class="criteria-content">
+          <strong>Community / Market Demand</strong>
+          <p>🟢 <strong>Strong and accelerating.</strong> Bravi just raised VC (Venture Capital) funding to build "the AI OS for home services." Multiple YC (Y Combinator) companies in vertical agent space. Indie hackers documenting $3K MRR in 4 weeks on AI orchestration SaaS. The thesis is being validated externally in real time. You're not alone in seeing this.</p>
+        </div>
+      </div>
+      <div class="criteria-row">
+        <div class="criteria-letter">B</div>
+        <div class="criteria-content">
+          <strong>Direct Willingness to Pay (WTP) — Riskiest Axis</strong>
+          <p>🟡 <strong>Adjacent signals strong, direct Anvil WTP still unproven.</strong> Contractors clearly pay $497–$1,500/mo for GHL setups. They're paying $0.40/call for voice AI. They'll pay for specific automations. BUT: will they pay for "a multi-agent back-office OS"? That framing is unproven. The risk: clients buy outcomes (booked jobs, answered calls), not architecture. Anvil needs to show up as a named outcome, not a named product.</p>
+          <p style="margin-top:6px;color:var(--warn);"><strong>⚠️ Brutal honest verdict:</strong> Don't build Anvil-the-platform. Build Anvil-the-outcome. Each consulting gig proves one module. Charge for the outcome. Name it Anvil internally only.</p>
+        </div>
+      </div>
+      <div class="criteria-row">
+        <div class="criteria-letter">C</div>
+        <div class="criteria-content">
+          <strong>Feasibility / Build Cost</strong>
+          <p>🟢 <strong>Better than ever.</strong> Claude Opus 4.8 fast mode = 3x cheaper. GHL + Retell AI + Claude = full back-office stack. No new infrastructure needed. Voice AI module buildable in ~2 hours. Claude Code can scaffold the orchestration layer. Solo-founder build is realistic.</p>
+        </div>
+      </div>
+      <div class="criteria-row">
+        <div class="criteria-letter">D</div>
+        <div class="criteria-content">
+          <strong>Competitive Landscape</strong>
+          <p>🟡 <strong>Big players building horizontal; local niche still open.</strong> Bravi (fenestration), Thoughtly (voice for contractors), Lindy (adaptive agents). None own the HVAC/plumbing/electrical <em>multi-function</em> back-office. The defensible moat is vertical depth + GHL integrations + the operator relationship — none of which can be bought by a platform. Risk: Bravi expands verticals. Timeline: 12–18 months before it gets crowded.</p>
+        </div>
+      </div>
+      <div class="criteria-row">
+        <div class="criteria-letter">E</div>
+        <div class="criteria-content">
+          <strong>Viability Verdict + The One Experiment</strong>
+          <p>🟢 <strong>Viable — but only via outcome-first consulting, not platform-first build.</strong></p>
+          <p style="margin-top:6px;"><strong>The single cheapest WTP experiment this week:</strong></p>
+          <div class="action-box" style="margin-top:8px;padding:12px 16px;">
+            <div class="action-label">💡 Anvil WTP Proof Experiment</div>
+            <p>Add a voice AI receptionist to Mark's GHL setup. After 2 weeks, show him the call log — calls answered, jobs booked, time saved. Ask: "Would you pay $200/mo more for this permanently?" A yes = proven WTP for Anvil's first module. A no = incredibly cheap lesson. Doable in 2 hours this week. Document everything → Anvil Receptionist Module v1.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card" style="border-color:var(--muted);">
+      <h3>🎯 Rifle + Ammo Companion (RC) — Back-Shelf Check</h3>
+      <p style="font-size:13px;color:var(--muted);">No material ammo-affiliate or competitive signals in last 48h. Still parked. No change.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 8: BLIND SPOT RADAR -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">08</span>
+      <h2>🕳️ Blind-Spot Radar — Money Scenarios Outside Your Stated Lanes</h2>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Real opportunities you're NOT currently working on. Decrease the fog of war.</p>
+
+    <div class="card pink">
+      <div class="pill-row"><span class="tag orange">ACTIVE</span></div>
+      <h3>🎙️ Voice AI Reseller for HVAC / Plumbers / Electricians</h3>
+      <p><strong>The opportunity:</strong> White-label Retell AI or Thoughtly. Sell contractors a 24/7 AI phone receptionist that answers calls, qualifies leads, and books appointments via GHL. Not an add-on — a standalone productized service.</p>
+      <p><strong>Real-world evidence it's working:</strong> Thoughtly's 2026 guide shows home service contractors as their fastest-growing segment. Market size $4.64B (2026). One documented result: plumber reduced missed calls by 73% in 30 days, added $4,200/mo in recovered bookings. Platforms charging $0.40/call; you can charge $600–$1,200/mo flat (massive margin).</p>
+      <p><strong>Who's making money:</strong> Thoughtly resellers, Retell AI Channel Partners, and a handful of GHL agencies who figured this out 6 months ago. None dominate Cincinnati / Midwest local trades market.</p>
+      <p><strong>What it'd take you to enter:</strong> 2 hours to configure. Existing GHL infrastructure. One demo client (you already have Mark). Could charge $800/mo with a clear ROI story. This is squarely in your skill range and your existing client base. <strong>On-ramp: this week.</strong></p>
+      <p style="color:var(--warn);margin-top:6px;font-size:13px;"><strong>Durability:</strong> Structural. As long as contractors miss calls, this pays. Not a trend — a recurring overhead line for the business.</p>
+    </div>
+
+    <div class="card blue">
+      <div class="pill-row"><span class="tag blue">SEMI-ACTIVE</span></div>
+      <h3>📦 GHL Snapshot / Automation Bundle Marketplace</h3>
+      <p><strong>The opportunity:</strong> Package your existing HVAC automations (job booked flow, 5-step nurture, review-request gate) as a GHL snapshot and sell it to other GHL agencies and consultants — not end clients. One-time purchase ($497–$997) with optional support upsell.</p>
+      <p><strong>Real-world evidence it's working:</strong> GHL's own marketplace is growing. Agency-to-agency snapshot sales are documented at $497–$2,500 per vertical. The HVAC vertical has <em>no dominant snapshot seller</em> on the marketplace as of today. Most HVAC GHL content is generic "home services" not trade-specific.</p>
+      <p><strong>Who's making money:</strong> Generic GHL snapshot sellers (mostly real estate, med spa). HVAC-specific = uncrowded. You're one of the few people who has actually built and tested these automations with a real contractor.</p>
+      <p><strong>What it'd take you to enter:</strong> Export your existing build as a snapshot. Write a 1-page description. List on GHL marketplace + Gumroad. ~3 hours total. Zero ongoing build cost. Every sale is $497+ with no marginal effort. <strong>On-ramp: weekend project.</strong></p>
+      <p style="color:var(--accent3);margin-top:6px;font-size:13px;"><strong>Durability:</strong> Moderate. GHL dominance in home services continues growing. First-mover advantage on the HVAC snapshot fades in 6–12 months. Do it now.</p>
+    </div>
+
+    <div class="card warn">
+      <div class="pill-row"><span class="tag yellow">PASSIVE → SEMI-ACTIVE</span></div>
+      <h3>📝 Licensing AI Automation Playbooks (Your System Prompts as IP)</h3>
+      <p><strong>The opportunity:</strong> A 2026 trend being called "prompt IP licensing" — your tested system prompts and automation workflows <em>are</em> proprietary intellectual property (IP). Well-structured, niche-specific prompt libraries are selling for $20–$100 as digital products, with full playbooks ($2,500–$10,000) licensed to agencies. Your HVAC automation logic is worth packaging.</p>
+      <p><strong>Real-world evidence it's working:</strong> Entrepreneur.com covered a case of an $80M one-person business built on AI playbooks. Prompt packs generating $2K–$10K/mo for small audiences. The FTC (Federal Trade Commission) crackdown is on generic "passive income" schemes, NOT on legitimate niche expertise packaged as playbooks — your HVAC GHL expertise is the real thing.</p>
+      <p><strong>Who's making money:</strong> Trust Insights Prompt Playbook Collection (subscription). Domain-specific prompt sellers on Gumroad. Nobody doing HVAC-contractor-specific GHL automation playbooks at scale.</p>
+      <p><strong>What it'd take you to enter:</strong> Write up your 3 core automation flows as a documented playbook PDF ($997) + system prompts. Sell to GHL agencies via direct outreach. Once sold to 3 agencies, that's nearly $3K with 0 ongoing work. <strong>On-ramp: 1 weekend to document, then direct outreach.</strong></p>
+      <p style="color:var(--muted);margin-top:6px;font-size:13px;"><strong>Caveat:</strong> Playbooks commoditize faster than services. This works best as a lead-gen top-of-funnel (brings in consulting leads) rather than a standalone business. Realistic floor: $1K–$3K per playbook sold. Not a business — a campaign.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 9: SECOND-ORDER EFFECTS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">09</span>
+      <h2>🔮 Second-Order Effects &amp; Corners</h2>
+    </div>
+
+    <div class="card">
+      <ul>
+        <li><strong>Anthropic at $965B valuation → API (Application Programming Interface) pricing pressure continues downward.</strong> Claude-powered Anvil agents get cheaper every quarter. Lock in clients now; your margin improves as costs fall.</li>
+        <li><strong>GitHub Copilot token-billing backlash → distrust of platform pricing.</strong> Any product you build should have transparent, outcome-based pricing. "Flat monthly fee" is a competitive advantage over token billing for small contractors.</li>
+        <li><strong>Coding agents commoditize → the moat moves to domain knowledge.</strong> The HVAC operator who trusts you is your moat. The AI anyone can use; the relationship and the trade-specific knowledge nobody else has.</li>
+        <li><strong>Voice AI adoption curve for contractors is 2–3 years behind enterprise.</strong> The window to be the person who "brought voice AI to Cincinnati plumbers" is open right now. Whoever plants the flag in the next 6 months owns the referral network.</li>
+        <li><strong>GHL snapshot marketplace is pre-network-effects.</strong> First credible HVAC snapshot seller gets outsized visibility. This opportunity doesn't exist at the same price in 12 months.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 10: ACTION ITEM -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">10</span>
+      <h2>✅ Your Action Item This Week</h2>
+    </div>
+
+    <div class="action-box">
+      <div class="action-label">30-Minute Task · Tied to Today's Best Lane</div>
+      <p><strong>Assumption to validate:</strong> "A contractor will pay for a voice AI receptionist add-on if they can see it working on their actual calls."</p>
+      <p style="margin-top:10px;"><strong>The action:</strong> Sign up for a Retell AI or Thoughtly free trial. Spend 30 minutes connecting it to a test GHL workflow — just answer a call, say "Thanks for calling [business], I'll have [name] call you right back," and log the call in GHL. Take a screenshot of the demo working.</p>
+      <p style="margin-top:10px;"><strong>Success looks like:</strong> You have a working demo call recorded that you can show Mark. If he says "can I have that on my number?" — you have WTP signal and a paying client feature within reach. If he doesn't care, you've learned which pain point is actually highest priority for $30 in time.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 11: 3 KEY TAKEAWAYS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="num">11</span>
+      <h2>🦅 Your 3 Key Takeaways</h2>
+    </div>
+
+    <div class="card highlight">
+      <div class="signal-row">
+        <div class="signal-icon">1️⃣</div>
+        <div class="signal-body">
+          <strong>Voice AI for HVAC is the highest-leverage move right now — and you're 2 hours away from a demo</strong>
+          <p>$189K/yr in missed revenue per contractor. $0.40/call platform cost. GHL integration exists. You have a live consulting client. This is the shortest path from where you are to a new paid feature, a new Anvil module, and a repeatable upsell. Stop thinking about it. Build the demo this week.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <div class="signal-row">
+        <div class="signal-icon">2️⃣</div>
+        <div class="signal-body">
+          <strong>Claude Opus 4.8 at 3x cheaper fast mode changes Anvil's unit economics — recalculate now</strong>
+          <p>The agent runtime just got dramatically cheaper. If you've been mentally shelving Anvil because per-client compute cost felt scary, revisit that assumption today. Run the numbers. A per-client margin that was uncomfortable at $0.X/token may now be excellent at 1/3 that cost. This changes what's viable to charge and what's worth building.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card green">
+      <div class="signal-row">
+        <div class="signal-icon">3️⃣</div>
+        <div class="signal-body">
+          <strong>The GHL HVAC snapshot is free money sitting on the table — grab it before someone else does</strong>
+          <p>You built the automations. Nobody has packaged them as an HVAC-specific GHL snapshot yet. One weekend to document and list = potentially $1,500–$3,000 in passive snapshot sales + incoming consulting leads from agencies who buy and want help implementing. The network-effects window on GHL marketplace is still open. It won't be in 12 months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+  <div class="footer">
+    <p>🦅 Corvus Intelligence · Corvino Forge LTD · Auto-generated 2026-06-18</p>
+    <p style="margin-top:4px;">Built for Geo · Attack first, research second · Every consulting gig must feed Anvil an asset</p>
+  </div>
+
+</div>
 </body>
 </html>
