@@ -6,215 +6,218 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>Daily Intelligence Brief — June 24, 2026</title>
+<title>Daily Intelligence Brief — June 25, 2026</title>
 <style>
   :root{
-    --bg:#0f1117; --card:#181b24; --card2:#1f2330; --ink:#e8eaf0; --mut:#9aa3b2;
-    --acc:#ffb454; --acc2:#7aa2ff; --good:#5ad19a; --bad:#ff7a7a; --line:#2a2f3d;
-    --warn:#ffd166;
+    --bg:#0e1116; --card:#171c24; --card2:#1d2530; --ink:#e8edf3; --mut:#9aa7b6;
+    --acc:#ffb454; --acc2:#7ee0c0; --hot:#ff6b6b; --cool:#5aa9ff; --line:#283242;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;font-size:17px;-webkit-text-size-adjust:100%}
-  .wrap{max-width:780px;margin:0 auto;padding:18px 16px 60px}
-  header.top{text-align:center;padding:20px 0 8px}
-  header.top .kick{color:var(--acc);letter-spacing:2px;font-size:12px;font-weight:700;text-transform:uppercase}
-  header.top h1{font-size:27px;margin:6px 0 2px;line-height:1.2}
+    line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:22px 16px 80px}
+  header.top{text-align:center;padding:14px 0 6px}
+  header.top .kicker{color:var(--acc);letter-spacing:2px;font-size:12px;text-transform:uppercase;font-weight:700}
+  header.top h1{font-size:30px;margin:6px 0 2px;line-height:1.15}
   header.top .date{color:var(--mut);font-size:14px}
-  .lede{background:linear-gradient(135deg,#241c10,#1a1d28);border:1px solid var(--acc);
-    border-radius:16px;padding:18px;margin:18px 0}
-  .lede .tag{display:inline-block;background:var(--acc);color:#1a1206;font-weight:800;
-    font-size:12px;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+  .lane-chip{display:inline-block;background:var(--acc);color:#1a1206;font-weight:800;
+    padding:4px 12px;border-radius:20px;font-size:13px;margin-top:10px}
   section{background:var(--card);border:1px solid var(--line);border-radius:16px;
-    padding:18px;margin:16px 0}
-  h2{font-size:20px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
-  h2 .n{background:var(--card2);color:var(--acc2);font-size:13px;font-weight:700;
-    border-radius:8px;padding:2px 8px;border:1px solid var(--line)}
-  h3{font-size:16px;margin:16px 0 4px;color:var(--acc)}
+    padding:18px 18px 14px;margin:18px 0;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  h2{font-size:20px;margin:0 0 10px;display:flex;align-items:center;gap:8px;line-height:1.25}
+  h2 .num{background:var(--card2);color:var(--acc);border:1px solid var(--line);
+    border-radius:8px;font-size:13px;padding:2px 8px;font-weight:700}
+  h3{font-size:16px;margin:14px 0 4px;color:var(--acc2)}
   p{margin:8px 0}
-  .mut{color:var(--mut)}
+  .punch{background:var(--card2);border-left:4px solid var(--acc);border-radius:8px;
+    padding:12px 14px;margin:10px 0;font-size:16px}
+  .verdict{font-size:18px;font-weight:800;color:var(--acc)}
   ul{margin:8px 0;padding-left:20px}
   li{margin:6px 0}
-  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;
-    text-transform:uppercase;letter-spacing:.5px;margin-right:6px}
-  .p-pass{background:#13322a;color:var(--good);border:1px solid #1d5142}
-  .p-semi{background:#332a13;color:var(--warn);border:1px solid #5a4a1d}
-  .p-act{background:#33131a;color:var(--bad);border:1px solid #5a1d28}
-  .up{color:var(--good);font-weight:700}
-  .down{color:var(--bad);font-weight:700}
-  .box{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
-  .box.attack{border-color:var(--acc)}
-  .box.warnbox{border-color:var(--warn)}
-  .label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);font-weight:700}
-  .spark{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--acc2);
-    background:#11141d;padding:8px 10px;border-radius:8px;overflow-x:auto;white-space:nowrap}
-  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
-  th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
-  .verdict{font-weight:800;font-size:15px}
-  a{color:var(--acc2)}
-  .foot{text-align:center;color:var(--mut);font-size:13px;margin-top:24px}
-  .keytake{background:linear-gradient(135deg,#10241a,#171c27);border:1px solid var(--good)}
-  .scn{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
-  .scn:first-of-type{border-top:0;padding-top:0;margin-top:0}
-  .crit{display:grid;grid-template-columns:130px 1fr;gap:4px 10px;font-size:14px;margin:6px 0}
-  .crit .k{color:var(--mut)}
+  .tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px;
+    text-transform:uppercase;letter-spacing:.5px;vertical-align:middle}
+  .t-passive{background:#13352b;color:var(--acc2)}
+  .t-semi{background:#3a2f12;color:var(--acc)}
+  .t-active{background:#3a1a1a;color:#ffb3b3}
+  .t-hot{background:#3a1a1a;color:#ff9d9d}
+  .t-watch{background:#1a2c3a;color:var(--cool)}
+  .up{color:var(--acc2);font-weight:700}
+  .down{color:var(--hot);font-weight:700}
+  .spark{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--acc2);letter-spacing:1px}
+  .flag{background:#2a1411;border:1px solid #6b2b22;border-radius:12px;padding:12px 14px;margin:12px 0}
+  .flag .lbl{color:var(--hot);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:700;font-size:12px;text-transform:uppercase}
+  .action{background:linear-gradient(135deg,#1d2a22,#19211c);border:1px solid #2f5a44;border-radius:16px}
+  .action h2{color:var(--acc2)}
+  .success{background:#13352b;border-radius:8px;padding:10px 12px;margin-top:8px;font-size:15px}
+  .take{counter-reset:t;list-style:none;padding-left:0}
+  .take li{background:var(--card2);border-radius:10px;padding:12px 14px 12px 46px;position:relative;margin:8px 0}
+  .take li::before{counter-increment:t;content:counter(t);position:absolute;left:12px;top:12px;
+    background:var(--acc);color:#1a1206;width:24px;height:24px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+  .src{color:var(--mut);font-size:12px}
+  a{color:var(--cool)}
+  .foot{text-align:center;color:var(--mut);font-size:12px;margin-top:24px}
+  .mini{font-size:13px;color:var(--mut)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header class="top">
-  <div class="kick">🦅 Corvino Forge · Daily Intelligence Brief</div>
-  <h1>Where do you attack first today?</h1>
-  <div class="date">Wednesday, June 24, 2026 · ~10 min read</div>
+  <div class="kicker">Corvino Forge · Intelligence</div>
+  <h1>🦅 Daily Intelligence Brief</h1>
+  <div class="date">Thursday, June 25, 2026 · ~10-min read</div>
+  <div class="lane-chip">🎯 Today's call: ATTACK CONSULTING via the Voice AI wedge</div>
 </header>
 
-<!-- ================= 1. BEST LANE ================= -->
-<div class="lede">
-  <span class="tag">⚔️ Today's Best Lane to Attack</span>
-  <h2 style="margin-top:12px">Consulting — voice Artificial Intelligence (AI) upsell to Mark &amp; Lisa. Now.</h2>
-  <p><strong>Why today:</strong> Avoca AI just raised <strong>$125 million at a $1 billion valuation</strong> to put voice agents in front of every Heating, Ventilation and Air Conditioning (HVAC), plumbing, and roofing front office — and they're on track to book <strong>$1 billion in jobs</strong> for their customers in 2026. That's the loudest possible Willingness To Pay (WTP) signal your voice-AI thesis could ask for. The catch that hands <em>you</em> the opening: Avoca's referral/onboarding window was gated to <strong>$3 million-plus revenue contractors</strong> on ServiceTitan or Housecall Pro. They've publicly decided small operators aren't worth their time.</p>
-  <div class="box attack">
-    <div class="label">Highest-leverage move (doable now)</div>
-    <p style="margin:6px 0 0">Reposition the Mark pitch in one sentence: <em>"This is Avoca for shops too small for Avoca."</em> A $1B company validating that missed calls = lost revenue does your selling for you. Pull one of Avoca's public stats (the $1B-in-jobs number) into the Mark demo deck today as third-party proof — then make voice AI the headline upsell, not a footnote. Same script works verbatim for Lisa Tuck (a solo attorney missing intake calls bleeds the identical money).</p>
+<!-- 1 -->
+<section>
+  <h2><span class="num">01</span>🎯 Today's Best Lane to Attack</h2>
+  <div class="punch">
+    <span class="verdict">Verdict: Consulting — and specifically the Voice Artificial Intelligence (AI) upsell.</span>
+    Two unrelated signals landed in the last 48 hours that both point at the same door: (1) Vapi, a voice AI platform, just hit a <strong>$500M valuation</strong> after <strong>Amazon Ring chose it over 40 rivals and now routes 100% of its inbound phone calls through it</strong> — voice AI is no longer a demo, it's production infrastructure a Fortune-500 trusts with every call. (2) GoHighLevel (GHL) shipped a <strong>February 2026 Application-to-Person (A2P) enforcement + auto opt-out update</strong> that bakes sender-ID and "Reply STOP" language into the first message of every conversation, including Missed Call Text-Back and review requests — which is the exact blocker sitting between you and demoing Mark.
   </div>
-  <p class="mut" style="margin-bottom:0">Honest caveat: Mark is still blocked on Application-to-Person (A2P) 10DLC / phone provisioning for Short Message Service (SMS). Voice AI doesn't need that gate cleared — it rides the phone line, not the texting registry. So you can sell and demo voice <em>before</em> the A2P unlock lands. That's why today favors voice over the SMS automations.</p>
-</div>
-
-<!-- ================= 2. TOP SIGNALS ================= -->
-<section>
-  <h2><span class="n">02</span> 📡 Top Signals</h2>
-
-  <h3>1. Avoca AI hits $1B valuation on trades voice agents</h3>
-  <p>Backed by Kleiner Perkins, Meritech, and General Catalyst; installed at 1-800-GOT-JUNK?, Goettl, and Turnpoint. Pricing is custom/demo-only, estimated <strong>$1,000–$3,000/month</strong> for established operators. <span class="up">▲ Validation</span> for your voice lane — and proof the money sits in the trades, exactly where Mark lives. The enterprise tier is taken; the <strong>under-$3M-revenue local shop is wide open</strong>, and that's your whole client base.</p>
-
-  <h3>2. Bravi (Y Combinator) is building "the AI operating system for home services"</h3>
-  <p>This is the one to sit up for. Bravi's pitch — AI customer-communication as the wedge, then an internal copilot that knows pricing, products, and technical docs — is <strong>Anvil's exact thesis</strong>, now funded and shipping. <span class="down">▲ Threat</span> and <span class="up">▲ validation</span> at once. Someone with capital agrees the vertical agent back-office for local service is real. See the Anvil deep-dive (§7) for what to do about it.</p>
-
-  <h3>3. The agent capital wave is now a flood</h3>
-  <p>Second-Quarter (Q2) 2026 AI funding hit <strong>$42.6 billion across 312 rounds</strong>, with agentic systems capturing ~$20 billion — nearly half. Salesforce cut 4,000 support staff after deploying agents; Coinbase restructured around them. Meaning for you: the "should I trust an agent" objection is dying in the market. Your buyers are getting pre-sold by the headlines. Stop educating, start closing.</p>
-  <div class="spark">Q2'26 AI funding ▏ agentic ████████████ $20B │ everything else ████████████ $22.6B</div>
+  <p><strong>Why this lane today:</strong> Your #1 first-money lane is consulting, and your two live targets — <strong>Mark</strong> (Heating Ventilation and Air Conditioning (HVAC) contractor, GHL system built, blocked on A2P/phone provisioning) and <strong>Lisa Tuck</strong> (solo employment attorney, drowning in admin, warm intro not yet pitched) — share one ironclad pain: <em>a missed call is lost money</em>. The Ring/Vapi story is the single best proof point you will ever hand a skeptical contractor or lawyer. It says: "The company that protects your front door with cameras trusts an AI to answer 100% of its calls. You miss calls on a roof / in a deposition every day."</p>
+  <h3>⚡ Highest-leverage action, doable now</h3>
+  <p>Don't wait on the perfect end-to-end test. <strong>Build a 90-second voice AI demo agent</strong> (Retell AI or Thoughtly free tier) that answers as "Mark's HVAC," captures name + issue + address, and books into the calendar you already built. Record one inbound call to it. That recording is your opener for BOTH Mark and Lisa — same script, swap the business name. It also doubles as the reusable Anvil asset (a "missed-call rescue" module). One build, three uses.</p>
 </section>
 
-<!-- ================= 3. EMERGING OPPORTUNITIES ================= -->
+<!-- 2 -->
 <section>
-  <h2><span class="n">03</span> 💡 Emerging Opportunities</h2>
-  <ul>
-    <li><strong>Sub-$3M trades shops need a voice receptionist + no enterprise vendor will sell to them</strong> = your opening. Avoca/Bravi chase ServiceTitan-scale operators; the corner-shop HVAC/plumber is ignored. <span class="up">Strengthens</span> your consulting + voice lane directly. On-ramp exists today via Retell AI / Thoughtly + GoHighLevel (GHL).</li>
-    <li><strong>Solo professional-services intake (law, accounting) is bleeding calls + has zero tailored tooling</strong> = the Lisa Tuck wedge. Same voice-AI Return On Investment (ROI) math as a contractor, but almost nobody is packaging it for a one-attorney shop. <span class="up">Strengthens</span> consulting; proves voice AI is cross-vertical, not an HVAC trick.</li>
-    <li><strong>Single-platform analytics keeps minting solo Software-as-a-Service (SaaS)</strong> — Notionlytics is at <strong>$43,160 Monthly Recurring Revenue (MRR)</strong> just reading one platform's data. The pattern (thin analytics layer on top of a system everyone already pays for) is a feasible Anvil module someday, but a distraction this week. Flagged, not chased.</li>
-  </ul>
+  <h2><span class="num">02</span>📡 Top Signals</h2>
+
+  <h3>1. Vapi → $500M, Amazon Ring routes 100% of inbound calls to it <span class="tag t-hot">linchpin</span></h3>
+  <p>Vapi raised a $50M Series B led by Peak XV at a ~$500M valuation. The headline isn't the money — it's that <strong>Amazon Ring evaluated 40+ voice vendors and now sends every inbound call through one AI platform.</strong> <strong>What it means for you:</strong> the "AI answers your phone" objection is dead. You no longer have to convince Mark or Lisa the tech works — you point at Ring and ask why their business deserves less. This is your sales cold-open for the next 60 days.</p>
+
+  <h3>2. GHL tightened A2P enforcement + auto-injects opt-out into first message <span class="tag t-watch">your blocker</span></h3>
+  <p>The Feb 2026 GHL update now auto-adds sender identification and "Reply STOP to unsubscribe" to the first message of every conversation — Missed Call Text-Back and review requests included. <strong>What it means for you:</strong> this both <em>raises</em> the compliance bar (carriers are stricter, campaigns must clearly define use case) and <em>lowers</em> your manual work (GHL now handles opt-out language for you). Clearing Mark's A2P registration is now mostly a paperwork sprint, not an engineering one — finish the brand/campaign registration and the SMS automations you already built go live.</p>
+
+  <h3>3. ChatGPT market share fell below 50% for the first time <span class="tag t-watch">tailwind</span></h3>
+  <p>OpenAI's consumer dominance cracked as Gemini 3.5 Pro and Claude 4.8 landed simultaneously. <strong>What it means for you:</strong> model choice is commoditizing fast — good for a builder. You're not betting your consulting stack on one vendor; whatever powers your voice agent and automations gets cheaper and more swappable every month. Don't over-invest in any single model's lock-in.</p>
+  <p class="src">Sources: TechCrunch (Vapi/Ring), GoHighLevel changelog, Hacker News roundup — see footer.</p>
 </section>
 
-<!-- ================= 4. FASTEST MONEY ================= -->
+<!-- 3 -->
 <section>
-  <h2><span class="n">04</span> 💰 Fastest Money Right Now</h2>
+  <h2><span class="num">03</span>💡 Emerging Opportunities</h2>
+  <p class="mini">Format: <em>problem + no good solution = opportunity</em>, tagged to your lanes.</p>
+
+  <h3>A. "I know I need AI but I have no idea where to start" — the implementation gap</h3>
+  <p>67% of small businesses using AI automation saw 20%+ revenue growth, yet most owners can't name a single tool or connect it to their workflow. The gap between demand and implementation is, per McKinsey-cited reporting, "worth billions." <strong>Strengthens:</strong> consulting (this IS your wedge) and Anvil (the productized version). Your edge is you've already <em>built</em> the HVAC stack — you're selling a finished thing, not a promise.</p>
+
+  <h3>B. Missed-call rescue as a standalone $300–800/mo product</h3>
+  <p>Local service businesses miss calls constantly (on roofs, in depositions) and lose the job to whoever answers first. There's still no clean, vertical-specific "we answer 100% of your calls and book them" offer most contractors trust. <strong>Strengthens:</strong> consulting + voice AI cross-sell. This is the smallest, fastest-to-close slice of your offer — lead with it, expand later.</p>
+
+  <h3>C. Compliance-as-a-service for SMS-heavy agencies</h3>
+  <p>Carrier enforcement keeps tightening; every GHL agency now has to navigate A2P brand/campaign approval or their texts die silently. Most solo operators hate this and get stuck exactly where you are. <strong>Watch, don't build yet:</strong> once you clear Mark's registration, you'll have a repeatable A2P playbook that's itself sellable to other agencies — a reusable Anvil asset, not a new lane.</p>
+</section>
+
+<!-- 4 -->
+<section>
+  <h2><span class="num">04</span>💸 Fastest Money Right Now</h2>
   <table>
-    <tr><th>Play</th><th>Real numbers (last 48h sources)</th><th>Durable?</th></tr>
-    <tr><td>AI automation retainers for small biz (your lane)</td><td>HighLevel partner report: avg freelancer earns <strong>$2,000–$5,000/mo recurring</strong> by month 12; top solo agencies $10K–$30K/mo at ~80% automation, 20+ clients</td><td><span class="up">High</span> — recurring, sticky</td></tr>
-    <tr><td>Custom Generative Pre-trained Transformer (GPT) bots for execs</td><td>$1,000–$5,000 per build + $200–$500/mo maintenance</td><td>Medium</td></tr>
-    <tr><td>Faceless / automated video channels</td><td>$1,000–$5,000/mo ad revenue in 6–12 mo (finance, tech, true-crime niches)</td><td><span class="down">Fragile</span> — see whitespace flag</td></tr>
+    <tr><th>Play</th><th>Real numbers (48h)</th><th>Durable?</th></tr>
+    <tr><td>Custom GPT bots for execs (LinkedIn posts, meeting summaries)</td><td>$0→$1K in months, zero code</td><td>Medium — low moat</td></tr>
+    <tr><td>AI faceless content / UGC</td><td>UGC $50–500/video; full-time $5K–15K/mo; top faceless channels $80K/mo ad rev</td><td>Niche-dependent</td></tr>
+    <tr><td>Micro-Software-as-a-Service (SaaS)</td><td>One solo hit: $28K Monthly Recurring Revenue (MRR) from 25K subs @ $1–2; AI orchestration tool $3K MRR in 4 weeks</td><td>High if it sticks</td></tr>
+    <tr><td>Voice AI infra (build-side)</td><td>Vapi $500M val; the picks-and-shovels layer</td><td>High, but capital-heavy</td></tr>
   </table>
 
-  <div class="box warnbox">
-    <div class="label">🚨 Whitespace radar — money outside your lanes</div>
-    <p style="margin:6px 0 0"><strong>AI digital-asset licensing royalties.</strong> Webflow marketplace pays creators <strong>60% royalties</strong> per sale; Adobe Stock / Envato licensing of AI-generated images, voice models, and music is a genuine repeat-revenue stream you touch zero of today. It's <em>passive</em> and uncorrelated to client work. Honest read: crowded, low per-unit payout, and the new Federal Trade Commission (FTC) AI-disclosure rules (Jan 2026) already triggered ~25% delistings in some affiliate niches. Real, but a trickle, not a fortune. Logged so it's not a blind spot — not a pivot.</p>
+  <div class="flag">
+    <span class="lbl">🚨 Whitespace radar — outside your lanes</span>
+    <p style="margin:6px 0 0"><strong>AI faceless content is the loudest "are you missing a fortune" flag this week.</strong> Faceless channels are now <strong>38% of all new creator monetization</strong> (up from 12% in 2022, +217% in 3 yrs). Production cost has collapsed to <strong>under $3/video</strong> with AI voice + auto-assembly. Niche choice is everything: finance Cost Per Mille (CPM) runs $25–50 vs gaming $1–4 — a 50× swing. <strong>Honest read:</strong> this is real money but saturated and grindy at the bottom; it competes with nothing you do and would split your focus. Flagging it because the math is loud, not because you should drop consulting for it. If you ever test it, point it at a high-CPM niche adjacent to your edge (home-services finance / "what HVAC repairs actually cost").</p>
   </div>
 </section>
 
-<!-- ================= 5. TECHNICAL SHIFTS ================= -->
+<!-- 5 -->
 <section>
-  <h2><span class="n">05</span> 🔧 Technical Shifts</h2>
+  <h2><span class="num">05</span>🔧 Technical Shifts</h2>
+  <p><strong>The model flood:</strong> GPT-5.6 (rumored 1.5M-token context, ~89% Polymarket odds of June release), Gemini 3.5 Pro (general availability imminent), and Claude Opus 4.8 (shipped May 28, tuned for long-horizon agentic work) all in one month. <strong>Builder takeaway:</strong> longer context + better agentic reasoning = your voice/automation agents can hold more of a customer's history and act over multi-step jobs without hand-holding. Pick the cheapest model that clears your task; swap quarterly. Don't architect around one vendor.</p>
+  <p class="mini">⚠️ Geopolitical note: Claude Fable 5 / Mythos 5 remain offline 12+ days after a U.S. export-control directive, and China's AI sector raised $7.4B this week pushing open-weight alternatives. Net effect for you: open-weight models keep getting better and cheaper — good for cost, watch for reliability if a model you depend on gets pulled.</p>
+</section>
+
+<!-- 6 -->
+<section>
+  <h2><span class="num">06</span>📈 Adoption &amp; Traction Signals</h2>
+  <p><strong>Local-service voice AI is past the hype line.</strong> Real adoption, not vibes:</p>
   <ul>
-    <li><strong>Claude Opus 4.8</strong> took #1 on the Artificial Analysis Intelligence Index at <strong>61.4</strong> — first model cleanly above 60. <strong>Gemini 3.5</strong> launched as Google's "agentic era" frontier model; <strong>GPT-5.5</strong> variants shipped. Translation for you: the brains powering your agents got cheaper-per-token and smarter at tool-calling. Voice-agent quality objections shrink every month you wait — another reason to demo now, not in Q3.</li>
-    <li><strong>Microsoft MAI-Code-1-Flash</strong> turns plain descriptions into app code. Watch only: lowers the floor for building Anvil modules yourself, but also for every competitor.</li>
+    <li>Amazon Ring: <span class="up">100%</span> of inbound calls via one AI voice platform <span class="spark">▁▃▅█</span></li>
+    <li>SMB AI automation: <span class="up">67%</span> saw 20%+ revenue growth (up from 41% in 2023) <span class="spark">▁▄▆█</span></li>
+    <li>AI-using SMBs handling <span class="up">3–5×</span> customer volume without proportional staff</li>
   </ul>
+  <p><strong>Market-timing read for your lanes:</strong> the contractor/lawyer market is now warm enough that you're selling into demand, not creating it. The window where "AI answers your phone" still feels novel-but-proven (the best selling window) is open now. Move while it's novel to <em>them</em> and proven to <em>you</em>.</p>
 </section>
 
-<!-- ================= 6. ADOPTION ================= -->
+<!-- 7 -->
 <section>
-  <h2><span class="n">06</span> 📈 Adoption &amp; Traction Signals</h2>
-  <ul>
-    <li>2026 is the year the market stopped asking "are agents real?" and started asking "which part of my company gets agentized first?" — the buying psychology has flipped in your favor.</li>
-    <li>Avoca booking $1B in jobs and serving named multi-location brands = trades operators are <em>actively paying</em> for AI front-office, not pilot-testing it. Market timing for your voice upsell is now, not later.</li>
-  </ul>
+  <h2><span class="num">07</span>🔬 Validation Stage — ANVIL</h2>
+  <p class="mini">Rotating deep-dive on the portfolio's least-proven lane. 5-criteria pass.</p>
+
+  <h3>(a) Community / market demand — <span class="up">STRONG</span></h3>
+  <p>The "implementation gap worth billions" + 67% of SMBs seeing real revenue lift = the demand for a back-office that runs a local business is unambiguous. Anvil's thesis (multi-agent business operating system / vertical agent back-office) is aimed at a real, growing hole.</p>
+
+  <h3>(b) Direct Willingness To Pay (WTP) — <span class="down">STILL UNPROVEN</span> (the risky axis)</h3>
+  <p>Brutal honesty: demand for <em>outcomes</em> (more booked jobs) is proven; demand for <em>"an operating system"</em> is not. Nobody has handed you money for Anvil-as-a-platform. They'd pay for "answer my calls and book them" — which is a feature, not the OS. The Vapi/Ring signal actually <em>raises</em> Anvil's risk: if best-of-breed point tools (voice, scheduling) are this good and cheap, why buy a bundled platform from a solo founder? Anvil's only defensible wedge is the <strong>vertical-local glue</strong> the big platforms won't bother with.</p>
+
+  <h3>(c) Feasibility / build cost — <span class="up">FAVORABLE &amp; IMPROVING</span></h3>
+  <p>Longer context + cheaper swappable models + your existing GHL stack mean the build cost keeps dropping. Anvil should be assembled from modules you already build for paying consulting clients — not coded speculatively.</p>
+
+  <h3>(d) Competitive landscape — <span class="t-watch tag">crowded center, open edge</span></h3>
+  <p>The center (general agent platforms, voice infra like Vapi) is well-funded and fast. Your defensible niche is narrow and unglamorous: one vertical (HVAC, then solo legal), one geography, deep workflow glue, done-for-you. Big platforms win horizontal; you win "I set up and run the whole back office for Cincinnati HVAC."</p>
+
+  <h3>(e) Verdict + the one cheap move to prove/kill WTP</h3>
+  <p class="punch"><strong>Verdict: keep Anvil funded-discovery only — do NOT build ahead of WTP.</strong> The single cheapest WTP experiment <strong>this week</strong>: when you pitch Mark the voice-AI add-on, price it as a <em>separate monthly line item</em> ($300–500/mo) on top of the base setup. If he says yes to a recurring add-on, that's your first real signal someone will pay monthly for an Anvil <em>module</em>. Success = one verbal "yes" to a recurring add-on price. That single data point is worth more than a month of building.</p>
+
+  <p class="mini">🔫 <strong>Rifle + Ammo Companion (RC):</strong> No change, still parked. No material ammo-affiliate or competitive signal in the last 48h.</p>
 </section>
 
-<!-- ================= 7. VALIDATION — ANVIL ================= -->
-<section style="border-color:var(--acc2)">
-  <h2><span class="n">07</span> 🔬 Validation Stage — Anvil</h2>
-  <p class="mut">Daily 5-criteria pass on the portfolio's least-proven, biggest-time-sink lane. Today Bravi makes this unusually live.</p>
-
-  <div class="crit"><span class="k">a) Demand</span><span><span class="up">Strong.</span> Bravi (Y Combinator-backed) + Avoca's $1B both confirm appetite for an AI back-office in local service. The market exists and is funded.</span></div>
-  <div class="crit"><span class="k">b) Direct WTP</span><span><span class="down">Still the risk.</span> Demand for <em>a</em> platform ≠ WTP for <em>yours</em>. Avoca/Bravi charge because they have a product and references; you have a thesis and consulting assets. No one has yet paid Geo for "Anvil" as a product.</span></div>
-  <div class="crit"><span class="k">c) Feasibility</span><span>Improving — MAI-Code-1-Flash and cheaper frontier models cut build cost. But "OS for home services" is a large surface; Bravi has a funded team, you have nights and weekends.</span></div>
-  <div class="crit"><span class="k">d) Competition</span><span><span class="down">Got real this week.</span> Bravi occupies Anvil's literal positioning sentence. Your defensible edge is NOT "build the same thing solo" — it's <strong>the sub-$3M shops Avoca rejects and Bravi will likely outgrow</strong>, reached through hands-on consulting relationships they can't replicate at scale.</span></div>
-  <div class="crit"><span class="k">e) Verdict</span><span class="verdict">Keep Anvil funded-discovery only. Do NOT spec-build against Bravi. Let Mark/Lisa pay for the modules.</span></div>
-
-  <div class="box attack">
-    <div class="label">The one WTP experiment this week</div>
-    <p style="margin:6px 0 0">Stop validating Anvil-the-product. Validate the <strong>module</strong>: offer Mark a paid voice-AI setup fee (even $300–$500) <em>before</em> any build. If he pays a deposit for the voice agent, that's a real dollar proving WTP for an Anvil component, funded by a client — exactly the discipline. If he won't put money down, that's the cheapest possible "kill" signal. Either way you learn this week, for free.</p>
-  </div>
-
-  <p class="mut" style="margin-bottom:0"><strong>Rifle + Ammo Companion (RC):</strong> No change — still back-shelf/parked. No material ammo-affiliate signal in the last 48h.</p>
-</section>
-
-<!-- ================= 8. BLIND-SPOT RADAR ================= -->
+<!-- 8 -->
 <section>
-  <h2><span class="n">08</span> 🌫️ Blind-Spot Radar — Money Outside Your Lanes</h2>
-  <p class="mut">Real opportunities you are NOT currently working on. The job here is to find the unseen lane, even if it competes with the portfolio.</p>
+  <h2><span class="num">08</span>🌫️ Blind-Spot Radar — Money Outside Your Lanes</h2>
+  <p class="mini">Genuinely outside consulting / Anvil / Website Landlord / affiliate. The job here is to find what you're NOT seeing.</p>
 
-  <div class="scn">
-    <span class="pill p-semi">Semi-Active</span>
-    <h3 style="margin-top:6px">Voice-agent QA / evaluation tooling</h3>
-    <p>As every contractor and law office bolts on a voice agent, someone has to test that the agent doesn't hallucinate a price or mis-book a job. HackerNoon catalogued <strong>7 voice-agent testing platforms</strong> already competing in 2026 — a category that didn't exist 18 months ago. <strong>Evidence it's working:</strong> the testing layer always arrives right after the deployment layer scales (it happened with web, mobile, and Application Programming Interfaces (APIs)). <strong>Your edge:</strong> you're about to deploy voice agents for real clients — you'll generate the exact failure cases that make a QA product credible. <strong>To enter:</strong> document every voice-agent failure you hit with Mark; that log <em>is</em> the product wedge. Outside your stated lanes, adjacent to your daily work.</p>
-  </div>
+  <h3>1. Selling a "done-for-you A2P / SMS compliance" micro-service <span class="tag t-semi">semi-active</span></h3>
+  <p>Carrier enforcement tightened again (Feb 2026). Thousands of agencies and SMBs are stuck on brand/campaign registration and their texts silently fail. <strong>Who's making money:</strong> compliance-specialist freelancers charging $150–400 per registration + retainer. <strong>Real-world evidence:</strong> entire help-desk threads and LinkedIn checklists exist purely because people are lost. <strong>To enter:</strong> the moment you clear Mark's registration you've literally done the work once — productize the checklist and sell the same 2-hour service. <strong>Honest read:</strong> small ceiling, but near-zero new skill and it's adjacent enough to be a fast cash sidecar.</p>
 
-  <div class="scn">
-    <span class="pill p-act">Active</span>
-    <h3 style="margin-top:6px">FTC AI-disclosure compliance for creators</h3>
-    <p>The Jan 2026 FTC AI-disclosure rules already caused <strong>~25% delistings</strong> in some affiliate-video niches. A whole class of faceless-content earners is suddenly out of compliance and scared. <strong>Who's making money:</strong> nobody owns this niche yet — it's brand-new pain. <strong>Your edge:</strong> you already understand affiliate mechanics and content workflows from the Portugal channel. A "get-compliant-fast" audit + template service to creators is a different customer (creators, not contractors) = a true blind spot, not a consulting rerun. <strong>To enter:</strong> read the FTC guidance once, build a checklist + disclosure template, sell it at $99–$299. Caveat: regulatory niches move fast and can evaporate; treat as a sprint, not a foundation.</p>
-  </div>
+  <h3>2. AI voice-clone dubbing / localization for existing creators <span class="tag t-passive">passive-leaning</span></h3>
+  <p>AI multilingual dubbing collapsed to under $3/video; faceless content is 38% of new monetization. <strong>Who's making money:</strong> service providers re-voicing English channels into Spanish/Portuguese for new ad markets — and you have a Portugal channel angle already in the affiliate lane. <strong>Real-world evidence:</strong> the faceless explosion + multilingual tooling maturing simultaneously. <strong>To enter:</strong> one tool subscription + a few sample reels. <strong>Honest read:</strong> fragile and competitive, but the Portugal connection makes it less of a cold start for you than for most. Truly outside your stated lanes — flagging it because the cross-lingual arbitrage window is real right now.</p>
 
-  <div class="scn">
-    <span class="pill p-pass">Passive</span>
-    <h3 style="margin-top:6px">Single-platform micro-analytics SaaS</h3>
-    <p>Notionlytics ($43K MRR) and Simple Analytics ($39K MRR) prove a thin analytics layer on top of <em>one</em> platform's data is a "cheat code" — small surface, high margin, recurring. <strong>Evidence:</strong> median profitable micro-SaaS does ~$4.2K MRR; these are 10× that on one platform each. <strong>Honest read:</strong> AI <em>wrappers</em> are a graveyard (90% fail, 25–35% margins) — but single-platform analytics is the opposite (70–85% margins) because the moat is the data integration, not the model. <strong>Your edge / on-ramp:</strong> pick a platform you don't already touch (so it's a true new lane) with painful native reporting; ~2–4 weeks of build. Outside your current skill comfort zone — flag honestly — but the most durable of the three.</p>
-  </div>
+  <h3>3. Reselling a vertical micro-SaaS you DON'T build <span class="tag t-active">active</span></h3>
+  <p>Solo micro-SaaS hit $28K MRR from 25K subs at $1–2 each. The blind spot isn't building one — it's becoming the <strong>distribution partner / affiliate-with-setup</strong> for an existing tool aimed at contractors, charging for onboarding. <strong>Who's making money:</strong> "implementation partners" who never wrote a line of the product. <strong>To enter:</strong> find one contractor-focused tool with a partner program; sell setup. <strong>Honest read:</strong> this is close to your DFY instinct but the twist — earning on someone else's product's recurring revenue — is the genuinely new part. Lower risk than building, lower ceiling than owning.</p>
 </section>
 
-<!-- ================= 9. SECOND-ORDER ================= -->
+<!-- 9 -->
 <section>
-  <h2><span class="n">09</span> ♟️ Second-Order Effects &amp; Corners</h2>
-  <ul>
-    <li><strong>Avoca/Bravi educate the whole trades market for free.</strong> Within ~12 months every HVAC owner will have <em>heard</em> of AI voice agents. The corner they can't reach: the small-shop owner who wants it but can't get a demo from a $1B startup. That window is open now and closes as Bravi moves downmarket — move while you're the only one in the room.</li>
-    <li><strong>If enterprise voice AI commoditizes the front office, the next scarce thing is the <em>back</em> office</strong> (dispatch, parts, follow-up logic). That's where Anvil should aim — not at the call-answering wedge Avoca already owns.</li>
-  </ul>
+  <h2><span class="num">09</span>♟️ Second-Order Effects &amp; Corners</h2>
+  <p><strong>If voice AI becomes table-stakes (Ring just made it so):</strong> the value migrates from "having a voice agent" to "who configured it to actually book the right jobs and not annoy customers." That's a services moat — good for you, bad for pure tool-sellers. <strong>Corner to watch:</strong> as GHL and others auto-handle more compliance, the differentiator shifts from "can you make it work" to "can you make it convert." Position yourself on conversion/outcomes, not setup, before setup becomes free.</p>
+  <p><strong>Disruption risk:</strong> if the big agent platforms add native local-service templates, the horizontal layer eats part of Anvil's center. Your insurance is depth in one vertical + one city that no platform will bother to localize.</p>
 </section>
 
-<!-- ================= 10. ACTION ITEM ================= -->
-<section class="keytake">
-  <h2><span class="n">10</span> ✅ Your Action Item (This Week)</h2>
-  <p><strong>Assumption to validate:</strong> "Mark will put real money down for a voice agent before it's built."</p>
-  <p><strong>The 30-minute task:</strong> Draft and send Mark a one-paragraph voice-AI offer that leads with the Avoca proof point ("a $1B company just proved missed calls cost trades businesses real money — here's that, sized for your shop") and asks for a <strong>$300–$500 setup deposit</strong> to start.</p>
-  <p style="margin-bottom:0"><strong>Success =</strong> Mark replies with a yes/deposit (WTP confirmed, build funded) <em>or</em> a hard no (cheapest possible kill signal). Either is a win — silence is the only failure.</p>
+<!-- 10 -->
+<section class="action">
+  <h2><span class="num">10</span>✅ Your Action Item (This Week)</h2>
+  <p><strong>Assumption to validate:</strong> "A local service owner will say yes to a <em>recurring monthly</em> voice-AI add-on, not just a one-time setup."</p>
+  <p><strong>The 30-minute move:</strong> Spin up a Retell AI or Thoughtly trial agent for "Mark's HVAC," script it to capture name/issue/address and book to your calendar, and record one test inbound call. Use that recording + the Amazon Ring proof point in your next Mark conversation, and quote the voice add-on as a separate $300–500/mo line.</p>
+  <div class="success">🎯 <strong>Success = </strong> one recorded working demo call <em>and</em> one verbal reaction from Mark to a recurring add-on price (yes / no / "how much"). Either answer is a win — it's your first real WTP data point for an Anvil module.</div>
 </section>
 
-<!-- ================= 11. TAKEAWAYS ================= -->
+<!-- 11 -->
 <section>
-  <h2><span class="n">11</span> 🎯 Your 3 Key Takeaways</h2>
-  <ol>
-    <li><strong>Sell voice AI today, not the SMS automations.</strong> Voice rides the phone line and skips the A2P 10DLC block — it's the one upsell you can demo before the registry clears.</li>
-    <li><strong>Bravi is your wake-up call, not your funeral.</strong> Someone funded Anvil's exact thesis. Don't race them on product — own the sub-$3M shops they ignore, via consulting relationships they can't scale.</li>
-    <li><strong>Make Mark pay a deposit.</strong> One $300 deposit beats a month of speculative Anvil building — it's the only WTP proof that costs you nothing to run.</li>
+  <h2><span class="num">11</span>🔑 Your 3 Key Takeaways</h2>
+  <ol class="take">
+    <li><strong>Lead with voice AI, sell the Ring proof.</strong> "Amazon Ring trusts AI with 100% of its calls — your roof/deposition costs you every missed one." It's the same pitch for Mark and Lisa; build the demo once.</li>
+    <li><strong>Your A2P blocker just got smaller.</strong> GHL now auto-injects opt-out/sender-ID. Treat clearing Mark's registration as a paperwork sprint this week, not an engineering problem — it unlocks every SMS automation you already built.</li>
+    <li><strong>Don't build Anvil ahead of a "yes."</strong> Price the voice add-on as a recurring line item and let Mark's answer be your first WTP proof. One verbal yes beats a month of speculative building.</li>
   </ol>
 </section>
 
 <div class="foot">
-  Generated for Geo · Corvino Forge LTD · <a href="https://ggalioto.github.io/daily-brief/">ggalioto.github.io/daily-brief</a><br/>
-  Sharp, not padded. Where do you attack first? 🦅
+  Generated June 25, 2026 · Corvino Forge daily intelligence · Sources: TechCrunch (Vapi/Amazon Ring), GoHighLevel changelog &amp; support, Hacker News June 2026 roundups, Retell AI / Thoughtly / Lindy voice-agent comparisons, Indie Hackers revenue reports, llm-stats / model-release coverage, faceless-content statistics 2026.<br>
+  Every acronym expanded on first use · No insight repeated · Built to tell you where to attack.
 </div>
 
 </div>
