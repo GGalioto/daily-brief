@@ -9,198 +9,209 @@
 <title>🐦‍⬛ Daily Intelligence Brief — July 3, 2026</title>
 <style>
   :root{
-    --bg:#0f1117; --card:#181b25; --card2:#1e2230; --ink:#e8e6e1; --dim:#9a97a3;
-    --gold:#e8b64c; --green:#5ec98a; --red:#e06c6c; --blue:#6ca8e0; --purple:#a98ce0;
-    --line:#2a2e3d;
+    --bg:#0f1115; --card:#181b22; --card2:#1f232d; --ink:#e8e6e1; --dim:#9a97a0;
+    --gold:#e8b04b; --red:#e06055; --green:#6fbf73; --blue:#6da8e8; --purple:#a98ee6;
+    --border:#2a2e3a;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;font-size:16px;padding:0 0 60px;}
-  .wrap{max-width:760px;margin:0 auto;padding:0 16px;}
-  header{padding:36px 16px 20px;text-align:center;border-bottom:1px solid var(--line);margin-bottom:24px;}
-  header h1{font-size:1.55rem;letter-spacing:.5px;}
-  header .date{color:var(--gold);font-weight:600;margin-top:6px;}
-  header .tagline{color:var(--dim);font-size:.9rem;margin-top:4px;font-style:italic;}
-  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-bottom:20px;}
-  h2{font-size:1.15rem;margin-bottom:14px;color:var(--gold);display:flex;align-items:center;gap:8px;}
-  h3{font-size:1rem;margin:16px 0 8px;color:var(--blue);}
-  p{margin-bottom:12px;}
-  ul{margin:0 0 12px 20px;}
-  li{margin-bottom:8px;}
-  .verdict{background:linear-gradient(135deg,#2a2410,#1e2230);border:1px solid var(--gold);border-radius:12px;padding:16px;margin-bottom:14px;}
-  .verdict .big{font-size:1.25rem;font-weight:700;color:var(--gold);}
-  .action{background:var(--card2);border-left:4px solid var(--green);border-radius:8px;padding:12px 14px;margin:12px 0;}
-  .action b{color:var(--green);}
-  .warn{background:var(--card2);border-left:4px solid var(--red);border-radius:8px;padding:12px 14px;margin:12px 0;}
-  .warn b{color:var(--red);}
-  .signal{background:var(--card2);border-radius:10px;padding:14px;margin-bottom:12px;}
-  .signal .head{font-weight:700;margin-bottom:6px;}
-  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 10px;border-radius:20px;margin-right:6px;vertical-align:middle;}
-  .tag.up{background:#1d3325;color:var(--green);}
-  .tag.hot{background:#33271d;color:var(--gold);}
-  .tag.watch{background:#1d2733;color:var(--blue);}
-  .tag.risk{background:#331d1d;color:var(--red);}
-  .tag.passive{background:#241d33;color:var(--purple);}
-  .num{color:var(--gold);font-weight:700;}
-  .spark{font-family:monospace;color:var(--green);letter-spacing:1px;}
-  .divider{border:none;border-top:1px dashed var(--line);margin:16px 0;}
-  .muted{color:var(--dim);font-size:.9rem;}
-  .takeaway{background:var(--card2);border-radius:10px;padding:14px;margin-bottom:10px;border-left:4px solid var(--gold);}
-  table{width:100%;border-collapse:collapse;font-size:.9rem;margin:10px 0;}
-  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);}
-  th{color:var(--dim);font-weight:600;font-size:.8rem;text-transform:uppercase;}
-  a{color:var(--blue);text-decoration:none;}
-  footer{text-align:center;color:var(--dim);font-size:.85rem;margin-top:30px;}
-  @media(max-width:480px){body{font-size:15px;} section{padding:18px 14px;}}
+  body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Nunito',sans-serif;line-height:1.55;font-size:16px;padding:0 0 60px;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px;}
+  header{background:linear-gradient(160deg,#14171e 0%,#1c1420 100%);border-bottom:2px solid var(--gold);padding:28px 16px 22px;text-align:center;}
+  header h1{font-size:1.5rem;letter-spacing:.5px;}
+  header .date{color:var(--gold);font-weight:700;margin-top:6px;}
+  header .tagline{color:var(--dim);font-size:.85rem;margin-top:8px;font-style:italic;}
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 18px;margin:18px 0;}
+  section.lead{border:2px solid var(--gold);background:linear-gradient(170deg,#1d1a14 0%,#181b22 60%);}
+  h2{font-size:1.15rem;margin-bottom:12px;letter-spacing:.3px;}
+  h3{font-size:1rem;margin:14px 0 6px;color:var(--gold);}
+  p{margin:8px 0;}
+  ul{margin:8px 0 8px 20px;}
+  li{margin:6px 0;}
+  .verdict{background:var(--card2);border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;margin:12px 0;font-size:1.02rem;}
+  .verdict b{color:var(--gold);}
+  .kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
+  .flag{background:#2a1d1a;border:1px solid var(--red);border-radius:10px;padding:12px 14px;margin:12px 0;}
+  .flag b{color:var(--red);}
+  .go{color:var(--green);font-weight:800;}
+  .caution{color:var(--gold);font-weight:800;}
+  .up{color:var(--green);} .down{color:var(--red);} .flat{color:var(--dim);}
+  .src{font-size:.78rem;color:var(--dim);}
+  .src a{color:var(--blue);text-decoration:none;}
+  .bar{font-family:ui-monospace,Consolas,monospace;font-size:.82rem;white-space:pre;color:var(--blue);background:var(--card2);border-radius:8px;padding:10px 12px;margin:10px 0;overflow-x:auto;line-height:1.7;}
+  .tag{display:inline-block;font-size:.7rem;font-weight:800;padding:2px 8px;border-radius:20px;margin-right:6px;vertical-align:middle;}
+  .tag.passive{background:#1d2a1e;color:var(--green);border:1px solid var(--green);}
+  .tag.semi{background:#2a2617;color:var(--gold);border:1px solid var(--gold);}
+  .tag.active{background:#231a2a;color:var(--purple);border:1px solid var(--purple);}
+  .divider{text-align:center;color:var(--dim);margin:6px 0;letter-spacing:6px;}
+  .action-box{background:#14201a;border:2px solid var(--green);border-radius:12px;padding:14px 16px;margin:12px 0;}
+  .takeaway{background:var(--card2);border-radius:10px;padding:12px 14px;margin:10px 0;border-left:4px solid var(--purple);}
+  .small{font-size:.85rem;color:var(--dim);}
+  footer{text-align:center;color:var(--dim);font-size:.8rem;margin-top:30px;}
 </style>
 </head>
 <body>
 <header>
-  <h1>🐦‍⬛ DAILY INTELLIGENCE BRIEF</h1>
+  <h1>🐦‍⬛ CORVUS DAILY INTELLIGENCE BRIEF</h1>
   <div class="date">Friday, July 3, 2026</div>
-  <div class="tagline">Where do you attack first and hardest today?</div>
+  <div class="tagline">Pre-battle briefing. Ground truth read from CorvinoMemory (last log entry 2026-06-29; corrections through 2026-07-03 applied). Where do we attack first and hardest today?</div>
 </header>
 <div class="wrap">
 
 <!-- 1. BEST LANE -->
-<section>
-  <h2>⚔️ 1. Today's Best Lane to Attack</h2>
-  <div class="verdict">
-    <div class="big">CONSULTING — a competitor just published your business model with a price tag on it.</div>
-  </div>
-  <p>On June 28, a Denver agency called <b>Fasttcart</b> formally launched "FASTTOFFICE" — an Artificial Intelligence (AI) receptionist bundled with local Search Engine Optimization (SEO) and Google Business Profile (GBP) optimization, sold exclusively to Heating, Ventilation, and Air Conditioning (HVAC), plumbing, roofing, and electrical contractors. Retainers <b>start at <span class="num">$997/month</span></b>. That is your consulting stack — vertical focus, GBP, lead capture, phone automation — packaged and priced by someone else, in public, this week.</p>
-  <p>Read this the right way: it's not a threat in Cincinnati, it's <b>pricing validation</b>. A whole agency is betting a business on the exact bundle you've already built for Mark. And upstream, the money is confirming the thesis at scale: on July 1, <b>Revin</b> (AI voice + Short Message Service (SMS) platform for residential services) announced a national rollout across <b>Vertex Service Partners'</b> roofing portfolio — Private Equity (PE)-backed platforms are now deploying AI agents that respond to leads in <b>under 2 seconds, 24/7</b>, booked straight into ServiceTitan. When PE consolidators standardize on a tool category, the independent contractors they compete against feel it within months — and go looking for their own version. That's who you sell to.</p>
-  <p>The trade press is doing your pre-selling for you. ACHR News (the HVAC industry's own magazine) is running the numbers at contractors directly: <span class="num">27%</span> of home-service calls go unanswered, <span class="num">$1,200</span> average revenue lost per missed call, <span class="num">$45K–$120K/year</span> bleeding out of the average small shop. Mark's peers are reading this. The market is being warmed up while your demo sits blocked on paperwork.</p>
-  <div class="action"><b>Highest-leverage action today:</b> kill the Application-to-Person (A2P) 10-Digit Long Code (10DLC) blocker. It is the single gate between "built" and "demoable" — every SMS automation you've already published is dead weight until it clears. If registration is submitted and pending, then today's action shifts to Lisa Tuck: the missed-call math above is vertical-agnostic (a missed client call for an employment attorney is worth far more than $1,200), so draft the 5-line warm-intro follow-up through Christy while the A2P clock runs.</div>
+<section class="lead">
+  <span class="kicker">⚔️ Section 1</span>
+  <h2>TODAY'S BEST LANE TO ATTACK: CONSULTING — GoHighLevel (GHL) for Heating, Ventilation and Air Conditioning (HVAC)</h2>
+  <div class="verdict"><b>Verdict:</b> Attack Consulting. Three signals converged in the last 72 hours, and one of them is <em>your own</em>: your Application-to-Person 10-Digit Long Code (A2P 10DLC) registration was <b>APPROVED July 2</b>. The only thing between you and a demo-ready product is buying a phone number. Meanwhile the market just told you — loudly, with $155M of Venture Capital (VC) — that Artificial Intelligence (AI) for local service businesses is now consensus.</div>
+  <h3>The three drivers</h3>
+  <ul>
+    <li><b>🔓 Your gate is gone (internal).</b> A2P approved 2026-07-02. Buying the GHL phone number (~15 minutes, a few dollars/month) unlocks every Short Message Service (SMS) automation you've already built and published. Nothing else blocks the clean end-to-end test.</li>
+    <li><b>🎁 July is free-ammo month (platform).</b> GHL's "Summer of AI" makes <b>July the Voice AI spotlight month</b>: eligible sub-accounts get a <b>free 30-day Voice AI trial</b>, the AI Growth plan is $50/month with 100 voice minutes included, and there's a <b>50%-off pricing window July 13–19</b>. GHL's new Prompt Optimizer reports average voice-agent accuracy gains of +20.5 points, with 75% of optimized agents crossing 80% accuracy — voice agents are now reliable enough to demo to a contractor without sweating. <span class="src">Sources: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008057-summer-of-ai-2026">GHL Summer of AI 2026</a>, <a href="https://www.gohighlevel.com/post/highlevel-voice-ai-prompt-optimizer">GHL Prompt Optimizer</a>, <a href="https://automatethejourney.com/blog/gohighlevel-voice-ai-setup-guide">Voice AI setup guide</a></span></li>
+    <li><b>💰 The market priced your offer for you (external).</b> Pie — founded by ex-Toast people — came out of stealth June 30 with a <b>$19.5M Series A led by Lightspeed</b> selling exactly your pitch to Main Street: AI-search visibility + "Front Desk," a 24/7 AI receptionist, at <b>$359/month</b>. They claim 100,000+ phone calls driven and 15–20% year-over-year sales lifts for customers. Read it both ways: your price floor just got validated at $359/month, AND funded horizontal players are now hunting your customers. The indie window is open <em>today</em> — it does not stay open. <span class="src">Sources: <a href="https://www.morningstar.com/news/business-wire/20260630636582/pie-raises-237m-to-bring-ai-powered-growth-to-main-street-businesses">Business Wire via Morningstar</a>, <a href="https://thenextweb.com/news/pie-19-5m-ai-search-main-street-businesses">The Next Web</a></span></li>
+  </ul>
+  <h3>Highest-leverage move, doable now</h3>
+  <p><b>Buy the phone number in Mark's sub-account and run the clean end-to-end test today.</b> Call → Job Booked workflow → nurture SMS fires → review-request gate. That flips the product to "ready" — which, per your own standing rule (no pitching until the product is ready), is what legally re-opens the door to demos and to Lisa Tuck's referral network. Then activate the free Voice AI trial on the same sub-account while July's spotlight makes it $0.</p>
 </section>
 
 <!-- 2. TOP SIGNALS -->
 <section>
-  <h2>📡 2. Top Signals (Last 48h)</h2>
-  <div class="signal">
-    <span class="tag hot">MONEY</span><span class="head">"Organizational memory" raised ~$200M in one week — Anvil's concept space is getting funded, at the wrong altitude</span>
-    <p><b>Engram</b> emerged from stealth July 1 with <span class="num">$98M</span> (General Catalyst, Kleiner Perkins, Sequoia; angels include Andrej Karpathy) building a "learned memory layer" that teaches AI a specific organization's world. Same week, <b>Hyper</b> (Y Combinator (YC) P26 batch) launched on Hacker News as a "company brain" ingesting Slack, email, docs into a fact graph. And <b>Scaled Cognition</b> took a <span class="num">$100M</span> Series A (Khosla) purely for enterprise AI <i>reliability</i>. Meaning for you: the "AI that knows your business" thesis behind Anvil is now heavily validated — but everyone funded is aiming at enterprises. Nobody is building the memory-and-operations layer for a 6-truck HVAC shop. Your niche got more credible and stayed empty. Full analysis in Section 7.</p>
-  </div>
-  <div class="signal">
-    <span class="tag up">COST</span><span class="head">Claude Sonnet 5 (June 30): near-flagship agents at less than half the price</span>
-    <p>Anthropic shipped Sonnet 5 at <span class="num">$2/$10</span> per million tokens (intro through Aug 31, then $3/$15) versus Opus 4.8's $5/$25 — with agentic performance close behind the flagship (63.2% vs 69.2% on agentic coding benchmarks). Anthropic's Fable 5 also returned globally July 1 after United States (US) export controls lifted. Why it matters to you: everything you'd build for clients — voice agents, automations, Anvil modules — just got roughly <span class="num">60% cheaper to run</span> at near-flagship quality. Your margin on any AI retainer widened this week without you lifting a finger.</p>
-  </div>
-  <div class="signal">
-    <span class="tag watch">TONE SHIFT</span><span class="head">Hacker News July trend: AI-slop fatigue → buyers now pay for review layers and verification</span>
-    <p>The July Hacker News trend roundup is blunt: builders are irritated with AI "slop," and buyer demand is shifting toward <b>control, auditability, and review layers</b> — products that catch bad AI output before it ships. For a consultant, this is a positioning gift: sell "AI with a kill-switch and a human gate" (which — nudge — you literally already built into Mark's nurture sequence). The contractor who got burned by a garbage chatbot in 2025 is your easiest 2026 close.</p>
-  </div>
+  <span class="kicker">📡 Section 2</span>
+  <h2>TOP SIGNALS (last 48h)</h2>
+  <h3>1. VC pile-in on local & home services AI — $155M in ~72 hours 📈</h3>
+  <div class="bar">Pie      ▓▓▓▓ $19.5M  (local SMB growth + AI receptionist)
+Probook  ▓▓▓▓▓▓▓▓ $40M   (home-services AI dispatch)
+Higharc  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ $95M   (homebuilding AI + supply chain)</div>
+  <p>Three raises, one thesis: AI operating layers for physical-world local businesses. Your core portfolio thesis — diverse revenue streams targeting local service contractors — just became the consensus VC bet. Validation and a countdown clock in the same headline. (Probook's competitive meaning for Anvil is dissected in Section 7.) <span class="src">Sources: <a href="https://www.startupresearcher.com/news/probook-raises-40m-from-andreessen-horowitz-and-sequoia-for-home-services-ai">Startup Researcher</a>, <a href="https://www.techtimes.com/articles/319480/20260701/homebuilding-ai-raises-95m-floor-plan-vision-tech-moves-lumber-supply-chain.htm">TechTimes</a>, <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/">TechStartups roundup July 1</a></span></p>
+  <h3>2. AI assistants are now a real referral channel 🤖➡️💵</h3>
+  <p>Zigpoll's solo founder (posted July 2): <b>14% of new signups now come from ChatGPT, Claude, and Gemini recommending the product</b> — his #3 acquisition channel. Shopify's first-quarter 2026 numbers: AI-driven traffic up <b>8x</b> year-over-year, conversion on those visits nearly <b>2x</b>. Discovery is moving from blue links to AI answers — which changes what "being findable" means for every local client you serve. <span class="src">Sources: <a href="https://www.indiehackers.com/post/tech/hitting-125k-mrr-as-a-solo-founder-by-doubling-down-on-the-right-segment-c4o2Tfs6mjdpip5yZhaO">Indie Hackers, July 2</a>, <a href="https://finance.biggo.com/news/fdf143335be01ce6">BigGo Finance</a></span></p>
+  <h3>3. The AI-slop backlash is hardening into a market 🧹</h3>
+  <p>Hacker News (HN) front page July 2: a "short-leash AI coding" thread where a senior dev found <b>one issue per 20 lines</b> of AI-generated code, and an "Ask HN: Who is quitting?" thread full of seniors fleeing AI-first mandates and "80% slop" pull requests. Quality verification of AI output is becoming something people <em>pay</em> for — see Blind-Spot #2. <span class="src">Sources: <a href="https://news.ycombinator.com/item?id=48766026">HN: short-leash method</a>, <a href="https://news.ycombinator.com/item?id=48760048">HN: Who is quitting? (July 2026)</a></span></p>
 </section>
 
 <!-- 3. EMERGING OPPORTUNITIES -->
 <section>
-  <h2>🌱 3. Emerging Opportunities</h2>
+  <span class="kicker">🌱 Section 3</span>
+  <h2>EMERGING OPPORTUNITIES</h2>
   <ul>
-    <li><b>Website visitors bouncing without booking + no good Small and Medium Business (SMB) answer = the "website receptionist" gap.</b> Zanderio launched July 1: a real-time AI sales agent that turns service-business websites into 24/7 booking assistants (WordPress plugin, sub-10-minute install). Strengthens your consulting lane — it's a natural line item on any client site you touch, and a Website Landlord upgrade later. The gap: nobody bundles it with the phone side. You could.</li>
-    <li><b>Agent tool-integration chaos + no standard = infrastructure whitespace.</b> Builders on Hacker News keep reinventing the same tool hookups for every agent framework (see: 2LY, open-source, solving "pre-Docker chaos" for agent tooling). Strengthens Anvil long-term: your Model Context Protocol (MCP) server experience is exactly this skill. Watch, don't build — the standard isn't settled.</li>
-    <li><b>Zero-shot tabular prediction + SMBs drowning in spreadsheets = future consulting module.</b> Google released TabFM (July 1): a foundation model that predicts from any spreadsheet with no training, coming to BigQuery as a plain SQL command. When this lands in accessible tooling, "predict which quotes will close" becomes a service you can sell a contractor in an afternoon. File it; revisit in 60 days.</li>
+    <li><b>Local businesses invisible in AI answers + nothing credible under $359/month = opportunity.</b> Pie priced the category; the sub-$359 tier for Small and Medium-sized Businesses (SMBs) is empty. A lightweight "AI-visibility tune-up" (structured data, Google Business Profile (GBP) hygiene, review velocity) bolts straight onto Website Landlord and Done-For-You (DFY) offers. Strengthens both lanes.</li>
+    <li><b>Non-coders shipping AI-built apps + no one hardening them = opportunity.</b> The slop backlash (Section 2) meets the wave of founders building with Claude Code. Cleanup, security, and database-sanity audits have no dominant provider. Neutral to your lanes today — expanded as Blind-Spot #2.</li>
+    <li><b>Frontier-grade open models on cheap hardware + privacy-nervous SMBs = opportunity.</b> Ornith-1.0's 9-billion-parameter (9B) model runs on a single consumer Graphics Processing Unit (GPU) under a Massachusetts Institute of Technology (MIT) license. Local-first automations without per-token bills strengthen <b>Anvil's</b> feasibility story (Section 7c). <span class="src">Source: <a href="https://pub.towardsai.net/another-opensource-self-improving-model-challenging-the-frontier-labs-was-just-released-052259db69fd">Towards AI, July 1</a></span></li>
   </ul>
 </section>
 
 <!-- 4. FASTEST MONEY -->
 <section>
-  <h2>💸 4. Fastest Money Right Now</h2>
-  <p>What actually paid people in the last 48 hours of reports:</p>
-  <table>
-    <tr><th>Who</th><th>What</th><th>Numbers</th><th>Durability</th></tr>
-    <tr><td>Jason Zigelbaum (Zigpoll)</td><td>Solo Software as a Service (SaaS), niched into one segment</td><td><span class="num">$125K</span> Monthly Recurring Revenue (MRR), solo, no funding</td><td>High — 2yr grind first</td></tr>
-    <tr><td>Hasaam Bhatti (Launch Fast)</td><td>Amazon-seller AI tool built in Cursor in 48h</td><td><span class="num">$30K</span> MRR + paid enterprise <b>workshops</b></td><td>Medium</td></tr>
-    <tr><td>Mattia Pomelli (Sleek.design)</td><td>AI app designer for non-designers</td><td><span class="num">$10K</span> MRR in 6 weeks, $0 ads</td><td>Unproven churn</td></tr>
-    <tr><td>Fasttcart (Denver)</td><td>Trades-only agency: SEO + GBP + AI receptionist</td><td>Retainers from <span class="num">$997/mo</span></td><td>High — recurring, sticky</td></tr>
-  </table>
-  <div class="warn"><b>🚨 WHITESPACE FLAG — paid AI-workflow workshops.</b> The detail buried in the Launch Fast story: the founder now runs <b>paid enterprise workshops on Claude Code and agentic workflows</b> — and says it "opens a lot of doors." This is money you are qualified to take <i>today</i> and it's in nobody's plan of yours: a 90-minute "AI phone + follow-up automation for contractors" workshop, sold at $200–500 a seat or free-as-lead-gen to a trade association chapter. It's the same content as your consulting demo, monetized before the retainer closes. Fast, durable enough (training demand is rising, not falling), and it feeds the pipeline instead of distracting from it. The only cost: you have to be visible.</div>
-  <p class="muted">Honesty check: the solo-SaaS numbers above all sit on 1–4 years of unglamorous grind before the curve bent. The workshop/agency lanes are the only ones that pay inside 30 days.</p>
+  <span class="kicker">💸 Section 4</span>
+  <h2>FASTEST MONEY RIGHT NOW</h2>
+  <div class="bar">Zigpoll     ▓▓▓▓▓▓▓▓▓▓▓▓▓ $125K/mo  solo, surveys      [durable]
+Profit AI   ▓▓▓ $30K/mo   non-coder, Shopify [medium]
+AIDesigner  ▓ $9.5K/mo  30-day sprint      [flashy]</div>
+  <ul>
+    <li><b>Zigpoll — $125K Monthly Recurring Revenue (MRR), solo, no funding</b> (posted July 2). Survey/feedback platform; added ~$500K of new Annual Recurring Revenue (ARR) in six months by doubling down on one segment (e-commerce post-purchase surveys). Durability: high — boring, embedded, compounding. <span class="src"><a href="https://www.indiehackers.com/post/tech/hitting-125k-mrr-as-a-solo-founder-by-doubling-down-on-the-right-segment-c4o2Tfs6mjdpip5yZhaO">Indie Hackers</a></span></li>
+    <li><b>Profit AI — $30K MRR in 5 months from a spreadsheet.</b> Former e-commerce operator, zero coding background, exported his client spreadsheet to a Comma-Separated Values (CSV) file, had Cursor/Claude Code wrap it into a Shopify profit-analytics app. 38 paying customers at $800/month. Durability: medium — 43 uninstalls against 47 installs says onboarding friction, but the channel (Shopify App Store) does the distribution. <span class="src"><a href="https://finance.biggo.com/news/fdf143335be01ce6">BigGo Finance, June 24</a></span></li>
+    <li><b>AIDesigner.ai — $1K→$9.5K MRR in 30 days</b> at $25/month, riding the fix-ugly-vibe-coded-apps wave with relentless ship-and-demo posting. Durability: moderate; category is hot and crowded. <span class="src"><a href="https://www.mrrstory.com/stories/from-1k-to-95k-mrr-in-30-days-the-solo-ai-tool-fixing-ugly-vibe-coded-apps">MRR Story</a></span></li>
+    <li><b>Vendor-reported but on-lane:</b> a GHL customer claims 800 Voice AI calls → 190 leads → $40K in sales. Take vendor numbers with salt, but the shape of the math is your Mark demo. <span class="src"><a href="https://www.gohighlevel.com/ai">gohighlevel.com/ai</a></span></li>
+  </ul>
+  <div class="flag">🚨 <b>WHITESPACE FLAG:</b> The Profit AI pattern — <b>spreadsheet → AI-built micro-app → app-store distribution</b> — is NOT covered by any of your lanes. You build with Claude Code weekly; you have never shipped to a marketplace that markets for you. That's the fortune-shaped hole this week. Full entry math in Blind-Spot #3.</div>
 </section>
 
 <!-- 5. TECHNICAL SHIFTS -->
 <section>
-  <h2>⚙️ 5. Technical Shifts</h2>
+  <span class="kicker">🔧 Section 5</span>
+  <h2>TECHNICAL SHIFTS (tight)</h2>
   <ul>
-    <li><b>Cheap, fast generative media just crossed a commercial line.</b> Google shipped Nano Banana 2 Lite (4-second image generation, <span class="num">$0.034</span>/image) and Gemini Omni Flash (conversational video editing, <span class="num">$0.10</span>/second of output) on June 30. A 15-second local-business video ad now costs about <span class="num">$1.50</span> of compute. Decision impact: client ad creative stops being a cost center — fold it into retainers as a near-free upsell.</li>
-    <li><b>Agentic capability is now commoditized at every price tier</b> (Sonnet 5, Gemini 3.5 Flash, GPT-5.6 Sol). The moat has officially moved from "can you build an agent" to "do you own the customer and the workflow." Advantage: people standing next to actual businesses. That's you.</li>
-    <li><b>GPT-5.6 remains gated to ~20 partners</b> post-preview while government review frameworks form. Frontier access is becoming political; the applied layer (your layer) carries none of that risk.</li>
+    <li><b>LongCat-2.0 (Meituan, June 30):</b> scores 59.5 on SWE-bench Pro (a real-world software-engineering benchmark), edging GPT-5.5's 58.6, priced at <b>$0.75/M input, $2.95/M output tokens</b> with a 1M-token context window — trained entirely on Chinese domestic chips. <span class="src"><a href="https://cryptobriefing.com/meituan-longcat-2-undercuts-gpt-claude-pricing/">Crypto Briefing</a></span></li>
+    <li><b>Ornith-1.0 (MIT license):</b> open model that writes its own agent scaffold; 397B variant beats Claude Opus 4.7 on coding benchmarks, 9B variant runs on one consumer GPU. <span class="src"><a href="https://firethering.com/ornith-1-0-ai-model-for-agentic-coding/">Firethering</a></span></li>
+    <li><b>Kimi K2.7 now in GitHub Copilot</b> (July 1) — frontier-adjacent models are becoming default plumbing. <span class="src"><a href="https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/">GitHub changelog</a></span></li>
   </ul>
+  <p><b>Why it matters to you:</b> intelligence is a commodity; nobody wins on model access anymore — including the funded players circling your niche. Moats are now distribution and installed relationships. You have one of those with Mark. Use it.</p>
 </section>
 
-<!-- 6. ADOPTION & TRACTION -->
+<!-- 6. ADOPTION -->
 <section>
-  <h2>📈 6. Adoption & Traction Signals</h2>
+  <span class="kicker">📊 Section 6</span>
+  <h2>ADOPTION & TRACTION SIGNALS (tight)</h2>
   <ul>
-    <li><b>Consumer agent culture went mainstream-weird:</b> TechCrunch (July 2) covered people running OpenClaw agents for dating automation — one guy pulled 1M+ views and 200 direct messages with an automated reel pipeline. Signal: normal people now expect software to act on their behalf. Timing tailwind for every agent pitch you make.</li>
-    <li><b>ServiceTitan is the integration surface that matters:</b> both Revin and Thoughtly lead with ServiceTitan/Housecall Pro integration in home services. For your GoHighLevel (GHL) practice: GHL remains the right wedge for small shops, but note where the up-market gravity is pulling.</li>
-    <li><b>Cost sensitivity is real:</b> Hacker News threads show developers churning off GitHub Copilot within days of pricing changes. SMBs will be even more brutal — anchor your retainers to recovered revenue, never to seats or usage.</li>
+    <li><b>Shopify first-quarter 2026:</b> Gross Merchandise Volume (GMV) +30% year-over-year — the merchant app economy underneath Blind-Spot #3 is growing, not shrinking. <span class="src"><a href="https://finance.biggo.com/news/fdf143335be01ce6">BigGo</a></span></li>
+    <li><b>GHL Prompt Optimizer week one:</b> 124 voice agents optimized across 110 locations, 586 optimization cycles in 8 days. Agencies are actively tuning voice agents at volume — market timing for your voice-agent demo is now, not later. <span class="src"><a href="https://www.gohighlevel.com/post/highlevel-voice-ai-prompt-optimizer">GHL blog</a></span></li>
+    <li><b>LLM Pulse:</b> mid-five-figure MRR within a year of launch, purely from monitoring brand visibility in Large Language Model (LLM) answers — companies are already paying to be seen by AI. <span class="src"><a href="https://www.indiehackers.com/post/tech/growing-a-geo-tool-to-a-mid-five-figure-mrr-within-a-year-FkhE79ioFu4EpEpJOXsA">Indie Hackers</a></span></li>
   </ul>
 </section>
 
 <!-- 7. VALIDATION STAGE: ANVIL -->
 <section>
-  <h2>🔨 7. Validation Stage — Anvil (5-Criteria Pass)</h2>
-  <p class="muted">Daily discipline: don't build on unproven Willingness To Pay (WTP). Every consulting gig feeds Anvil an asset — funded discovery, not speculation.</p>
-  <h3>(a) Community/market demand — <span class="spark">▲▲▲ strongest week yet</span></h3>
-  <p>This was the best demand week Anvil's concept space has ever had: Engram (<span class="num">$98M</span>), Hyper (YC launch), Scaled Cognition (<span class="num">$100M</span>) — three separate bets in seven days that "AI that deeply knows one organization" is the next layer. Sequoia, Kleiner, Khosla, and Karpathy don't co-sign a fake trend.</p>
-  <h3>(b) Direct WTP — <span class="spark">▬ still the hole in the boat</span></h3>
-  <p>Brutal honesty: every dollar above is <i>enterprise</i> WTP. Zero evidence this week that a local service business will pay for a "business operating system" as a category. What SMBs demonstrably pay for right now is <b>outcomes in a bundle</b> — Fasttcart's $997/month is for "your phone gets answered and you rank on Google," not for infrastructure. Anvil's path to WTP is disguising itself as an outcome.</p>
-  <h3>(c) Feasibility / build cost — <span class="spark">▲ improved again</span></h3>
-  <p>Sonnet 5 pricing cuts agent operating cost ~60% at near-flagship quality. The technical risk of Anvil keeps falling on its own; you don't need to spend a single hour on it this week for the build to get easier.</p>
-  <h3>(d) Competitive landscape — <span class="spark">▲ niche still open</span></h3>
-  <p>Engram sells to Microsoft, Notion, Harvey. Hyper sells to knowledge-work teams. The big platforms are all climbing up-market where the tokens are. Nobody funded this week wants to integrate with a contractor's GHL account, truck schedule, and review pipeline. The vertical-local niche remains defensible precisely because it's unglamorous.</p>
-  <h3>(e) Verdict + cheapest WTP experiment</h3>
-  <p><b>Verdict: HOLD on back shelf — thesis strengthening, WTP still unproven, no build time justified.</b> The one experiment that would most cheaply test WTP this week: when the A2P blocker clears and Mark's system is live, quote him a <b>named, separate line item</b> — e.g., "Missed-Call Rescue module, $X/month" — instead of burying it in a flat retainer. If a real contractor accepts a per-module price, that's the first direct evidence Anvil's modular pricing model works. Cost of the experiment: one sentence in a proposal.</p>
-  <hr class="divider" />
-  <p class="muted">🎯 <b>Rifle + Ammo Companion (RC):</b> no material ammo-affiliate or competitive signal in the last 48h. No change, still parked.</p>
+  <span class="kicker">🔨 Section 7</span>
+  <h2>VALIDATION STAGE — ANVIL (5-criteria pass)</h2>
+  <p class="small">Anvil = multi-agent business operating system / vertical agent back-office. Ceiling play, biggest time-sink, least-proven direct Willingness To Pay (WTP). Live on the OVH Virtual Private Server (VPS) alongside Talon.</p>
+  <h3>(a) Community/market demand — <span class="up">↑ strongest week yet</span></h3>
+  <p><b>Probook raised $40M</b> ($34M Series A led by Andreessen Horowitz (a16z) + $6M Sequoia seed) for an "AI-powered operating system for home service businesses," built dispatch-first. a16z's partner called dispatch "the nerve center of every home service business." That is the Anvil thesis, verbatim, funded by the two most-watched firms in venture. Demand for the <em>category</em>: proven beyond argument. <span class="src"><a href="https://www.startupresearcher.com/news/probook-raises-40m-from-andreessen-horowitz-and-sequoia-for-home-services-ai">Startup Researcher</a></span></p>
+  <h3>(b) Direct WTP — <span class="down">still the naked axis</span></h3>
+  <p>Brutal honesty, as required: the market now has real price anchors — Pie's AI receptionist at <b>$359/month</b>, GHL AI plans at $50–$97/month — but <b>Anvil itself still has zero direct WTP evidence</b>. Big raises validate categories, not your invoice. Nobody has yet said "I will pay Geo $X/month for Anvil." That number is still the only one that matters.</p>
+  <h3>(c) Feasibility / build cost — <span class="up">↑ improving</span></h3>
+  <p>LongCat-2.0's pricing and Ornith's local-runnable 9B (Section 5) keep pushing agent operating costs toward zero. Infrastructure is already live on the OVH VPS. Feasibility was never the problem; time-sink discipline is.</p>
+  <h3>(d) Competitive landscape — <span class="caution">the slot is open but shrinking</span></h3>
+  <p>Probook attacks top-down: "America's largest brands already run on it" — enterprise home services. Pie attacks horizontal: SMB marketing-side, self-serve. <b>Neither serves the sub-10-employee contractor's back office hands-on with GHL integration.</b> That defensible vertical-local slot is exactly where every consulting gig feeds Anvil a reusable asset. But two funded entrants in one week means the fog is lifting for everyone — the discount on moving slow just got repriced.</p>
+  <h3>(e) Verdict — <span class="go">CONDITIONAL GO (as funded discovery only)</span></h3>
+  <p>Keep the rule: no speculative building on unproven WTP. <b>The single cheapest WTP experiment this week</b> (carried from when it was first defined on 2026-06-29 — now cheaper): activate the <b>free 30-day GHL Voice AI trial</b> on Mark's sub-account during July's spotlight month, demo the working agent, then ask him straight: <em>"Would you pay $200/month for this as a standalone add-on?"</em> A yes = Anvil's first direct WTP datapoint, gathered at $0 marginal cost. A no = a free education. Either way the consulting build feeds Anvil, exactly as designed.</p>
+  <p class="small">🔫 <b>Rifle + Ammo Companion (RC):</b> no material ammo-affiliate or competitive signals in the last 48h. No change — still parked.</p>
 </section>
 
 <!-- 8. BLIND-SPOT RADAR -->
 <section>
-  <h2>🌫️ 8. Blind-Spot Radar — Money Outside Your Lanes</h2>
-  <p class="muted">Scenarios genuinely outside consulting / Anvil / Website Landlord / affiliate. The job here is decreasing your fog of war, not validating the portfolio.</p>
-  <div class="signal">
-    <span class="tag passive">PASSIVE→SEMI</span><span class="head">1. Agent-economy micro-Application Programming Interfaces (APIs) — getting paid per call by other people's agents</span>
-    <p>A developer post going around this week (dev.to, July 2) documents an agent that curates tech signals and sells access via <b>x402</b> — a HyperText Transfer Protocol (HTTP) payment standard where the 402 status code itself requests payment in USD Coin (USDC, a dollar-pegged stablecoin) with no API keys and no Know Your Customer (KYC) checks. Pricing: $0.01/call. The agent bids on jobs in agent marketplaces (MoltJobs) and fulfills them by calling its own paid endpoint. <b>Who's making money:</b> almost nobody yet — that's the point. The marketplace had 6 open jobs. <b>Your edge:</b> you already run a live MCP server on a Virtual Machine (VM); exposing a paid endpoint is a weekend, not a quarter. <b>Honest read:</b> highly speculative, pre-chasm, could be a dead standard by October — but it's the earliest visible plumbing of agents paying agents, and the cost to hold a position is ~zero. Watch-and-tinker tier.</p>
-  </div>
-  <div class="signal">
-    <span class="tag hot">SEMI-ACTIVE</span><span class="head">2. AI persona commerce — a synthetic character that fronts a product</span>
-    <p>A documented case this month: a builder created an "AI grandma" character (Higgsfield video + ElevenLabs voice), ground through 90 days of near-zero Instagram traction, then hit a viral reel and now sells a $27 ebook in the character's voice — <span class="num">$4,800</span> last month, ~175 sales/month, run as a night-job. <b>Who's making money:</b> solo creators willing to eat a 90-day flat curve; most quit before the curve bends. <b>Entry cost for you:</b> ~$100/month in tools + the June 30 Google models just cut video-generation cost dramatically. <b>Honest read:</b> this is a content lottery with better odds than it looks <i>if</i> the character targets a niche you already understand — but it's a daily-posting commitment, and your attention is your scarcest asset right now. Real, durable-ish, wrong quarter.</p>
-  </div>
-  <div class="signal">
-    <span class="tag watch">ACTIVE</span><span class="head">3. AI-output review & verification services — the anti-slop economy</span>
-    <p>The July Hacker News trend analysis explicitly lists what buyers now want: <b>verification and provenance tools, review layers that catch bad AI output before publication, and security hygiene for small teams with no security lead</b>. This is a services category being born in real time — "I audit what your AI produces before it embarrasses you" — and it's the inverse of every AI-implementation pitch on the market. <b>Who's making money:</b> early consultants positioning as AI risk / Quality Assurance (QA) reviewers; no dominant player, no certification, no standard rates yet. <b>Entry cost:</b> near zero — it's judgment plus checklists, both of which you build daily. <b>Honest read:</b> genuinely outside your lanes (it's a skeptic's business, not a builder's), likely to professionalize fast, and worth one bookmark: if a consulting prospect ever hesitates with "we tried AI and it burned us," this is the door you walk through.</p>
-  </div>
+  <span class="kicker">🌫️ Section 8</span>
+  <h2>BLIND-SPOT RADAR — money outside your stated lanes</h2>
+  <p class="small">Rule check applied: every scenario below is genuinely outside Consulting/Anvil/Website Landlord/Affiliate/DFY as you currently run them.</p>
+
+  <h3><span class="tag passive">PASSIVE</span> 1. AI-answer affiliate publishing</h3>
+  <p><b>The play:</b> build the comparison pages, data tables, and niche buying guides that LLMs cite when someone asks "what's the best X" — monetized with affiliate links. Not Search Engine Optimization (SEO) for Google (that's Website Landlord); this is Answer Engine Optimization (AEO) for assistants, a different content shape (structured, factual, citation-friendly). <b>Evidence:</b> Zigpoll gets 14% of signups from AI recommendations and treats it "as an SEO problem for a new kind of search"; Shopify's AI-referred visitors convert at ~2x. <b>Who's earning:</b> affiliate publishers whose pages LLMs already cite; LLM Pulse selling the measurement layer at mid-five-figure MRR. <b>Entry for you:</b> content skill + patience, near-zero capital; pick one product niche you already know. <b>Honest flag:</b> platforms may eventually insert native ads and squeeze citations — medium durability, cheap to test.</p>
+
+  <h3><span class="tag semi">SEMI-ACTIVE</span> 2. Vibe-code rescue &amp; hardening service</h3>
+  <p><b>The play:</b> productized audits ($500–$1,500) that take an AI-built app and fix security, database sanity, and missing tests before it hurts someone. <b>Evidence (last 48h):</b> the HN short-leash thread's senior reviewer found one issue per 20 lines of frontier-model output, including read-modify-save without transactions and broken authorization; another commenter: teammate pull requests are "80% slop." Meanwhile non-coders keep shipping revenue-bearing apps (Profit AI). <b>Who's earning:</b> senior-review consultants, plus adjacent tools like AIDesigner ($9.5K MRR fixing ugly AI output). <b>Entry for you:</b> your Claude Code fluency + a written audit checklist; sell to the vibe-coder communities you already read. <b>Honest flag:</b> trust is the gate — you'd need 2–3 public teardowns as proof before anyone pays.</p>
+
+  <h3><span class="tag active">ACTIVE</span> 3. Spreadsheet → marketplace micro-app</h3>
+  <p><b>The play:</b> the Profit AI playbook — take a spreadsheet that already runs a real workflow, wrap it into an app with Claude Code, and list it where distribution is built in (Shopify App Store today; others tomorrow). <b>Evidence:</b> $147K total revenue in 6 months, $30K MRR, 38 customers at $800/month, built by a founder who had never written code — and Shopify's merchant economy grew 30% underneath him. <b>Who's earning:</b> Jack (Profit AI), and a long tail of app-store micro-devs. <b>Entry for you:</b> 3–4 months part-time; you're a stronger builder than the founder in the case study. <b>Honest flag:</b> his 43-uninstalls-per-47-installs churn shows the work is onboarding, not code; pick a spreadsheet with a retention hook (recurring reporting beats one-time calculators). <span class="src"><a href="https://finance.biggo.com/news/fdf143335be01ce6">BigGo</a></span></p>
+
+  <h3><span class="tag semi">SEMI-ACTIVE</span> 4. Embedded micro-tools in OTHER vertical software marketplaces</h3>
+  <p><b>The play:</b> you only distribute through GHL. Jobber, Housecall Pro, and Tekmetric (auto repair) all run app marketplaces serving the same local contractors — porting one already-built automation to a second marketplace is new distribution without new skills. <b>Evidence:</b> Pie's entire growth model post-raise is embedding inside vertical Software as a Service (SaaS) platforms like Tekmetric to reach merchants "inside tools they already use" — the channel works well enough that Lightspeed funded it. <b>Who's earning:</b> Pie, and every app-store vendor riding a vertical platform's install base. <b>Entry for you:</b> one partner-program application + a port of your review-request automation. <b>Honest flag:</b> each platform takes a rev share and can Sherlock you; treat it as a channel test, not a home.</p>
+
+  <h3><span class="tag active">ACTIVE</span> 5. Small-builder estimating &amp; takeoff automation</h3>
+  <p><b>The play:</b> Higharc just raised $95M and partnered with US LBM (the biggest private building-materials distributor) to auto-convert 2D floor plans into exact material orders — for enterprise builders. Nobody is doing this for the 5-person Cincinnati remodeler who still estimates in a notebook. <b>Evidence:</b> $170M total now behind this exact workflow; the pain (slow, error-prone takeoffs) is universal down-market. <b>Who's earning:</b> Higharc at the top; estimating-service freelancers at the bottom. <b>Entry for you:</b> honest flag first — this is the heaviest lift on this list and outside your current domain knowledge; it only works with a contractor partner who estimates daily. But your local-contractor network is precisely where such a partner lives. File it; don't start it this week. <span class="src"><a href="https://www.techtimes.com/articles/319480/20260701/homebuilding-ai-raises-95m-floor-plan-vision-tech-moves-lumber-supply-chain.htm">TechTimes</a></span></p>
 </section>
 
 <!-- 9. SECOND-ORDER -->
 <section>
-  <h2>🔮 9. Second-Order Effects & Corners</h2>
+  <span class="kicker">🔮 Section 9</span>
+  <h2>SECOND-ORDER EFFECTS & CORNERS (tight)</h2>
   <ul>
-    <li><b>Nvidia is now offering startups compute in exchange for revenue share</b> (reported July 2) while raising ~$20B in debt — textbook late-cycle "bubblenomics," per the Hacker News read. Corner worth seeing: if the infrastructure bubble deflates, tool prices fall but <i>service businesses keep needing their phones answered</i>. Your SMB-service positioning is the bubble-resistant end of the market. Don't envy the funded layer.</li>
-    <li><b>PE platform adoption creates a trickle-down sales calendar.</b> Vertex's roofing brands now answer leads in 2 seconds. Every independent roofer/HVAC shop losing bids to a PE-backed competitor over the next 2 quarters becomes a warmer lead for you than any cold list. The enemy of your prospect is your best marketer.</li>
-    <li><b>Government-gated frontier models</b> (GPT-5.6 still limited to ~20 partners) hint at a future where raw model access is a regulated resource. Second-order: businesses will prize consultants who can deliver results on <i>whatever</i> models remain freely available — model-agnostic builders win.</li>
+    <li><b>If AI answers eat blue links, rank-and-rent value migrates</b> from "site that ranks" to "entity the AI cites." GBP verification — Website Landlord's current blocker — becomes MORE valuable, since assistants lean heavily on structured local data. Chase that verification; don't let it drift.</li>
+    <li><b>Commodity intelligence = commodity competitors.</b> Every DFY competitor now has the same cheap frontier models you do. The durable asset is the relationship (Mark, Lisa Tuck's network), not the build. Price accordingly.</li>
+    <li><b>Platform turbulence favors the small and boring.</b> OpenAI is reportedly in early talks to give the United States government a 5% stake — big-platform regulatory entanglement tends to slow giants and leave unregulated local niches alone. Tailwind for you. <span class="src"><a href="https://news.ycombinator.com/item?id=48759623">HN thread</a></span></li>
   </ul>
 </section>
 
 <!-- 10. ACTION ITEM -->
 <section>
-  <h2>✅ 10. Your Action Item (This Week)</h2>
-  <div class="action">
-    <p><b>Assumption to validate:</b> the missed-call Return On Investment (ROI) math sells itself when a real contractor sees it on one page.</p>
-    <p><b>The task (≤30 min):</b> build a one-page "Missed-Call Money Leak" sheet using the trade-press numbers now circulating in Mark's own industry: 27% of calls unanswered · $1,200 lost per missed call · answering within 5 minutes = 21x more likely to qualify the lead · AI coverage from ~$100–600/month vs ~$37K/year for a receptionist. Put Mark's shop size into the math. It becomes your demo opener for Mark <i>and</i> your pitch page for Lisa (swap "missed job" for "missed client").</p>
-    <p><b>Success in writing:</b> the sheet exists, has Mark's numbers plugged in, and has been sent to (or scheduled with) at least one of the two prospects by end of Sunday, July 5. Bonus success: the A2P registration status is confirmed in writing this week, whatever the answer.</p>
+  <span class="kicker">🎯 Section 10</span>
+  <h2>YOUR ACTION ITEM (THIS WEEK)</h2>
+  <div class="action-box">
+    <p><b>Buy the GHL phone number in Mark's sub-account and run ONE clean end-to-end test.</b></p>
+    <p class="small">⏱️ 30 minutes or less. Test lead books via calendar → Job Booked workflow fires → nurture SMS sequence sends → review-request 👍/👎 gate triggers.</p>
+    <p><b>Success, in writing:</b> one test contact receives correct SMS from all three published automations with zero manual touches. The moment that happens, the product is officially "ready" — and your own no-pitch rule unlocks.</p>
+    <p class="small">Assumption being validated: that the A2P approval actually cleared the whole SMS path, not just the paperwork.</p>
   </div>
 </section>
 
 <!-- 11. TAKEAWAYS -->
 <section>
-  <h2>🗝️ 11. Your 3 Key Takeaways</h2>
-  <div class="takeaway"><b>1. Your consulting bundle now has a public market price: $997/month.</b> Fasttcart just anchored it for the whole trades vertical. Stop wondering if contractors will pay for this — price your Mark proposal against a live comp, and let the A2P blocker be the only thing standing between you and a demo. Kill it first.</div>
-  <div class="takeaway"><b>2. Anvil's thesis got ~$200M of validation this week — aimed at the wrong customer.</b> Enterprise memory layers are funded; the local-service version is untouched. Your move isn't to build — it's a one-sentence pricing experiment in Mark's proposal that tests modular WTP for free.</div>
-  <div class="takeaway"><b>3. There's untaken money in teaching what you already know.</b> A non-technical founder is charging enterprises for agentic-workflow workshops as a side effect of his SaaS. Your demo content is a workshop; a workshop is lead-gen that pays. Decide this week whether visibility is a price you'll pay for pipeline.</div>
+  <span class="kicker">🐦‍⬛ Section 11</span>
+  <h2>YOUR 3 KEY TAKEAWAYS</h2>
+  <div class="takeaway"><b>1. The gate is gone — act like it.</b> A2P approved July 2. Every day the phone number stays unbought is a self-imposed blocker wearing a bureaucracy costume. Buy it, test it, declare the product ready.</div>
+  <div class="takeaway"><b>2. July is a free-ammo month.</b> GHL's Voice AI spotlight means the Anvil WTP experiment (demo Mark, ask the $200/month question) runs at $0 marginal cost — but only while the trial window is open. One month, two lanes advanced.</div>
+  <div class="takeaway"><b>3. $155M landed on your thesis in 72 hours.</b> Pie + Probook + Higharc make "AI for local services" consensus. Consensus means you were right AND the window is narrowing. This quarter, speed beats polish.</div>
 </section>
 
 <footer>
-  🐦‍⬛ Corvus · compiled 2026-07-03 · signals from the last 48h · <a href="https://ggalioto.github.io/daily-brief/">ggalioto.github.io/daily-brief</a>
+  🐦‍⬛ Corvus — forged for Geo · Corvino Forge LTD · Cincinnati<br/>
+  Sources cited inline. No datapoints invented. Vendor-reported numbers flagged as such.
 </footer>
 </div>
 </body>
