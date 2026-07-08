@@ -6,180 +6,173 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Daily Intelligence Brief — July 7, 2026</title>
+<title>🐦‍⬛ Corvus Daily Brief — July 8, 2026</title>
 <style>
-:root{
-  --bg:#0f1115; --card:#181b22; --card2:#1f232d; --ink:#e8e6e1; --dim:#9a97a0;
-  --gold:#e8b04b; --red:#e06055; --green:#6fbf73; --blue:#6da8e8; --purple:#a98ee6; --border:#2a2e3a;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,'Nunito',sans-serif;line-height:1.55;font-size:16px;padding:0 0 60px;}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px;}
-header{background:linear-gradient(160deg,#14171e 0%,#1c1420 100%);border-bottom:2px solid var(--gold);padding:28px 16px 22px;text-align:center;}
-header h1{font-size:1.5rem;letter-spacing:.5px;}
-header .date{color:var(--gold);font-weight:700;margin-top:6px;}
-header .tagline{color:var(--dim);font-size:.85rem;margin-top:8px;font-style:italic;}
-header .groundtruth{color:var(--dim);font-size:.72rem;margin-top:10px;border-top:1px solid var(--border);padding-top:8px;text-align:left;}
-section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 18px;margin:18px 0;}
-section.lead{border:2px solid var(--gold);background:linear-gradient(170deg,#1d1a14 0%,#181b22 60%);}
-section.school{border:2px solid var(--purple);background:linear-gradient(170deg,#1c1a24 0%,#181b22 60%);}
-h2{font-size:1.15rem;margin-bottom:12px;letter-spacing:.3px;}
-h3{font-size:1rem;margin:14px 0 6px;color:var(--gold);}
-p{margin:8px 0;}
-ul{margin:8px 0 8px 20px;}
-li{margin:6px 0;}
-.verdict{background:var(--card2);border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px;margin:12px 0;font-size:1.02rem;}
-.verdict b{color:var(--gold);}
-.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
-.flag{background:#2a1d1a;border:1px solid var(--red);border-radius:10px;padding:12px 14px;margin:12px 0;}
-.flag b{color:var(--red);}
-.new{background:#1a2420;border:1px solid var(--green);border-radius:10px;padding:12px 14px;margin:12px 0;}
-.new b{color:var(--green);}
-.lesson{background:var(--card2);border-left:4px solid var(--purple);padding:12px 14px;border-radius:8px;margin:12px 0;}
-.lesson b{color:var(--purple);}
-.go{color:var(--green);font-weight:800;}
-.caution{color:var(--gold);font-weight:800;}
-.bad{color:var(--red);font-weight:800;}
-.up{color:var(--green);}
-.down{color:var(--red);}
-.flat{color:var(--dim);}
-.src{font-size:.78rem;color:var(--dim);}
-.src a{color:var(--blue);text-decoration:none;}
-.bar{font-family:ui-monospace,Consolas,monospace;font-size:.82rem;white-space:pre;color:var(--blue);background:var(--card2);border-radius:8px;padding:10px 12px;margin:10px 0;overflow-x:auto;line-height:1.7;}
-.tag{display:inline-block;font-size:.7rem;font-weight:800;padding:2px 8px;border-radius:20px;margin-right:6px;vertical-align:middle;}
-.tag.passive{background:#1d2a1e;color:var(--green);border:1px solid var(--green);}
-.tag.semi{background:#2a2617;color:var(--gold);border:1px solid var(--gold);}
-.tag.active{background:#231a2a;color:var(--purple);border:1px solid var(--purple);}
-.divider{text-align:center;color:var(--dim);margin:6px 0;letter-spacing:6px;}
-.action-box{background:#14201a;border:2px solid var(--green);border-radius:12px;padding:14px 16px;margin:12px 0;}
-.takeaway{background:var(--card2);border-radius:10px;padding:12px 14px;margin:10px 0;border-left:4px solid var(--purple);}
-.small{font-size:.85rem;color:var(--dim);}
-.competitor{background:var(--card2);border-radius:10px;padding:12px 14px;margin:10px 0;border-left:4px solid var(--red);}
-.competitor b{color:var(--red);}
-.restored{background:#1a2028;border:1px dashed var(--blue);border-radius:10px;padding:10px 12px;margin:12px 0;font-size:.85rem;color:var(--dim);}
-footer{text-align:center;color:var(--dim);font-size:.8rem;margin-top:30px;}
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --accent:#7dd3fc; --accent2:#f0b429;
+    --good:#4ade80; --warn:#fb923c; --bad:#f87171; --text:#e8eaf0; --sub:#a3aab8; --line:#2a2f3a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:20px 16px 60px;}
+  header{ text-align:center; padding:22px 10px 18px; }
+  header .raven{font-size:2.4rem;}
+  header h1{ margin:6px 0 2px; font-size:1.5rem; }
+  header .date{color:var(--sub); font-size:.95rem;}
+  h2{ font-size:1.15rem; margin:0 0 10px; display:flex; align-items:center; gap:8px; }
+  h3{font-size:1rem; margin:16px 0 6px; color:var(--accent);}
+  section{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 20px; margin-bottom:16px; }
+  .lane{ background:linear-gradient(135deg,#1d2a1f,#182018); border:1px solid #2f4a34; }
+  .lane h2{color:var(--good);}
+  .verdict{ font-size:1.05rem; font-weight:600; margin-bottom:8px; }
+  .school{ background:linear-gradient(135deg,#241d10,#1d1810); border:1px solid #4a3a1a; }
+  .school h2{color:var(--accent2);}
+  .tag{ display:inline-block; font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:20px; background:var(--card2); color:var(--sub); margin-left:6px;}
+  .tag.new{background:#3a2a10; color:var(--accent2);}
+  .tag.same{background:#20242c; color:var(--sub);}
+  .sig{ border-left:3px solid var(--accent); padding:8px 0 8px 12px; margin-bottom:14px; }
+  .sig:last-child{margin-bottom:0;}
+  .sig .src{ font-size:.78rem; color:var(--sub); }
+  .opp{ border-left:3px solid var(--accent2); padding:8px 0 8px 12px; margin-bottom:12px;}
+  .money{font-weight:700; color:var(--good);}
+  .flag{ background:#2a1a1a; border:1px solid #4a2a2a; color:#ffb4b4; padding:8px 10px; border-radius:8px; font-size:.85rem; margin-top:6px;}
+  .crit{margin-bottom:10px;}
+  .crit b{color:var(--accent);}
+  .compact{color:var(--sub); font-size:.92rem;}
+  .action{ background:linear-gradient(135deg,#1a2230,#161b24); border:1px solid #2f3a4a; }
+  .action h2{color:var(--accent);}
+  .checklist{margin:0; padding-left:20px;}
+  .takeaways ol{padding-left:20px; margin:0;}
+  .takeaways li{margin-bottom:10px;}
+  footer{ text-align:center; color:var(--sub); font-size:.85rem; padding:20px 10px 10px; }
+  a{color:var(--accent);}
+  .divider{ height:1px; background:var(--line); margin:14px 0; }
+  .blind{border-left:3px solid #c084fc; padding:8px 0 8px 12px; margin-bottom:14px;}
+  .blind h3{color:#c084fc; margin-top:0;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-<h1>🐦‍⬛ CORVUS DAILY INTELLIGENCE BRIEF</h1>
-<div class="date">Tuesday, July 7, 2026</div>
-<div class="tagline">Pre-battle briefing. Where do we attack first and hardest today — and what did you actually learn about running a business today?</div>
-<div class="groundtruth">Ground truth read from the connected Claude folder: CLAUDE.md's lane table, memory/session-log.md (last two entries, 2026-06-29 and 2026-07-06), TASKS.md, and the business curriculum files. Housekeeping: memory/anvil-and-other.md, consulting-ghl.md, website-landlord.md, affiliate-marketing.md, and done-for-you.md were all found <b>missing</b> from the live memory/ folder today (referenced in CLAUDE.md, but gone) — restored from a 2026-06-17 backup archive so future briefs have them again. Content in those files is dated to 2026-06-17; TASKS.md and session-log.md are the newer layer on top. GoHighLevel (GHL) Voice AI specifically — the phone-answering component — is still unconfirmed as something you're actually running (per your 2026-07-03 flag); today's biggest finding is about GHL's broader "AI Employee" bundle, and the note below is careful not to assume Voice AI is part of your plan.</div>
+  <div class="raven">🐦‍⬛</div>
+  <h1>Corvus Daily Brief</h1>
+  <div class="date">Wednesday, July 8, 2026 · ~10 min read</div>
 </header>
 
-<section class="lead">
-<div class="kicker">⚔️ Section 1</div>
-<h2>TODAY'S BEST LANE TO ATTACK: CONSULTING — a real price tag just landed on the thing you've been guessing at</h2>
-<div class="verdict"><b>Verdict:</b> Still Consulting. But today isn't a "nothing changed, see yesterday" day — genuinely new evidence landed that changes what you do next, not just how you talk about it.</div>
-<p><b>The find:</b> GoHighLevel's own native "AI Employee" bundle (Conversation AI website/SMS chatbot, Reviews AI, Content AI, Workflow AI, and Voice AI as an option) costs <b>$97/month per sub-account</b> to you as the agency. Multiple independent sources (netpartners.marketing's GHL pricing breakdown, GHL's own AI product pricing page) confirm agencies are already reselling that same bundle to local business clients as a standalone line item at <b>$200–$500/month</b>. That's not a hunch or a projection — it's the going market rate other GHL agencies are charging today, verified across GHL's own pricing docs and a third-party agency guide.</p>
-<p><b>Why it matters more than yesterday's competitive research:</b> yesterday's Snapshot research told you what to build. Today's find tells you what to <i>charge</i> for a piece of it you already have access to (Mark's account is on GHL). $200–$500/month margin on a $97/month cost is a real, proven number — not a guess you'd otherwise have had to test blind with Mark.</p>
-<p><b>One honest caveat before you get excited:</b> your 2026-07-03 note flags that you're likely <i>not</i> currently running GHL's native Voice AI specifically — don't assume that piece is switched on or part of your pitch to Mark. The $200–$500/month resale number covers the whole bundle (chatbot, reviews, content, workflow automation), and that part alone is real and available today regardless of the Voice AI question. Confirm which components you'd actually enable before you quote a price — that's this week's Action Item (Section 11).</p>
-<p><b>Highest-leverage move, doable now:</b> price the AI Employee bundle as a named add-on in your Mark pitch and in the Snapshot listing copy — a concrete number, not "AI features included." Still true from yesterday and unresolved: provision Mark's phone number and clear A2P 10DLC — that's still the blocker standing between you and a live end-to-end test, and no new information changed that.</p>
+<section class="lane">
+  <h2>🎯 Today's Best Lane To Attack <span class="tag new">reframed, same lane</span></h2>
+  <div class="verdict">Still Consulting — but ship the GHL HVAC Snapshot this week, not "someday."</div>
+  <p>Same lane as the last three briefs, so I'll keep this tight per your no-repeat rule — but the reasoning got a real jolt today. A startup called Probook just raised <b>$40 million</b> (Sequoia + a16z) specifically to build "the AI brain for home services — plumbers, electricians, HVAC (Heating, Ventilation, and Air Conditioning) crews." <span class="src">(Fortune, 2026-06-23)</span> That's not a generic AI receptionist company — that's someone with serious capital aiming at your exact niche.</p>
+  <p>Your Snapshot task (packaging the 3 built automations — Job Booked calendar flow, 5-step nurture, review-request gate — into a sellable GoHighLevel (GHL) template at $497–$997) has been sitting in TASKS.md since 2026-06-18, ~3 hours from done. Probook's raise doesn't mean you're beaten — it means the "be the dominant HVAC-specific Snapshot before anyone claims the space" window is closing faster than you assumed. A $40M company will go enterprise-first; the solo-contractor Snapshot-on-Gumroad price point is still wide open, but not indefinitely.</p>
+  <p class="compact">Bonus: GHL's "Summer of AI 2026" promo gives every sub-account free access to the AI Assistants (Voice AI, Conversation AI, Reviews AI) through August 31 <span class="src">(HighLevel Support Portal, 2026-06-04)</span>. You can test Voice AI on the "Cincinnati Honest HVAC TEST" sub-account right now at zero extra cost — the phone number + Application-to-Person 10-Digit Long Code (A2P 10DLC) registration is still the real blocker for live calls, but nothing stops you from building the flow now.</p>
 </section>
 
 <section class="school">
-<div class="kicker">🎓 Section 2</div>
-<h2>BUSINESS SCHOOL — Module 2: Revenue vs. Profit vs. Cash Flow</h2>
-<p class="small">Curriculum module 2 of the Foundations arc. The three numbers founders mix up — and why a "profitable" business can still go bankrupt.</p>
-<p>Here's the confusion almost every first-time founder walks into: they think "money coming in" is one number. It's actually three different numbers, measuring three different things, and mixing them up is one of the most common ways a business that looks healthy on paper actually runs out of cash.</p>
-<p><b>Revenue</b> — the total amount of money a sale generates, before you subtract anything. If Mark pays you $300/month for the GHL retainer, your revenue from Mark is $300/month. Full stop, no subtraction yet.</p>
-<p><b>Profit</b> — what's left after you subtract everything it cost you to generate that revenue. Take the Snapshot: you plan to sell it for $997. That's revenue. But subtract Gumroad or Stripe's cut (roughly 3–9% depending on platform), the GHL account cost you're already paying to build and test it, and any support hours you spend helping a buyer install it — and the number left over is profit. Revenue tells you what you made. Profit tells you what you kept.</p>
-<p><b>Cash flow</b> — the actual timing of money moving in and out of your bank account, which can be completely disconnected from both of the above. This is the one that kills businesses that are "profitable" on paper. Concrete example from your own numbers: Namecheap billed your Website Landlord hosting <b>annually</b> ($34.88 due July 1) — that's cash going out in one lump, regardless of whether the site has generated a single dollar of revenue yet. Flip it around: if you sign three Snapshot clients this month but two of them are on a 30-day invoice term, your revenue for the month looks great, but the cash isn't in your account yet — and if a bill comes due before that cash arrives, a "profitable" month can still leave you short.</p>
-<div class="lesson"><b>Today's proof, from today's research feed:</b> Profit AI — a Shopify app built by a non-technical founder using Cursor and Claude Code (the same category of tool you use daily) — exists <i>specifically</i> because e-commerce store owners could see their revenue in Shopify's dashboard but had no idea what their actual profit was after ad spend, cost of goods, and platform fees. That confusion is common enough that solving it is now a $30,000/month product. The lesson repeats itself everywhere: knowing your revenue and not your profit isn't a minor gap, it's a business model waiting to be sold to you.</div>
-<p><b>Applying it to the AI Employee resale from Section 1:</b> if you charge Mark $250/month for the AI Employee bundle, that's revenue. Subtract your $97/month GHL cost and any time you spend configuring it, and what's left is profit — probably $140–150/month, not $250. Cash flow is the timing question on top: GHL bills you monthly, so as long as you invoice Mark on the same cycle (not net-30), the cash flow risk here is low. That's exactly the kind of quick mental check — revenue, then profit, then cash timing — you should run before quoting any number to anyone.</p>
-<p class="small">Next up: Module 3 — Unit economics 101 (cost per unit, price per unit, contribution margin).</p>
+  <h2>🎓 Business School — Module 3: Unit Economics 101</h2>
+  <p><b>The concept:</b> every business has three numbers hiding inside a single sale: <b>cost per unit</b> (what it actually costs you to deliver one unit of your product/service), <b>price per unit</b> (what the customer pays), and <b>contribution margin</b> (price minus cost — what's left over to cover your fixed costs and eventually become profit). Most first-time founders only track price. That's like knowing your paycheck but not your rent.</p>
+
+  <h3>Your worked example: Mark's GHL reseller math</h3>
+  <p>You already made this decision back on 2026-06-16 without naming it — you were doing unit economics instinctively. Here's the breakdown, made explicit:</p>
+  <p><b>Cost per unit</b> = what GoHighLevel charges you underneath, per client, per month. On the Reseller/SaaS lane, that's the $97/month Starter plan cost you eat so Mark doesn't have to see it.<br>
+  <b>Price per unit</b> = what Mark pays you, all-in — roughly $300/month (software + your management retainer bundled).<br>
+  <b>Contribution margin</b> = $300 − $97 = <b>$203/month, per client</b>. That $203 is what's actually yours to keep — not the $300 headline number.</p>
+  <p>Now stack today's research on top: agencies are reselling GHL's AI Employee add-on (itself a $97/month cost) at $200–$600/month to local businesses <span class="src">(netpartners.marketing, verified against HighLevel Support Portal, 2026)</span>. If you add that line to Mark's account: cost per unit rises by $97, price per unit could rise by $200–$500 (an "AI Receptionist Package" upsell), so contribution margin on <i>that one add-on alone</i> is $103–$403/month. Layer it on top of the existing $203 and one client could be worth $306–$606/month in pure contribution margin — before you've signed client #2.</p>
+  <p>This is also why "10 clients at $300/month = $3,000/month" is the wrong way to think about scale. It's 10 clients × $203 contribution margin = $2,030/month <i>after</i> the GHL cost — and that's before your own time (which isn't free, even if it feels that way right now). Tomorrow's module (Fixed vs. Variable Costs) picks up exactly here: is your $203 margin per client mostly eaten by fixed costs (the same regardless of client count) or variable ones (that scale with clients)? That's the number that decides whether client #11 is almost pure profit or costs you almost as much as client #1.</p>
 </section>
 
 <section>
-<div class="kicker">📡 Section 3</div>
-<h2>TOP SIGNALS (last 48 hours)</h2>
-<h3>1. Polsia raises $30M running an "AI Chief Executive Officer (CEO)" with zero employees — $100K to $10M run-rate in 3 months</h3>
-<p>Polsia, an "autonomous operating system" that runs engineering, marketing, support, and operations through AI agents for other companies, raised a $30M seed/Series A (Sound Ventures lead, with True Ventures, Vaynerfund, and others) after growing from a $100,000 to a $10,000,000 run rate in about three months — 8,698 active companies paying <b>$49/month</b> each, with zero human employees on Polsia's own side. This is the single biggest proof point yet that "AI runs your business for you" is real, funded, and growing fast at the horizontal, generic-business level. What it means for Anvil specifically — where the pricing gap between $49/month generic and Mark's proposed $200/month vertical ask matters — is in Section 8, not repeated here. Source: <a href="https://www.angelsround.com/p/polsia" target="_blank">angelsround.com</a></p>
-<h3>2. The open-weight model flood kept going — LongCat-2.0's actual weights are live, and Tencent joined with Hy3</h3>
-<p>Meituan's LongCat-2.0 (the 1.6-trillion-parameter model named in yesterday's brief) shipped its actual downloadable weights on July 4 under an MIT license, benchmarking at 59.5 on SWE-bench Pro — edging out GPT-5.5's 58.6 — and it's now the most-used coding model on OpenRouter. Tencent separately released Hy3, a 295-billion-parameter model under Apache 2.0, free via OpenRouter for two weeks. Same trend as yesterday, one step further along: frontier-capable coding models are now free-to-cheap and open-license, which keeps compressing what it costs to build something like Anvil (Section 8, criterion c) — noted, not a new decision this week. Sources: <a href="https://www.creativeainews.com/articles/longcat-2-open-weights-coding-benchmarks-2026/" target="_blank">creativeainews.com</a>, <a href="https://explainx.ai/blog/tencent-hy3-295b-moe-open-source-agentic-model-2026" target="_blank">explainx.ai</a></p>
+  <h2>📡 Top Signals</h2>
+
+  <div class="sig">
+    <b>Probook raises $40M to be "the AI brain for home services"</b> — a founder who went from pressure washing to Wharton just landed Sequoia + a16z money specifically for plumbers, electricians, and HVAC crews. One customer had 2,500+ jobs booked in a month with zero human intervention.
+    <div class="src">Source: Fortune, "Exclusive: This founder went from pressure washing to Wharton," 2026-06-23</div>
+    <p class="compact">Means for you: validates the home-services-AI thesis hard (good news for Anvil's underlying bet) but also means a well-funded player now has your exact vertical in its crosshairs (bad news for waiting). Full read under Validation Stage below.</p>
+  </div>
+
+  <div class="sig">
+    <b>AI phone disclosure laws are now live and stacking</b> — Pie (AI receptionist for salons/auto shops) raised $19.5M the same week California's SB 243 (disclosure before any substantive interaction) and Texas's Responsible AI Governance Act took effect. The Federal Trade Commission (FTC) can now fine deceptive AI deployments up to $53,088 per violation.
+    <div class="src">Source: Tech Times, "AI Receptionist Startup Pie Gets $19.5M," 2026-07-02</div>
+    <p class="compact">Means for you: if you launch Voice AI on Mark's account (or anyone's), the AI has to identify itself as AI before it asks for name/appointment details — in Ohio this isn't law yet, but if you ever sell the Snapshot nationally, some buyers will be in California or Texas. Bake a disclosure line into the Snapshot's Voice AI script now; it's a 10-minute fix versus a retrofit later.</p>
+  </div>
+
+  <div class="sig">
+    <b>GHL's AI Employee reseller math is now independently confirmed</b> — $97/month cost, resold at $200–$600/month by agencies, matching the number you already had in memory from 2026-07-07.
+    <div class="src">Source: netpartners.marketing "GoHighLevel AI Employee 2026," cross-checked against HighLevel Support Portal</div>
+    <p class="compact">No new decision here — this is confirmation, not news. Filed under Business School above instead of repeating it.</p>
+  </div>
 </section>
 
 <section>
-<div class="kicker">🌱 Section 4</div>
-<h2>EMERGING OPPORTUNITIES</h2>
-<p><b>Every solo GHL agency reselling the AI Employee bundle prices it as a flat monthly add-on, and none of the vendor pages found today mention "vertical-specific" configuration (HVAC dispatch logic, emergency-call routing) as part of what you're paying for =</b> the same differentiation lever as the Snapshot itself — anyone can flip on GHL's $97 AI Employee, but "configured for HVAC's specific call patterns" is the part a generic reseller isn't offering. Strengthens Consulting.</p>
-<p><b>Non-technical founders are turning single spreadsheets into $20K–$30K/month products using the exact same AI coding tools you already use daily (Cursor, Claude Code), and it's now common enough that one report estimates 34% of new micro-SaaS launches in Q1 2026 had a non-coding founder =</b> a genuine option outside every current lane. Full treatment in Blind-Spot Radar (Section 9), not repeated here.</p>
+  <h2>💡 Emerging Opportunities</h2>
+  <div class="opp">
+    <b>Every new AI-receptionist customer now has a compliance problem nobody's selling them the fix for.</b> Pie, Probook, Newo.ai, Callab, DialIQ, Fluent Front, HuskyVoiceAI, Olelo — that's at least eight funded AI-voice-agent companies selling into small businesses right now, and none of the marketing copy I found mentions state disclosure law compliance. Problem: small business owners buying these tools don't know AB 2905 / SB 243 / Texas RAIGA exist. No good solution = opportunity. Strengthens: Consulting (you can bake compliant scripts into the Snapshot as a selling point — "compliance-ready out of the box") and opens a real Blind-Spot angle below.
+  </div>
 </section>
 
 <section>
-<div class="kicker">💸 Section 5</div>
-<h2>FASTEST MONEY RIGHT NOW</h2>
-<p class="small">Figures below in Monthly Recurring Revenue (MRR) and total revenue terms.</p>
-<div class="bar">Profit AI (Shopify, solo, no-code) ▓▓▓▓▓▓▓▓▓▓▓  $30K MRR / 5 months  [see Blind-Spot #1 — same tools you use]
-Polsia (AI-run companies, $49/mo)  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  $10M run-rate / 3 months [flashy, ceiling marker — Section 3]
-CutCoach (niche mobile app, solo) ▓▓▓▓▓▓▓▓▓▓▓  $20K/month / <1 year  [off-lane, durable niche-insider play]</div>
-<p><b>Profit AI</b> — Jack, a non-technical founder, converted a Shopify profit-tracking spreadsheet he already used with agency clients into an app, using Cursor and Claude Code with zero prior coding background. $147,000 total revenue and ~$30,000 MRR from the app alone within 5 months (built Dec 2024, current figures per a June 2026 podcast interview), growing entirely by word of mouth with no formal marketing yet. Full relevance in Section 9. Source: <a href="https://finance.biggo.com/podcast/fdf143335be01ce6" target="_blank">finance.biggo.com</a></p>
-<p><b>CutCoach</b> — a 19-year-old college dropout built a niche mobile app for combat-sport athletes managing weight cuts, using Cursor plus influencer marketing, scaling to $20,000/month in under a year. Off-lane (consumer mobile, not local services), but the "you already know the niche, that's your edge" logic is worth banking for later. Source: <a href="https://marketingagent.blog/2026/04/01/tutorial-build-a-20k-month-niche-app-with-cursor/" target="_blank">marketingagent.blog</a></p>
+  <h2>💰 Fastest Money Right Now</h2>
+  <p><span class="money">$84.5M</span> flowed into home-services/local-business AI voice in about 5 weeks — Probook ($40M, 2026-06-23), Pie ($19.5M, 2026-06-30), Newo.ai ($25M, 2026-02-10, still closing partnerships). That's venture money, not something you can go get — flagging it honestly as whitespace radar, not a lane for you directly.</p>
+  <p>More reachable: a solo developer publicly documented going <span class="money">$0 → $200K Annual Recurring Revenue (ARR) in 6 months</span> building an AI-native micro-Software as a Service (SaaS) tool (newsletter analytics) using AI coding agents for ~100% of the build, at $111/month total AI-tool cost. <span class="src">Source: dev.to, "How a Solo Founder Reached $200,000 ARR Using AI Agents," 2026-06-07</span> Durability check: 24% month-over-month growth trailing 3 months, 1.4% churn — real, not a launch-week spike, but it's one data point, not a pattern yet, and it's outside your current lanes (flagging, not recommending a pivot).</p>
 </section>
 
 <section>
-<div class="kicker">🔧 Section 6</div>
-<h2>TECHNICAL SHIFTS (tight)</h2>
-<p>X launched a hosted Model Context Protocol (MCP) server on June 30 — read-only access to search, trends, and user data for any MCP-compatible AI tool (Claude, Cursor, Grok), joining GitHub, Slack, Notion, Stripe, and Salesforce as platforms building specifically for AI agents rather than only humans. No action for you this week, but it's a small further data point for the "sell to agents" thesis from yesterday's brief — not re-explained here.</p>
-<p>LongCat-2.0 and Tencent's Hy3 both shipped this week (Section 3) — more evidence build-cost for anything like Anvil keeps falling.</p>
+  <h2>⚙️ Technical Shifts</h2>
+  <p class="compact">OpenAI shipped gpt-realtime-2.1 and a cheaper "-mini" variant on 2026-07-06 — 25%+ lower latency, better at reading back phone numbers/confirmation codes out loud. <span class="src">(DataNorth, 2026-07-07)</span> Matters if you ever build Voice AI outside GHL's native stack (Anvil): the cost/quality gap between "good enough" and "premium" voice models just narrowed again, which favors small builders who can't afford premium tiers.</p>
 </section>
 
 <section>
-<div class="kicker">📊 Section 7</div>
-<h2>ADOPTION & TRACTION SIGNALS (tight)</h2>
-<p>Cursor crossed 1 million monthly active users in early 2026, and one industry report pegs 34% of new micro-SaaS products launched in Q1 2026 as built by founders with no prior coding background. That's a market-timing signal specifically relevant to Section 9's blind-spot scenario: the tooling that makes "build your own small product" viable has gone from niche to mainstream in the time you've been running your other lanes.</p>
+  <h2>📈 Adoption & Traction Signals</h2>
+  <p class="compact">GHL's free "Summer of AI 2026" window (June 1 – Aug 31) is a market-timing tell: HighLevel is subsidizing AI Employee adoption hard, meaning agencies/contractors are being pushed to try Voice AI right now whether they asked for it or not — good timing to have your Snapshot ready to catch that wave before the free window closes.</p>
 </section>
 
 <section>
-<div class="kicker">🔨 Section 8</div>
-<h2>VALIDATION STAGE — ANVIL (5-criteria pass)</h2>
-<p class="small">Anvil = multi-agent business operating system / vertical agent back-office. Ceiling play, biggest time-sink, least-proven direct Willingness To Pay (WTP).</p>
-<p><b>(a) Demand</b> — reinforced, not new: Polsia's $10M run-rate in 3 months (Section 3) is the strongest proof yet that "AI runs your business" demand is real — but at the horizontal, generic-business level, same conclusion as before.</p>
-<p><b>(b) Direct WTP — genuinely new evidence today.</b> You've been waiting on Mark's direct answer to "$200/month, yes or no" with no market comp to anchor it. Today's find (Section 1) gives you one: GHL agencies are already charging $200–$500/month for a comparable "AI handles your calls and messages" bundle, to the same kind of small local-business owner Mark is. That doesn't answer Mark's specific yes/no, but it means you're no longer asking him to validate a number pulled from nowhere — you're asking him to confirm a price other operators in his exact position are already paying elsewhere.</p>
-<p><b>(c) Feasibility / build cost</b> — still falling, no change in direction. LongCat-2.0 and Hy3 (Section 3) continue the commoditization trend.</p>
-<p><b>(d) Competitive landscape — meaningful update.</b> Today surfaced a denser horizontal field than yesterday's list: Polsia ($30M raised, $49/mo, 8,698 companies), Zebi (early access, "AI business operating system," targeting solo founders running multiple ventures), Harnyss AI (positions itself explicitly against "custom agent orchestration," selling a pre-built agent hierarchy), and Lio ($30M Series A, a16z-backed, but narrowly scoped to enterprise procurement — not a fit for Anvil's space). All of them are horizontal (any business) or enterprise-scoped (procurement, not local trades) — <b>zero found today are built specifically for a local-service vertical like HVAC, plumbing, or similar.</b> Same structural conclusion as yesterday, but with real funded competitors now, not just names — worth tracking whether any of them start marketing toward trades specifically.</p>
-<p><b>(e) Verdict</b> — <span class="caution">CONDITIONAL GO</span>, but slightly de-risked: the WTP question isn't resolved, but it now has a market anchor instead of a blind guess. Cheapest experiment is unchanged: get Mark's setup live, then ask directly whether he'd pay $200/month for it standalone — now you can frame that ask around a real number other agencies charge, not a hypothetical.</p>
-<div class="competitor"><b>Rifle + Ammo Companion (RC):</b> no change, still parked. No new signal found today.</div>
+  <h2>🔬 Validation Stage — Anvil</h2>
+  <p class="compact">(a) Demand — no change, still strong (home-services owners hate missed calls, confirmed repeatedly). (b) Direct willingness to pay (WTP) — no change, still unproven; Mark hasn't answered the $200/month ask.</p>
+  <div class="crit">
+    <b>(d) Competitive landscape — real update, expand here.</b> Last brief flagged Polsia, Zebi, Harnyss AI, Lio as funded horizontal competitors with zero found building specifically for a local-trades vertical. That's no longer true. Probook ($40M, Sequoia/a16z) is now explicitly building for plumbers, electricians, and HVAC — your exact vertical, at enterprise scale, with a customer already at 2,500+ autonomous bookings/month. Pie ($19.5M) is going after salons/auto shops with a disclosure-compliance angle baked in. This doesn't kill Anvil's thesis (it confirms the market is real and big) but it raises the bar: a "me too" AI receptionist for local trades is now competing against $40M of product velocity, not just GHL's native features. Anvil's realistic lane, if it ever gets built, is a narrow wedge Probook won't chase at its scale — e.g., a compliance-first, dirt-cheap single-contractor tool GHL's SaaS Pro reseller model already half-covers. Not a kill signal, but the "wait and see" runway just got shorter.
+  </div>
+  <p class="compact">(c) Feasibility/build cost — no change. (e) Verdict — still CONDITIONAL GO, hold at back-shelf; cheapest kill/prove experiment is still "get Mark to say yes or no to $200/month" once his voice agent is live. Nothing moved on that front today — that's the actual bottleneck, not competition.</p>
+  <p class="compact"><b>Rifle + Ammo Companion (RC):</b> still officially back-shelf, no change, no new signal today.</p>
 </section>
 
 <section>
-<div class="kicker">🌫️ Section 9</div>
-<h2>BLIND-SPOT RADAR — money outside your stated lanes</h2>
-<p class="small">Rule check applied: both scenarios below are genuinely outside Consulting / Anvil / Website Landlord / Affiliate Marketing / Done-For-You (DFY) as you currently run them.</p>
-<p><span class="tag active">ACTIVE</span></p>
-<p><b>1. Build your own small product from a spreadsheet you (or a client) already use — not a clone of someone else's site, not a service.</b> This is structurally different from DFY (which clones an already-proven revenue site) and Consulting (which sells a service relationship) — here, you invent the product from a repeatable process. Evidence: Jack, a non-technical founder, turned a Shopify profit-tracking spreadsheet into Profit AI — $147K total revenue, ~$30K MRR in 5 months, built with Cursor and Claude Code, the same category of tool you're using right now in Cowork. Separately, a 19-year-old built CutCoach (a niche fitness app) to $20K/month in under a year using Cursor plus influencer marketing in a niche he personally knew. The common thread in both: pick a problem you already understand from the inside (a spreadsheet you use, a hobby community you're in), and let AI coding tools compress the build from months to weeks. Entry for you: genuinely open — you already have Claude/Cowork access, and you already have several spreadsheets and repeatable processes across your other lanes (the GHL Snapshot's own logic, Website Landlord's Search Engine Optimization (SEO) tracking, the Money Experiment's mark-to-market process) that could each be the seed of a small standalone tool. Honest flag: "AI makes it easy" undersells the real timeline — Jack's build still took 3.5–4 months even with these tools, and picking the right spreadsheet/niche is the actual hard part, not the coding. This is a real option, not a shortcut. Sources: <a href="https://finance.biggo.com/podcast/fdf143335be01ce6" target="_blank">finance.biggo.com</a>, <a href="https://marketingagent.blog/2026/04/01/tutorial-build-a-20k-month-niche-app-with-cursor/" target="_blank">marketingagent.blog</a></p>
-<p><span class="tag semi">SEMI-ACTIVE</span> (fog-of-war entry, early and speculative — flagged honestly)</p>
-<p><b>2. "Trust and verification" tooling for small businesses worried about AI slop and deepfakes.</b> A July 2026 sweep of Hacker News' mood (not a funded startup, just an analyst's read on where builder attention is going) found a sharp shift toward distrust of "AI-generated everything" — fear of synthetic disinformation, and a backlash against low-quality AI output flooding every channel. The analysis names a real gap: cheap, simple trust/verification/provenance tools for small teams that can't afford an enterprise security vendor. No funded product or revenue number backs this yet — it's a mood signal, not a market proof point like scenario 1. Worth a bookmark if you ever want a horizontal (non-trades) product idea, not a today-action. Source: <a href="https://blog.mean.ceo/hacker-news-trends-july-2026/" target="_blank">blog.mean.ceo</a></p>
+  <h2>🧭 Blind-Spot Radar — Outside Your Lanes</h2>
+  <div class="blind">
+    <h3>SEMI-ACTIVE: AI-receptionist compliance kit</h3>
+    <p>At least 8 funded companies (Pie, Probook, Newo.ai, Callab, DialIQ, Fluent Front, HuskyVoiceAI, Olelo) are selling AI voice agents to small businesses in a legal environment that now requires upfront AI disclosure in California, Texas, and soon Colorado (Aug 1, 2026), with FTC fines up to $53,088/violation. None of their marketing mentions this. A simple product — a state-by-state compliance checklist + pre-written disclosure scripts, sold as a $29–$79 one-time Gumroad download, or a $199 "audit my AI receptionist" service for local businesses that already bought one of these tools — sits genuinely outside your HVAC/Anvil/affiliate lanes because the buyer isn't a contractor, it's any small business that bought <i>any</i> AI receptionist. Honest flag: you're not a lawyer, and neither am I — this has to be framed as "informational checklist," not legal advice, or it becomes a liability instead of a product. That caveat alone might be reason enough to treat this as a content/lead-magnet play (attach it to your own consulting funnel) rather than a standalone paid product.</p>
+  </div>
 </section>
 
 <section>
-<div class="kicker">🌀 Section 10</div>
-<h2>SECOND-ORDER EFFECTS & CORNERS (tight)</h2>
-<p>If GHL keeps commoditizing AI features into its own $97/month native tier the way it's commoditizing HVAC snapshots (Section 1 vs. yesterday's Section 1), expect third-party "AI add-on" resellers to face the same margin squeeze third-party snapshot vendors already face — another reason your edge has to be vertical configuration (HVAC-specific call handling, dispatch logic), not just "we turned on the AI feature."</p>
-<p>X's MCP launch (Section 6) plus Polsia/Zebi/Harnyss all building "AI runs the whole business" products (Section 8) point the same direction: distribution and operations are both quietly re-platforming around AI agents as the primary user, not humans. Neither is a this-week action, but both are worth remembering as the ground shifting under every lane you run.</p>
+  <h2>🔀 Second-Order Effects & Corners</h2>
+  <p class="compact">If disclosure law enforcement actually bites (first FTC fine against an AI receptionist vendor would be the tell to watch for), slow-moving giants built before the law existed have a retrofit problem. Boutique or vertical-specific tools built compliance-first from day one — which is exactly the kind of thing a Snapshot or a narrow Anvil wedge could do — get a real, defensible edge that has nothing to do with features and everything to do with not getting fined. Worth remembering as a moat angle when Business School reaches Module 11 (Moats).</p>
 </section>
 
-<section class="action-box">
-<div class="kicker">✅ Section 11</div>
-<h2>YOUR ACTION ITEM (THIS WEEK)</h2>
-<p><b>Assumption to validate:</b> "The GHL AI Employee bundle is something I can price and pitch today, not just a nice-to-know fact."</p>
-<p><b>The 30-minute version:</b> Log into Mark's GHL account and confirm exactly which AI Employee components are actually toggled on right now (Conversation AI, Reviews AI, Content AI, Workflow AI — and confirm Voice AI's status one way or the other, since that's the piece your 2026-07-03 note flagged as unconfirmed). Pick one price point in the $200–$500/month range other agencies charge, and write the one-sentence pitch line you'd actually say to Mark or put in the Snapshot listing.</p>
-<p><b>Success looks like:</b> a written list of which AI Employee components are live, one chosen price, and one drafted sentence — ready to use on your next call with Mark or in the Snapshot's copy, not still sitting as an idea.</p>
+<section class="action">
+  <h2>✅ Your Action Item (This Week)</h2>
+  <p><b>Test the willingness-to-pay assumption behind the Snapshot before finishing the packaging.</b></p>
+  <ol class="checklist">
+    <li>Spend 30 minutes: post the Snapshot concept (3 built automations, founding-buyer price $497) in 2 GoHighLevel agency communities (Facebook Groups or Slack — pick whichever you're already in).</li>
+    <li><b>Success defined:</b> at least 3 people reply asking "where do I buy" or DM you interest within 48 hours. If you get that, finish packaging immediately. If you get silence or "meh," that's real information before you sink the remaining ~3 hours.</li>
+  </ol>
 </section>
 
-<section>
-<div class="kicker">🔑 Section 12</div>
-<h2>YOUR 3 KEY TAKEAWAYS</h2>
-<div class="takeaway">1. GHL's own AI Employee bundle costs you $97/month and agencies resell it at $200–$500/month — a real, checkable number that turns Mark's WTP question from a guess into a benchmarked ask. Price it and pitch it this week (Section 11).</div>
-<div class="takeaway">2. Polsia's $10M-run-rate-in-3-months at $49/month confirms "AI runs your business" is a real, funded, growing category — but at generic pricing far below what Mark's WTP test would need. The vertical-trades angle Anvil is betting on remains genuinely unclaimed by any funded competitor found so far (Section 8).</div>
-<div class="takeaway">3. Today's Business School lesson isn't abstract: before you quote any number to anyone — Mark, a Snapshot buyer, yourself — run it through all three: what's the revenue, what's left after costs (profit), and does the cash actually land in time to pay your own bills (cash flow)?</div>
+<section class="takeaways">
+  <h2>🔑 Your 3 Key Takeaways</h2>
+  <ol>
+    <li><b>The HVAC Snapshot has a clock on it now.</b> Probook's $40M raise doesn't beat you, but it means "someday" needs to become "this week" — test WTP with the 30-minute action above before investing the last 3 hours of build time.</li>
+    <li><b>You already do unit economics — now you have the vocabulary.</b> Cost per unit ($97), price per unit ($300), contribution margin ($203) is the exact lens to run every future pricing decision through, including the AI Employee upsell.</li>
+    <li><b>Compliance is becoming a product feature, not paperwork.</b> Bake AI disclosure into the Snapshot's Voice AI script now — it's cheap insurance and doubles as a selling point against competitors who haven't bothered.</li>
+  </ol>
 </section>
 
 <footer>
-🐦‍⬛ Corvus — built for Geo, Corvino Forge LTD · Sources linked inline · Next brief tomorrow
+  🐦‍⬛ Corvus — built for Corvino Forge LTD · Next brief: Module 4 (Fixed vs. Variable Costs)
 </footer>
 
 </div>
