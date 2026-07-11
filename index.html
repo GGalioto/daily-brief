@@ -6,194 +6,256 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Daily Intelligence Brief — July 10, 2026</title>
+<title>🐦‍⬛ Corvus Daily Intelligence Brief — July 11, 2026</title>
 <style>
   :root{
-    --bg:#0f1117; --card:#1a1d27; --card2:#20242f; --ink:#eef1f7; --mut:#a3adc2;
-    --accent:#ffb454; --accent2:#7aa2f7; --good:#7bd88f; --warn:#ff7a93; --line:#2a2f3d;
+    --ink:#1b1b23;
+    --paper:#faf7f2;
+    --card:#ffffff;
+    --raven:#2b2d42;
+    --accent:#c1440e;
+    --accent2:#3a7d44;
+    --gold:#d4a017;
+    --soft:#6b6b76;
+    --line:#e7e2d8;
   }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:22px 18px 60px}
-  header.top{text-align:center;padding:18px 0 8px}
-  header.top .bird{font-size:40px}
-  h1{font-size:25px;margin:6px 0 2px;letter-spacing:-.3px}
-  .date{color:var(--mut);font-size:14px;letter-spacing:.4px;text-transform:uppercase}
-  .kicker{color:var(--accent);font-weight:700;font-size:12px;letter-spacing:1.6px;text-transform:uppercase}
-  section{background:var(--card);border:1px solid var(--line);border-radius:16px;
-    padding:20px 20px;margin:18px 0;box-shadow:0 2px 14px rgba(0,0,0,.25)}
-  section h2{font-size:20px;margin:2px 0 12px;display:flex;gap:9px;align-items:flex-start}
-  section h3{font-size:16px;margin:16px 0 5px;color:var(--accent2)}
-  p{margin:9px 0}
-  .lead{background:linear-gradient(135deg,#232838,#1a1d27);border-color:#39405a}
-  .verdict{font-size:19px;font-weight:800;color:var(--accent);margin:2px 0 6px}
-  .pill{display:inline-block;background:var(--card2);border:1px solid var(--line);
-    border-radius:999px;padding:3px 11px;font-size:12px;color:var(--mut);margin:2px 4px 2px 0}
-  .do{background:#152417;border:1px solid #274b30;border-radius:12px;padding:12px 14px;margin:12px 0}
-  .do b{color:var(--good)}
-  .flag{background:#2a1620;border:1px solid #5a2740;border-radius:12px;padding:12px 14px;margin:12px 0}
-  .flag b{color:var(--warn)}
-  .school{background:linear-gradient(135deg,#1c2233,#191d28);border-color:#39405a}
-  .school{border-color:#39405a}
-  .num{color:var(--good);font-weight:700}
-  .mut{color:var(--mut)}
-  a{color:var(--accent2)}
-  .src{font-size:12px;color:var(--mut);margin-top:6px}
-  .src a{color:var(--mut);text-decoration:underline}
-  ul{margin:8px 0 8px 2px;padding-left:20px}
-  li{margin:6px 0}
-  .tk{background:var(--card2);border-radius:12px;padding:12px 14px;margin:8px 0;border-left:3px solid var(--accent)}
-  .divider{height:1px;background:var(--line);margin:14px 0}
-  footer{text-align:center;color:var(--mut);font-size:13px;padding:26px 0 0}
-  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
-  th,td{border:1px solid var(--line);padding:7px 9px;text-align:left}
-  th{background:var(--card2);color:var(--accent2)}
-  .big{font-size:15px}
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 16px 60px;}
+  header.hero{
+    background: linear-gradient(135deg, var(--raven) 0%, #4b4e6d 100%);
+    color:#fff;
+    padding:32px 20px 26px;
+    border-radius:0 0 24px 24px;
+    text-align:center;
+    margin-bottom:22px;
+  }
+  header.hero .bird{font-size:42px;display:block;margin-bottom:6px;}
+  header.hero h1{margin:0 0 6px;font-size:22px;letter-spacing:.3px;}
+  header.hero .date{font-size:14px;opacity:.85;margin:0;}
+  header.hero .tag{
+    display:inline-block;margin-top:12px;font-size:12px;
+    background:rgba(255,255,255,.14);padding:6px 12px;border-radius:20px;
+  }
+  h2.section-title{
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+    color:var(--accent);
+    margin:34px 0 10px;
+    display:flex;align-items:center;gap:8px;
+  }
+  h2.section-title .num{
+    background:var(--accent);color:#fff;border-radius:50%;
+    width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;flex:none;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 18px 16px;
+    margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  .card h3{margin:0 0 8px;font-size:17px;color:var(--raven);}
+  .card p{margin:0 0 10px;font-size:15px;}
+  .card p:last-child{margin-bottom:0;}
+  .verdict-badge{
+    display:inline-block;background:var(--accent2);color:#fff;font-size:12px;
+    font-weight:700;padding:5px 10px;border-radius:8px;margin-bottom:10px;
+    text-transform:uppercase;letter-spacing:.4px;
+  }
+  .action-box{
+    background:#fff6e9;border-left:4px solid var(--gold);
+    padding:12px 14px;border-radius:8px;margin-top:10px;font-size:14.5px;
+  }
+  .action-box b{color:#8a5a00;}
+  .source{
+    font-size:12.5px;color:var(--soft);margin-top:8px;
+  }
+  .source a{color:var(--soft);}
+  ul.tight{margin:8px 0 0;padding-left:20px;}
+  ul.tight li{margin-bottom:6px;font-size:15px;}
+  .score-row{
+    display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;
+  }
+  .score-pill{
+    background:var(--raven);color:#fff;font-size:12.5px;
+    padding:7px 11px;border-radius:10px;flex:1 1 auto;text-align:center;
+  }
+  .score-pill b{display:block;font-size:16px;}
+  .score-final{
+    text-align:center;margin:16px 0 6px;
+  }
+  .score-final .big{
+    font-size:40px;font-weight:800;color:var(--accent);
+  }
+  .score-final .of{font-size:16px;color:var(--soft);}
+  .divider{border:none;border-top:1px dashed var(--line);margin:26px 0;}
+  .blindspot{
+    border-left:4px solid var(--accent2);
+  }
+  .stage-tag{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:.5px;
+    text-transform:uppercase;background:var(--accent2);color:#fff;
+    padding:3px 8px;border-radius:6px;margin-bottom:8px;
+  }
+  footer{
+    text-align:center;margin-top:40px;padding-top:20px;
+    border-top:1px solid var(--line);color:var(--soft);font-size:13px;
+  }
+  footer .bird{font-size:22px;display:block;margin-bottom:6px;}
+  .takeaway-list{counter-reset:tk;list-style:none;padding:0;margin:10px 0 0;}
+  .takeaway-list li{
+    counter-increment:tk;position:relative;padding-left:34px;margin-bottom:12px;font-size:15px;
+  }
+  .takeaway-list li::before{
+    content:counter(tk);position:absolute;left:0;top:0;
+    background:var(--gold);color:#3a2a00;font-weight:800;
+    width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="top">
-  <div class="bird">🐦‍⬛</div>
-  <div class="kicker">Corvus · Daily Intelligence Brief</div>
-  <h1>Where do you attack today?</h1>
-  <div class="date">Friday · July 10, 2026</div>
-  <p class="mut" style="font-size:13px">Claude folder connected & readable — lane statuses are live from CLAUDE.md, session-log, and TASKS.md.</p>
-</header>
+  <header class="hero">
+    <span class="bird">🐦‍⬛</span>
+    <h1>Corvus Daily Intelligence Brief</h1>
+    <p class="date">Saturday, July 11, 2026</p>
+    <span class="tag">Ground truth loaded from CLAUDE.md + session-log.md + TASKS.md ✓</span>
+  </header>
 
-<!-- 1 -->
-<section class="lead">
-  <h2>⚔️ 1 · Today's Best Lane to Attack</h2>
-  <div class="verdict">Consulting / the GHL HVAC Snapshot — again. But today GoHighLevel handed you a free lead-gen upgrade to actually move it.</div>
-  <p>Nothing changed the core calculus since the 07-09 brief — Consulting is still the lane because it's your only path with a warm prospect (Mark) and a half-built asset (the Snapshot, sitting in TASKS.md since 06-18). See that brief for the full case; I'm not re-arguing it.</p>
-  <p><b>What's new and worth 20 minutes today:</b> GoHighLevel (GHL — the all-in-one agency platform you build on) shipped a July upgrade to its native <b>Prospecting Tool</b>. It no longer just pulls Google Business Profile data — it now auto-crawls a prospect's website and scrapes extra phone numbers, public emails, and location data straight into the Customer Relationship Management (CRM) record, auto-tagged by source. Translation: your cold-outreach list of Cincinnati Heating, Ventilation and Air Conditioning (HVAC) shops builds itself now, enriched, ready to drop into a workflow.</p>
-  <div class="do"><b>Highest-leverage action:</b> Open the Prospecting Tool, pull 15–20 local HVAC contractors, let it enrich them, and export. That single list feeds <i>both</i> revenue paths at once — consulting outreach to the next Mark, and the first buyers to pitch the Snapshot to. You've been blocked on "who do I even talk to." GHL just removed that excuse for free.</div>
-  <div class="src">Sources: <a href="https://ghldeveloper.io/blog/gohighlevel-july-2026-updates-hidden-features-you-probably-missed">GHL July 2026 Updates (ghldeveloper.io)</a></div>
-</section>
-
-<!-- 2 -->
-<section class="school">
-  <h2>🎓 2 · Business School — Module 5</h2>
-  <div class="kicker" style="color:var(--accent2)">Customer Acquisition Cost (CAC)</div>
-  <p class="big"><b>The one idea:</b> Customer Acquisition Cost (CAC) is the <i>total</i> money and money-equivalent you spend to turn one stranger into one paying customer — averaged across everyone you win, including the people who cost you effort and never bought.</p>
-
-  <h3>The trap it exists to catch</h3>
-  <p>New founders look at a sale and think "I charged $300, it cost me $97 to deliver, so I made $203." That's contribution margin (Module 3) — real, but it ignores the money you burned to <i>find</i> that customer in the first place. CAC is the number that hides in the "before the sale" darkness. A business with great margins can still bleed to death if it spends $400 in ads to land a customer worth $203.</p>
-
-  <h3>How you actually calculate it</h3>
-  <p>Add up everything you spent trying to get customers in a period — ad spend, tools, the dollar-value of your own hours, any fees — then divide by the number of customers you actually landed. Note the word <i>landed</i>, not "leads." The people who ghosted you still count in the numerator; that's what makes CAC honest and brutal.</p>
-  <p class="mut" style="font-size:15px">CAC = (all sales &amp; marketing cost) ÷ (new customers won)</p>
-
-  <h3>Worked example — with your own numbers</h3>
-  <p>Say you spend a Saturday — call it 6 hours of your time, worth $50/hr to you = <span class="num">$300</span> — doing manual outreach to HVAC shops for the Snapshot. You also pay <span class="num">$0</span> in ads. Out of it, <b>2 contractors buy</b> at $497.</p>
-  <table>
-    <tr><th>Line</th><th>Amount</th></tr>
-    <tr><td>Your time (6 hrs × $50)</td><td>$300</td></tr>
-    <tr><td>Ad spend</td><td>$0</td></tr>
-    <tr><td>Customers won</td><td>2</td></tr>
-    <tr><td><b>CAC (per customer)</b></td><td><b>$150</b></td></tr>
-  </table>
-  <p>$150 to acquire a $497 sale is <b>excellent</b> — you keep the difference. But flip one number: if only <b>1</b> shop bought, CAC doubles to <span class="num">$300</span>. And if you'd paid $400 in Meta ads and landed 1 customer, your CAC is <span class="warn" style="color:var(--warn)">$700 for a $497 sale — you lost money on that customer</span> even though the "margin" looked fine.</p>
-
-  <h3>Why this matters <i>this week</i></h3>
-  <p>Today's real-world proof lands right on top of the lesson. A fresh survey of 3,787 revenue-earning bootstrapped Software-as-a-Service (SaaS) businesses found the ones that win almost all did it with a CAC near <b>$0 — 100% organic and community-driven</b>. One solo founder hit <span class="num">$200,000</span> Annual Recurring Revenue (ARR) in six months with a literal CAC of $0 (every customer came from Reddit and word-of-mouth). Meanwhile the same data shows <b>paid ads are a margin-destroyer at your scale</b> — organic search "costs" $480–$942 per customer in built-up effort, and paid ads run so hot they only make sense for very high Lifetime Value (LTV) products.</p>
-  <div class="do"><b>The takeaway that changes what you do:</b> Your cheapest, best CAC lever right now is your own hands + free channels (that enriched GHL prospect list, Reddit, GHL agency communities) — not opening your wallet. The instinct to "just run some ads" is the expensive amateur move. Bank the free CAC while you're small.</div>
-  <div class="src">Sources: <a href="https://bigideasdb.com/state-of-indie-saas-revenue-2026">State of Indie SaaS Revenue 2026 (BigIdeasDB, 3,787 businesses)</a> · <a href="https://dev.to/starsearn/how-a-solo-founder-reached-200000-arr-using-ai-agents-full-breakdown-36h0">$200K ARR / $0 CAC breakdown (dev.to)</a></div>
-  <p class="mut" style="font-size:13px">Next up (Module 6): Lifetime Value (LTV) and the 3:1 LTV:CAC rule — the other half of this equation.</p>
-</section>
-
-<!-- 3 -->
-<section>
-  <h2>📡 3 · Top Signals</h2>
-  <p><b>The model floodgates opened this week — and the price of "smart" collapsed.</b> In 48 hours: OpenAI shipped <b>GPT-5.6</b> (July 9) and <b>GPT-Live</b> natural-conversation voice models (July 8); Meta launched <b>Muse Spark 1.1</b>, an agentic-coding model at <span class="num">$1.25</span>/million input tokens; and SpaceXAI released <b>Grok 4.5</b>, which Elon Musk calls "Opus-class" at <span class="num">$2</span>/$6 per million tokens vs. Anthropic Opus's $5/$25.</p>
-  <p><b>Why it matters to you specifically:</b> the cost of the Large Language Model (LLM — the "brain" behind any Artificial Intelligence (AI) agent) is in free-fall, and the voice models keep getting more natural. Every dollar drop makes the Voice AI inside the Snapshot cheaper to run and better-sounding — which is your product getting stronger while you sleep. The flip side: it also makes it trivially cheap for the next person to build the same thing, so speed-to-ship matters more, not less.</p>
-  <div class="src">Sources: <a href="https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/">Muse Spark 1.1 (TechCrunch)</a> · <a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/">Grok 4.5 (TechCrunch)</a> · <a href="https://openai.com/index/introducing-gpt-live/">GPT-Live (OpenAI)</a></div>
-</section>
-
-<!-- 4 -->
-<section>
-  <h2>💡 4 · Emerging Opportunity</h2>
-  <p><b>Problem + no clean solution = opening:</b> GHL's July Prospecting Tool now scrapes rich contact data on any local business — but most agency owners don't know it exists or how to turn a raw enriched list into booked appointments. That gap ("I have data, now what?") is a productized service: a done-for-you "enriched-list → 5-touch outreach workflow" you install for HVAC contractors.</p>
-  <p><b>Which lane it strengthens:</b> Consulting, directly. It's the same muscle as the Snapshot but sold as a service — and it's a natural warm-up conversation before the bigger retainer pitch. It does <i>not</i> require anything new to be built; it's packaging a capability GHL just gave away.</p>
-</section>
-
-<!-- 5 -->
-<section>
-  <h2>💰 5 · Fastest Money Right Now</h2>
-  <p>The honest indie SaaS reality check, straight from 3,787 real businesses: median Monthly Recurring Revenue (MRR) is <span class="num">$145/month</span>. AI is the <i>most crowded</i> category (941 businesses) yet its median is only <span class="num">$203</span> — proof that "AI" is a feature, not a moat. The category with the <b>best odds</b> of clearing $1k MRR? <b>Sales tools (42%)</b>, because they attach directly to a buyer's revenue.</p>
-  <div class="flag"><b>🚩 Whitespace flag (outside your lanes):</b> The single fastest verified money this cycle is in the <b>Shopify app ecosystem</b> — "Profit AI," built by a non-coder with Claude, hit <span class="num">$30K/month</span> in five months; another founder scaled a Shopify plugin from $200K/mo to $1M/mo in a year. The pattern is dead simple: take a spreadsheet merchants already hack together, turn it into a narrow app. This is genuinely outside everything you're doing. Durability: real and growing (Shopify Gross Merchandise Volume up 30% year-over-year), but it demands e-commerce domain knowledge and a community you're not in. Flagging it honestly, not telling you to chase it.</div>
-  <div class="src">Sources: <a href="https://bigideasdb.com/state-of-indie-saas-revenue-2026">Indie SaaS Revenue 2026</a> · <a href="https://finance.biggo.com/news/fdf143335be01ce6">Profit AI $30K/mo (BigGo)</a></div>
-</section>
-
-<!-- 6 -->
-<section>
-  <h2>🔧 6 · Technical Shift (tight)</h2>
-  <p>Muse Spark 1.1 and Grok 4.5 both undercut the previous price/performance frontier. For a builder in your seat, the decision this changes is small but real: <b>you no longer need to design around token cost</b> for a low-volume Voice AI or nurture-agent. Build for quality; the bill won't bite at your scale.</p>
-</section>
-
-<!-- 7 -->
-<section>
-  <h2>📈 7 · Adoption &amp; Traction (tight)</h2>
-  <p>GHL's own AI push keeps accelerating — the new <b>AI Employee "Growth" tier at $50/month per sub-account</b> (below the old $97 Unlimited) means the AI upsell you'd resell to Mark just got a cheaper entry point, widening your margin room. Adoption signal: GHL is racing to make AI the default, not the add-on. Ride the platform's momentum; don't fight it.</p>
-  <div class="src">Sources: <a href="https://ghlcentral.com/highlevel-ai-employee-plans/">GHL AI Employee Plans (ghlcentral.com)</a></div>
-</section>
-
-<!-- 8 -->
-<section>
-  <h2>🔬 8 · Validation Stage — Anvil</h2>
-  <p class="mut">Rotating deep-dive slot. Rule: only expand criteria with genuinely new evidence today.</p>
-  <ul>
-    <li><b>(a) Demand</b> — unchanged since 07-09. Real, but still proven only indirectly.</li>
-    <li><b>(b) Direct Willingness To Pay (WTP)</b> — <b>still the bottleneck.</b> Mark has not answered the $200/month standalone question. Nothing moved. This is the only criterion that matters right now.</li>
-    <li><b>(c) Feasibility / build cost</b> — <span class="good" style="color:var(--good)">improved today.</span> This week's model price collapse (Muse Spark $1.25/M input, Grok 4.5 at $2/$6) directly lowers Anvil's runtime cost. Cheaper to build and run than it was a week ago.</li>
-    <li><b>(d) Competitive landscape</b> — <b>new, and it's a double-edged read.</b> The 3,787-business dataset shows AI is the most crowded indie category (941 businesses) with a middling $203 median — "AI is a feature, not a moat." That confirms a horizontal AI-Anvil would drown, and <i>reinforces</i> the whole thesis: Anvil only survives as a <b>narrow local-trades vertical</b>, not a general tool. Still zero direct local-trades-vertical competitor found; the funded names (Probook, Polsia, Revin) are enterprise/rollup-focused.</li>
-    <li><b>(e) Verdict</b> — <b>CONDITIONAL GO, unchanged.</b> Cheapest kill/prove experiment is still one sentence to Mark. The tech got cheaper and the "must be vertical" case got stronger, but none of it substitutes for a human saying "yes, I'd pay."</li>
-  </ul>
-  <p class="mut" style="font-size:14px"><b>Rifle + Ammo Companion (RC):</b> back-shelf, no change. Parked until the ammo affiliate model is proven elsewhere.</p>
-</section>
-
-<!-- 9 -->
-<section>
-  <h2>🛰️ 9 · Blind-Spot Radar — outside your stated lanes</h2>
-  <h3>SEMI-ACTIVE · Shopify data micro-app</h3>
-  <p>Covered the money in §5 — the on-ramp here is real (non-coders shipping $30K/mo apps with Claude) but the honest blocker is domain: you'd be selling to e-commerce merchants whose pain you don't live. Your edge (GHL, local services) doesn't transfer. Realistic only if you first spend time <i>inside</i> a Shopify seller community. Filed, not recommended.</p>
-  <div class="divider"></div>
-  <h3>PASSIVE-ish · "New-AI-topic" SEO content as an asset</h3>
-  <p>An indie found that blog content on <i>brand-new</i> AI topics (GPTBot, ClaudeBot crawler tags) ranked top-5 fast because existing content was stale within months — and it compounded into 6%-converting traffic. This overlaps your Search Engine Optimization (SEO) skill from Website Landlord, but the audience (builders/developers) and monetization (affiliate/ads, not local clients) are genuinely different. With this week's model flood, the "what changed in AI pricing/tools" beat is wide open and under-covered. Low effort, slow payoff, real compounding. The most plausible outside-lane move for you because it reuses a skill you already have.</p>
-  <div class="src">Source: <a href="https://crawlix.app/blog/indie-seo-tool-marketing-year-one/">A Year of Indie SaaS Marketing (Crawlix)</a></div>
-</section>
-
-<!-- 10 -->
-<section>
-  <h2>🔭 10 · Second-Order Effects (tight)</h2>
-  <p>As LLM prices crater, the moat stops being "we have AI" and becomes <b>distribution + niche trust</b> — exactly the two things a local, boots-on-the-ground consultant can own that a funded horizontal startup can't. The macro trend quietly favors your smallness. The thing you might miss: the window to plant the "Cincinnati HVAC guy who does AI" flag is <i>now</i>, before the price collapse invites ten more generalists.</p>
-</section>
-
-<!-- 11 -->
-<section>
-  <h2>🎯 11 · Your Action Item (this week)</h2>
-  <div class="do">
-    <p><b>Assumption to test:</b> "The enriched GHL Prospecting list gives me usable HVAC leads faster than manual research."</p>
-    <p><b>Do (30 min):</b> Pull 15 Cincinnati-area HVAC contractors through the upgraded Prospecting Tool, let it auto-enrich, export the list with phone + email.</p>
-    <p><b>Success = in writing:</b> at least <b>10 of 15</b> records come back with a valid phone <i>and</i> email attached. If yes, you have your outreach list for both the Snapshot and the next consulting pitch — no more "who do I talk to."</p>
+  <h2 class="section-title"><span class="num">1</span>Today's Best Lane To Attack</h2>
+  <div class="card">
+    <span class="verdict-badge">Verdict: Consulting / GoHighLevel (GHL) Heating Ventilation and Air Conditioning (HVAC) Snapshot</span>
+    <p>Same lane as the last several briefs, but with a genuinely new, provable hook — worth the full write-up because the reasoning actually changed today.</p>
+    <p>A speed-to-lead study from Hatch, analyzing 132,000 HVAC follow-up campaigns, found the single biggest cost lever in this business isn't ad spend — it's follow-up cadence. Top-performing sequences run <b>7 touches over 5 days</b> (5 Short Message Service (SMS) texts + 2 emails), while generic GoHighLevel (GHL) snapshots built for coaches or Software as a Service (SaaS) buyers typically run only 2–3 touches. The gap in outcomes is stark: a $130 lead costs $190–$230 per booked job with fast, full follow-up — or <b>$1,486 per booked job</b> with the generic cadence. The report estimates <b>73% of HVAC contractors on generic snapshots are overpaying by 6x or more</b> per booked job, without knowing it.</p>
+    <p>Your GHL HVAC Snapshot task (packaging the 3 built automations — Job Booked calendar flow, 5-step nurture + kill-switch, review-request gate) has sat untouched in TASKS.md since June 18 — 23 days. This is the differentiation hook that finally makes it worth 3 hours of packaging time: a cited, dated, third-party number proving generic snapshots bleed money, and a specific target (5 SMS + 2 email over 5 days) to check your own nurture flow against.</p>
+    <div class="action-box"><b>Do this:</b> Pull up your 5-step nurture flow and count its touches against the 5-SMS/2-email/5-day benchmark. If it's short, add the missing steps. Then write one sales-page paragraph leading with the "73% overpay 6x" stat. List at your already-decided $497–$997 price band.</div>
+    <p class="source">Source: <a href="https://theaitrades.ai/blog/ghl-snapshot-trades-hvac-contractors" target="_blank">The AI Trades, "Why Generic GHL Snapshots Fail HVAC and Trades Businesses," June 4 2026</a> (citing Hatch's 132,000-campaign analysis)</p>
   </div>
-</section>
 
-<!-- 12 -->
-<section>
-  <h2>🗝️ 12 · Three Key Takeaways</h2>
-  <div class="tk"><b>1.</b> Consulting stays the lane — but GHL's new auto-enriching Prospecting Tool just deleted your "no leads" excuse. Pull a list today.</div>
-  <div class="tk"><b>2.</b> Your cheapest customer-acquisition cost is your own hands on free channels. The data is unanimous: winners bank ~$0 CAC; paid ads at your scale lose money. Don't reach for the ad button.</div>
-  <div class="tk"><b>3.</b> LLM prices collapsed this week (Grok 4.5 / Muse Spark). That makes Anvil cheaper to build <i>and</i> makes "we have AI" worthless as a moat — your niche trust is the real moat. Ship before the generalists arrive.</div>
-</section>
+  <h2 class="section-title"><span class="num">2</span>🎓 Business School — Module 6</h2>
+  <div class="card">
+    <h3>Lifetime Value (LTV) and the LTV:Customer Acquisition Cost (CAC) 3:1 rule</h3>
+    <p><b>What it is, in plain terms:</b> Customer Acquisition Cost (CAC), which you learned last time, is what it costs you to <i>win</i> one customer. Lifetime Value (LTV) is the flip side — it's the total <i>profit</i> (not revenue — profit, the money left after costs) you expect to collect from that one customer over the entire time they stay with you, not just their first purchase. Compare the two as a ratio and you get the single most important sentence in a subscription business: "for every dollar I spend winning a customer, how many dollars of profit do I get back over their whole relationship with me?"</p>
+    <p><b>Why the classic bar is 3:1, not 1:1:</b> At exactly 1:1, you spend everything that customer will ever be worth just to acquire them — you never make a cent of profit off them, ever, even if they stay for years. Below 1:1, you're paying to lose money on every customer, forever. 3:1 is the classic floor because you need margin left over for three things beyond the CAC itself: your other fixed costs that CAC math doesn't count (your own unpaid hours, tools, overhead), a cushion for the fact that real-world churn is always a little worse than your spreadsheet assumes, and actual cash left to reinvest in growing instead of just breaking even. Below 3:1 you're not necessarily dead, but you have zero room for anything going wrong.</p>
+    <p><b>Worked example — Mark's HVAC retainer:</b> From Module 3, your reseller math on Mark is $97 cost / $300 price = <b>$203/month contribution margin</b>. From Module 5, your CAC ranges from $150 (great case — 6 hours of your own outreach split across 2 sales) to $700 (bad case — one sale plus $400 in ads). Nobody has real churn data yet for a retainer like this, so — flagged honestly as an assumption, not measured data — let's use 12 months as a placeholder average relationship length (reasonable for a tool a contractor has to re-configure to leave, which raises switching costs and stickiness).</p>
+    <p>LTV = $203 × 12 months = <b>$2,436</b>.</p>
+    <ul class="tight">
+      <li><b>Good case:</b> $2,436 LTV ÷ $150 CAC = <b>16.2 : 1</b>. Wildly above the 3:1 bar — arguably a signal you could spend more on acquisition and still come out ahead.</li>
+      <li><b>Bad case:</b> $2,436 LTV ÷ $700 CAC = <b>3.5 : 1</b>. Still technically clears the bar, but thin — and that's before counting your own uncounted time, or churn landing earlier than 12 months.</li>
+    </ul>
+    <p><b>One wrinkle worth understanding now, because it previews Module 17:</b> the Snapshot is a one-time $497–$997 sale, not a subscription. There's no "lifetime" to compound — the entire LTV of a Snapshot buyer is just that one sale's margin (roughly 87–90%, per Module 3's platform-cut math), full stop. The 3:1 rule matters enormously for Mark's retainer, where you collect margin every month for as long as he stays. It matters far less for the Snapshot, where you get one shot at margin per customer and then need a brand-new customer to make another dollar. That's the real difference between a <i>product</i> business and a <i>services/subscription</i> business — and why the two lanes you're running side by side behave completely differently even though they share a price tag.</p>
+  </div>
 
-<footer>
-  🐦‍⬛ &nbsp;Corvus · Built for Geo · July 10, 2026<br/>
-  <span style="font-size:11px">Diverse revenue streams, aimed at local service contractors. Attack the lane the day favors.</span>
-</footer>
+  <h2 class="section-title"><span class="num">3</span>Top Signals</h2>
+  <div class="card">
+    <h3>1. Tradesly AI launches the "bot handles routine, human closes the big ticket" model</h3>
+    <p>Launched July 6, Tradesly AI is a new entrant pitching itself against the growing pile of pure-voice-Artificial Intelligence (AI) receptionists for trades: its argument is that 81% of callers want a human when real money is on the line, so its AI answers routine calls but routes $5,000–$15,000 replacement jobs to its own AI-coached human phone reps. This is a direct, dated data point that the AI-voice-for-trades category is starting to specialize — "answers every call" alone is becoming table stakes, and the fight is moving to who closes the expensive jobs. Relevant to Anvil's positioning — see today's Underdog Featuring below.</p>
+    <p class="source">Source: <a href="https://www.tradesly.ai/" target="_blank">tradesly.ai</a>, published July 6, 2026</p>
+  </div>
+  <div class="card">
+    <h3>2. Probook's first hard adoption numbers land (not just funding)</h3>
+    <p>Probook (the $40M home-services dispatch AI already flagged in the July 8–9 briefs) disclosed real customer results this week for the first time: Summers Plumbing, Heating & Cooling booked 2,542 jobs in its first month across 14 locations and 260 technicians with zero human intervention; Del-Air said it picked Probook over other AI vendors specifically because it "knows dispatch." The story has moved from "funded" to "shipping and working" — the competitive window for a local-trades AI product keeps closing, not opening.</p>
+    <p class="source">Source: <a href="https://invasion24.com/probook-raises-40-million-dispatch-ai-home-services/" target="_blank">Probook customer disclosures, reported July 4–9, 2026</a></p>
+  </div>
+
+  <h2 class="section-title"><span class="num">4</span>Emerging Opportunities</h2>
+  <div class="card">
+    <p><b>Contractors don't know their follow-up cadence is bleeding them 6x per job</b> (it's an invisible cost — no dashboard flags "cadence tax") <b>+ no contractor-facing audit tool exists</b> = opportunity to build a free "cadence health check" as a lead magnet ahead of the Snapshot sale. Strengthens the Consulting/Snapshot lane directly — turns today's Hatch data into a mini-tool, not just a marketing line.</p>
+    <p><b>High-ticket trade calls need a skilled human closer, but solo shops can't staff 24/7 coverage or afford an outsourced Tradesly-style Customer Service Representative (CSR) team</b> <b>+ nobody in today's search results ships a lightweight version</b> = a real, currently-unclaimed wedge: real-time AI-drafted objection-handling scripts pushed to the <i>contractor's own phone</i> the moment a high-value call comes in — no outsourced humans, cheaper to build than Tradesly's model. Threatens nothing today (Anvil isn't built), but strengthens Anvil's future positioning if it ever moves off the back shelf.</p>
+  </div>
+
+  <h2 class="section-title"><span class="num">5</span>Fastest Money Right Now</h2>
+  <div class="card">
+    <p><b>In-lane comp:</b> OnCrew, an AI answering service built for HVAC/plumbing/electrical/roofing, prices its entry tier at just <b>$49/month for 100 calls</b> ($149 and $349 tiers above that). That's a real, dated market anchor for what a trades-AI tool can charge at the low end — useful context if Mark ever mentally anchors on "what should this cost" for an Anvil-style add-on.</p>
+    <p><b>🚩 WHITESPACE FLAG:</b> solo creators selling narrow digital products (templates, guides, kits) are posting real near-term numbers with low build cost — one cited case: <b>$3,615 in a single month</b> from digital products, published July 5, 2026. This is <b>not covered by any of your current lanes.</b> Honest durability read: this is very likely audience-dependent, not build-dependent — it lines up with the Gumroad data flagged in the July 9 brief (42% of sales come from email-list traffic), which you don't currently have. Worth knowing the ceiling exists; not worth chasing without an audience first.</p>
+    <p class="source">Sources: <a href="https://oncrew.ai/ai-answering-service" target="_blank">oncrew.ai pricing</a>, May 2026 · <a href="https://travisnicholson.medium.com/i-made-3-615-last-month-selling-digital-products-heres-how-d518b58b2aa2" target="_blank">Travis Nicholson, Medium</a>, July 5, 2026</p>
+  </div>
+
+  <h2 class="section-title"><span class="num">6</span>Technical Shifts</h2>
+  <div class="card">
+    <p>Three more capable, cheap open-weight models landed this week, extending the "Artificial Intelligence (AI) is a feature, not a moat" thesis from the July 10 brief: Tencent's <b>Hy3</b> (open-source, 295-billion-parameter Mixture-of-Experts (MoE) model, Apache 2.0 license, July 8), Mistral's <b>Leanstral 1.5</b> (open-source, July 10), and Nvidia's <b>Nemotron Puzzle 75B</b> (a compressed model claiming roughly 2x server throughput at matched cost, July 9). Build cost for anything you'd label "AI-powered" keeps dropping — good news for what Anvil would cost to build, bad news for using "AI" as a selling point, since every competitor gets the same discount.</p>
+  </div>
+
+  <h2 class="section-title"><span class="num">7</span>Adoption & Traction Signals</h2>
+  <div class="card">
+    <p>The AI-voice-for-trades field is no longer a handful of players — this run's research surfaced <b>six live-or-recently-launched competitors</b> beyond Probook in one search pass: Tradesly AI, OnCrew, Liorra, Zov·io, Arkanis, and Invox AI (UK-focused). That density, combined with Probook's first hard usage numbers (Top Signal #2), is a market-timing signal: this category is now in the "shipping to real customers" phase, not the "raising to build" phase.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <h2 class="section-title"><span class="num">8</span>🐦‍⬛ Featuring — Underdog of the Day: Anvil</h2>
+  <div class="card">
+    <p style="font-size:13.5px;color:var(--soft);margin-bottom:14px;">First feature under the new rotation format (log was empty — Anvil leads the pool). Rated in isolation, on its own merits only — never against another project or lane.</p>
+    <div class="score-row">
+      <div class="score-pill">Market Pull<b>8/10</b></div>
+      <div class="score-pill">Geo's Edge<b>3/10</b></div>
+      <div class="score-pill">Effort→$1<b>2/10</b></div>
+    </div>
+    <div class="score-final"><span class="big">4</span><span class="of">/10 — Underdog Score</span></div>
+    <p><b>Market pull (8/10):</b> Extremely real, extremely current. One search sweep today found six live-or-launching AI-voice-for-trades competitors (Tradesly AI, launched Jul 6; OnCrew; Liorra; Zov·io; Arkanis; Invox AI) on top of Probook's $40M raise and its cited $700 billion Total Addressable Market (TAM) framing for the home-services trades. People are unmistakably paying for this category right now — that's what earns the 8, not a guess.</p>
+    <p><b>Geo's edge (3/10):</b> Real but modest. You have an actual HVAC contractor relationship (Mark) as a live pilot testbed and genuine hands-on GHL/HVAC workflow fluency from active consulting work — that's a real head start most of today's funded entrants didn't have on day one. But you have zero code built, no proprietary data, and no live pilot running, while the market above is already funded and shipping. Modest edge against a crowded, resourced field.</p>
+    <p><b>Effort-to-first-dollar (2/10):</b> Unchanged and stalled. The single open question — would Mark pay $200/month for this as a standalone add-on — has sat unasked/unanswered since 2026-06-29, 12 days ago. No build has started. This is the score dragging the average down, and it's the one entirely within your control this week.</p>
+    <p><b>Cheapest experiment to move the weakest sub-score:</b> Ask Mark the WTP question. One conversation, zero cost, 12 days overdue.</p>
+    <p><b>Free positioning idea if it ever moves off the shelf:</b> steal Tradesly's insight, not its model — don't compete on "AI answers every call" (that's the crowded, commoditized part). Compete on AI-drafted objection scripts for whoever closes the high-ticket job. Cheaper to build than an outsourced CSR team, and nothing in today's search results is doing that lightweight version yet.</p>
+    <p class="source">Sources: <a href="https://www.tradesly.ai/" target="_blank">tradesly.ai</a> · <a href="https://oncrew.ai/" target="_blank">oncrew.ai</a> · <a href="https://liorra.ai/" target="_blank">liorra.ai</a> · <a href="https://zovio.ai/" target="_blank">zovio.ai</a> · <a href="https://www.arkanis.ai/" target="_blank">arkanis.ai</a> · <a href="https://www.invoxai.uk/" target="_blank">invoxai.uk</a> · <a href="https://www.thehardwirenews.com/probook-raises-40-million-ai-dispatch-hvac-contractors/" target="_blank">Probook $700B TAM framing, July 9 2026</a></p>
+  </div>
+
+  <hr class="divider" />
+
+  <h2 class="section-title"><span class="num">9</span>Blind-Spot Radar</h2>
+  <div class="card blindspot">
+    <span class="stage-tag">Active</span>
+    <h3>Distribution-monitoring micro-tool for solo Software as a Service (SaaS) founders</h3>
+    <p>Two independent posts this week describe the exact same pain: indie hackers automate their product but do zero automation on finding customers, manually checking Reddit/X/LinkedIn a few hours a day. One post runs the math: 2 hours/day × 5 days × 52 weeks = 520 hours/year, or roughly <b>$104,000/year</b> in opportunity cost at a $200/hour founder rate. A named competitor (LeadSynth AI) already exists doing real-time monitoring + auto-engagement for exactly this. Genuinely outside every current lane — the buyer here is a solo SaaS founder, not an HVAC contractor.</p>
+    <p><b>Honest flag:</b> this is "sharpen an existing wedge," not a blue ocean — LeadSynth AI is already live, and you have no existing audience among indie hackers either. Worth knowing about, not worth dropping anything for.</p>
+    <p class="source">Sources: <a href="https://www.indiehackers.com/post/the-indie-hackers-paradox-we-automate-everything-in-our-product-nothing-in-our-distribution-f0addccdfc" target="_blank">Indie Hackers, "The indie hacker's paradox"</a> · <a href="https://medium.com/@hamzaashfaqchaudhary/ai-solved-the-wrong-problem-for-indie-hackers-6b5fb43b4c10" target="_blank">Hamza Chaudhary, Medium, June 2026</a></p>
+  </div>
+  <div class="card blindspot">
+    <span class="stage-tag">Semi-Active</span>
+    <h3>Narrow digital products / templates</h3>
+    <p>See the Fastest Money whitespace flag above — real numbers ($3,615/month cited), low build cost, but distribution-dependent. Only worth it if you're willing to build or already have an email list or audience, which per the July 9 brief's Gumroad data (42% of sales come from list traffic), you currently don't. Filed here as a scenario to revisit, not act on today.</p>
+  </div>
+
+  <h2 class="section-title"><span class="num">10</span>Second-Order Effects & Corners</h2>
+  <div class="card">
+    <p>As the AI-for-trades category gets crowded (six-plus new competitors surfaced in a single day's research), "we use AI" stops working as a sales pitch by itself. Hacker News' July trend read on technical buyers wanting audit trails and verifiable claims over raw novelty is a leading indicator this same shift lands on contractor buyers next. Cheap takeaway: any Snapshot or consulting sales copy you write should lead with a specific, verifiable number (like the Hatch cadence stat) — not the word "AI."</p>
+  </div>
+
+  <h2 class="section-title"><span class="num">11</span>Your Action Item (This Week)</h2>
+  <div class="card">
+    <p><b>Assumption to test:</b> "The Hatch 7-touch/5-day cadence benchmark is a strong enough hook to finally get the Snapshot listed."</p>
+    <div class="action-box">
+      <b>30-minute action:</b> Open your built 5-step nurture flow. Count its touches and timing against the benchmark (5 SMS + 2 email over 5 days). Write the one sales-page paragraph that leads with "73% of contractors overpay 6x per booked job."<br/><br/>
+      <b>Success =</b> paragraph written, and a documented yes/no in TASKS.md on whether the nurture flow needs a 6th/7th touch added.
+    </div>
+  </div>
+
+  <h2 class="section-title"><span class="num">12</span>Your 3 Key Takeaways</h2>
+  <div class="card">
+    <ol class="takeaway-list">
+      <li>Ship the Snapshot. The Hatch data is the differentiation hook you've been missing since June 18 — the packaging work left is ~3 hours; the blocker was never the product.</li>
+      <li>Today's LTV:CAC math says your consulting retainer model has real margin cushion (16.2:1 best case, 3.5:1 even in the bad-ads case). The arithmetic works — the constraint is reps and time, not the numbers.</li>
+      <li>Anvil scored 4/10 today, on its own merits: hot market, thin edge, zero movement on the one question that's been open for 12 days. Ask Mark this week, or accept the score stays put.</li>
+    </ol>
+  </div>
+
+  <footer>
+    <span class="bird">🐦‍⬛</span>
+    Corvus — pre-battle briefing, not a performance review.<br/>
+    Built for Geo · Corvino Forge LTD
+  </footer>
 
 </div>
 </body>
