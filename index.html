@@ -1,265 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Corvus Daily Brief — July 12, 2026</title>
-<style>
-  :root {
-    --ink: #1a1a2e;
-    --paper: #fdfcf9;
-    --card: #ffffff;
-    --accent: #6c4fd6;
-    --accent2: #e8622c;
-    --green: #1f9e63;
-    --gold: #c9971f;
-    --red: #d43d3d;
-    --border: #e5e0f5;
-    --muted: #6b6b7d;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: linear-gradient(180deg, #f6f3ff 0%, #fdfcf9 400px);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
-    padding-bottom: 60px;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 18px; }
-  header.top {
-    background: linear-gradient(135deg, #241b4d, #4b2e8f 60%, #6c4fd6);
-    color: #fff;
-    padding: 28px 18px 34px;
-    border-radius: 0 0 24px 24px;
-    text-align: center;
-  }
-  header.top h1 { margin: 0 0 6px; font-size: 1.6rem; letter-spacing: -0.3px; }
-  header.top .sub { opacity: 0.88; font-size: 0.95rem; }
-  header.top .datebadge {
-    display: inline-block; margin-top: 10px; background: rgba(255,255,255,0.15);
-    padding: 5px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
-  }
-  section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 20px 20px 22px;
-    margin: 18px 0;
-    box-shadow: 0 2px 10px rgba(90,60,180,0.05);
-  }
-  section.lead {
-    border: none;
-    background: linear-gradient(135deg, #2c1f5e, #6c4fd6);
-    color: #fff;
-  }
-  section.lead h2 { color: #fff; }
-  section.lead .verdict-tag {
-    display: inline-block; background: rgba(255,255,255,0.18); padding: 4px 12px;
-    border-radius: 999px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.4px;
-    text-transform: uppercase; margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 1.15rem; margin: 0 0 12px; display: flex; align-items: center; gap: 8px;
-  }
-  h3 { font-size: 1rem; margin: 16px 0 6px; }
-  .school {
-    background: linear-gradient(135deg, #fff8e8, #fef1d6);
-    border: 1px solid #f0dba3;
-  }
-  .school h2 { color: #8a6a10; }
-  .underdog {
-    background: linear-gradient(135deg, #eefaf3, #e2f6ea);
-    border: 1px solid #bfe8d2;
-  }
-  .blindspot {
-    background: linear-gradient(135deg, #fdeeee, #fbe4e4);
-    border: 1px solid #f0c4c4;
-  }
-  .action {
-    background: linear-gradient(135deg, #eef0ff, #e4e8ff);
-    border: 1px solid #c9d0f5;
-  }
-  .takeaways {
-    background: linear-gradient(135deg, #241b4d, #3c2a7a);
-    color: #fff;
-  }
-  .takeaways h2 { color: #fff; }
-  .score-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0;
-  }
-  .score-box {
-    background: #fff; border-radius: 12px; padding: 10px 8px; text-align: center;
-    border: 1px solid #cdeadb;
-  }
-  .score-box .num { font-size: 1.4rem; font-weight: 800; color: var(--green); }
-  .score-box .lbl { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; }
-  .overall-score {
-    text-align: center; margin: 14px 0; padding: 14px; background: #1f9e63; color: #fff;
-    border-radius: 14px; font-size: 1.6rem; font-weight: 800;
-  }
-  .overall-score span { display: block; font-size: 0.75rem; font-weight: 500; opacity: 0.9; text-transform: uppercase; }
-  .sparkline { font-family: monospace; letter-spacing: 2px; color: var(--accent); }
-  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.88rem; }
-  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; }
-  .tag {
-    display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 9px;
-    border-radius: 999px; margin-right: 6px; text-transform: uppercase;
-  }
-  .tag.passive { background: #dfeaff; color: #1c4fa3; }
-  .tag.semi { background: #fff0d6; color: #96650a; }
-  .tag.active { background: #ffe0e0; color: #a32323; }
-  .tag.watch { background: #eee; color: #555; }
-  blockquote {
-    margin: 10px 0; padding: 10px 14px; border-left: 4px solid var(--accent);
-    background: #f7f4ff; font-style: italic; font-size: 0.92rem;
-  }
-  a { color: var(--accent); }
-  .src { font-size: 0.72rem; color: var(--muted); }
-  .divider { border: none; border-top: 1px dashed var(--border); margin: 14px 0; }
-  footer {
-    text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 30px; padding: 0 18px;
-  }
-  .pillrow { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
-  .pill { background: #f1edff; color: var(--accent); font-size: 0.75rem; padding: 3px 10px; border-radius: 999px; font-weight: 600; }
-  ul { padding-left: 20px; margin: 8px 0; }
-  li { margin-bottom: 6px; }
-  .checklist { list-style: none; padding-left: 0; }
-  .checklist li:before { content: "→ "; color: var(--accent); font-weight: 800; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>📁 Daily Intelligence Brief — 2026-07-13</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(20, 30, 50, 0.95);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid rgba(100, 150, 255, 0.3);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .date { color: #a0a0a0; font-size: 0.9em; }
+        section {
+            margin-bottom: 35px;
+        }
+        h2 {
+            font-size: 1.3em;
+            color: #64b5f6;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(100, 150, 255, 0.2);
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 1.05em;
+            color: #81c784;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+        }
+        .verdict-box {
+            background: rgba(100, 150, 255, 0.1);
+            border-left: 4px solid #64b5f6;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .score-box {
+            background: rgba(129, 199, 132, 0.1);
+            border-left: 4px solid #81c784;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .action-box {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #ffb74d;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        strong { color: #fff; font-weight: 600; }
+        em { color: #b0d4ff; font-style: italic; }
+        .metric {
+            font-weight: 600;
+            color: #64b5f6;
+        }
+        ul { margin-left: 20px; margin-bottom: 12px; }
+        li { margin-bottom: 8px; }
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #808080;
+        }
+        .source-list { font-size: 0.9em; color: #a0a0a0; margin-left: 20px; }
+        .source-list li { margin-bottom: 5px; }
+        .raven { font-size: 1.2em; margin-right: 5px; }
+    </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
+    <header>
+        <h1><span class="raven">🐦‍⬛</span>Daily Intelligence Brief</h1>
+        <div class="date">Sunday, July 13, 2026</div>
+    </header>
 
-<header class="top">
-  <h1>🐦‍⬛ Corvus — Daily Intelligence Brief</h1>
-  <div class="sub">Where to attack, what to learn, what you're missing</div>
-  <div class="datebadge">Sunday, July 12, 2026</div>
-</header>
+    <section>
+        <h2>1. TODAY'S BEST LANE TO ATTACK</h2>
+        <div class="verdict-box">
+            <strong>CONSULTING — Activate Voice AI on Mark's HVAC account this week.</strong> The GoHighLevel (GHL) 50%-off Voice AI promotion window opened TODAY and runs through July 19 — first-time activations get a free 30-day trial on top of the discount. Mark's payback period (time to recover the customer acquisition cost) is <span class="metric">3 weeks</span> at the current $203/month contribution margin, so every week you ship matters. <strong>Success metric:</strong> Voice AI live on his account by July 17, WTP question asked directly (would he pay $200/month as a standalone add-on?) logged by July 19.
+        </div>
+    </section>
 
-<section class="lead">
-  <div class="verdict-tag">Today's Best Lane To Attack</div>
-  <h2>🎯 Still Consulting/Snapshot — but a dated 7-day trigger just landed</h2>
-  <p>Same verdict as the last several briefs, for the same underlying reason: the Snapshot task has sat in <code>TASKS.md</code> untouched for <strong>24 days</strong> (added 2026-06-18) while competitors ship. Full case already made in prior briefs — not re-justifying it today. See <a href="#genuinely-new" style="color:#fff;text-decoration:underline;">what's genuinely new below</a>.</p>
-  <p id="genuinely-new"><strong>What's new:</strong> GoHighLevel's (GHL) own promo calendar just handed you a dated window: the <strong>Voice AI 50%-off pop-up runs July 13–19</strong> — starting tomorrow. Activating Voice AI on a sub-account during that window locks in half-price for 3 months <em>and</em> starts the 30-day free trial clock while "Road to $100,000" contest points still compound (earlier activation = more points across more scoring periods, confirmed on HighLevel's own terms page).</p>
-  <p><strong>Do this:</strong> Activate GHL Voice AI on Mark's sub-account between July 13–19. While you're in there, finally ask him the Willingness To Pay (WTP) question that's sat unasked since June 29 (13 days): <em>"Would you pay $200/month for this as a standalone add-on?"</em> Same 30-minute action either way — the promo window is just the reason to stop delaying it.</p>
-</section>
+    <section>
+        <h2>2. 🎓 BUSINESS SCHOOL — Payback Period</h2>
+        <p>You've learned Revenue vs. Profit vs. Cash Flow. You know Unit Economics (cost + price + margin). You know Fixed vs. Variable Costs. Now the practical question: <em>when does a customer actually pay for themselves?</em></p>
 
-<section class="school">
-  <h2>🎓 Business School — Module 7: Margin vs. Markup</h2>
-  <p><strong>The single most common founder pricing mistake:</strong> treating "margin" and "markup" as the same number. They're not, and confusing them makes people price themselves into a loss without realizing it.</p>
-  <ul>
-    <li><strong>Markup</strong> = profit ÷ <em>what it cost you</em>. "I marked it up 200%" means you charged 3x your cost.</li>
-    <li><strong>Margin</strong> = profit ÷ <em>what the customer paid</em>. It can never exceed 100% (you can't keep more than 100% of the sale price as profit). Markup, on the other hand, has no ceiling — you can mark something up 500%, 1,000%, whatever.</li>
-  </ul>
-  <p><strong>Worked example #1 — Mark's reseller lane:</strong> You pay GHL $97/month (your cost). You charge Mark $300/month. Profit = $203.</p>
-  <table>
-    <tr><th>Metric</th><th>Formula</th><th>Result</th></tr>
-    <tr><td>Markup</td><td>$203 ÷ $97 (cost)</td><td><strong>209%</strong></td></tr>
-    <tr><td>Margin</td><td>$203 ÷ $300 (price)</td><td><strong>67.7%</strong></td></tr>
-  </table>
-  <p>Same $203 profit, two very different-sounding numbers. If you'd mentally treated "209% markup" as "209% margin," you'd be modeling a business that's mathematically impossible — margin tops out at 100%.</p>
-  <p><strong>Worked example #2 — today's research handed us a live one:</strong> a competing HVAC Snapshot vendor (Epic HVAC Snapshot, on the HighLevel Marketplace) lists its snapshot at <strong>$2,497 "regular price," discounted to $497</strong> under permanent-looking "Black Friday" branding. That's an 80% sticker discount — a markup/anchor story designed to make $497 feel like a steal. It says nothing about their actual margin, because we don't know their real cost basis. This is a sales-copy trick, not a pricing calculation: big invented "markup" from an inflated anchor price, sold as a "margin gift" to the buyer.</p>
-  <p><strong>Why this matters for you:</strong> when you price the Snapshot task ($497–$997 is the going range per today's research — see lane verdict), don't just ask "what's my markup over my build cost?" Sunk build hours aren't a per-unit cost, so markup math on them is close to infinite and useless. Ask the margin question instead: "of the $997 sale price, what % is actually mine to keep after payment processing (~10–13% variable, per your own 07-09 numbers)?" That's roughly 87–90% margin — a genuinely excellent number, and the one that should drive your pricing confidence, not an arbitrary markup multiple.</p>
-  <p class="src">Progress tracker advanced to Module 8 (Payback period) after this run.</p>
-</section>
+        <h3>The Concept</h3>
+        <p><strong>Payback period</strong> = how many months of profit from one customer it takes to recover the money you spent to acquire that customer.</p>
+        <p>Formula: <strong>Payback period (months) = CAC ÷ (contribution margin per month)</strong></p>
 
-<section>
-  <h2>📡 Top Signals</h2>
-  <p><strong>1. Three named competitors now confirmed live in your exact Snapshot niche</strong> — and one updated its spec sheet yesterday. HVAC Snapshot for GHL ($997, marked "REV 2026.07.11") claims 200+ paying U.S./Canada HVAC contractors. GHL Automations ($297 budget option) and Epic HVAC Snapshot ($497–2,497, HighLevel Marketplace) round out the field. This directly feeds the lane verdict above — full detail there, not repeating it.</p>
-  <p><strong>2. Hacker News' July mood: buyers are done with AI hype, they want proof.</strong> This month's dominant Hacker News (HN) thread cluster isn't about new models — it's fatigue with "AI slop," synthetic content, and unverified claims, paired with a swing toward trust signals and honest specificity. That's not abstract: today's appliance-repair SEO research (below, Underdog section) independently confirms the same thing — "honest specificity beats urgency-bait copy" is literally what's winning in home-service search right now. Write your Snapshot sales page and cincyappliancerepair.com copy around real caseload references and specific claims, not generic AI-hype language.</p>
-  <p class="src">Sources: <a href="https://hvacsnapshotforghl.com/" target="_blank">hvacsnapshotforghl.com</a> · <a href="https://snaps.hlprotools.com/product/epic-hvac-snapshot/" target="_blank">Epic HVAC Snapshot</a> · <a href="https://blog.mean.ceo/hacker-news-trends-july-2026/" target="_blank">HN Trends, July 2026</a></p>
-</section>
+        <h3>Why It Matters</h3>
+        <p>A customer who pays for themselves in 3 weeks is fundamentally different from a customer who takes 12 months. The fast-payback customer gives you real cash flow (money coming in to fund the next hire, ad spend, or product build). The slow-payback customer looks profitable on paper but might drain you before the profit actually arrives. This is why "profitable" and "viable" are not the same thing.</p>
 
-<section>
-  <h2>💡 Emerging Opportunity</h2>
-  <p><strong>AI-native site-building compressed rank-and-rent's build time, and almost nobody's fully exploiting it yet.</strong> A copywriter (Ryan Doser) documented building his own rank-and-rent test site (a septic-service site for Des Moines) using Claude Code + Cloudflare + the Astro framework — ranking page one for real local queries with essentially no marketing budget. The "no good solution" gap: most rank-and-rent operators still outsource content/dev or grind it out manually, so the build-speed advantage from AI tooling isn't priced into how people size up the opportunity yet. Strengthens Website Landlord specifically — your build stack (Claude, in this exact workflow) already matches what worked here.</p>
-  <p class="src">Source: <a href="https://ryandoser.com/rank-and-rent-seo/" target="_blank">ryandoser.com — rank & rent SEO breakdown</a></p>
-</section>
+        <h3>Your HVAC Example</h3>
+        <p>Let's use Mark's deal:</p>
+        <ul>
+            <li><strong>CAC (Customer Acquisition Cost):</strong> You spent 6 hours getting Mark to sign, at your effective rate of $50/hour = <span class="metric">$300</span>. (Actually achieved: you landed him in 2 hours, so real CAC = $100, but let's be conservative.)</li>
+            <li><strong>Contribution margin per month:</strong> Mark pays $300/month for the GHL setup, you pay $97 for his GHL license, leaving <span class="metric">$203 profit per month</span>.</li>
+            <li><strong>Payback period:</strong> $300 CAC ÷ $203/month = <span class="metric">1.48 months</span> = roughly <span class="metric">6 weeks</span>. (At the real $100 CAC: 3 weeks.)</li>
+        </ul>
+        <p>Translation: Mark pays for himself in less than a month. After that, every month is profit that funds the next customer acquisition or product build.</p>
 
-<section>
-  <h2>💰 Fastest Money Right Now</h2>
-  <p><strong>In-lane and durable:</strong> Rank-and-rent (Website Landlord's exact model) has real, cited numbers behind it — Kyle's documented $100K/month portfolio, and Ippei Kanehara's single site that's generated $192,000 total (80+ sites, 55 paying clients, ~96% margin once ranked). Durability read: legitimate when treated as a real SEO business, not a shortcut — Google's 2026 quality bar has risen, but local demand for leads hasn't gone anywhere.</p>
-  <p><strong>🚩 Whitespace flag — NOT covered by any of your lanes:</strong> a solo creator reported $37,000 in 30 days from a new Payhip digital-product page (an ebook bundle) — but the honest fine print is it followed 8 weeks of audience-building first, not a cold launch. Filed as whitespace, not a "go": you don't have a pre-built audience anywhere in your portfolio right now, so this number isn't reachable for you today. Worth knowing, not worth chasing yet.</p>
-  <p class="src">Sources: <a href="https://ryandoser.com/rank-and-rent-seo/" target="_blank">ryandoser.com</a> · <a href="https://medium.com/@thepsychoflifes/one-guy-made-192-000-from-a-single-website-the-strategy-is-called-rank-and-rent-313904d114af" target="_blank">Medium — $192K rank-and-rent case</a> · <a href="https://medium.com/@purecontenttasks/how-i-made-37-000-in-30-days-from-a-new-payhip-page-without-ads-or-a-big-following-142d35e97aaf" target="_blank">Medium — Payhip $37K/30-days</a></p>
-</section>
+        <h3>Contrast: Paid Ads</h3>
+        <p>If instead of your time, you spent $400 on ads to land a customer (CAC = $700 total):</p>
+        <ul>
+            <li>Payback period: $700 ÷ $203 = <span class="metric">3.4 months</span></li>
+        </ul>
+        <p>Still reasonable (under 4 months is typical), but you're bleeding cash for over 3 months before that customer becomes profitable. And if your churn happens in month 4, you break even or lose money.</p>
 
-<section>
-  <h2>⚙️ Technical Shifts <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(tight)</span></h2>
-  <p>Context.dev launched out of Y Combinator's (YC) Summer 2026 batch — a single-call Application Programming Interface (API) that turns any webpage into structured JSON, aimed at Large Language Model (LLM) agents that need reliable web data instead of brittle scraping code. Not decision-relevant for you today, but it's another data point in the ongoing "AI infrastructure is commoditizing fast" trend — the same trend that's been quietly lowering what it costs to build something like Anvil.</p>
-  <p class="src">Source: <a href="https://ainews.cool/article/20260709-context-dev-web-to-structured-data-api" target="_blank">Context.dev launch coverage</a></p>
-</section>
+        <h3>The Hidden Lesson</h3>
+        <p>Payback period is why <em>organic</em> growth (your time, content, community) scales differently from <em>paid</em> growth (ads, outsourced sales). With organic CAC, you can afford to wait 3-6 months for payback because you're not burning cash the whole time — you're working. With paid CAC, a short payback period is non-negotiable, because cash leaves your account on day 1.</p>
+        <p>This is the real reason the Snapshot ($497 one-time sale, ~$150 CAC organic, ~6 hours build) makes sense at your scale. One sale pays for itself in pure revenue. A $300 consulting retainer pays for itself in a month. But a $5K-per-month AI tool with a $2K CAC doesn't work unless you can fund 2-3 months of cash burn while customers accumulate.</p>
+    </section>
 
-<section>
-  <h2>📈 Adoption & Traction <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(tight)</span></h2>
-  <p>200+ paying HVAC contractors on a single Snapshot vendor's own claim is the clearest "the niche buys" signal you've gotten yet — market timing for your Snapshot task is still favorable, but the window for "first mover" framing is closing, not opening. Separately, Prime Intellect (enterprise AI-agent tooling) disclosed a $100M annualized revenue run rate this week off customers like Ramp and Zapier — a reminder that the AI-agent infrastructure layer is now generating real, not hypothetical, revenue at the top end.</p>
-  <p class="src">Sources: <a href="https://hvacsnapshotforghl.com/" target="_blank">hvacsnapshotforghl.com</a> · <a href="https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/" target="_blank">TechCrunch — Prime Intellect $130M</a></p>
-</section>
+    <section>
+        <h2>3. TOP SIGNALS</h2>
 
-<section class="underdog">
-  <h2>🐦‍⬛ Featuring — Underdog of the Day: Website Landlord</h2>
-  <p>Second lane through the rotation (Anvil went 2026-07-11). Rated in isolation — this score has nothing to do with any other project, lane, or yesterday's feature. If it's a 4.7, it's a 4.7 on its own merits.</p>
+        <h3>GHL Voice AI Adoption Growing Urgently</h3>
+        <p>ServiceTitan (market leader, 100K+ contractors) reports 74% of residential contractors now see AI as an efficiency engine, but only 25% have actually implemented it. HVAC contractors miss <span class="metric">27-74%</span> of incoming calls, costing <span class="metric">$500-900 per missed emergency call</span>. Voice AI reports resolve 90-95% of calls without human intervention. The opportunity is supply-constrained (not everyone has built it yet), but competition is closing fast.</p>
 
-  <div class="score-grid">
-    <div class="score-box"><div class="num">7</div><div class="lbl">Market Pull</div></div>
-    <div class="score-box"><div class="num">4</div><div class="lbl">Geo's Edge</div></div>
-    <div class="score-box"><div class="num">3</div><div class="lbl">Effort→$1</div></div>
-  </div>
-  <div class="overall-score">4.7 / 10 <span>Underdog Score</span></div>
+        <h3>Snapshot Vendors Proliferating</h3>
+        <p>Epic HVAC Snapshot (HighLevel Marketplace, 200+ claimed paying contractors) is now outdated at $997 and offered "Black Friday" pricing at $497 — anchor pricing as sales copy. Three named vendors exist in this niche now (up from zero when Geo started). The first-mover advantage is narrowing; this window will not last indefinitely.</p>
 
-  <h3>(a) Market Pull — 7/10</h3>
-  <p>Real, cited, dated demand. Kyle's documented $100K/month rank-and-rent portfolio (published 2026-06-16) and the "roughly 1,000 niches × 800+ US cities over 50K population" opportunity math are the headline case. Specific to your exact niche: appliance repair has genuinely strong underlying economics — Google Business Profile (GBP) + local Search Engine Optimization (SEO) leads cost $5–25 at maturity, and appliance repair has an unusually high lifetime value ($400–900 over 5 years per customer) because homeowners with 8–10 appliances keep breaking things and Googling the same company again. Two independent sources this year (Formative Digital, April; RankPill, April) both flag that the "brand × appliance" long-tail (e.g., "Samsung refrigerator repair Cincinnati") is structurally under-built by nearly every competitor, including in metros with a decade of entrenched local players — because building the full grid (10+ brands × 8 appliance types = 40+ pages) is unglamorous, so most operators skip it.</p>
+        <h3>Legal Automation Shifting to Specialized Tools</h3>
+        <p>Law firms are adopting <em>specialized</em> AI platforms (CoCounsel, Spellbook, BriefPoint) rather than generic "done-for-you" admin services. 41% of law firms and 47% of corporate legal departments are using GenAI (up from 28% and 23% in 2025). The DFY angle for Lisa Tuck (your employment lawyer prospect) may need repositioning from "we handle your admin" to "we automate your specific legal workflows" — a narrower, deeper play.</p>
+    </section>
 
-  <h3>(b) Geo's Edge — 4/10</h3>
-  <p>You have the asset shell: domain registered, WordPress (WP) admin live, Google Search Console (GSC) verified with a sitemap submitted, hosting paid through the year. That's real progress most people never get to. But you have not yet built the single highest-leverage tactic the research names — the brand×appliance page grid — and your Google Business Profile has been "pending verification" since June 10. That's over a month on a process the platform itself estimates takes up to 5 days. <strong>Flag: check GBP status manually this week</strong> — either it's stuck (support ticket needed) or the memory file is stale and it's actually live and nobody's checked.</p>
+    <section>
+        <h2>4. EMERGING OPPORTUNITIES</h2>
 
-  <h3>(c) Effort-to-First-Dollar — 3/10</h3>
-  <p>Honest read: you're still months out. CLAUDE.md has this at "Phase 4 — watching GSC impressions, target 3-5 leads before pitching," and the rank-and-rent literature is consistent that a first site typically takes 3-6 months to rank and produce rentable lead volume, even executed well. No brand×appliance content exists yet, so the fastest lever available hasn't been pulled.</p>
+        <h3>AI Disclosure Compliance Kits for Voice Agent Users</h3>
+        <p>California SB 243 and Texas's Responsible AI Governance Act now require AI to disclose itself before substantive interaction (Federal Trade Commission fines up to $53,088/violation). Eight+ funded voice AI companies (Pie, Newo, etc.) have customers who need audit trails and disclosure language. A checklist/audit service built once and sold to 100 of those customers at $50-100/month each could be a <span class="metric">$5-10K monthly revenue stream</span> with zero marginal cost past the first build. Outside Geo's current lanes.</p>
 
-  <h3>Cheapest experiment to move the weakest score (3/10, effort-to-first-dollar):</h3>
-  <p class="checklist"><ul class="checklist"><li>Draft 5–8 brand×appliance pages this week (e.g., "Whirlpool refrigerator repair Cincinnati," "Samsung dryer repair Cincinnati," "LG washer repair Cincinnati") using Claude for the first drafts. These target near-zero-competition long-tail terms per today's research — they can start pulling organic traffic well before "appliance repair Cincinnati" (the head term) ever ranks. You already have WP admin access; this is a content task, not a rebuild.</li></ul></p>
-  <p class="src">Sources: <a href="https://ryandoser.com/rank-and-rent-seo/" target="_blank">ryandoser.com</a> · <a href="https://bluegridmedia.com/appliance-repair-leads" target="_blank">Blue Grid Media — appliance repair lead economics</a> · <a href="https://formativedigital.com/research/digital-marketing-appliance-repair/" target="_blank">Formative Digital — appliance repair SEO research</a> · <a href="https://rankpill.com/seo-for/appliance-repair" target="_blank">RankPill — appliance repair SEO guide</a></p>
-</section>
+        <h3>Vertical-Specific DFY (Not Generic)</h3>
+        <p>Generic "we do everything" DFY is declining, but <span class="metric">specialized vertical DFY is growing</span>. Example: "DFY Social Media for HVAC Contractors" (not for all small business). Same labor cost, 10x easier to sell, better retention. Geo's HVAC expertise could support this, but it requires hiring (not software). Flags it as a path toward revenue scaling that's not on the current roadmap.</p>
+    </section>
 
-<section class="blindspot">
-  <h2>🔭 Blind-Spot Radar — Money Outside Your Lanes</h2>
+    <section>
+        <h2>5. FASTEST MONEY RIGHT NOW</h2>
 
-  <p><span class="tag semi">Semi-Active</span><strong>One-time-purchase micro-tools for subscription-fatigued freelancers.</strong> Crawlix, a solo-built desktop SEO crawler, hit 158 paid activations across 20 weeks with a genuinely surprising pattern: 49% of buyers chose the $249 <em>perpetual</em> license over monthly, specifically because they're "sick of subscriptions." This is a different lane entirely — developer/creator tooling, not local trades — but you already have the exact skill this requires proven: you built the Anvil Model Context Protocol (MCP) server and all of Mark's GHL automations with Claude's help. A realistic on-ramp: pick one narrow, unglamorous tool for a niche you already understand (a rank-and-rent SEO helper, a GHL workflow export/debug tool) and sell it once, no subscription, via Gumroad or Lemon Squeezy. Honest caveat: conversion rates in this data are modest (2.5–4.1% of downloads), so this is a slow-build durable-niche-tool income, not a jackpot — but it's real and it's yours to test cheaply.</p>
+        <h3>Indie SaaS Lifetime Deals (One-Time Purchases) Still Work</h3>
+        <p>Gil Hildebrand pre-sold 50 lifetime deals generating <span class="metric">$20K</span> before writing any code for Subscribr (AI podcast transcription tool). Indie makers are diversifying beyond subscriptions into one-time perpetual licenses, especially for <span class="metric">subscription-fatigued freelancers</span>. Crawlix (a keyword research tool) sold 158 lifetime licenses with 49% choosing the <span class="metric">$249 perpetual option</span> vs. subscription. This is whitespace if you build a tool that solves one painful problem well.</p>
 
-  <p><span class="tag active">Active — flagged as out of reach</span><strong>AI-agent training infrastructure.</strong> Three funding rounds landed this week for companies that build testing/training environments for enterprise AI agents: Prime Intellect ($130M Series A, $1B valuation), Lyzr ($100M Series B in progress), Bespoke Labs ($40M combined seed+Series A). This is genuinely outside every lane you're in, and being honest about it: it requires machine learning engineering depth you don't currently have. Naming it so you know the money is there — not recommending you chase it. Watch, don't build.</p>
+        <h3>HVAC Contractors: 40-60% Lead Capture Improvement via Voice AI</h3>
+        <p>Contractors implementing voice AI report lead improvements of 40-60%. Mark's business (if he's typical) might be missing <span class="metric">$10-20K in revenue annually</span> just from unanswered calls. Getting him to activate Voice AI is a quick WTP test for the Snapshot's voice-enabled upsell.</p>
+    </section>
 
-  <p><span class="tag watch">Watch Only</span><strong>AI-content verification/trust tooling.</strong> This month's Hacker News mood (see Top Signals) named a real, still-nascent gap: tools that verify AI-generated content isn't spoofed/faked, aimed at small teams without a security lead. No named company is monetizing this specifically yet in the data pulled today — it's a direction, not yet a business. Filed here so it's on your radar if a concrete player emerges.</p>
-</section>
+    <section>
+        <h2>6. TECHNICAL SHIFTS</h2>
+        <p>Fable 5 returned to global availability on July 1, 2026 after US export control lift. No immediate impact on Geo's current stack (still on Haiku/Sonnet/Opus), but expands Claude availability globally. Relevant if Anvil or any product gets non-US users.</p>
+    </section>
 
-<section>
-  <h2>🌊 Second-Order Effects & Corners <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(tight)</span></h2>
-  <p>The HN "AI-slop backlash" isn't just a vibe — it's a copy directive. Buyers (including the HVAC contractors you're selling to) are getting warier of generic AI-hype claims and more responsive to specific, verifiable proof. That should shape both the Snapshot sales page and cincyappliancerepair.com content: lead with real numbers and caseload specifics, not "AI-powered" as the pitch.</p>
-</section>
+    <section>
+        <h2>7. ADOPTION & TRACTION SIGNALS</h2>
+        <p><strong>Together AI:</strong> $800M Series C (post-money $8.3B valuation) for open-source model training infrastructure. Signals that <em>enabling others to build with AI</em> (not just building AI products) is a major venture thesis. Geo's MCP server (Anvil) follows this pattern — it's infrastructure for Mark to build on GHL, not a standalone product. That positioning gets easier to explain as investors validate the category.</p>
+        <p><strong>Physical AI & Agentic AI:</strong> Bespoke Labs ($40M Series A) and CarbonSix ($40M Series A) both funded to build environments for AI agents to safely learn and improve. Signals that <em>agent training</em> is moving from research to commercial. Mark's Donna voice agent + the Snapshot's workflow agents are baby versions of this — once Mark's WTP question is answered, training + iteration becomes the next build priority.</p>
+    </section>
 
-<section class="action">
-  <h2>✅ Your Action Item (This Week)</h2>
-  <p><strong>Activate GHL Voice AI on Mark's sub-account between July 13–19</strong> (the 50%-off pop-up window) and ask him directly: "Would you pay $200/month for this as a standalone add-on?"</p>
-  <p><strong>Success = </strong>a logged yes/no answer from Mark by July 19. Either answer is useful data — a "no" kills the upsell thesis cheaply, a "yes" gives you your first real WTP proof point for the whole consulting → Anvil pipeline.</p>
-</section>
+    <section>
+        <h2>8. 🐦‍⬛ FEATURING — UNDERDOG OF THE DAY</h2>
 
-<section class="takeaways">
-  <h2>🔑 Your 3 Key Takeaways</h2>
-  <ol>
-    <li><strong>Three named competitors, one updated yesterday.</strong> The Snapshot task's "first mover" framing is on a shrinking clock — package and list it this month, not "someday."</li>
-    <li><strong>The Voice AI promo window (July 13–19) is your forcing function.</strong> Use it to finally get Mark's WTP answer instead of letting it sit unasked past day 13.</li>
-    <li><strong>Website Landlord's GBP has been "pending" for over a month.</strong> Check it manually this week — and once it's live, the brand×appliance content grid is the cheapest, highest-leverage move nobody in Cincinnati's appliance-repair market has bothered to build.</li>
-  </ol>
-</section>
+        <h3>Done-For-You (DFY) Cloning</h3>
+        <p><strong>Underdog Score: 5.2 / 10</strong></p>
+        <div class="score-box">
+            <strong>Market Pull (5/10):</strong> The global digital services market is $750B, and DFY is one of the fastest-growing segments. BUT the market is highly fragmented. Generic "we do everything" DFY is declining; <em>vertical-specific</em> DFY (e.g., "DFY Social for HVAC") is thriving. General-purpose cloning services have long sales cycles and high churn. Signal: AI integration is enhancing DFY, not replacing it — automation raises quality without reducing price yet. Neutral on generic DFY, positive on vertical-focused.
+            <br/><br/>
+            <strong>Geo's Edge (4/10):</strong> Deep understanding of both consulting (his network with Mark, Lisa Tuck) and product building (Anvil, the Snapshot). Could build DFY packages that are <em>actually</em> what consultants need (templated playbooks, not generic admin). No existing portfolio of DFY clients or proof of repeatable sales motion. Starting from zero reputation in the DFY space.
+            <br/><br/>
+            <strong>Effort-to-First-Dollar (6/10):</strong> Faster than Anvil (no code) or Website Landlord (no content to write). Could package one working consulting playbook (e.g., Mark's HVAC setup) as a template, find 3-5 HVAC contractors in Cincinnati who'd pay $500-1K to clone it, measure demand. Cheapest next move: 1-hour interview with 2 contractors outside Mark's circle, ask "would you pay $700 for a template we built + 2 hours of setup calls?" If 1+ says yes, you have legs.
+        </div>
 
-<footer>
-  🐦‍⬛ Corvus — Daily Intelligence Brief · Generated for Geo · Corvino Forge LTD<br/>
-  Published at <a href="https://ggalioto.github.io/daily-brief/">ggalioto.github.io/daily-brief</a>
-</footer>
+        <p><strong>The Honest Flag:</strong> DFY only becomes <strong>fast money</strong> if you pick a tight vertical (HVAC, plumbing, electricians) and charge enough ($500-2K per clone). Generic DFY is a hustle forever. Geo's constraint: he's introverted and doesn't do cold outreach. DFY requires repeated sales conversations. This lane works IF you hire a sales person (not Geo labor) or build a marketplace listing (inbound, no 1:1 outreach). Otherwise, it stays a one-off, not a business.</p>
 
+        <p><strong>Cheapest next experiment:</strong> Draft a 1-page DFY playbook (Mark's HVAC template, reproducible in 8 hours for a new contractor). Post it anonymously on 2 HVAC contractor Reddit/Facebook groups, gauge interest. If cold interest exists, move to the interview. If not, drop it.</p>
+    </section>
+
+    <section>
+        <h2>9. BLIND-SPOT RADAR — MONEY SCENARIOS OUTSIDE CURRENT LANES</h2>
+
+        <h3>PASSIVE: AI Disclosure & Compliance Audit Service</h3>
+        <p>SB 243 + Texas AI law create a legal requirement for AI platforms to include disclosure language. Eight+ funded voice AI platforms (Pie, Newo, Fonio) × their customers = <span class="metric">hundreds of businesses needing a compliance audit</span>. One-page checklist template, sold at $50-100/month = <span class="metric">$5-10K/month at scale</span> with zero ongoing labor past the first build. Genuinely outside Geo's lanes. Legal liability risk exists (not Geo's background), so flag it but don't chase it.</p>
+
+        <h3>SEMI-ACTIVE: Vertical SaaS — One-Time Tool for Indie Makers</h3>
+        <p>Indie SaaS builders are tired of subscription fatigue. Lifetime deals work: Subscribr pre-sold $20K, Crawlix hit $249 perpetual-license demand at 49% conversion rate. Geo has proven Claude-assisted build skill (Anvil MCP, GHL automations). Could build a $49-149 one-time tool targeting a real indie maker pain point (e.g., "Claude Token Usage Meter for creators" — tracking your daily/weekly GenAI spend). Post on Indie Hackers, Gumroad, maker marketplaces. Low CAC (organic), high margin. Proof exists (the metrics above). Geo's edge is real. Effort-to-launch: 3-4 days. Cheapest next experiment: build one prototype, list it, measure 2 weeks of sales before deciding to iterate.</p>
+
+        <h3>ACTIVE-BUT-FLAGGED: AI-Powered Business Intelligence for Solo Contractors</h3>
+        <p>Mark and similar HVAC contractors can't afford a Business Intelligence (BI) consultant ($150-200/hour, weeks of work). But they <em>need</em> to know "are my jobs profitable?" and "which truck routes waste time?" AI can answer these from job photos + time logs. Probook's $40M raise (Sequoia + a16z) signals the home-services AI wave is real. Geo's 20-year BI background is a moat here. BUT it requires hiring (no solo path) or a high-touch contract model (not scalable, just consulting renamed). Keep watching; probably 6-12 months out before Geo would pivot to this.</p>
+    </section>
+
+    <section>
+        <h2>10. SECOND-ORDER EFFECTS & CORNERS</h2>
+        <p><strong>GHL Snapshot × Voice AI:</strong> Once Mark activates Voice AI, his booking rate should jump (Voice resolves 90-95% of calls). If booking rate goes +30%, the Snapshot's actual ROI becomes a real sales hook: "Voice AI gives you 40% more bookings; the Snapshot automates the 5-step nurture to convert those bookings faster." That's a proof story for the next contractor you pitch.</p>
+
+        <p><strong>Payback Period × Consulting Pricing:</strong> Now that you know Mark's payback is 3-6 weeks, you can confidently raise your rate for the next customer. A 4-week payback at $500/month (instead of $300) = $300 CAC ÷ $400 margin = 3 weeks. Faster payback at higher price. Margin floor is now visible.</p>
+    </section>
+
+    <section>
+        <h2>11. YOUR ACTION ITEM (THIS WEEK)</h2>
+        <div class="action-box">
+            <strong>Activate Voice AI on Mark's GHL sub-account by July 17.</strong><br/>
+            The 50%-off window runs through July 19. He gets a free 30-day trial + discount on the add-on.
+            <br/><br/>
+            <strong>Success definition:</strong> Voice AI running live on his line (513-599-0412 or whatever number you assign), taking calls and logging data to his GHL contact record.
+            <br/><br/>
+            <strong>Follow-up (same week):</strong> Ask Mark directly: "Would you pay $200/month to keep Voice AI after the trial, as a standalone feature?" Document his answer exactly. This is the WTP test that unlocks whether the Snapshot's AI upsell tier ($200-400/mo added revenue per customer) is real demand or a guess.
+        </div>
+    </section>
+
+    <section>
+        <h2>12. YOUR 3 KEY TAKEAWAYS</h2>
+        <ol>
+            <li><strong>Payback period = cash flow reality.</strong> Mark's 3-week payback means every 10 new customers funds the 11th without external capital. This is how bootstrapped businesses actually work. Measure it for every lane, always.</li>
+            <li><strong>Today's Voice AI window is temporary.</strong> Competitors are shipping fast. Snapshot vendors are proliferating. Activate on Mark THIS WEEK, get the WTP answer by July 19, then decide your next move (Snapshot packaging, second customer, or pivoting to DFY). Waiting costs you a month of market.</li>
+            <li><strong>Vertical DFY + inbound (not outbound) is your path if you do DFY.</strong> Your constraint is no cold outreach. Reddit posts + marketplace listings solve that. Generic DFY is a grind; HVAC-specific DFY with a playbook is defensible. But only worth building if you test demand first (one interview with a contractor outside Mark's world).</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p><strong>Brief published:</strong> Sunday, July 13, 2026 at 07:05 UTC</p>
+        <p>Archive: <a href="https://ggalioto.github.io/daily-brief/" target="_blank">Live brief</a> | Next run: Monday, July 14, 2026</p>
+    </footer>
 </div>
 </body>
 </html>
