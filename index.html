@@ -6,271 +6,237 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Daily Intelligence Brief — July 28, 2026</title>
+<title>🐦‍⬛ Daily Intelligence Brief — 2026-07-29</title>
 <style>
   :root {
-    --ink: #1c1a17;
-    --paper: #faf6ee;
-    --card: #ffffff;
-    --accent: #8b1e1e;
-    --accent2: #2b4a3f;
-    --gold: #b8862c;
-    --muted: #6b6357;
-    --border: #e4dcc9;
+    --bg: #0f1115;
+    --card: #171a21;
+    --card2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e8e9ec;
+    --muted: #9aa1ad;
+    --accent: #6ee7b7;
+    --accent2: #f0b429;
+    --red: #ff6b6b;
+    --blue: #7dd3fc;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.55;
-    font-size: 16px;
+    padding: 0 0 60px 0;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 60px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 18px; }
   header {
     text-align: center;
-    padding: 28px 16px 20px;
-    border-bottom: 3px solid var(--ink);
-    margin-bottom: 22px;
+    padding: 32px 18px 22px 18px;
+    background: linear-gradient(180deg, #1a1e27 0%, #0f1115 100%);
+    border-bottom: 1px solid var(--border);
   }
-  header .bird { font-size: 42px; }
-  header h1 {
-    font-size: 1.5rem;
-    margin: 6px 0 4px;
-    letter-spacing: 0.5px;
-  }
-  header .date { color: var(--muted); font-size: 0.9rem; }
-  header .tag { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: 4px; }
-
+  header .icon { font-size: 42px; }
+  header h1 { font-size: 1.4rem; margin: 8px 0 4px 0; }
+  header .sub { color: var(--muted); font-size: 0.9rem; }
   section {
+    margin: 22px 0;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 18px 16px;
-    margin-bottom: 18px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border-radius: 14px;
+    padding: 20px 18px;
   }
   section h2 {
-    font-size: 1.05rem;
-    margin: 0 0 10px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border);
+    font-size: 1.08rem;
+    margin: 0 0 12px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
   }
-  .lead {
-    background: linear-gradient(135deg, #8b1e1e 0%, #5e1414 100%);
-    color: #fff;
-    border: none;
-  }
-  .lead h2 { border-bottom-color: rgba(255,255,255,0.3); color: #fff; }
-  .lead .verdict { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
-  .lead .action-box {
-    background: rgba(255,255,255,0.12);
-    border-left: 4px solid #ffd27a;
-    padding: 10px 12px;
-    border-radius: 6px;
-    margin-top: 10px;
-    font-size: 0.95rem;
-  }
-  .school { border-left: 5px solid var(--gold); }
-  .signal { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
-  .signal:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .signal .h { font-weight: 700; margin-bottom: 3px; }
-  .tag-lane {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    background: var(--accent2);
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin: 4px 4px 0 0;
-  }
-  .tag-blind {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin-bottom: 6px;
-  }
-  .tag-passive { background: #cde3d5; color: #1f4a30; }
-  .tag-semi { background: #f4e0b0; color: #6b4c05; }
-  .tag-active { background: #f0c4c4; color: #7a1c1c; }
-  .score-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 8px 0;
-    font-size: 0.85rem;
-  }
-  .score-pill {
-    background: var(--paper);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 8px;
-  }
-  .bar-row { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.85rem; }
-  .bar-label { width: 130px; flex-shrink: 0; color: var(--muted); }
-  .bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 10px; overflow: hidden; }
-  .bar-fill { height: 100%; background: var(--accent2); border-radius: 4px; }
-  .takeaway { margin-bottom: 10px; }
-  .takeaway b { color: var(--accent); }
-  .src { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
-  .action-week {
-    background: #f4ede0;
-    border: 1px dashed var(--gold);
+  section h3 { font-size: 0.98rem; color: var(--accent); margin: 16px 0 6px 0; }
+  p { margin: 0 0 12px 0; }
+  p:last-child { margin-bottom: 0; }
+  .verdict {
+    background: var(--card2);
+    border-left: 4px solid var(--accent);
+    padding: 14px 16px;
     border-radius: 8px;
-    padding: 12px 14px;
+    margin-bottom: 14px;
+    font-size: 1.02rem;
   }
-  footer {
+  .action-box {
+    background: #1c2b26;
+    border: 1px solid #2e4a3f;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 10px;
+  }
+  .action-box .label { color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  ul, ol { padding-left: 20px; margin: 10px 0; }
+  li { margin-bottom: 8px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-right: 6px;
+  }
+  .tag-passive { background: #1c2b26; color: var(--accent); border: 1px solid #2e4a3f; }
+  .tag-semi { background: #2a2419; color: var(--accent2); border: 1px solid #4a3f1f; }
+  .tag-active { background: #2b1c1c; color: var(--red); border: 1px solid #4a2929; }
+  .score-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0; }
+  .score-pill {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: 130px;
     text-align: center;
-    color: var(--muted);
-    font-size: 0.8rem;
-    margin-top: 20px;
-    padding-top: 14px;
-    border-top: 1px solid var(--border);
   }
-  .note {
+  .score-pill b { display: block; font-size: 1.3rem; color: var(--accent2); }
+  .spark { font-family: monospace; color: var(--blue); letter-spacing: 1px; }
+  .src { color: var(--muted); font-size: 0.8rem; }
+  .src a { color: var(--blue); text-decoration: none; }
+  .src a:hover { text-decoration: underline; }
+  .divider { border: none; border-top: 1px dashed var(--border); margin: 14px 0; }
+  .takeaway-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    background: var(--accent);
+    color: #0f1115;
+    border-radius: 50%;
+    font-weight: 800;
     font-size: 0.8rem;
-    color: var(--muted);
-    font-style: italic;
+    margin-right: 8px;
+    flex-shrink: 0;
   }
-  ul { margin: 6px 0; padding-left: 20px; }
-  li { margin-bottom: 4px; }
+  .takeaway { display: flex; align-items: flex-start; margin-bottom: 12px; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 30px 18px 0 18px; }
+  .glossary { font-size: 0.85rem; color: var(--muted); }
+  .glossary code { color: var(--blue); }
+  strong.hl { color: var(--accent2); }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <header>
+    <div class="icon">🐦‍⬛</div>
+    <h1>Daily Intelligence Brief</h1>
+    <div class="sub">Wednesday, July 29, 2026 · ~10-minute read</div>
+  </header>
 
-<header>
-  <div class="bird">🐦‍⬛</div>
-  <h1>Daily Intelligence Brief</h1>
-  <div class="date">Tuesday, July 28, 2026</div>
-  <div class="tag">~10-min read · sharp, not padded</div>
-</header>
+  <section>
+    <h2>1. 🎯 Today's Best Lane to Attack</h2>
+    <div class="verdict">
+      <strong>Notification &amp; Compliance</strong> — not because something new happened today, but because everything just built is sitting in a pile marked "not usable yet," and the one thing standing between that pile and real value is a single review pass.
+    </div>
+    <p>Here's the stack, in order: Huginn (your low-cost automation runner) ran 23,550 synthetic test scenarios against all six regulatory-filing tracks and came back 99.99% clean — one real bug found (a crash on a malformed date), zero fee/deadline logic errors. Same week, a Contractor &amp; Building/Site lookup database got designed and handed off for build. Same week, Terri (your sister, effectively running Rainbow Environmental's compliance filings) confirmed in a real conversation that the office's entire process runs on one person's personal login and a dry-erase board — and that person is cutting to three days a week. The lunch to talk it through happened. The problem is real, the prospect is warm, the tooling works.</p>
+    <p>None of it counts yet. Your own standing rule says this database and this stress-test data don't get treated as usable until your Quality Assurance (QA) reviewer — Code — independently re-checks the work, not just confirms the spec was followed. That review hasn't started. <strong class="hl">The highest-leverage move today isn't more building — it's unblocking the review that turns "looks done" into "is done."</strong></p>
+  </section>
 
-<section class="lead">
-  <h2>🎯 Today's Best Lane to Attack</h2>
-  <div class="verdict">Notification &amp; Compliance — get the Rainbow/Terri visit prep finished, today, not when the date locks.</div>
-  <p>Two signals point the same direction at once. First, the macro one: Norm AI (agentic regulatory-compliance software) just closed a $120M Series C at a $1.2 billion valuation, and used part of it to launch an actual AI-native law firm doing real compliance filing work for clients. Institutional money (Khosla, Blackstone, Bain Capital) is betting big that "software that files and monitors regulatory paperwork for you" is a real category — that's the exact shape of the Notification &amp; Compliance lane, just at enterprise financial-services scale instead of small-contractor-environmental scale. Second, the human one, and it's fresher and more load-bearing: your own 2026-07-27 conversation with Terri confirmed Rainbow's compliance filing process is genuinely fragile — one person (Cari) holds the only eBiz login on a personal PIN, tracks everything on a dry-erase board, and is dropping to 3 days a week. Her husband Brian already said the quiet part out loud: "cheaper than Cari 3 days/week." That's a real budget signal, unprompted, from someone adjacent to the decision-maker.</p>
-  <p>Your own log has the visit at ~95% likely this week, with no exact date locked yet. That's the leverage point — not selling, not quoting (both correctly off the table until Terri commits and until the product's actually ready), just showing up prepared.</p>
-  <div class="action-box"><b>Highest-leverage action, doable now:</b> Turn the 5 open Terri questions already sitting in TASKS.md (original-vs-revision delegation, whether eBiz lets you clone/import a filing, real filing volume per month, how Brian captures inspection data today, and confirming the AC1411 license renewal) into one clean one-page visit-prep sheet. Nothing new to research — just consolidate what's already scattered across three files so it's ready to hand-carry into a kitchen-table conversation whenever the date lands.</div>
-</section>
+  <section>
+    <h2>2. 🎓 Business School — Module 20: Willingness To Pay vs. Interest</h2>
+    <p>This closes the original 20-module arc that started 2026-07-06. New modules get appended after this one — the curriculum keeps going, it just isn't a fixed syllabus anymore.</p>
+    <p><strong>The gap:</strong> "interest" is free for the other person to give you. A like, a "that's cool," a nod at a demo, an unprompted comment about cost — none of it has required them to give anything up. <strong class="hl">Willingness To Pay (WTP)</strong> is different in kind, not degree: it's the moment someone trades real money, meaning they're choosing your thing over something else their budget could have bought instead. Founders blow enormous amounts of time and money because they mistake the first for the second.</p>
+    <p><strong>The cheapest way to test it:</strong> don't build more — ask for a commitment before the thing is finished. A deposit, a pre-order, a signed letter of intent, or simply naming a real number out loud and watching whether the other person engages with the number or changes the subject. All four cost you nothing but a conversation.</p>
+    <p><strong>Your own live example, right now:</strong> when you pressed Terri on real interest, her first reaction was cost — and her husband Brian volunteered, unprompted, that your service would probably be "cheaper than paying [the office manager] for 3 days a week." That is a genuinely better signal than a survey answer or a polite "sounds useful" — it was self-generated, it was framed in dollars, and nobody had to ask for it. <strong>But it is still not proof of Willingness To Pay.</strong> It's proof of interest with a price tag loosely attached. The actual test — the one that would move this from "promising conversation" to "validated" — is naming your real number in a real conversation and watching what happens next: does she engage with it, negotiate it, or go quiet? That's module 20's lesson applied directly to the lane sitting at the top of this brief: the warmest lead in your whole portfolio still hasn't cleared the one bar that actually matters.</p>
+  </section>
 
-<section class="school">
-  <h2>🎓 Business School — Module 19: Cash Flow &amp; Runway</h2>
-  <p><b>The mix-up this module fixes:</b> "runway" gets talked about like it only applies to Venture Capital (VC)-funded startups burning through a pile of investor cash until it hits zero. For a bootstrapped operation like Corvino Forge LTD — funded by your day job, not a funding round — the concept still matters, but the failure mode is different. You don't run out of a fixed pool. You get squeezed by <b>timing</b>: money owed to you arrives later than money you owe.</p>
-  <p><b>Burn rate</b> is simply what goes out the door every month regardless of revenue. Run the actual Corvino Forge number: GoHighLevel (GHL) Starter plan $104.57/mo (with tax), Namecheap hosting $34.88/yr (≈$2.91/mo), plus whatever small tool costs float in and out — call it roughly $110-150/mo all-in right now. That's tiny. <b>Runway</b>, in the VC sense, is cash-on-hand ÷ burn rate = months until zero. But Corvino Forge has no venture cash pool to divide — the "runway" is really "how long can the day-job income comfortably absorb this $110-150/mo before it's felt," and the honest answer today is indefinitely, because the business isn't yet the thing paying the mortgage.</p>
-  <p><b>Where it gets real:</b> the risk isn't burn, it's <b>mismatch</b> — a cost lands before the matching revenue does. CashMoney sidesteps this entirely: $50 one-time sale, cash in hand same day as the sale, zero timing gap. Notification &amp; Compliance is the opposite shape on purpose: if Rainbow signs on, there's a real gap between "Forge does the filing work this month" and "the retainer invoice actually clears" — the exact gap every service business has to manage, and the reason the pricing-anchor work already done (~$100-175/filing, still uncommitted) has to account for payment terms, not just the number itself.</p>
-  <p><b>The one-sentence version to be able to explain back:</b> burn rate is what you spend each month no matter what; runway is how long you can survive that spend before income catches up; and for a bootstrapped builder the real skill isn't calculating a runway number, it's picking business models (like CashMoney's instant-cash shape) that shrink the gap between spending the effort and collecting the cash.</p>
-  <p class="note">Next: Module 20 — Willingness To Pay (WTP) vs. interest, the final module in Arc 6. After that, new advanced modules get appended to the curriculum.</p>
-</section>
+  <section>
+    <h2>3. 📡 Top Signals</h2>
+    <h3>Cheap models + premium review is now the industry's default architecture, not just your workaround</h3>
+    <p>Enterprise Artificial Intelligence (AI) token costs fell 67% year-over-year — from $18.40 per million tokens in Q1 2025 to $6.07 in Q1 2026 — and open-weight models now carry 38% of enterprise token volume, up from 11% a year ago. The pattern driving it has a name now: a "Tiered Intelligence Stack," where cheap/open models absorb high-volume work and a premium model is reserved for the parts that need real judgment — enterprises running this mix report a blended cost 87.4% below an all-frontier setup. <span class="src">(<a href="https://www.opensourceforu.com/2026/05/enterprise-ai-costs-crash-67-as-open-source-models-and-multi-model-routing-go-mainstream/" target="_blank">Open Source For You, May 2026</a>)</span></p>
+    <p>You already built this exact architecture — Huginn on free/cheap OpenRouter models doing the heavy lifting, Claude Code as the paid reviewer catching what the cheap model misses. It's not a scrappy workaround; it's the pattern the whole industry converged on this year. Worth knowing, since it means your Huginn/Code split will keep getting cheaper on its own as this trend continues — no action needed, just confidence that the architecture is sound.</p>
+    <h3>Compliance-automation money is real, but nobody funded is anywhere near your niche</h3>
+    <p>Taktile (a Fintech automation platform) raised a $110 million Series C for an "agentic decision platform" handling loan approvals and claims processing with audit trails; Norm is doing the same for contract management and litigation prep. Investors are explicitly betting that domain-specific AI with compliance built in is "the new frontier." <span class="src">(<a href="https://blog.mean.ceo/ai-startup-funding-news-july-2026/" target="_blank">Mean CEO funding roundup, July 2026</a>)</span></p>
+    <p>None of that money is anywhere near state/local environmental-notification filing — the whole funded field is fintech, legal, and enterprise Governance, Risk, and Compliance (GRC). That's a genuine point in Rainbow's favor: the niche isn't crowded, it's just not on anyone's radar yet. It also means there's no funded competitor's pricing to anchor against — you're pricing blind until Terri gives you real volume numbers.</p>
+    <h3>Hacker News' top story this week: Anthropic's own position on open-weight models</h3>
+    <p>The #1 story on Hacker News (a technology and startup news aggregator) as of July 28 was Anthropic's own post on open-weight models — directly touching the same cheap-model-vs-frontier-model economics playing out in your own stack. <span class="src">(<a href="https://news.ycombinator.com/front" target="_blank">Hacker News front page, 2026-07-27</a>)</span></p>
+  </section>
 
-<section>
-  <h2>📡 Top Signals</h2>
-  <div class="signal">
-    <div class="h">1. Norm AI: $120M Series C, $1.2B valuation, and a real AI-native law firm launched alongside it</div>
-    Khosla Ventures led, with Blackstone, Bain Capital, Coatue, and Vanguard participating. Norm didn't just raise money for software — it launched <b>Norm Law LLP</b>, an actual law firm using its own agentic compliance tooling to do billable legal/compliance work for financial-services clients. <span class="tag-lane">Notification &amp; Compliance</span> This is the clearest available proof that "an AI system that acts, monitors, and files inside a defined rule set" is fundable at serious scale — validates the shape of the tri-state notification build, at a tier so far above Geo's lane it's not competition, just confirmation the category is real.
-    <div class="src">Sources: <a href="https://www.jdjournal.com/2026/07/09/norm-ai-1-2-billion-valuation-120m-series-c-funding/">JD Journal</a>, <a href="https://www.bloomberg.com/news/articles/2026-07-07/ai-legal-startup-norm-valued-at-1-2-billion-in-funding-round">Bloomberg</a></div>
-  </div>
-  <div class="signal">
-    <div class="h">2. AI agent funding hit $1.8B across 12+ deals in July — enterprise automation took 58% of it</div>
-    Harvey AI ($200M/$2.1B), Lovable ($200M/$2.8B), Glean ($180M/$2.7B), Hebbia ($130M/$1.0B) all closed rounds this month, average valuations up 40% quarter-over-quarter to $280M. <span class="tag-lane">Anvil</span> The investor thesis is explicitly "specialized vertical agents beat general chatbots" — which is the entire bet behind Anvil's local-service-back-office positioning. None of this money is reachable by Geo directly, and it shouldn't be chased — but it's an unusually clean signal that the vertical-agent thesis Anvil is built on is the same one institutional capital is currently paying premiums for.
-    <div class="src">Sources: <a href="https://gravity.fast/blog/ai-agent-funding-tracker-q3-2026/">Gravity AI Agent Funding Tracker</a>, <a href="https://aifundingtracker.com/top-50-ai-startups/">AI Funding Tracker</a></div>
-  </div>
-  <div class="signal">
-    <div class="h">3. GoHighLevel quietly raised Private Integration Token (PIT) limits from 5 to 20 per sub-account (July 27)</div>
-    <span class="tag-lane">Anvil</span> <span class="tag-lane">Heating, Ventilation, and Air Conditioning (HVAC)</span> Small infrastructure change, real consequence: PIT tokens are how external systems (like a future Anvil back-office module) authenticate into a GHL sub-account. A 4x ceiling increase removes a real constraint on how many independent integrations one client's account can carry at once — relevant the moment Anvil moves past single-purpose automations into an actual multi-agent back-office per client.
-    <div class="src">Source: <a href="https://ghldeveloper.io/blog/gohighlevel-july-2026-updates-hidden-features-you-probably-missed">GHL Developer Blog</a></div>
-  </div>
-</section>
+  <section>
+    <h2>4. 🌱 Emerging Opportunities</h2>
+    <p><strong>Construction still barely touches AI (8.9% adoption) + every voice-AI vendor is chasing healthcare/legal/hospitality instead = a genuinely underserved trade.</strong> Small-business AI adoption overall sits at 89%, and AI phone-handling specifically has gone from 11% to 34% of small and mid-size businesses in two years — but construction lags every other tracked industry at just 8.9%. <span class="src">(<a href="https://www.brilo.ai/resources/ai-adoption-statistics" target="_blank">Brilo AI adoption statistics, 2026</a>; <a href="https://epiphanydynamics.ai/blog/state-of-ai-adoption-us-small-business-2026/" target="_blank">Epiphany Dynamics, 2026</a>)</span> This directly strengthens the trades-focused end of your portfolio — the gap between overall adoption and construction-specific adoption is the widest of any industry measured, and nobody's rushing to close it.</p>
+    <p><strong>Funded compliance-automation platforms all sit one layer up (enterprise finance/legal) + nobody's built the boring state-portal-filing layer = the gap Notification &amp; Compliance already found.</strong> Confirms, doesn't newly reveal — your own research already established this (see Section 3) — but it's worth naming as a real emerging-opportunities pattern: the entire well-funded compliance wave is skipping over the unglamorous government-portal layer where Rainbow lives.</p>
+  </section>
 
-<section>
-  <h2>🌱 Emerging Opportunities</h2>
-  <p><b>Freelance AI-automation demand is up 136%, but the supply is almost entirely generalist workflow builders, not vertical specialists</b> = opportunity. Upwork reports AI freelancers earning 44% more than platform average and workflow consultants billing $75-200/hr — but the listings scanned skew toward "I'll build you any automation" rather than "I only build for HVAC/home-services." <span class="tag-lane">DFY Cloning</span> Reinforces the 2026-07-18 Underdog finding that the winning version of Done-For-You (DFY) reselling is vertical-depth-backed, not generic — this is independent evidence for the same conclusion, one week later.</p>
-  <p><b>Norm AI's raise proves agentic compliance is fundable at $1.2B — but only at enterprise financial-services scale, not small/local-government filings</b> = opportunity. Nobody in the funding data is chasing state environmental/demolition notification work for tri-state contractors; that tier is beneath what venture money bothers with. <span class="tag-lane">Notification &amp; Compliance</span> The white space isn't threatened by this raise, it's dated by it — the small/local end of "agentic compliance" stays open only as long as nobody bigger decides it's worth building down-market.</p>
-  <p><b>62% of Small-to-Medium Business (SMB) inbound calls go unanswered at peak hours, and home-services contractors specifically miss 60-80% of calls</b> = opportunity, already being worked. <span class="tag-lane">Voice AI / HVAC</span> No new action here — flagging only because today's numbers are a stronger, more current citation than what's been used in the brief before; worth having on hand if the HVAC voice-agent story ever needs a fresh stat.</p>
-</section>
+  <section>
+    <h2>5. 💵 Fastest Money Right Now</h2>
+    <p>Pieter Levels' Photo AI is a real, durable case — $132,000 Monthly Recurring Revenue (MRR), solo-built, but it took 18 months to get there (started at $5,400 in week one). Marc Lou's whole solo micro-Software as a Service (SaaS) portfolio pulled $1.03 million in 2025. Those are the names people cite — real, verifiable, not flash-in-the-pan. <span class="src">(<a href="https://bigideasdb.com/micro-saas-examples-2026" target="_blank">BigIdeasDB, 2026</a>)</span></p>
+    <p><strong>The sober number underneath those headlines:</strong> the average micro-SaaS product runs about $1,735 MRR, and 70% of them never clear $1,000/month at all. <span class="src">(<a href="https://ideaproof.io/lists/micro-saas-ideas" target="_blank">IdeaProof, 2026</a>)</span> The Levels/Lou numbers are the top 1%, not the median — worth remembering before benchmarking any new bet against them.</p>
+    <p><strong>Whitespace flag:</strong> AppSumo — the marketplace most people point to for "sell your tool once, get paid forever" — has seen its own revenue crash 50% over the last two years, despite still pulling ~2 million monthly visits. <span class="src">(<a href="https://ppc.land/appsumos-revenue-crashes-50-as-lifetime-deal-model-faces-existential-crisis/" target="_blank">PPC Land, 2026</a>)</span> If a future product-marketplace play (you already have this banked as an idea) leans on AppSumo specifically as the distribution channel, know going in that the channel itself is weakening — not disqualifying, just a headwind that wasn't there two years ago.</p>
+  </section>
 
-<section>
-  <h2>💵 Fastest Money Right Now</h2>
-  <div class="bar-row"><div class="bar-label">Harvey AI Series C</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div>$200M</div></div>
-  <div class="bar-row"><div class="bar-label">Lovable Series B</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div>$200M</div></div>
-  <div class="bar-row"><div class="bar-label">Glean Series D</div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><div>$180M</div></div>
-  <div class="bar-row"><div class="bar-label">Norm AI Series C</div><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><div>$120M</div></div>
-  <div class="bar-row"><div class="bar-label">Hebbia Series B</div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div><div>$130M</div></div>
-  <p><b>Flag: none of this is reachable money for Geo — it's VC-scale, listed for context only, not aspiration.</b></p>
-  <p><b>What's actually reachable and outside every current lane:</b> AI-automation consulting gigs on Upwork/Fiverr. Real numbers — $75-200/hr for workflow-building, demand up 136% year-over-year (Fiverr's Business Trends Index), AI freelancers earning 44% more per hour than the platform average. Platform cut is real (Fiverr flat 20%, Upwork 0-15% variable) but net pay still clears $60-170/hr after the cut. <b>Durability check:</b> this is a real, current, inbound-lead channel (client posts a job or searches a gig listing — no cold outreach required), but it's competitive and rates compress as more generalist freelancers pile in; the honest read is "solid side cash, not a lane," which is exactly why it's flagged in Blind-Spot Radar below rather than promoted to a fifth lane.</p>
-  <p><b>White-label AI voice reselling</b> is the other large number in circulation — agencies reportedly clearing $20K-80K/mo, some claiming $1M Annual Recurring Revenue (ARR) at 30-50 clients. Not flagging this as new money for Geo: it's a variant of the voice-AI upsell already inside the Consulting/Anvil thesis, not a blind spot, and the client volumes cited (30-50 clients) assume a lead-gen motion that runs straight into the no-cold-outreach constraint. Mentioned here only so the number doesn't look ignored.</p>
-  <div class="src">Sources: <a href="https://gravity.fast/blog/ai-agent-funding-tracker-q3-2026/">Gravity Funding Tracker</a>, <a href="https://www.digitalinformationworld.com/2026/07/upwork-reports-growth-in-skilled.html">Upwork/Digital Information World</a>, <a href="https://oncallclerk.com/blog/how-resellers-make-money-ai-receptionists">OnCallClerk</a></div>
-</section>
+  <section>
+    <h2>6. ⚙️ Technical Shifts</h2>
+    <p>Voice-AI infrastructure funding stayed hot: ElevenLabs raised $500 million at an $11 billion valuation in February, Deepgram raised $130 million at $1.3 billion in January. <span class="src">(<a href="https://newmarketpitch.com/blogs/news/ai-sales-anding-funding-analysis" target="_blank">New Market Pitch, 2026</a>)</span> Confirms the underlying rails you build on (Retell, and the broader voice-AI stack) aren't going anywhere — the infrastructure layer is well-capitalized and getting cheaper (see Section 3's cost-crash data), which is good news for anything you build on top of it.</p>
+  </section>
 
-<section>
-  <h2>⚙️ Technical Shifts</h2>
-  <p>Moonshot AI open-sourced Kimi K3, a 2.8-trillion-parameter model — the largest open-weight release yet, strong at coding/agentic tasks, and it lowers the cost floor for anyone (including Huginn, running free-tier OpenRouter models) to access frontier-adjacent capability without paying Application Programming Interface (API) rates. Anthropic released Claude Opus 5 on July 24. Between July 17-23 alone, seven other labs (Qwen, Google Gemini, poolside, Ant Group, Black Forest Labs' FLUX 3) shipped new models — the field's framing has shifted from "best model wins" to "best fit wins," meaning price, speed, and access now matter as much as raw benchmark scores. Practical read for Geo: model choice for Anvil/Huginn should keep being made on cost-and-fit grounds, not "wait for the best one" — there is no stable "best."</p>
-  <div class="src">Sources: <a href="https://techstartups.com/2026/07/27/top-tech-news-today-july-27-2026-anthropic-monday-com-moonshot-ai-nvidia-openai-more/">Tech Startups</a>, <a href="https://www.digitalapplied.com/blog/seven-days-seven-releases-july-2026-model-wave">Digital Applied</a></div>
-</section>
+  <section>
+    <h2>7. 📈 Adoption &amp; Traction Signals</h2>
+    <p>Voice AI adoption among small and mid-size businesses in the United States and Europe: 34% now use some form of AI phone handling, up from 11% in 2024 — a 340% jump in three years. Healthcare leads at 48%, professional services at 38%, hospitality at 35%. <span class="src">(<a href="https://www.ringly.io/blog/voice-ai-statistics-2026" target="_blank">Ringly.io, 2026</a>)</span> A small service business (5–50 employees) typically saves $23,000–$42,000 a year replacing a full-time receptionist with a voice agent, with median Return on Investment (ROI) break-even at 3.2 months. <span class="src">(<a href="https://agxntsix.ai/reports/state-of-enterprise-voice-ai-adoption-2026" target="_blank">AgxntSix, 2026</a>)</span> Real, fast-growing market — the trades sector (construction's 8.9%, per Section 4) is the visible laggard inside an otherwise-surging category.</p>
+  </section>
 
-<section>
-  <h2>📈 Adoption &amp; Traction Signals</h2>
-  <p>Voice AI market sizing: $3.14B growing to a projected $47.5B by 2034 (34.8% Compound Annual Growth Rate (CAGR)) — timing tailwind already priced into the HVAC/voice-AI thesis, no new action implied, just confirms the window is still open and widening. Separately: Upwork's own reporting frames 2026 as "growth in skilled freelancing as AI reshapes the value of work" — real platform-level evidence (not just anecdote) that the freelance-automation-gig channel flagged above is an active, growing market right now, not a stale idea.</p>
-  <div class="src">Sources: <a href="https://www.vellum.ai/blog/best-ai-receptionist-for-small-business">Vellum</a>, <a href="https://www.digitalinformationworld.com/2026/07/upwork-reports-growth-in-skilled.html">Digital Information World</a></div>
-</section>
+  <section>
+    <h2>8. 🐦‍⬛ Featuring — Underdog of the Day</h2>
+    <h3>⚡ Speed-to-Lead AI Caller</h3>
+    <div class="score-row">
+      <div class="score-pill">Market Pull<b>7</b></div>
+      <div class="score-pill">Geo's Edge<b>7</b></div>
+      <div class="score-pill">Effort-to-$1<b>3</b></div>
+    </div>
+    <p><strong>Underdog Score: 5.7/10</strong> — rated absolutely, not against any other lane.</p>
+    <p>The idea: businesses that <em>buy</em> leads — solar, roofing, mortgage, real estate, insurance — lose a huge share of them to slow callbacks. An outbound voice agent calls every new lead within a minute, 24/7, and books the appointment before a competitor gets there.</p>
+    <p><strong>Market pull (7):</strong> today's independent search re-confirmed the exact numbers the original write-up cited — responding within 60 seconds lifts conversion up to 391%, and 78% of buyers go with whoever answers first. New this run: a broader benchmark shows 9x higher conversion inside 5 minutes vs. 30 minutes, and solar specifically (average $206 cost-per-lead) treats sub-60-second response as competitively mandatory, not a nice-to-have. <span class="src">(<a href="https://www.apten.ai/blog/speed-to-lead-benchmarks-2026" target="_blank">Apten, 2026</a>; <a href="https://www.blazeo.com/blog/speed-to-lead-for-solar-contractors-roi-playbook/" target="_blank">Blazeo, 2026</a>)</span> Held at 7, not higher, because Retell AI's own comparison piece confirms this space is already served by funded self-serve tools (Aloware, Thoughtly, Bland AI) — real demand, contested field.</p>
+    <p><strong>Geo's edge (7):</strong> this is structurally "outbound Donna" — same Retell foundation, same SMS fallback rail, same GHL pipeline you already understand cold. Held at 7, not 9, because it's a fresh integration challenge (every client's lead source is different) with zero live outbound build in this specific shape yet.</p>
+    <p><strong>Effort-to-first-dollar (3):</strong> the harder truth — none of your current warm network (Christy's circle: an employment attorney, a former judge, a dentist, an ophthalmologist, a couple more lawyers) sits anywhere near solar, roofing, mortgage, or real estate. Every other lane in your portfolio has at least one warm door already open; this one doesn't. That's the real reason it scores lower than the demand data alone would suggest.</p>
+    <p><strong>Cheapest next experiment ($0, ~20 minutes):</strong> before anything else, confirm the technical delta between Retell's inbound (Donna) and outbound calling modes — is it a settings change or a real rebuild? That answer alone would tell you whether this is a weekend project or a multi-week one, and it costs nothing but reading Retell's own docs.</p>
+    <p class="src">Next in pool: Story Sprint (loop 2, position 4 of the idea group).</p>
+  </section>
 
-<section>
-  <h2>🐦‍⬛ Featuring — Underdog of the Day: Quote Follow-Up Closer</h2>
-  <p class="note">Rated absolutely, never against another project. Rotation position: first IDEA-group feature after Profit Dashboard (07-23).</p>
-  <div class="score-row">
-    <span class="score-pill">Market pull: 8/10</span>
-    <span class="score-pill">Geo's edge: 7/10</span>
-    <span class="score-pill">Effort-to-first-dollar: 4/10</span>
-  </div>
-  <p><b>Overall: 6.3/10.</b></p>
-  <p><b>Market pull (8):</b> today's independent search corroborated the exact numbers the original 2026-06-23 write-up cited — 80% of sales need 5+ follow-up touches, but 44% of contractors give up after one attempt; quotes that eventually convert close in a median of 2 days, while quotes marked lost sat untouched a median of 29 days. Fresh HVAC-specific data point found today: 41% of service decisions made after a 3+ day delay cite "reminded by company" as the actual trigger — meaning the follow-up itself, not new information, is what closes a meaningful share of stalled quotes. One roofing-contractor model in the data: a contractor sending 25 quotes/month at $9,500 average job value could recover roughly $402,000/year in revenue currently lost to follow-up gaps. Not a 9 or 10 because this is a well-known pain point with several point-solution competitors already selling into it (QuoteIQ, QuoteFollow) — not virgin territory.</p>
-  <p><b>Geo's edge (7):</b> this is not a new build. It's mechanic #5 (trigger→multi-step) — already built, published, and smoke-tested for the HVAC automation set, just re-pointed at a different pipeline trigger ("Estimate Sent" instead of "Missed Call"). The original write-up self-rated build difficulty Low-Medium and profit margin ~85%, and nothing about that's changed. Held at 7, not 9, because no live client currently has quote-flow volume identified as their actual bottleneck — the skeleton is proven, the target customer isn't.</p>
-  <p><b>Effort-to-first-dollar (4):</b> technically fast once a client exists (it's inventory, not invention) — but reaching a service business that (a) generates real quotes/estimates and (b) is willing to let Geo wire a follow-up sequence into their pipeline still has to arrive through referral or inbound, same channel constraint as everything else in the portfolio. No such client is currently identified.</p>
-  <p><b>Cheapest next experiment ($0, ~20 min):</b> re-read `idea-quote-follow-up-closer.md` in full and check whether any of the existing HVAC automation infrastructure (the pipeline stages already built) could be repurposed with a stage rename rather than new workflow logic — if yes, the effort score is wrong and should rise; if a real rebuild is needed, the score holds.</p>
-  <div class="src">Sources: <a href="https://quotefollow.co/blog/contractors-close-more-jobs-automated-follow-ups">QuoteFollow</a>, <a href="https://levelcfo.com/blog/quote-follow-up-7-day-rule/">Level</a>, <a href="https://ustechautomations.com/resources/blog/automate-estimate-and-quote-followup-for-hvac-companies-2026">US Tech Automations</a></div>
-</section>
+  <section>
+    <h2>9. 🕳️ Blind-Spot Radar</h2>
+    <p>Genuinely outside your current 11 lanes — not a repackaging of anything you're already building.</p>
 
-<section>
-  <h2>🕳️ Blind-Spot Radar</h2>
-  <p class="note">Genuinely outside the current five lanes — not a variant of Consulting, Anvil, Website Landlord, or Affiliate work already underway.</p>
+    <h3><span class="tag tag-passive">Passive / Semi-Passive</span> A narrow, single-feature prosumer AI tool, sold self-serve</h3>
+    <p>Pieter Levels' Photo AI ($132K MRR, 18 months) and Marc Lou's portfolio ($1.03M/year) are both built on the same shape: one narrow tool, one clear feature, distribution through SEO/directories/word-of-mouth — never a sales conversation. <span class="src">(<a href="https://bigideasdb.com/micro-saas-examples-2026" target="_blank">BigIdeasDB, 2026</a>)</span> This is structurally different from every current lane: it's a consumer/prosumer product, not a local-service B2B automation, and it never requires you to talk to a stranger — pure inbound discovery. <strong>Real evidence it's working</strong> at the top; <strong>real evidence it usually doesn't</strong> too — 70% of micro-SaaS products never clear $1,000/month, and building the tool is the easy 20%; getting found is the other 80%. Entry cost: a weekend build plus months of quiet SEO/content work before any signal on whether it lands. Fits your building skill directly; doesn't fit your local-service network at all — which is exactly why it's a blind spot, not an extension.</p>
 
-  <span class="tag-blind tag-semi">SEMI-ACTIVE</span>
-  <p><b>Productized AI-automation consulting on Upwork/Fiverr, sold as an inbound gig, not a pitch.</b> Real, current evidence: AI-automation demand up 136% (Fiverr Business Trends Index), workflow-building specialists billing $75-200/hr, AI freelancers earning 44% more per hour than platform average (Upwork). Who's already making money at it: agency-side automation consultants listing productized "I'll build you a GHL/n8n workflow" gigs, not custom bespoke work. Fully compliant with the no-cold-outreach rule — the client finds and messages the gig, not the reverse. What it would take: a couple hours to write and post one or two specific gig listings (e.g., "I'll build a missed-call-to-booking automation in GoHighLevel") using language already proven in the HVAC build. Honest flag: rates compress fast as more generalists list similar gigs, and this is real cash-flow-timing help (Module 19, above), not a lane — treat it as a valve, not a strategy.</p>
+    <h3><span class="tag tag-semi">Semi-Active</span> Package your own cheap-model/premium-review architecture as a guide or template for other solo builders</h3>
+    <p>You already built the exact "Tiered Intelligence Stack" the industry converged on this year (Section 3) — Huginn absorbing volume on free models, Claude Code catching what matters. That's not just internal efficiency; it's a real, working case study other solo builders and small agencies running their own AI-agent stacks would pay for, at a moment when 2026 data shows the average enterprise account now juggles 4.7 different models and most solo operators are guessing at how to split the work. A build-log post, a config template, or a short paid guide — sold via content, not outreach — turns something you already have working into a second, unrelated revenue thread. <strong>Real evidence it's a live need:</strong> the cost-crash and multi-model-routing trend itself is brand new enough (this year) that polished how-to content doesn't yet exist in volume. <strong>Honest flag:</strong> unproven whether other builders would pay for this vs. figuring it out themselves for free from provider docs — the cheapest test is publishing the guide and watching whether anyone asks for more.</p>
+  </section>
 
-  <span class="tag-blind tag-passive">PASSIVE → SEMI-ACTIVE</span>
-  <p><b>AI virtual staging for real estate listing photos.</b> Real numbers: the virtual-staging market hit $1.33B in 2026, staged listings sell 73% faster (52 days down to 29-31 days on market), and a $6 spend on AI-staged images can add $7,000+ in perceived home value. Cost to the agent is $1-15/photo, 95-99% cheaper than physical staging. Who's making money: dedicated AI staging tools (roomstage.ai, InstantInteriorAI, and others found in today's scan) selling directly to agents and photographers. Geo's honest fit: this touches a local-service client base similar to his other work, but the underlying skill (image-generation tooling, not workflow/CRM automation) is new territory — not a natural extension of GHL fluency. Flagging it because the evidence is real and strong, not because it's an easy yes; entering would mean learning a genuinely different tool stack first.</p>
+  <section>
+    <h2>10. 🔄 Second-Order Effects &amp; Corners</h2>
+    <p>The 67% AI cost crash (Section 3) isn't a one-time event — if the trend holds, your own Huginn/Code stack gets cheaper every quarter without you touching anything, freeing real budget for experiments you're currently rationing tokens against.</p>
+    <p>AppSumo's revenue crash is a quiet warning, not just trivia: if any future product play (yours or banked) leans on lifetime-deal marketplaces as the primary distribution channel, that channel is measurably weaker than it was two years ago — worth factoring in before betting a launch plan on it.</p>
+    <p>Compliance-automation Venture Capital (VC) money flowing into fintech/legal and skipping environmental/local-government filing cuts both ways: no incumbent is likely to show up in Rainbow's lane soon, but there's also no funded comparable to anchor pricing or a future exit against — you're building the category's price expectations from scratch.</p>
+  </section>
 
-  <span class="tag-blind tag-active">ACTIVE</span>
-  <p><b>Done-for-you AI meeting-notetaker setup for solo professional-services clients (lawyers, financial advisors, therapists).</b> Real adoption evidence: three out of four professionals now use an AI notetaker at work, and users report saving 4 hours/week — roughly a month of time back per year. But the tools (Avoma, Bluedot, Krisp, and others) are self-serve and generic; most solo professionals configure them poorly or not at all, missing integration with their actual case-management or billing system. Nobody in the scanned market is selling a specific "set this up right for a solo attorney's practice" service. This sits adjacent to, but is distinct from, the existing law-firm Consulting prospecting (it's a different product — documentation tooling, not lead/CRM automation) and would be a genuinely new offer, not a repackaging of what's already planned for that vertical. Untested whether there's real willingness to pay for configuration help on a tool that's often free or cheap on its own — that would be the first thing to check before building anything.</p>
-</section>
+  <section>
+    <h2>11. ✅ Your Action Item (This Week)</h2>
+    <div class="action-box">
+      <div class="label">30 minutes or less</div>
+      <p style="margin-top:8px;">Get Code's independent QA pass explicitly scheduled or kicked off today on Huginn's stress-test findings and the Contractor/Building database — the specific open items are the <code>pdate()</code> crash fix, the Ohio "&gt;50 linear feet" and Indiana "&gt;2600 linear feet" threshold reads, and confirming the database build actually landed via the git bridge. <strong>Success looks like:</strong> a written pass/fail verdict exists somewhere in <code>code-sessions/</code> or the session log by the time you next check in — not "still pending" carried forward another day. Nothing built this week counts as real until this happens; that makes it the cheapest, highest-leverage half-hour available right now.</p>
+    </div>
+  </section>
 
-<section>
-  <h2>🔮 Second-Order Effects &amp; Corners</h2>
-  <p>If billion-dollar compliance-automation money keeps flowing at the enterprise tier (Norm AI), expect well-funded players to eventually look downmarket toward smaller regulatory niches — the tri-state notification build likely has a real but not infinite head start; packaging speed matters more than perfecting it. Separately: as open-weight frontier-adjacent models (Kimi K3) keep getting cheaper and better, the economics behind running Huginn on free OpenRouter tiers keep improving for free — a tailwind that costs nothing to receive. And the freelance-market data point (AI operators who deliver real business outcomes earning more than prompt-writers) quietly favors Geo's actual profile — 20 years of operational/database experience plus a real deployed HVAC build — over freelancers with AI skills but no operating history.</p>
-</section>
+  <section>
+    <h2>12. 🔑 Your 3 Key Takeaways</h2>
+    <div class="takeaway"><span class="takeaway-num">1</span><span>Notification &amp; Compliance is your hottest lane, but "built" isn't "usable" — push the Code Quality Assurance (QA) pass, not more building, until that verdict lands.</span></div>
+    <div class="takeaway"><span class="takeaway-num">2</span><span>The Huginn/Claude cost-split you built for yourself is the same architecture 2026 data says the whole industry just adopted — that's a second, unrelated product hiding inside your own infrastructure.</span></div>
+    <div class="takeaway"><span class="takeaway-num">3</span><span>Terri's unprompted cost comment is a real signal, but not proof — Module 20's lesson applies directly: the only thing that actually tests Willingness To Pay is naming a real number out loud and watching what happens.</span></div>
+  </section>
 
-<section class="action-week">
-  <h2>✅ Your Action Item (This Week)</h2>
-  <p><b>Build the one-page Terri/Rainbow visit-prep sheet.</b> Pull the 5 open questions already sitting in TASKS.md (original-vs-revision delegation eligibility; whether eBiz allows cloning/importing a filing or requires re-keying; real filing volume per month; how Brian currently captures inspection data — paper, iPad PDF, or an app; confirmation that the AC1411 license renewal, due 8/20/2026, is being handled) onto a single page. 30 minutes, no new research needed.</p>
-  <p><b>Success looks like:</b> a finished one-pager saved into `lanes/notification-compliance/`, ready to carry into the conversation the moment the date locks — not a new insight, just zero friction when the moment arrives.</p>
-</section>
-
-<section>
-  <h2>🔑 Your 3 Key Takeaways</h2>
-  <div class="takeaway"><b>1. Two independent signals (Norm AI's raise, Terri's fragility conversation) both point at Notification &amp; Compliance right now</b> — the enterprise end of this category is getting more validated and more expensive by the week, while the small/local end you're building for just produced its own real budget signal. Get the visit-prep sheet done today so readiness isn't the bottleneck when the date lands.</div>
-  <div class="takeaway"><b>2. Quote Follow-Up Closer isn't a new build, it's the HVAC automation skeleton pointed at a different trigger</b> — the cheapest possible next win in the whole idea backlog is finding one real client with actual quote-flow, not writing new code.</div>
-  <div class="takeaway"><b>3. If cash-flow timing (Module 19) gets tight before any lane pays, Upwork/Fiverr automation gigs are real, current, and fully compliant with the no-cold-outreach rule</b> — worth 30 minutes to list even as a pressure valve, not a pivot.</div>
-</section>
-
-<footer>
-  🐦‍⬛ Corvino Forge LTD — "We work for tomorrow to bring needed hope to today."<br/>
-  Daily Intelligence Brief · generated and published automatically
-</footer>
-
+  <footer>
+    🐦‍⬛ Corvino Forge LTD — Daily Intelligence Brief · Generated 2026-07-29<br/>
+    <span class="glossary">Full acronym key: WTP = Willingness To Pay · MRR = Monthly Recurring Revenue · SaaS = Software as a Service · VC = Venture Capital · QA = Quality Assurance · ROI = Return on Investment · GRC = Governance, Risk, and Compliance · API = Application Programming Interface</span>
+  </footer>
 </div>
 </body>
 </html>
