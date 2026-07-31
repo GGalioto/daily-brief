@@ -1,170 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Daily Intelligence Brief — July 30, 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Daily Intelligence Brief — 2026-07-31</title>
 <style>
-  :root{
-    --bg:#0f1115; --card:#181b22; --card2:#1f2430; --border:#2a2f3a;
-    --text:#e8e9ee; --muted:#9aa1b0; --accent:#f5b942; --accent2:#5fc9f8;
-    --green:#5fd98a; --red:#f2694f; --purple:#b58cf0;
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #2a2e38;
+    --text: #e8e8ec;
+    --muted: #9aa0ac;
+    --accent: #d4a94a;
+    --accent2: #6fb5e0;
+    --good: #6fbf73;
+    --warn: #e0a24a;
+    --bad: #e06f6f;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0; padding:0; background:var(--bg); color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.55;
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0 0 60px 0;
+    line-height: 1.55;
   }
-  .wrap{max-width:680px; margin:0 auto; padding:20px 16px 60px;}
-  header{text-align:center; padding:28px 0 20px; border-bottom:1px solid var(--border); margin-bottom:24px;}
-  header .icon{font-size:42px; display:block; margin-bottom:6px;}
-  header h1{font-size:22px; margin:4px 0; letter-spacing:-0.3px;}
-  header .date{color:var(--muted); font-size:14px;}
-  header .read-time{display:inline-block; margin-top:10px; background:var(--card2); border:1px solid var(--border); border-radius:20px; padding:4px 14px; font-size:12px; color:var(--accent2);}
-  h2{font-size:17px; margin:0 0 12px; color:var(--accent); letter-spacing:-0.2px;}
-  .section{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 18px 20px; margin-bottom:16px;}
-  .section.verdict{border-color:#5a4420; background:linear-gradient(180deg,#221c10,#181b22);}
-  .section.school{border-color:#1f3a52; background:linear-gradient(180deg,#101f2c,#181b22);}
-  .section.blindspot{border-color:#3a2050; background:linear-gradient(180deg,#1c1028,#181b22);}
-  p{margin:0 0 10px; font-size:14.5px;}
-  p:last-child{margin-bottom:0;}
-  .lead{font-size:15.5px; font-weight:600; color:var(--text);}
-  .tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; padding:3px 9px; border-radius:20px; margin:0 6px 6px 0;}
-  .tag.passive{background:#123526; color:var(--green);}
-  .tag.semi{background:#2a2510; color:var(--accent);}
-  .tag.active{background:#3a1a14; color:var(--red);}
-  .tag.action{background:#1a2a3a; color:var(--accent2);}
-  .action-box{background:var(--card2); border-left:3px solid var(--accent2); border-radius:8px; padding:12px 14px; margin-top:10px; font-size:14px;}
-  .action-box b{color:var(--accent2);}
-  ul{margin:8px 0 10px; padding-left:20px;}
-  li{font-size:14.5px; margin-bottom:6px;}
-  .src{font-size:12px; color:var(--muted); font-style:italic;}
-  .divider{border:none; border-top:1px dashed var(--border); margin:14px 0;}
-  .score{font-family:ui-monospace,Menlo,monospace; font-size:13px; background:var(--card2); display:inline-block; padding:6px 12px; border-radius:8px; margin:8px 0;}
-  .spark{font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--accent2); letter-spacing:1px;}
-  .takeaway{display:flex; gap:10px; margin-bottom:10px; align-items:flex-start;}
-  .takeaway .num{background:var(--accent); color:#1a1a1a; font-weight:800; border-radius:50%; width:22px; height:22px; min-width:22px; display:flex; align-items:center; justify-content:center; font-size:12px; margin-top:1px;}
-  footer{text-align:center; padding:24px 0 8px; color:var(--muted); font-size:12px;}
-  footer .icon{font-size:20px; display:block; margin-bottom:6px;}
-  .flag{color:var(--red); font-weight:700;}
-  code{background:var(--card2); padding:1px 5px; border-radius:4px; font-size:13px;}
+  .wrap { max-width: 720px; margin: 0 auto; padding: 20px 16px; }
+  header { text-align: center; padding: 18px 0 10px 0; }
+  header .brand { font-size: 1.9rem; }
+  header h1 { font-size: 1.15rem; margin: 6px 0 2px 0; font-weight: 600; color: var(--accent); }
+  header .sub { color: var(--muted); font-size: 0.85rem; }
+  h2 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin: 30px 0 12px 0;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .verdict {
+    background: linear-gradient(135deg, #1c2230, #171a21);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .verdict .label { color: var(--accent); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .verdict .action { font-size: 1.05rem; font-weight: 600; margin: 6px 0 4px 0; }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-right: 6px;
+  }
+  .tag.good { background: rgba(111,191,115,0.15); color: var(--good); }
+  .tag.warn { background: rgba(224,162,74,0.15); color: var(--warn); }
+  .tag.bad { background: rgba(224,111,111,0.15); color: var(--bad); }
+  .tag.info { background: rgba(111,181,224,0.15); color: var(--accent2); }
+  .score { font-weight: 700; color: var(--accent); }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .src { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+  .src a { color: var(--muted); }
+  .action-item {
+    background: rgba(212,169,74,0.08);
+    border-left: 3px solid var(--accent);
+    padding: 12px 14px;
+    border-radius: 6px;
+  }
+  .takeaways li { margin-bottom: 10px; }
+  footer { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 30px; }
+  .divider { text-align: center; color: var(--border); margin: 24px 0; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <span class="icon">🐦‍⬛</span>
-  <h1>Daily Intelligence Brief</h1>
-  <div class="date">Thursday, July 30, 2026</div>
-  <div class="read-time">~10 min read</div>
+  <div class="brand">🐦‍⬛</div>
+  <h1>Corvino Forge — Daily Intelligence Brief</h1>
+  <div class="sub">Friday, July 31, 2026 · ~10 min read</div>
 </header>
 
-<div class="section verdict">
-<h2>1. 🎯 Today's Best Lane to Attack</h2>
-<p class="lead">Notification &amp; Compliance — and specifically, closing the validation-layer blocker Code found, not chasing anything new.</p>
-<p>Here's the honest read on the last two days: zero pipeline movement, 100% infrastructure. Code spent 7/29–7/30 building a Windows-side file watcher so Huginn's (Hermes Agent, your Discord-connected build agent on the OVH VPS — Virtual Private Server) dropped files actually get picked up automatically, and doing real quality-assurance (QA) work on the Notification &amp; Compliance engines. That QA pass found something that matters more than any new signal today: the "99.99% clean" stress-test result Huginn reported on 7/29 was wrong. Not a logic bug — a silent validation gap. All six state filing engines use defensive code that quietly defaults missing required fields to zero instead of throwing an error, so ~99 scenarios with incomplete data returned a fake "valid, here's your $50 fee" instead of catching the problem. That is exactly the failure mode that would embarrass you in front of Rainbow Environmental Services, your real prospect, whose lunch is locked for <b>Thursday, August 6</b> with Terri and Lynn and, as of 7/29, real interest from Jon (the President and actual budget-holder).</p>
-<p>The fix is designed (Code wrote the full validation architecture 7/30, two-tier: shared structural checks plus track-specific rules) but only "tested for syntax" — not re-run against the actual ~23,550 stress-test scenarios. That re-test is the single thing standing between "we think this works" and "we know this works" eight days before you're standing in front of the guy who writes the check.</p>
-<div class="action-box"><b>Highest-leverage move today:</b> dispatch the re-test to Huginn now via <code>lanes/hermes-agent/task-inbox.md</code> — confirm the ~99 previously-silent scenarios now return proper errors and the ~23,450 genuine scenarios still pass unchanged. This is a five-minute prompt-write that closes an eight-day countdown to a real sales conversation. Everything else below is secondary to this.</div>
+<div class="verdict">
+  <div class="label">1. 🎯 Today's Best Lane to Attack</div>
+  <div class="action">Notification &amp; Compliance — but the move today is a QA gate, not a sales motion.</div>
+  <p>Same call as the last several briefs, for the same underlying reason — Rainbow's lunch (Terri + Lynn, Thursday 8/6) is a week out, Jon (President) has said he wants to hear what you've got, and the build has two open blockers between here and "ready to show": Code's validation-layer fix (designed 7/30, not yet re-tested against the ~99 silent-failure scenarios) and the Rainbow Contractor/Building lookup database (Code-verified complete 7/30, still needs to land in <code>client-artifacts/</code>). Neither blocker is new today. What IS new: your own research confirmed nobody in the demolition/asbestos/remediation software space — not FieldFlō ($35M funded, built by contractors), not Projul, not Werx — actually files the state regulatory notification itself. They all do project management, job costing, and document storage around the filing. The gap Rainbow's Cari-bottleneck problem sits in is still empty. That's real, current confirmation your wedge hasn't been quietly closed while you weren't looking (same discipline as the CashMoney lesson from 7/21).</p>
+  <p style="margin-bottom:0;">Highest-leverage action: get Code's validation-layer fix re-tested (via Huginn, per Code's own handoff doc) before the 8/6 lunch. That's the difference between "I have some end-to-end processes" being true and being a hope.</p>
 </div>
 
-<div class="section school">
-<h2>2. 🎓 Business School — Module 21: Negotiation Basics</h2>
-<p class="lead">Anchoring, walking away, and why the first number said in a room matters more than most first-time founders think.</p>
-<p>Negotiation isn't a debate you win with better arguments — it's a psychological effect called <b>anchoring</b>. The first concrete number spoken in a negotiation pulls the entire rest of the conversation toward it, even when both sides know the number was arbitrary. This is one of the most replicated findings in behavioral economics: people adjust from an anchor, but they never adjust far enough. Say $150/filing first, and the conversation happens near $150. Let the other side say $50 first, and the conversation happens near $50 — even if $50 was a lowball guess, not a real assessment of value.</p>
-<p><b>The three mechanics that matter for you specifically:</b></p>
-<ul>
-<li><b>Anchor high, but inside the range of plausible.</b> An anchor that's obviously absurd (10x market rate) doesn't pull the conversation — it just signals you're not a serious negotiator and resets the whole thing to zero credibility. Your <code>~$100–175/filing</code> pricing anchor (session-log, triangulated from Harbor Compliance and permit expediters) is exactly this kind of number: high enough to leave room, grounded enough to survive a raised eyebrow.</li>
-<li><b>Whoever needs the deal less controls the anchor.</b> This is why your product-not-ready rule (no pricing until the product is done) is also, structurally, a negotiation tactic even though nobody built it that way on purpose. Terri and Jon have a genuine, worsening problem (Cari going to 3 days/week, zero digital records, no delegation) — that's leverage sitting on your side of the table whether you use it or not.</li>
-<li><b>"Walking away" only works if it's real, not performed.</b> You don't need to fake indifference to Rainbow — you're not desperate for this deal (day job covers the bills, Rainbow is one of several lanes) which means you can afford to hold your anchor instead of caving to the first counter. That's the actual meaning of a Best Alternative To a Negotiated Agreement (BATNA): the thing you'll do if this deal falls through. Yours is "keep building the other five lanes," which is a strong BATNA.</li>
-</ul>
-<p><b>Worked example, tied to 8/6:</b> if Jon opens with "what would this cost us," the anchoring mistake is answering with a number you haven't priced yet, live, in the room. The disciplined move — and the one that matches your own product-not-ready rule — is naming the range you've already triangulated ($100–175/filing) as a planning number while being explicit that a real quote needs to know Rainbow's actual volume first (still an open question on your Terri list). That's not stalling — it's controlling the anchor <i>and</i> the information asymmetry at the same time, because right now you know more about pricing this category than Rainbow does.</p>
-<p class="src">Source: general negotiation/behavioral-economics literature (anchoring effect, BATNA framework) — foundational concepts, not tied to a single 2026 citation.</p>
+<h2>2. 🎓 Business School — Module 22: Hiring Your First Contractor/Subcontractor</h2>
+<div class="card">
+<p><strong>The gap nobody warns you about:</strong> the day you pay someone else to do real work for your business, you cross from "solo operator" into "employer of labor" in the eyes of the Internal Revenue Service (IRS) and your state — whether you meant to or not. Get the classification wrong and the bill isn't just back-taxes. It's back-taxes plus penalties plus the worker's own claim for benefits you never budgeted, all landing at once, usually years after the work happened.</p>
+
+<p><strong>The classification line, plainly:</strong> an <em>employee</em> is someone whose work you control — you say when, where, how, using what tools, and you can fire them for not following your process. A <em>contractor</em> controls their own how — you buy an outcome, they decide the method, they can work for other people at the same time, they often have their own tools/business/other clients. The IRS uses a "right to control" test with roughly 20 factors bucketed into three: behavioral control (do you direct the work?), financial control (do they have real business risk — their own equipment, unreimbursed expenses, ability to profit or lose?), and relationship type (is there a contract, benefits, is the work indefinite/central to your business?). No single factor decides it — it's the whole pattern.</p>
+
+<p><strong>Why this matters at Geo's exact stage:</strong> Huginn is not a person, so this doesn't apply there — but the moment you bring on a real human subcontractor (say, someone to help with the Rainbow build, or eventually a second GoHighLevel (GHL) builder), this is the first legal document you'll actually need. Misclassifying someone as a "contractor" because it's simpler than payroll is one of the most common — and most expensive — small-business mistakes; the IRS runs entire audit programs specifically hunting for it, because it's the easiest way for a business to dodge payroll tax, workers' comp, and unemployment insurance, intentionally or not.</p>
+
+<p><strong>Scope and pay structure — the two things a contract has to nail:</strong> (1) <em>Scope</em> — a specific deliverable with a defined end (ties straight back to Module 18's contract/scope-creep lesson: name what's included, name what's excluded, define the change-order process before work starts, not after). (2) <em>Pay structure</em> — project-based or milestone-based pay is the contractor-friendly default (pay-by-the-hour-on-a-schedule starts to look more like employment in the IRS's eyes). A 1099 form gets issued at year-end for anyone paid $600+ in the year; a W-9 gets collected from them BEFORE the first payment goes out, not after — this is the piece people forget and then scramble for in January.</p>
+
+<p><strong>Worked example, tied to today's Best Lane pick:</strong> imagine Rainbow says yes and volume shows up faster than you can build solo. The tempting move is "pay a buddy $30/hr to help file forms." That's exactly the pattern that gets reclassified: you'd be setting the hours, dictating the exact process (because the filing has to match your engine's schema), and it'd be the person's only work. The compliant version: pay a fixed fee per batch of filings completed, let them set their own hours to hit the deadline, put it in writing with a scope doc (this filing type, this volume, this timeframe, here's what's NOT included), collect the W-9 first. Small change in structure, real difference in legal exposure.</p>
+
+<p><strong>Ties forward:</strong> Module 23 (bookkeeping/taxes for a sole proprietor) picks up right where this leaves off — once a 1099 exists, it has to land somewhere in your books.</p>
 </div>
 
-<hr class="divider">
-
-<div class="section">
 <h2>3. 📡 Top Signals</h2>
-<p><b>Signal 1 — "Orchestration over autonomy" is now the dominant Hacker News read on agents, and it's a direct match for what Code just built.</b> The current consensus forming on HN and in agent-ops writing: 2026 is the year autonomous agents stopped being demos and became infrastructure, and the four things that actually separate working systems from toy demos are workflows over demos, verification as the real bottleneck, skills beating prompts, and orchestration mattering more than raw autonomy. That is a precise description of what happened in your own house this week — Huginn (raw autonomy, cheap models, fast output) needed Code (the verification layer) to catch a real defect the raw autonomy missed. You didn't read this trend, you built it independently and it happens to match the industry's current best-practice read. Worth knowing you're not improvising against the grain here.</p>
-<p><b>Signal 2 — Environmental/EHS (Environmental, Health, and Safety) compliance-Artificial Intelligence (AI) funding is real and current, which is direct market validation for Notification &amp; Compliance's whole thesis.</b> ESGAgent.ai closed a seed round (Brisbane, AUD $1.7M total) building AI for heavy-industry compliance reporting; Spektr raised $20M for AI agents that automate compliance tasks previously done by human analysts; Encamp launched a new AI-powered EHS compliance platform in May 2026 explicitly targeting the "manpower gap" in this space — which is precisely Rainbow's Cari problem, just at enterprise scale instead of a 20-person tri-state remediation firm. Investors are watching for compliance startups with early customer demand in categories where compliance budgets already exist — which describes Rainbow (they already pay Cari to do this) exactly.</p>
-<p><b>Signal 3 — Voice AI receptionist adoption data confirms the Donna bet, with a number worth having in your pocket.</b> New data (NextPhone, 45-contractor study) found 74.1% of calls from small contractors went unanswered over a 7-month window — after-hours call gaps cost most Heating, Ventilation, and Air Conditioning (HVAC) shops 15–25% of total annual bookings. Flat-rate AI answering runs ~$199/mo vs. $4,000+/mo for a human receptionist or $400–800/mo for a live answering service. This doesn't change anything about Mark (still on hold, no outreach), but it's a real, current number if the HVAC Snapshot ever needs a cold-open stat.</p>
-<p class="src">Sources: <a href="https://blog.mean.ceo/ai-agents-news-july-2026/">Mean CEO — AI Agents News, July 2026</a> · <a href="https://itbrief.com.au/story/esgagent-ai-raises-seed-funding-to-automate-compliance">ESGAgent.ai seed funding — itbrief.com.au</a> · <a href="https://www.prnewswire.com/news-releases/encamp-launches-compliance-platform-with-embedded-ai-accelerating-the-shift-to-proactive-ehs-management-302770998.html">Encamp platform launch — PR Newswire</a> · <a href="https://www.getnextphone.com/blog/best-virtual-receptionist-for-hvac">NextPhone HVAC receptionist data</a></p>
+<div class="card">
+<span class="tag warn">Regulatory — voice AI</span>
+<p><strong>EU AI Act Article 50 goes live August 2 — four days from today.</strong> Every voice agent talking to an EU caller now has to disclose it's AI from the start of the interaction, and synthetic audio needs a machine-readable marking (existing systems get until Dec 2 to comply on marking only; anything new launching after Aug 2 needs it from day one). Fines: up to €15M or 3% of global turnover, lower ceiling for small/startups. <strong>Why this matters to you specifically:</strong> Donna (your Retell-built HVAC receptionist) already has an AI-disclosure line — that was built in ahead of a U.S. Federal Trade Commission (FTC) requirement, not this one, and Donna only ever talks to Mark's Cincinnati customers, so EU exposure is zero. Real relevance is narrower and more useful: this is the clearest live proof yet that "AI has to say it's AI on a call" is becoming a standing global default, not a one-off U.S. rule — which validates the design choice you already made rather than requiring a new one. No action needed, but worth knowing the ground truth if voice-AI disclosure ever comes up in a client conversation.</p>
+<p class="src">Sources: <a href="https://voice-layer.beehiiv.com/p/the-voice-agent-disclosure-rules-that-take-effect-august-2" target="_blank">Voice Layer</a>, <a href="https://www.pure-ip.com/blog/voice-ai-meets-the-eu-ai-act-whats-changing" target="_blank">Pure IP</a></p>
+</div>
+<div class="card">
+<span class="tag good">Funding — validates the lane</span>
+<p><strong>Dili raised a $21.7M Series A (led by Khosla Ventures) this week — an AI compliance company automating prevailing-wage and labor-compliance paperwork for construction/infrastructure projects.</strong> Not a Notification &amp; Compliance competitor (different regulation, different customer — federal construction wage rules, not state environmental notifications), but it's real, current, venture-grade proof that "boring regulatory paperwork with a real penalty for getting it wrong" is a fundable, provable wedge in 2026 — the exact category thesis Rainbow sits in. Dili's own framing is worth stealing almost verbatim: "the boring paperwork becomes the product." Their architecture is also a useful model — AI only touches unstructured-document-to-structured-data conversion, then a deterministic rules engine (not an LLM) makes the actual compliance call. That's precisely how your Ohio/Indiana/Kentucky engines are built (`common.py` + fee/deadline logic, not an LLM guessing at fees) — good outside confirmation you built the reliability-first way rather than the flashy way.</p>
+<p class="src">Sources: <a href="https://techcrunch.com/2026/07/30/dili-raises-15-million-to-bring-ai-compliance-to-the-infrastructure-boom/" target="_blank">TechCrunch</a></p>
+</div>
+<div class="card">
+<span class="tag info">Platform update</span>
+<p><strong>GoHighLevel shipped "User Replied" workflow triggers, SLA timeout escalation, and RCS (Rich Communication Services — the SMS successor with branded cards/buttons) messaging in beta, July 7–8.</strong> The SLA piece is directly relevant to the parked Speed-to-Lead Caller idea (last featured 7/29, scored 5.7/10, held back mainly by zero warm-network door into a target vertical) — GHL now has a native "wait N minutes for a human reply, escalate if it doesn't happen" building block, which is literally the mechanic that idea would need if a door ever opens. Filed as evidence, not an action — the effort-to-first-dollar bottleneck on that idea was never the tech.</p>
+<p class="src">Sources: <a href="https://imisofts.com/blog/gohighlevel-user-replied-sla-workflows-rcs-news-july-9-2026/" target="_blank">imisofts.com</a></p>
 </div>
 
-<div class="section">
 <h2>4. 🌱 Emerging Opportunities</h2>
-<p><b>Compliance teams drowning in manual, undocumented process + no affordable tool for the small-operator tier = the exact gap Notification &amp; Compliance is built for.</b> Every funded competitor found this week (ESGAgent.ai, Spektr, Encamp) is building for heavy industry / enterprise EHS teams, not a 20-person tri-state remediation contractor running a dry-erase board. That's not a coincidence — it's the same pattern CashMoney found in food-cost tracking (everyone serves the $350/location chain, nobody serves the one-location owner) except Notification &amp; Compliance's version of that gap is still open as of this week's search. Strengthens the lane; no threat identified.</p>
-<p><b>Voice-AI vendors are still chasing healthcare, legal, and hospitality, leaving construction/trades genuinely underserved.</b> This is a standing pattern (flagged in prior briefs) that got no new contradicting evidence this week — nothing changed, so no new home for it here beyond this one-line status check. Still true, still open, still not today's action.</p>
+<div class="card">
+<p><strong>"Everyone builds project-management software for regulated trades; nobody files the actual government form" = a confirmed-open lane, not a hunch.</strong> This week's research pass specifically went looking for a competitor to Notification &amp; Compliance — checked FieldFlō ($35M raised, 39 employees, purpose-built for demolition/asbestos/environmental remediation contractors), Projul, Werx, QuoteIQ, DemoCommand. Every one of them tracks hazmat surveys, permits, crew scheduling, job costing, and document storage. Not one of them submits the state notification through the actual regulatory portal (Ohio eBiz, Indiana, Kentucky eForms) and tracks the 10-working-day deadline clock the way your engine does. This is the second time this specific gap has been checked (first was 7/24 against a different competitor list) and it's held both times — worth treating as a real, re-verified moat rather than an assumption you're carrying forward on faith.</p>
 </div>
 
-<div class="section">
 <h2>5. 💵 Fastest Money Right Now</h2>
-<p><b>Fastest, most concrete number this week: Base44's solo-founder acquisition — built alone, $80M exit to Wix, at a multiple competitive with venture-backed companies.</b> Not remotely your speed or stage, but it's the current proof-point people are citing for solo-plus-AI ceiling. More grounded: a solo-founder AI agent stack now runs roughly $300–500/mo in tool subscriptions replacing what would cost $80,000–120,000/mo in human labor — that ratio is the real economic story of 2026, not any single headline exit.</p>
-<p><span class="flag">🚩 Whitespace flag:</span> template marketplaces (one profession, one set of AI-assisted templates — proposals, reports, lesson plans) are being cited repeatedly this week as a real, if modest, passive-income category. Real revenue examples found: a hedge-fund compliance tool at 25 customers × $79 = $1,975/mo; a dividend-tracker at 80 users × $25 = $2,000/mo. These are small, single-founder, low-drama numbers — not a fortune, but notably: this is functionally the same shape as your own Notification &amp; Compliance engine (one narrow professional niche, template-driven output, recurring small checks) except proven at a $2K/mo ceiling by other builders already. Not a new lane — a data point that your current lane's ceiling estimate is grounded, not optimistic.</p>
-<p><b>Durability read:</b> the compliance-AI funding signal (ESGAgent.ai, Spektr, Encamp) is durable — regulatory pressure doesn't go away, and none of these funded players are targeting your tier. The solo-founder $1M+ stories are real but survivorship-biased; the $300–500/mo tool-stack ratio is the more useful, boring, repeatable number.</p>
+<div class="card">
+<p><strong>Nothing new inside your active lanes this week that beats the standing read:</strong> CashMoney's remaining steps (persona, anonymized email, post) are still the fastest real dollar available today if you want one THIS week — genuinely down to minutes of admin, not build work, per the 7/21 Underdog feature. <span class="tag info">Outside your lanes, flagged not recommended</span> Upwork's 2026 in-demand-skills data (fresh this week) shows a widening spread between commodity freelance work ($20/hr median across 384K postings) and specialist niches (IP law $76.50/hr, blockchain $75/hr, tax/CPA advisory $47.50/hr, fractional CFO $90–175/hr) — none of it a fit for your skill set or lane list, noted only because it's a clean data point for tomorrow's Blind-Spot Radar reasoning, not a suggestion to chase it.</p>
 </div>
 
-<div class="section">
-<h2>6. 🔧 Technical Shifts</h2>
-<p>Nothing that changes a build decision today. The one worth banking: orchestration-layer "self-healing" (automatic retries, anomaly-gated circuit breaking, fallback to a different agent on failure) is becoming standard architecture in multi-agent systems industry-wide — directly relevant if the Huginn↔Code watcher pipeline ever needs a second layer of automatic recovery beyond what you built this week.</p>
+<h2>6. ⚙️ Technical Shifts</h2>
+<div class="card">
+<p>GoHighLevel's Prospecting tool (shipped July 1) now auto-enriches scraped business listings with phone/email and finds named decision-makers — relevant only if the GHL Prospecting Tool banked idea (7/10) ever gets picked back up; it makes that tool meaningfully more useful than when it was first evaluated. Not actionable today.</p>
 </div>
 
-<div class="section">
 <h2>7. 📈 Adoption &amp; Traction Signals</h2>
-<p>36.3% of new ventures in 2026 are now solo-founded, up from prior years — AI agent reliability improving is the cited driver. Directionally validates the entire Corvino Forge operating model (one founder, three AI agents doing the labor) as riding a real wave, not a fringe bet.</p>
+<div class="card">
+<p>GoHighLevel's "Summer of AI" free-tools promotion runs through August 31 — five AI tools free for every sub-account, no action needed on your end since you're already on Starter and not running the AI Employee stack. Real data point buried in this: AI Employee Unlimited is a flat $97/mo per sub-account, confirming the per-client cost math already locked in your GHL tier decision (TASKS.md) still holds — no update needed there.</p>
 </div>
 
-<div class="section">
 <h2>8. 🐦‍⬛ Featuring — Underdog of the Day</h2>
-<p><b>Story Sprint</b> — 4.1/10 (Market pull 5, Geo's edge 4, Effort-to-first-dollar 3.5)</p>
-<div class="score">Next in IDEA rotation pool per underdog-featuring-rotation.md — first feature ever for this entry.</div>
-<p>Story Sprint is a vetted-but-unbuilt idea from <code>strategy/ideas/idea-story-sprint.md</code>, part of the original "Wave 1 easy money" master plan alongside Quote Follow-Up Closer (already featured 7/28, scored 6.3). <b>Market pull 5:</b> content-driven case-study/testimonial packaging for local service businesses is a real, ongoing tactic (social proof consistently ranks among the highest-converting content types for local trades), but it's a well-worn category with no scarcity signal found this week — no funding round, no viral case study, nothing that moves this above "solid, unexciting fundamental." <b>Edge 4:</b> you already have the raw material this idea depends on — Mark's real HVAC build, the missed-call-to-booking flow, live automations to point a camera at — but the idea itself has sat untouched since the original master-plan doc, and nothing about it has been re-validated since. <b>Effort-to-first-dollar 3.5:</b> this is a content/packaging play, not a technical build, so the ceiling is genuinely low-effort once picked up — but "who is it for" is unresolved: is this a lead-magnet for Corvino Forge's own DFY (Done-For-You) pitch, or a deliverable you'd build for a client? That ambiguity is most of why it hasn't moved.</p>
-<p><b>Cheapest next experiment ($0, ~20 min):</b> re-read the original idea file and answer one question in writing — is Story Sprint a Corvino Forge marketing asset (feeds Track A / DFY positioning) or a client deliverable (something Mark or Rainbow would pay for)? Right now it's vague enough to be both and specific enough to be neither, which is likely the real reason it's never been picked up despite sitting in the "easy money first" wave since June.</p>
+<div class="card">
+<p><strong>Restoration Receptionist</strong> — <span class="score">4.4/10</span> (Market pull 5, Geo's edge 5, Effort-to-first-dollar 3.2)</p>
+<p>Fifth IDEA-tagged pick of loop two, first feature ever for this entry (`strategy/ideas/idea-restoration-receptionist.md`). Rated absolutely, not against any other lane.</p>
+<p><strong>Market pull — 5:</strong> water/fire/mold restoration is a genuinely urgent-response vertical (same "whoever answers first wins" dynamic quantified for HVAC and validated again for Speed-to-Lead on 7/29 — sub-60-second response materially lifts conversion in urgent-service categories), and restoration jobs route heavily through insurance-adjuster referral networks where being first-to-call-back is a real competitive lever, not a nice-to-have. Held at 5, not higher, because nothing found this week is restoration-specific evidence — this score leans on the adjacent HVAC/urgent-service data already validated elsewhere in the portfolio, not a fresh restoration-vertical citation. That's a real gap in the file, not a strength.</p>
+<p><strong>Geo's edge — 5:</strong> structurally this is "Donna, pointed at a different intake script" — same Retell foundation, same urgency-flagging logic already built and proven (HVAC's "no heat/no AC/gas smell" urgent-flag pattern maps almost directly onto "active water intrusion/active fire damage"), same GHL pipeline plumbing. Held at 5, not higher, because — same structural gap as Speed-to-Lead Caller on 7/29 — none of Christy's warm network (an employment attorney, a former judge, a dentist, an ophthalmologist, a couple more lawyers) sits anywhere near restoration, insurance adjusting, or property management. The technical edge is real; the distribution edge isn't there yet.</p>
+<p><strong>Effort-to-first-dollar — 3.2:</strong> genuinely fast to prototype (an intake-script variant of an already-built, already-proven system, not new infrastructure), but exactly like Speed-to-Lead, the no-cold-outreach constraint means the gap only closes through an inbound door or a referral — and unlike HVAC (Mark, found via Christy) or Rainbow (Terri, family), no door currently exists into this vertical.</p>
+<p><strong>Cheapest next experiment ($0, ~15 min):</strong> before touching anything else, check whether anyone in the extended family/warm network (the same pool that produced Mark and Rainbow) has any adjacent connection — a plumber, a contractor, a property manager, an insurance-adjuster friend-of-a-friend — the way Christy's circle unexpectedly produced Mark. If a door exists, this idea jumps several points overnight the same way Rainbow did once Terri surfaced it. If no door exists after asking, this is the same honest "real edge, zero distribution" pattern as Speed-to-Lead and should sit at the same low urgency until a door opens on its own.</p>
+<p>Next in pool: Vertical Playbook Library (loop 2, position 6 of the IDEA group).</p>
 </div>
 
-<div class="section blindspot">
 <h2>9. 🕳️ Blind-Spot Radar</h2>
-<p style="color:var(--muted); font-size:13px; margin-bottom:14px;">Scenarios genuinely outside your current lanes — not a repackaged version of consulting, Anvil, or Notification &amp; Compliance.</p>
-
-<p class="lead">Scenario A — Micro-vertical template marketplaces <span class="tag passive">PASSIVE</span></p>
-<p>Real, current, small numbers: a hedge-fund compliance template pack earning $1,975/mo from 25 customers at $79 each; a dividend-tracker spreadsheet template earning $2,000/mo from 80 users at $25. The pattern: pick one narrow profession, build a template/spreadsheet/document pack once, sell it repeatedly with near-zero marginal cost. This is genuinely outside your current lanes — none of your builds are "sell a document template," they're all service/software delivery. Your edge would be narrow: you'd need a profession you actually understand well enough to know what a good template looks like (accounting/BI (Business Intelligence) is off the table per the locked-door rule — but something adjacent, like a GoHighLevel workflow-documentation template pack for other consultants, could work). Entry cost: near-zero once built, but distribution still has to be inbound (marketplace listing, content) given the no-cold-outreach constraint — same channel truth as everything else in your portfolio. Honest flag: these are real but small — $2K/mo ceilings, not a fortune, and success stories are self-reported by the founders selling courses about it, so treat the numbers as directional.</p>
-
-<p class="lead">Scenario B — Solo-founder "second brain" ops-audit, aimed at the AI-agent-stack crowd specifically <span class="tag semi">SEMI-ACTIVE</span></p>
-<p>Note: this is adjacent to, but deliberately distinct from, the cheap-model/premium-review packaging idea already flagged in yesterday's brief (7/29) — not repeating that one. This angle is narrower: 36.3% of new 2026 ventures are now solo-founded, and the solo-founder AI stack research this week names a specific, recurring failure point — founders hit a real "soft ceiling" once compliance, governance, or any process needing a genuine second set of eyes becomes load-bearing, and most have nobody playing that role. Rather than selling your architecture as a template, this is a light recurring retainer — a scheduled monthly check where you (or a Corvino Forge process) reviews a solo founder's critical automations for exactly the kind of silent failure Code caught in your own engines this week. Real evidence of the gap: the research explicitly names compliance ownership as the point where solo-plus-AI operations currently break down. Entry cost: low technical lift, genuinely outside every current lane (none of your builds are "audit someone else's business"), but thin on proof — nobody has been found paying for this specific service yet, so it's closer to a hypothesis than a validated niche. Same no-cold-outreach constraint applies; the only compliant on-ramp is content (writing publicly about catching your own agent's false "clean" report is the natural top-of-funnel piece).</p>
-
-<p class="lead">Scenario C — License or resell the deadline/fee-calculation engine pattern itself, outside environmental compliance <span class="tag passive">PASSIVE</span></p>
-<p>The actual reusable asset inside Notification &amp; Compliance isn't the Ohio/Indiana/Kentucky-specific rules — it's the pattern (one shared engine, per-jurisdiction adapters, deadline-clock math, fee-tier logic) that Code's own 7/23 comparison doc already identified as generalizable. That same shape — a form with jurisdiction-specific deadlines and fee tiers that a small operator currently tracks by hand or dry-erase board — shows up constantly outside environmental filings: business license renewals, contractor certification tracking, professional continuing-education deadlines, even homeowner-association assessment schedules. None of this week's funded compliance players (ESGAgent.ai, Spektr, Encamp) are chasing these smaller, boring categories — they're all enterprise EHS or fintech. This is genuinely outside your current lane in the sense that it would mean licensing the underlying pattern (not the Rainbow-specific build) to a different vertical entirely, which nobody has scoped or costed yet. Entry cost: real but bounded — the engine exists, the adapter work per new vertical is the only new labor, and Code's generalizable/non-generalizable split (schema shape generalizes, fee logic doesn't) already tells you exactly what would need rebuilding. Honest flag: speculative until Notification & Compliance itself closes a paying customer — validate the core lane first; this is a "what the win could become," not a near-term move.</p>
+<div class="card">
+<p><span class="tag good">PASSIVE</span> <strong>License existing built HVAC IP as a one-time template sale, not a client relationship.</strong> You already have a fully-built, debugged Retell + GHL missed-call/reactivation/dashboard system (Mark's build). The GHL Snapshot Marketplace idea already sitting in your Someday list is exactly this — but the passive-money version is narrower and faster: package just the workflow logic (not a full client-managed snapshot) as a one-time Gumroad/Lemon Squeezy sale to other solo GHL consultants, the same distribution motion CashMoney already proved works without any cold outreach. Real number check: DFY Cloning's 7/18 feature found live reseller platforms charging $12,500–25,000 for full agency setup — a stripped-down "here's the exact HVAC missed-call workflow logic" template selling at $97–297 undercuts that by orders of magnitude while still being pure margin after the first sale, same shape as CashMoney's $50 one-time wedge. Nothing new required to build; it's inventory sitting idle.</p>
+<p><span class="tag good">PASSIVE</span> <strong>Sell the Notification &amp; Compliance engine's underlying "schema + fee/deadline calculator" pattern as a generic template, decoupled from Rainbow.</strong> Code's own 7/23 analysis (`comparison-shared-vs-adapter_20260723.md`) already proved the shape generalizes: one shared engine, six state-specific adapters. That same shared-engine pattern is reusable for ANY regulated-form-with-a-deadline-and-a-fee problem — building permits, contractor license renewals, DOT filings — sold as a no-code/low-code template on a platform like Gumroad, same one-time-sale logic as CashMoney. This is speculative (nobody's validated demand for a generic version outside the demolition/asbestos niche), which is exactly why it's PASSIVE-tier: worth banking as an idea-inbox entry, not worth building until Rainbow proves the core model works on a real paying client first.</p>
+<p><span class="tag warn">SEMI-PASSIVE</span> <strong>Content-license the Notification &amp; Compliance build story itself.</strong> "How I built a compliance-filing engine for a family member's business, from first EPA form to production" is a real, documented, screenshot-able build arc (session-log has the entire narrative, start to Code-QA). Dili's $21.7M raise this week proves investor appetite for the compliance-automation category broadly — a well-told build-in-public story in that same space, posted to a relevant community (IndieHackers, r/smallbusiness, GHL-adjacent spaces), costs one evening of writing and could pull inbound interest from other environmental/regulated-trade business owners without a single outreach message sent. Same mechanic as the banked Story Sprint idea (featured 7/30, scored 4.1/10 partly because its core framing question — Corvino Forge marketing asset vs. client-paid deliverable — has never been answered) but pointed at Notification &amp; Compliance instead of HVAC, where the material is fresher and the "regulatory peace of mind" narrative (confirmed by your own 7/24 voice-of-customer research) already writes itself.</p>
+<p><span class="tag warn">SEMI-ACTIVE</span> <strong>Offer a narrow, fixed-scope "compliance audit" as a one-time paid engagement, not a retainer.</strong> Module 22's own lesson today is directly usable here: a fixed-fee, clearly-scoped one-time engagement ("I'll review your current filing process and tell you where the deadline risk sits") sidesteps both the "product not ready" rule (you're selling judgment, not the unfinished engine) and the contractor-classification question (this would be Geo's own paid work, not subcontracted). Real tension to flag honestly: this brushes against the locked-door rule's spirit (no BI/consulting-as-a-service) even though it's not BI — worth a direct gut-check with the hard rule's actual boundary (his own labor building/selling coded software is in-bounds; his own labor doing advisory-hours work is the door that's locked) before treating this as viable. Flagged as a real tension, not resolved here.</p>
 </div>
 
-<div class="section">
-<h2>10. 🔀 Second-Order Effects &amp; Corners</h2>
-<p>Compliance-AI funding concentrating at the enterprise tier (Spektr's $20M, Encamp's platform launch) could eventually produce a well-funded competitor who decides to build downmarket into the exact Rainbow-sized tier you're targeting — no signal of that happening yet, but it's the natural next move for a funded player once the enterprise tier saturates. Worth a standing watch, not a today-action.</p>
+<h2>10. 🔍 Second-Order Effects &amp; Corners</h2>
+<div class="card">
+<p>The EU AI Act's August 2 deadline is going to generate a wave of "is your AI agent compliant" content and cold-outreach-style compliance-audit sales pitches over the next two weeks — worth recognizing as noise if it shows up in your feed rather than a new opportunity, since it has zero bearing on Donna's actual U.S.-only deployment.</p>
+<p>Session-log.md crossed the 100KB archive-trigger threshold this week (117.5KB as of this run) — a Corvus housekeeping item, not a DIB action, but flagging it here so it doesn't get missed at the next Corvus wrap-up.</p>
 </div>
 
-<div class="section">
 <h2>11. ✅ Your Action Item (This Week)</h2>
-<div class="action-box">
-<p><b>Dispatch the stress-test re-run to Huginn today.</b> Write a task-inbox entry asking Huginn to re-run the ~23,550 scenarios against the newly-implemented validation layer, confirming: (1) the ~99 previously-silent missing-data scenarios now return structured errors instead of fake "valid" results, and (2) the ~23,450 genuine scenarios still pass unchanged (no regression). 5 minutes to write and drop in <code>lanes/hermes-agent/task-inbox.md</code>.</p>
-<p><b>Success looks like:</b> a written confirmation from Huginn (relayed through Code's QA) that both counts hold — before August 6. If it doesn't hold, you know exactly what's broken with 8 days to fix it instead of finding out live in front of Jon.</p>
-</div>
+<div class="action-item">
+<p style="margin:0;"><strong>Get Huginn's re-test of the validation-layer fix moving.</strong> Code's 7/30 handoff doc explicitly names this as the next job — re-run the ~23,550 stress-test scenarios against the newly-added `validate_job_structure()`/`validate_date()`/`validate_numeric_nonnegative()` checks, confirm the ~99 previously-silent missing-data cases now return real errors instead of fake "$50 fee, all good" results, and confirm the ~23,450 genuine scenarios still pass unchanged. This has been sitting since 7/30 and the 8/6 Rainbow lunch is six days out. Thirty minutes of your time: drop the re-test task into `lanes/hermes-agent/task-inbox.md` (the auto-trigger watcher picks it up with zero manual nudge, confirmed working since 7/27) and let Huginn run it overnight.</p>
 </div>
 
-<div class="section">
 <h2>12. 🔑 Your 3 Key Takeaways</h2>
-<div class="takeaway"><div class="num">1</div><div>The "99.99% clean" number from 7/29 was false — it hid 99 silent validation failures. Don't let a self-reported clean bill of health from any agent (Huginn's or otherwise) substitute for Code's independent QA pass again. This is now a proven, not theoretical, risk.</div></div>
-<div class="takeaway"><div class="num">2</div><div>You have a hard, real deadline: August 6, Terri + Lynn + (likely) real interest from Jon. The validation-layer re-test is the one open item standing between "spec complete" and "production ready" before that date — prioritize it over any new build or new lane this week.</div></div>
-<div class="takeaway"><div class="num">3</div><div>Compliance-AI funding this week (ESGAgent.ai, Spektr, Encamp) confirms real money is chasing this category — and confirms nobody funded is chasing your specific tier (small multi-state remediation contractors). The gap you're building into is real and, as of this week, still open.</div></div>
+<div class="card takeaways">
+<ul>
+<li><strong>The competitive gap you're building into is real and re-confirmed, not assumed.</strong> Two separate research passes (7/24 and today) checked the demolition/asbestos/remediation software space and found nobody doing state-portal notification filing. Keep building with confidence on that specific claim — but don't let "no competitor found" quietly become "no competitor will ever exist," especially with $21.7M just flowing into adjacent compliance-AI plays this week.</li>
+<li><strong>The build has a QA gate between here and the 8/6 lunch, not a sales gate.</strong> Product-not-ready rule still applies — nothing about today's research changes that. The actual blocker is the validation-layer re-test, and it has a clear, already-designed owner (Huginn) and a clear next step (dispatch via task-inbox). This is inventory work, not a new decision.</li>
+<li><strong>Module 22 today gave you a real tool for a decision you don't need to make yet, but will.</strong> The moment Rainbow's volume outpaces what you can build solo, the contractor-vs-employee line and the fixed-scope/milestone-pay structure from today's lesson become the actual document you need — bank the framework now so it's not a scramble later.</li>
+</ul>
 </div>
+
+<div class="divider">— 🐦‍⬛ —</div>
 
 <footer>
-  <span class="icon">🐦‍⬛</span>
-  Corvino Forge LTD — Daily Intelligence Brief<br>
-  Generated by Corvus (DIB) · corvinoforge.com
+Corvino Forge LTD · Daily Intelligence Brief · Generated autonomously<br>
+"We work for tomorrow to bring needed hope to today."
 </footer>
 
 </div>
