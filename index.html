@@ -1,173 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<title>🐦‍⬛ Daily Intelligence Brief — August 9, 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Daily Intelligence Brief — 2026-08-10</title>
 <style>
   :root{
-    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --ink:#eef0f4; --ink-dim:#a8afbd;
-    --accent:#5b8cff; --accent2:#ffb454; --good:#4fd18b; --warn:#ff6b6b; --line:#2a2f3a;
+    --bg:#111013; --card:#19181c; --card2:#201f24; --text:#eae7e1; --muted:#a9a39a;
+    --accent:#e8792c; --accent2:#f2b544; --line:#2c2a2f; --good:#6fbf73; --warn:#e8792c;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0; padding:0; background:linear-gradient(180deg,#0b0d11,#12151c 400px,#0f1115);
-    color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.55;
-  }
-  .wrap{max-width:720px; margin:0 auto; padding:18px 16px 60px;}
-  header.masthead{text-align:center; padding:28px 10px 20px;}
-  header.masthead .bird{font-size:44px; display:block; margin-bottom:6px;}
-  header.masthead h1{font-size:22px; margin:0 0 4px; letter-spacing:.2px;}
-  header.masthead .sub{color:var(--ink-dim); font-size:13px;}
-  .status-note{background:#132018; border:1px solid #244a34; color:#9be8bc; border-radius:10px; padding:10px 14px; font-size:13px; margin:16px 0;}
-  section{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px; margin:16px 0;}
-  section h2{font-size:17px; margin:0 0 10px; display:flex; align-items:center; gap:8px; color:#fff;}
-  section h3{font-size:14px; margin:16px 0 6px; color:var(--accent2);}
-  p{margin:8px 0; font-size:15px;}
-  .lead{background:var(--card2); border-left:3px solid var(--accent); border-radius:8px; padding:12px 14px; font-size:15.5px;}
-  .verdict{font-weight:700; color:#fff;}
-  ul{margin:8px 0; padding-left:20px;}
-  li{margin:6px 0; font-size:14.5px;}
-  .tag{display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; padding:2px 8px; border-radius:20px; margin-right:6px;}
-  .tag.passive{background:#16332a; color:#5fe3a5;}
-  .tag.semi{background:#332b16; color:#ffcf7a;}
-  .tag.active{background:#33191a; color:#ff9b9b;}
-  .score{font-weight:700; color:var(--accent2);}
-  .cite{font-size:12px; color:var(--ink-dim); border-top:1px dashed var(--line); margin-top:10px; padding-top:8px;}
-  .cite a{color:#8fb3ff; text-decoration:none;}
-  .cite a:hover{text-decoration:underline;}
-  .action-box{background:#161f2e; border:1px solid #26364d; border-radius:10px; padding:14px;}
-  .takeaways li{font-size:15px;}
-  .divider{border:0; border-top:1px solid var(--line); margin:14px 0;}
-  footer{text-align:center; color:var(--ink-dim); font-size:12px; padding:24px 10px 10px;}
+  body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;}
+  .wrap{max-width:680px;margin:0 auto;padding:20px 16px 60px;}
+  header{padding:18px 0 14px;border-bottom:2px solid var(--accent);margin-bottom:18px;}
+  header .brand{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:700;}
+  header h1{font-size:22px;margin:6px 0 2px;color:var(--text);}
+  header .meta{font-size:13px;color:var(--muted);}
+  h2{font-size:17px;color:var(--accent2);border-left:4px solid var(--accent);padding-left:10px;margin:30px 0 10px;}
+  h3{font-size:15px;color:var(--text);margin:16px 0 6px;}
+  p{margin:8px 0;font-size:15px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0;}
+  .card2{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0;}
+  .verdict{background:linear-gradient(135deg,#2a1c10,#1c1710);border:1px solid var(--accent);border-radius:12px;padding:16px;margin:10px 0 4px;}
+  .verdict .tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:6px;}
+  .tag-row{margin:8px 0 2px;}
+  .pill{display:inline-block;font-size:12px;background:#2a2730;color:var(--accent2);border-radius:999px;padding:3px 10px;margin:2px 6px 2px 0;border:1px solid var(--line);}
+  ul{margin:6px 0;padding-left:20px;}
+  li{margin:5px 0;font-size:15px;}
+  .src{font-size:12px;color:var(--muted);margin-top:6px;}
+  .src a{color:#c9a4ff;text-decoration:none;}
+  .score{font-weight:700;color:var(--accent2);}
+  .action{background:#132018;border:1px solid var(--good);border-radius:10px;padding:14px 16px;margin:10px 0;}
+  .action .tag{color:var(--good);}
+  .takeaway{border-left:3px solid var(--accent2);padding-left:10px;margin:10px 0;}
+  footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);text-align:center;}
+  .divider{height:1px;background:var(--line);margin:26px 0;}
   strong{color:#fff;}
-  .small{font-size:12.5px; color:var(--ink-dim);}
+  a{color:var(--accent2);}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="masthead">
-  <span class="bird">🐦‍⬛</span>
-  <h1>Daily Intelligence Brief</h1>
-  <div class="sub">Sunday, August 9, 2026 · ~10-min read · Corvus for Geo</div>
+<header>
+  <div class="brand">🐦‍⬛ Corvino Forge — Daily Intelligence Brief</div>
+  <h1>Sunday scan, Monday move</h1>
+  <div class="meta">2026-08-10 · ~10 min read</div>
 </header>
 
-<div class="status-note">✅ CorvinoMemory connected — CLAUDE.md, session-log.md, TASKS.md, business-curriculum files, and the underdog rotation tracker all read live for this run. No stale statuses below.</div>
+<h2>1. 🎯 Today's Best Lane to Attack</h2>
+<div class="verdict">
+  <div class="tag">Verdict</div>
+  <p><strong>Notification & Compliance (Rainbow Environmental)</strong> — still the pick, same underlying reason as recent days: it's the only lane with a live human on the other end of it right now. As of the last confirmed update (2026-08-06 night), the office visit is <strong>"locked for next week"</strong> — meaning this week — with no exact date pinned down yet. That's the single biggest open loop in the whole portfolio.</p>
+  <p><strong>What's actually new today:</strong> the underlying product isn't the blocker anymore — the notifications database got a full architecture rebuild and a verified live push last week, and Contact-GUI is carrying real Rainbow filing data, including one genuinely useful discovery-conversation asset: 9 of 17 real specialists show an expired certification on the state's own record. That's not a "gotcha" to lead with — it's raw material for a Problem-stage question once you're in the room (more on that below).</p>
+</div>
 
-<section>
-  <h2>1. 🎯 Today's Best Lane to Attack</h2>
-  <p class="lead"><span class="verdict">Verdict: Notification &amp; Compliance (Rainbow Environmental) — same call as yesterday, same underlying reason. New evidence today reinforces the market rather than changing the pick.</span></p>
-  <p>The case hasn't moved since Friday night's schema rebuild: this is still the only lane with a live client relationship and a build that just closed its core architecture gap. What's new today is market-level confirmation, not lane-level movement — the environmental compliance software market is projected to nearly triple by 2035 (a 10.7% Compound Annual Growth Rate (CAGR), from $3.94 billion in 2025 to $10.59 billion), and enterprise-grade AI-assisted compliance tooling is already documented to cut reporting time 60-70% and violation risk 85%. That's the exact category this build sits in, backed by a real client's real filing history instead of a pitch deck.</p>
-  <p>Highest-leverage action: yesterday's module built the objection cheat sheet, the day before built the discovery skeleton. Today's Business School module (Section 2) finishes the set with a proposal skeleton — a complete, half-page pre-visit document ready whenever the still-undated Rainbow office visit lands. See Section 11 for the assembly step.</p>
-  <p class="cite">Source: <a href="https://www.insightaceanalytic.com/report/environmental-compliance-software-market-/3491" target="_blank">Environmental Compliance Software Market Size, Scope and Trends 2026-2035 — InsightAce Analytic</a></p>
-</section>
+<h3>Highest-leverage action</h3>
+<p>Confirm the exact visit date if it still hasn't landed, and walk in with the discovery + objection-handling script actually written down — not improvised. The curriculum below hands you the last piece of that (today's module closes the arc built specifically for this moment).</p>
+<div class="src">Source: internal — session-log 2026-08-06/08-07, TASKS.md, ops/vino-activation-prompt.md.</div>
 
-<section>
-  <h2>2. 🎓 Business School — Module 31: Proposal Structure</h2>
-  <p><strong>"Proposal structure — how a services proposal reduces perceived risk through pilot framing, phased scope, and a defined exit."</strong> Third module in Arc 9 (Closing the First Real Deal), following discovery (Module 29) and objection handling (Module 30).</p>
-  <p>The core reframe: a proposal is not a sales pitch, it's a risk-reduction document. Nobody hesitates on a proposal because of the number alone — they hesitate because committing feels like a one-way door. Three structural levers close that fear, and none of them require lowering the price:</p>
-  <ul>
-    <li><strong>Pilot framing</strong> — offer a small, clearly-scoped trial engagement instead of asking for the full commitment upfront. A pilot lets the buyer test real performance in a real setting before any big decision gets made.</li>
-    <li><strong>Phased scope</strong> — break a larger engagement into stages, where performance in an earlier stage is what earns the next one. Each phase becomes its own proof point instead of asking for trust all at once.</li>
-    <li><strong>A defined exit</strong> — state plainly how and when the engagement can end if it's not working. This sounds like it should scare a buyer off; the research says the opposite — a genuine, cheap off-ramp is what actually makes people comfortable saying yes, because the downside of a wrong call gets capped in writing before it happens.</li>
-  </ul>
-  <p>Fresh 2026 research on this exact pattern gives it real shape: a structure quoted directly in the small-business proposal literature is a fixed-scope pilot (one cited example runs three months at a stated dollar figure) followed by an explicitly-priced expansion phase once the pilot proves out — the proposal itself does the anchoring (Module 21) instead of leaving the number to a live back-and-forth.</p>
-  <h3>Worked example: the skeleton gets built now, not sent</h3>
-  <p>The product-not-ready rule is still fully in force — no price, no promise, nothing goes to Rainbow until Geo says the build is ready. But the skeleton of a pilot proposal can be drafted today, on paper only: <strong>Phase 1</strong> — a defined 30-day pilot covering just Rainbow's Ohio filings, fixed scope, a named review date, and an explicit off-ramp if it isn't delivering. <strong>Phase 2</strong> — expansion to Indiana and Kentucky once the pilot proves out, priced separately, not bundled in advance. This structure directly defuses yesterday's "we already have Cari for this" objection before it's even raised — a 30-day pilot on one state isn't asking Rainbow to replace anything, it's a small, low-stakes addition with a built-in exit. It also sets up Module 32 (the first invoice): a phased pilot with a named review date makes "scope confirmed in writing, payment terms agreed, kickoff date set" a formality instead of a negotiation.</p>
-  <p class="cite">Source: <a href="https://www.aventienterprises.com/post/small-business-insight-why-pilot-projects-phased-contracts-are-your-ticket-to-growth-in-2025-2026" target="_blank">Why Pilot Projects &amp; Phased Contracts Are Your Ticket to Growth — Aventi Enterprises</a></p>
-</section>
+<div class="divider"></div>
 
-<section>
-  <h2>3. 📡 Top Signals</h2>
-  <p><strong>Investors are getting narrower, not more cautious.</strong> August 2026 funding coverage confirms capital keeps flowing to AI broadly, but the bar for smaller companies has tightened to four specific things: a narrow workflow, protected data rights, a human-review step, and a repeatable sales path — not a vague pitch. Close to a checklist for what the Notification &amp; Compliance build already has on paper (a narrow workflow, human-owned filing decisions by design, real client data). The two pieces still missing are paying users and a repeatable sales motion — exactly what Sections 1 and 2 are building toward.</p>
-  <p><strong>Multi-agent reliability is now a named, measured problem, not a hunch.</strong> 57% of organizations already run multi-step agent workflows and 81% plan to expand in 2026, but 46% name system integration as their top barrier, and researchers are explicit that failures can propagate between agents with no chance for a human to catch it mid-stream. This is the exact failure shape behind this year's own debugging history across the Corvus/Code/Huginn pipeline — independent verification at each handoff, not a wider single check, is the documented fix, and it's already the working pattern here.</p>
-  <p class="cite">Sources: <a href="https://blog.mean.ceo/ai-startup-funding-news-august-2026/" target="_blank">AI Startup Funding News, August 2026 — Mean CEO</a> · <a href="https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/" target="_blank">State of AI Agents 2026 — Arcade.dev</a></p>
-</section>
+<h2>2. 🎓 Business School — Module 32: The First Invoice</h2>
+<div class="card">
+  <p><strong>What actually has to be true before you send an invoice:</strong> scope confirmed in writing, payment terms agreed, kickoff date set. All three — not two out of three. Skipping any one of them is how a first client relationship turns into a dispute six weeks in.</p>
 
-<section>
-  <h2>4. 🌱 Emerging Opportunities</h2>
-  <p><strong>Documented back-office knowledge risk + no productized fix = opportunity.</strong> Fresh research on small-business single points of failure confirms the pattern found live at Rainbow (one person's undocumented knowledge as an operational risk) is a named, current concern industry-wide in 2026 — and the standard advice available today is still generic ("cross-train," "document processes"), not a packaged, buyable answer. Nobody's selling the specific fix; that gap is exactly what Section 9's Blind-Spot Radar picks up.</p>
-  <p><strong>A market growing 10.7% a year with a real, working build already inside it is a genuine tailwind, not just a nice stat.</strong> Environmental compliance software tripling to $10.59 billion by 2035 isn't a reason to pivot — it's confirmation the category this build already sits in is a real, growing one, not a niche invented for one client.</p>
-  <p class="cite">Sources: <a href="https://worksbuddy.ai/blogs/what-is-a-single-point-of-failure-steps-to-protect-your-team-from-system-collapse" target="_blank">Single Point of Failure: Risks and Fixes — WorksBuddy</a> · <a href="https://www.insightaceanalytic.com/report/environmental-compliance-software-market-/3491" target="_blank">Environmental Compliance Software Market — InsightAce Analytic</a></p>
-</section>
+  <h3>Payment terms — the part almost everyone gets sloppy on</h3>
+  <p>Fresh 2026 research on small-business invoicing is blunt about the six most common mistakes: setting no term at all, using ambiguous wording, omitting the late-payment penalty, switching terms mid-engagement, failing to enforce the terms you set, and choosing terms that don't match your own cash-flow reality. The 2026 correction on the classic "Net 30": don't just write "Net 30" — write the actual due date. Net 30 as a phrase invites a dispute about which day it means; a calendar date doesn't.</p>
+  <p>For a brand-new client (which Rainbow would be, the moment this closes), the standard advice is to run shorter and safer than Net 30 by default: Net 7 or due-on-receipt, plus a deposit if the engagement is sized to justify one. You extend Net 30 to people who've already paid you once, not to people who haven't yet.</p>
 
-<section>
-  <h2>5. 💵 Fastest Money Right Now</h2>
-  <p><strong>⚠️ Outside Geo's current lanes — flagged, not recommended as a pivot.</strong> Freelance AI automation work is up sharply this year: demand for AI-related freelance skills on Upwork is up 109% year-over-year, and typical rates run $35-60/hour for automation-engineer work, $100-300/hour for senior AI/machine-learning work. The compliant version of this, given the no-cold-outreach rule, is a seller-listed gig (Fiverr-style — the buyer initiates contact, no live outbound) rather than an application-based marketplace (Upwork-style, closer to submitting a proposal per job posting). A fixed-scope gig — priced flat rather than hourly — is the compliant shape; see Section 9, Blind-Spot #3, for a version built directly from this year's own debugging history.</p>
-  <p class="cite">Source: <a href="https://bestjobsearchapps.com/articles/en/most-indemand-freelance-skills-for-2026-ai-and-data-dominate-upwork-and-fiverr" target="_blank">Most In-Demand Freelance Skills for 2026 — Best Job Search Apps</a></p>
-</section>
+  <h3>Why "scope confirmed in writing" comes first, not last</h3>
+  <p>Payment terms only mean something once both sides agree on what's actually being paid for. That's the connective tissue back to Module 31's pilot framing — a scoped, dated pilot with a named review point isn't just a sales tactic, it's the exact document that makes "what did we agree to" a non-issue when invoice time comes.</p>
 
-<section>
-  <h2>6. ⚙️ Technical Shifts</h2>
-  <p>Gartner projects 40% of enterprise apps will carry task-specific agents by 2026, up from under 5% in 2025 — real, fast adoption. The counterweight: 40%+ of agentic pilots are projected to get cancelled by 2027 on the same research track. Demand for the category is real; keeping a multi-agent build alive past the pilot stage is the actual bottleneck, and it's the same lesson this week's Notification &amp; Compliance rebuild already lived through directly.</p>
-  <p class="cite">Source: <a href="https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/" target="_blank">State of AI Agents 2026 — Arcade.dev</a></p>
-</section>
+  <h3>Worked example — Rainbow, honestly</h3>
+  <p>Product-not-ready rule is still fully in force. Nothing has been quoted, nothing has been invoiced, nothing will be before Geo says so. But it's worth naming plainly where the three prerequisites currently stand, because the gap is instructive: the Module 31 pilot skeleton (30-day, Ohio-only, named review date, explicit exit) is <em>scope</em>, drafted on paper. <strong>Payment terms and a kickoff date are both completely unset</strong> — correctly, since neither one can be real until an actual conversation with the actual client happens. That's not a gap to panic about; that's the invoice checklist doing its job. The moment scope gets confirmed live (which the imminent office visit could plausibly start), the other two pieces become the very next conversation, not an afterthought.</p>
+  <p><strong>This closes Arc 9 — Closing the First Real Deal</strong> (discovery → objection handling → proposal structure → the first invoice). The whole arc landed one module at a time, in order, right as the actual deal it was built for is about to go live. Arc 10 starts next: what happens after the first invoice clears — onboarding, referral-asking without violating the no-cold-outreach rule, and land-and-expand within an existing account. That's the next stretch of curriculum once this one closes for real.</p>
+  <div class="src">Sources: <a href="https://www.afternoon.co/blog/first-invoice">Afternoon — Your First Invoice (2026)</a>, <a href="https://quickbooks.intuit.com/r/bookkeeping/choosing-and-defining-invoice-payment-terms/">QuickBooks — Invoice & Payment Terms (2026)</a>, <a href="https://www.paidnice.com/blog/payment-terms-and-conditions-templates">Paidnice — Payment Terms Templates (2026)</a>.</div>
+</div>
 
-<section>
-  <h2>7. 📈 Adoption &amp; Traction Signals</h2>
-  <p>Real numbers from solo operators this week: an AI orchestration tool hit $3,000 Monthly Recurring Revenue (MRR) in four weeks off 60-100 users paying $30-50 each; a solo-run ghostwriting-agency model using AI agents runs $5,000-20,000/month; one solo founder running three small apps reports roughly $20,000/month combined. None of these are Geo's lanes — they're evidence of what "small, working system, real users" looks like at the scale Geo is actually building at, not enterprise noise.</p>
-  <p class="cite">Source: <a href="https://www.indiehackers.com/post/5-ai-agent-workflows-actually-making-money-in-2026-with-real-numbers-ea266790ba" target="_blank">5 AI Agent Workflows Actually Making Money in 2026 — Indie Hackers</a></p>
-</section>
+<div class="divider"></div>
 
-<section>
-  <h2>8. 🐦‍⬛ Featuring — Underdog of the Day: Website Landlord</h2>
-  <p>Loop four opens — the 2026-07-18 standing plan flagged the Lane group as a candidate for removal from rotation, but that hasn't been explicitly confirmed by Geo, so rotation continues on schedule rather than assuming the change (per the tracker's own stated default).</p>
-  <p><span class="tag semi">Underdog Score: 4.3/10</span> — rated absolutely, never against another project.</p>
-  <ul>
-    <li><strong>Market pull: 6/10.</strong> Fresh 2026 research confirms rank-and-rent local Search Engine Optimization (SEO) is a durable, legitimate model — not the loophole it once was — but the bar has genuinely risen: thin, generic sites no longer rank, and informational-query traffic is compressing under AI Overviews. The good news for this specific lane: map-pack and phone-call clicks on local commercial-intent searches — exactly what an appliance-repair site sells — are the category reported to survive that compression best.</li>
-    <li><strong>Geo's edge: 4/10.</strong> Unchanged — 2 published, indexed blog posts and a full SEO pass are real, live assets. But the Google Business Profile (GBP) has been stuck "pending verification" since June 10 — roughly 60 days now.</li>
-    <li><strong>Effort-to-first-dollar: 3/10.</strong> A specific, documented escalation path (the GBP Verification Status Tool's click-through workflow, ending in a human "Contact Us" link, plus a defined manual-review evidence package) was surfaced four days ago and still hasn't been run. That's a priority problem, not a difficulty problem — the fix has been sitting fully specified since 2026-08-05.</li>
-  </ul>
-  <p>Cheapest next experiment ($0, 15 minutes): run the documented click-through path tonight, not another generic support ticket.</p>
-  <p class="cite">Sources: <a href="https://theleadguy.online/is-rank-and-rent-dead/" target="_blank">Is Rank and Rent Dead in 2026? — The Lead Guy</a> · <a href="https://diggitymarketing.com/rank-and-rent/" target="_blank">Rank and Rent: The Definitive 2026 SEO Guide — Diggity Marketing</a></p>
-</section>
+<h2>3. 📡 Top Signals</h2>
+<div class="card">
+  <h3>Encamp shipped an embedded-AI compliance platform, May 2026</h3>
+  <p>Encamp (EHS compliance software, Indianapolis, $3.1M Series A) launched "Scout" — embedded AI that assesses obligations, collects/analyzes data, and checks against federal/state/local rules across 2,500+ facilities. It's the closest real comparable to the notifications-hub thesis, still not asbestos-NESHAP-specific (confirmed again this week — see Emerging Opportunities), but it's proof the "compliance automation with an AI layer" category has real funded builders moving fast. Timing pressure, not a threat yet.</p>
+  <div class="src">Source: <a href="https://www.prnewswire.com/news-releases/encamp-launches-compliance-platform-with-embedded-ai-accelerating-the-shift-to-proactive-ehs-management-302770998.html">PR Newswire — Encamp Compliance Platform launch</a>.</div>
+</div>
+<div class="card">
+  <h3>2026 is the "breakthrough year" for multi-agent systems, per Gartner/Forrester</h3>
+  <p>31% of enterprises now have at least one AI agent in production; Gartner projects 40% of enterprise apps will embed task-specific agents by end of 2026 (up from under 5% in 2025). 46% cite integration with existing systems — not intelligence — as the primary deployment challenge. Background context, not a today-action item, but it's the same validation curve Anvil's real, working three-agent build sits underneath.</p>
+  <div class="src">Source: <a href="https://www.digitalapplied.com/blog/ai-agent-adoption-2026-enterprise-data-points">Digital Applied — AI Agent Adoption 2026</a>, <a href="https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/">Arcade.dev — State of AI Agents 2026</a>.</div>
+</div>
+<div class="card">
+  <h3>Small-business AI adoption keeps confirming the same gap, from a bigger source this time</h3>
+  <p>The U.S. Chamber of Commerce's 2026 Small Business Survey puts AI use at 89% (up from 36% in 2023) — but only 14% have it fully integrated into core operations, and 73% say they need more training to use it effectively. This is a different, larger survey independently landing on the same "adoption without competence" gap the Thryv data flagged back on 2026-07-20. Two separate sources, same conclusion, worth trusting a bit more now.</p>
+  <div class="src">Source: <a href="https://capsulecrm.com/blog/small-business-ai-adoption-statistics/">Capsule CRM — Small Business AI Adoption Statistics 2026</a>.</div>
+</div>
 
-<section>
-  <h2>9. 🕳️ Blind-Spot Radar</h2>
-  <p>Four scenarios genuinely outside Geo's current lanes, weighted toward passive and semi-active — no full-active scenario earns its slot today.</p>
+<div class="divider"></div>
 
-  <h3><span class="tag passive">Passive</span> 1. Domain-knowledge content + affiliate links (compliance software)</h3>
-  <p>The Environmental Protection Agency (EPA)/National Emission Standards for Hazardous Air Pollutants (NESHAP) domain knowledge built for the Notification &amp; Compliance engine is now genuinely deep — deeper than a generalist blog writer's. A written comparison guide ("AI compliance tools for small remediation firms"), published once and monetized via affiliate links into the compliance-software vendors already surfacing in this market's own growth data, is a one-time-write, ongoing-payout shape. Real, unclaimed, and doesn't touch Rainbow at all.</p>
+<h2>4. 🌱 Emerging Opportunities</h2>
+<div class="card">
+  <p><strong>The specific filing-automation gap Rainbow's product targets still checked out clean on a fresh, independent scan.</strong> Every asbestos/EHS compliance tool found this week — Bolster Systems, Vision Pro, iSpecX, Ecesis, Verdant EHS — does inspection scheduling, register-keeping, and automated reminders. None of them actually fill out and submit the state-portal notification form itself. Re-verification, not new evidence — but a second independent look landing on the same "nobody does the actual filing" conclusion is worth more than the first look alone.</p>
+</div>
+<div class="card">
+  <p><strong>"AI deployment reliability" is becoming its own funded category.</strong> A stealth startup called June (led by a former Salesforce exec) launched this week specifically to solve why big companies can't get AI systems working reliably in production — leaning on the "forward-deployed engineer" model. Hacker News chatter this month has shifted the same direction: trustworthy orchestration, audit trails, human review, "prove it" replacing "wow." Enterprise-scale, not a lane fit today — but it's the same underlying problem (a system that works when watched, not yet unattended) already named in this week's own curriculum, one level up the market.</p>
+  <div class="src">Source: <a href="https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/">TechCrunch — June (Aug 3, 2026)</a>.</div>
+</div>
 
-  <h3><span class="tag passive">Passive</span> 2. Self-audit checklist product: "the Cari problem," productized</h3>
-  <p>The single-point-of-failure pattern found live at Rainbow (one person, undocumented knowledge, no backup) is confirmed as a named, current, generic small-business concern in fresh research — and the standard advice available today is still vague ("document your processes"). A short, sellable self-audit checklist — "how exposed is your business if your one key person is out for a month" — built once and sold as a one-time download, generalizes the real pattern without naming Rainbow or filing anything for anyone.</p>
+<div class="divider"></div>
 
-  <h3><span class="tag semi">Semi-Active</span> 3. Fixed-scope AI-agent-reliability audit gig</h3>
-  <p>Freelance demand for AI automation work is up 109% year-over-year, with fixed-scope work commanding real rates. The hard-won debugging history across this year's Corvus/Code/Huginn build — catching coordination failures, building independent-verification checkpoints — is exactly the credibility multi-agent researchers say the market currently lacks (46% cite system integration as the top barrier). A flat-fee, seller-listed audit gig (buyer-initiates, no cold contact) turns real scar tissue into a sellable, bounded engagement.</p>
+<h2>5. 💵 Fastest Money Right Now</h2>
+<div class="card">
+  <p><strong>GoHighLevel's "Summer of AI" free-tools window closes August 31 — three weeks out.</strong> Five AI tools free through summer; after that, unclear whether they roll into paid tiers. Relevant to Track A content (the GHL affiliate tutorial, still just a finished-but-unrecorded script) — a real, dated reason to reference those tools while they're still free and topical.</p>
+</div>
+<div class="card">
+  <p><strong>Outside Geo's current lanes, flagged for context only:</strong> today's AI-reseller market scan puts realistic small-operator income at $3,000–$5,000/mo within 6 months and $10,000–$15,000/mo within 12–18 months, 80–95% margins, selling AI phone/receptionist services into local businesses. Not acted on, not a new lane — just the going rate in that market as of this week, useful for sizing how DFY-style reselling actually pays off (see today's Underdog feature below).</p>
+  <div class="src">Source: <a href="https://oncallclerk.com/blog/how-resellers-make-money-ai-receptionists">OnCallClerk — How Resellers Make Money Selling AI Receptionists (2026)</a>.</div>
+</div>
 
-  <h3><span class="tag semi">Semi-Passive</span> 4. License the governance pattern itself</h3>
-  <p>The Notification &amp; Compliance rebuild produced a genuinely reusable pattern — Slowly Changing Dimension Type 2 (SCD2) versioning plus non-destructive, confidence-banded duplicate matching — solving exactly the "how do multiple agents or processes touch the same record safely" problem this week's own research names as a live, unsolved pain point industry-wide. Documented and sold once as a solo-builder starter-kit (schema plus working code, not a live service), it's a genuinely different product than Notification &amp; Compliance itself — infrastructure sold to other builders, not filings sold to Rainbow.</p>
-  <p class="cite">Sources: <a href="https://worksbuddy.ai/blogs/what-is-a-single-point-of-failure-steps-to-protect-your-team-from-system-collapse" target="_blank">Single Point of Failure — WorksBuddy</a> · <a href="https://bestjobsearchapps.com/articles/en/most-indemand-freelance-skills-for-2026-ai-and-data-dominate-upwork-and-fiverr" target="_blank">Most In-Demand Freelance Skills 2026 — Best Job Search Apps</a> · <a href="https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/" target="_blank">State of AI Agents 2026 — Arcade.dev</a></p>
-</section>
+<div class="divider"></div>
 
-<section>
-  <h2>10. 🔍 Second-Order Effects &amp; Corners</h2>
-  <p>If investor appetite really is narrowing toward "narrow workflow + human review + real data," that same bar is a good private gut-check for any lane, funded or not — a cleaner filter than "does this sound cool" for deciding what's actually worth building next.</p>
-  <p>The Nvidia-as-full-stack trend (compute, software, security, research access, digital twins) is a platform-dependence risk worth banking mentally for anything built on Model Context Protocol (MCP) infrastructure long-term, Anvil included — faster to build on, but concentrating risk in one vendor's stack.</p>
-</section>
+<h2>6. ⚙️ Technical Shifts</h2>
+<ul>
+  <li>Multi-agent orchestration crossing from "emerging" to "breakthrough year" per both Gartner and Forrester — definitions are converging across Google Cloud, IBM, AWS, and SAP, which usually signals a category is about to standardize.</li>
+  <li>GoHighLevel's own platform keeps absorbing capability that used to require custom build: Python in workflow custom code, native Calendly/HubSpot/Klaviyo connectors, and an "Ask AI" layer with scheduled tasks and persistent memory. Worth watching as a slow commoditization pressure on some custom-consulting work (see Second-Order Effects).</li>
+</ul>
 
-<section>
-  <h2>11. ✅ Your Action Item (This Week)</h2>
-  <div class="action-box"><p>30 minutes: combine the discovery skeleton (Module 29), the objection cheat sheet (Module 30), and today's pilot-proposal skeleton (Module 31) into one half-page document. No live pitch, no send — just have it ready before the still-undated Rainbow office visit lands, so the visit doesn't get improvised.</p></div>
-</section>
+<div class="divider"></div>
 
-<section>
-  <h2>12. 🎯 Your 3 Key Takeaways</h2>
-  <ul class="takeaways">
-    <li>The Rainbow sales toolkit is now three-for-three (discovery, objections, proposal skeleton) — the only thing left before the visit is assembling what's already been built, not writing anything new.</li>
-    <li>Website Landlord's real blocker has had a documented, specific fix sitting untouched for four days — that's worth 15 minutes tonight, independent of everything else in this brief.</li>
-    <li>Two genuinely new, compliant income angles surfaced today (compliance-content affiliate, and licensing the SCD2/dedup governance pattern) — they don't touch Rainbow, don't need cold outreach, and haven't been scored or tracked anywhere yet.</li>
-  </ul>
-</section>
+<h2>7. 📈 Adoption & Traction Signals</h2>
+<ul>
+  <li>89% of small businesses now use AI in some capacity (U.S. Chamber, 2026), 91% of AI-using small businesses report a revenue increase (Salesforce research) — adoption and payoff are both real, the gap is competence, not interest.</li>
+  <li>Managed voice-agent reselling projected to grow ~58% annually through 2028 — a real, dated growth-rate figure for the category behind today's Underdog pick.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>8. 🐦‍⬛ Featuring — Underdog of the Day: Done-For-You (DFY) Cloning</h2>
+<div class="card2">
+  <div class="tag-row">
+    <span class="pill">Market pull: <span class="score">6</span>/10</span>
+    <span class="pill">Geo's edge: <span class="score">4</span>/10</span>
+    <span class="pill">Effort-to-first-dollar: <span class="score">5</span>/10</span>
+  </div>
+  <p><strong>Underdog Score: 5.0/10</strong> — rated absolutely, not against any other lane.</p>
+  <p><strong>Market pull, nudged up:</strong> today's scan of the AI-reseller space found real dollar figures instead of vague "big market" framing — a $757B+ category, 20–40% reseller commissions, established agencies pulling $20K–$80K/mo on AI phone-answering alone, and realistic smaller-operator income of $3–5K/mo in 6 months scaling to $10–15K/mo in 12–18 months at 80–95% margins. That's more specific and more credible than the generic "crowded reseller platform" evidence this lane has carried in prior features. Held at 6, not higher, because none of it is differentiated — it's the going rate for anyone entering this market, not evidence Geo specifically would outperform it.</p>
+  <p><strong>Edge held at 4, unchanged:</strong> real, field-tested automation-build experience already sits in the portfolio — voice-driven intake, lead routing, deadline/fee logic, live client debugging reps — but none of it has ever been assembled into a standalone, sellable DFY portfolio. That packaging step is still undone, same as every prior feature of this lane.</p>
+  <p><strong>Effort-to-first-dollar:</strong> the fastest-to-revenue lane in the whole pool if it means licensing/packaging infrastructure that already exists rather than building new — but the no-cold-outreach constraint still rules out the sales motion most of today's reseller platforms are actually built around, and the compliant broadcast-path alternative remains untested.</p>
+  <p><strong>Cheapest next experiment ($0, ~20 min):</strong> still the same one banked back on 2026-07-18 and never done — write a one-page comparison of Geo's real automation-build experience versus generic reseller-platform tooling, to test in writing whether vertical depth is actually sellable as a premium before spending on any platform license.</p>
+  <div class="src">Sources: <a href="https://www.articsledge.com/post/ai-reseller-programs">Articsledge — AI Reseller Programs (2026)</a>, <a href="https://oncallclerk.com/blog/how-resellers-make-money-ai-receptionists">OnCallClerk (2026)</a>. Rotation tracker: <code>ops/briefing-prompt/underdog-featuring-rotation.md</code>.</div>
+</div>
+
+<div class="divider"></div>
+
+<h2>9. 🕳️ Blind-Spot Radar</h2>
+<div class="card">
+  <p><strong>PASSIVE — resell prebuilt automation templates on a dedicated marketplace, not a general platform listing.</strong> Today's side-hustle research names Agensi specifically as a marketplace where sellers report $100–$1,000+/mo passive from packaged AI skill/workflow templates — a narrower, more specific channel than the already-banked GHL Snapshot Marketplace idea, worth a look as a parallel or alternate listing surface, not a replacement.</p>
+</div>
+<div class="card">
+  <p><strong>SEMI-PASSIVE — a standalone license-expiration watcher, sold to compliance-adjacent small businesses generally, not tied to any one client relationship.</strong> Kentucky's public "Access To Data" API (48 endpoints, no auth required — confirmed real back on 2026-07-24) could power a simple recurring-alert tool: feed it a license number, get notified before it lapses. Build once, resell as a cheap subscription to contractors/specialists in regulated trades who'd rather pay $10–20/mo than track it themselves. Low support burden once built; doesn't depend on any single client relationship landing.</p>
+</div>
+<div class="card">
+  <p><strong>SEMI-ACTIVE — sell a short, recorded "how to actually use the AI tools you already pay for" workshop to small business owners.</strong> Directly answers the gap two independent 2026 surveys now confirm (89% use AI, only 14% fully integrated, 73% want more training). A live cohort session (semi-active) recorded once and resold as an on-demand course converts the same content into something closer to passive over time — and it's organic/inbound by construction, no cold-outreach conflict.</p>
+</div>
+<div class="card">
+  <p><strong>PASSIVE — publish the small-business AI-adoption research itself as a gated one-pager.</strong> The 89%-adoption/73%-want-training gap is genuinely citation-worthy content. A short, well-sourced "state of small-business AI" summary, posted organically (no outreach needed), can function as a lead magnet for any of Geo's consulting-adjacent lanes — reuses research already done for this brief at zero incremental cost.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>10. 🔀 Second-Order Effects & Corners</h2>
+<ul>
+  <li>GoHighLevel absorbing more native capability (Python in workflows, persistent-memory Ask AI, more native connectors) shrinks the amount of custom build work a solo consultant needs to do by hand over time — a slow commoditization pressure worth tracking against anything Geo positions as "we build this for you," not an emergency, but a real multi-year trend.</li>
+  <li>Enterprise multi-agent adoption crossing into "breakthrough year" territory doesn't create demand for Geo's tools directly, but it does normalize the concept for a small-business buyer two or three years from now — the same top-down validation pattern that made "AI receptionist" a sellable phrase to HVAC contractors in 2026 after enterprise voice AI normalized it first.</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>11. ✅ Your Action Item (This Week)</h2>
+<div class="action">
+  <div class="tag">30–40 minutes</div>
+  <p>If the Rainbow office visit date hasn't landed yet, get it confirmed — a direct text to Terri, not a wait-and-see. Once it's locked, spend the rest of the window writing out (not improvising) the discovery skeleton from Module 29 and the two-objection LAER cheat sheet from Module 30, with the expired-certification finding staged as a Problem-stage question ("has cert renewal ever come up as an issue?") — not a reveal. That's the whole prep list; nothing about it requires touching the product-not-ready rule.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>12. 🔑 Your 3 Key Takeaways</h2>
+<div class="takeaway"><p><strong>The Rainbow visit is the whole ballgame this week.</strong> Everything else in the portfolio can wait a few days; a locked-but-undated "next week" visit can't sit unconfirmed into Friday.</p></div>
+<div class="takeaway"><p><strong>Module 32 closes the curriculum arc built specifically for this moment.</strong> Discovery, objection handling, proposal structure, and the first invoice all landed in sequence right as the deal they're for is about to go live — use them, don't just file them.</p></div>
+<div class="takeaway"><p><strong>The two real gaps keep re-confirming themselves under independent checks:</strong> nobody else automates the actual state-portal filing (checked twice now, still true), and small businesses have AI but not AI competence (two separate surveys, same number). Both are still open doors, not closing ones.</p></div>
 
 <footer>
-  Corvino Forge LTD · Daily Intelligence Brief · Generated by Corvus<br/>
-  <span class="small">We work for tomorrow to bring needed hope to today.</span>
+  Corvino Forge LTD — "We work for tomorrow to bring needed hope to today."<br>
+  Generated 2026-08-10 · Full archive: <code>CorvinoMemory/daily-briefs/</code>
 </footer>
 
 </div>
